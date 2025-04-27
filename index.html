@@ -237,17 +237,21 @@
     <div class="row">
       <div class="col-md-8">
         <h4>Book Your Slot</h4>
-        <form class="appointment-form">
-          <input type="text" class="form-control" placeholder="Name">
-          <input type="text" class="form-control" placeholder="Reason for Appointment">
-          <input type="email" class="form-control" placeholder="Your Email">
-          <input type="datetime-local" class="form-control">
-          <select class="form-select">
-            <option selected>Select Treatment Type</option>
-            <option value="1">Skin Rejuvenation</option>
-            <option value="2">Laser Resurfacing</option>
-            <option value="3">Peel Treatments</option>
+        <form action="https://formsubmit.co/info@contourcosmeticclinic.com" method="POST" class="appointment-form">
+          <input type="text" class="form-control" name="name" placeholder="Name" required>
+          <input type="text" class="form-control" name="reason" placeholder="Reason for Appointment" required>
+          <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+          <input type="datetime-local" class="form-control" name="datetime" required>
+          <select class="form-select" name="treatment" required>
+            <option value="">Select Treatment Type</option>
+            <option value="Skin Rejuvenation">Skin Rejuvenation</option>
+            <option value="Laser Resurfacing">Laser Resurfacing</option>
+            <option value="Peel Treatments">Peel Treatments</option>
           </select>
+        
+          <!-- <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+         -->
           <button type="submit" class="btn btn-brown mt-2">Appointment</button>
         </form>
       </div>
