@@ -165,12 +165,16 @@
       <p>Aenean finibus feugiat odio quis porttitor. Duis vel sceleam sitt nisl ultricies, porttitor diam sit amet, varius urna.</p>
       <form action="https://formsubmit.co/info@contourcosmeticclinic.com" method="POST">
         <div class="form-grid">
-          <input type="text" class="half" placeholder="First Name" required>
-          <input type="text" class="half" placeholder="Last Name" required>
-          <input type="text" placeholder="Mobile number" required>
-          <input type="email" placeholder="Email Address" required>
-          <textarea rows="4" placeholder="Additional Information"></textarea>
+          <input type="text" name="first_name" class="half" placeholder="First Name" required>
+          <input type="text" name="last_name" class="half" placeholder="Last Name" required>
+          <input type="text" name="mobile_number" placeholder="Mobile number" required>
+          <input type="email" name="email_address" placeholder="Email Address" required>
+          <textarea rows="4" name="additional_info" placeholder="Additional Information"></textarea>
         </div>
+      
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+      
         <button type="submit">SUBMIT</button>
       </form>
     </div>
