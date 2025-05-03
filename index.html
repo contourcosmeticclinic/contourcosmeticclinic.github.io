@@ -193,6 +193,56 @@
   font-size: 20px;
 }
 
+.link-hover {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .link-hover:before {
+        content: '';
+        position: absolute;
+        background: #591d09; /* Change to any color you like */
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        left: -100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .link-hover:hover:before {
+        left: 0;
+    }
+
+    /* Add a smooth color change on hover */
+    .link-hover:hover {
+        color: #7a3d2c; /* Change text color when hovered */
+    }
+
+    .location-icon {
+        color: white; /* Default color */
+        margin-right: 8px;/* Space between icon and text */
+        transition: color 0.3s ease; /* Smooth transition */
+    }
+
+    /* Change color on hover */
+    .location-icon:hover {
+        color: #887670; /* Change to desired color on hover */
+    }
+    .contact {
+        color: black; /* Default color *//* Space between icon and text */
+        transition: color 0.3s ease; /* Smooth transition */
+    }
+
+    /* Change color on hover */
+    .contact :hover {
+        color: #887670; /* Change to desired color on hover */
+    }
+    .separator {
+      color: black;
+      margin: 0 5px;
+    }
+
   </style>
 </head>
 
@@ -200,8 +250,20 @@
   <!-- Header -->
   <div class="container-fluid p-3 d-flex flex-column flex-md-row justify-content-between align-items-center bg-light-brown border-bottom text-center text-md-start">
     <div>
-      <small> +91-866-043-2589 | info@contourcosmeticclinic.com </small><br>
-      <small> 2nd Floor, Above Samsung Showroom, DLF City Road, Arekere, Bangalore, India </small>
+      <small>
+        <span class="d-inline-flex align-items-center">
+        <a href="tel:+918660432589" class="contact text-decoration-none me-2">
+          <i class="bi bi-telephone me-1"></i>+91-866-043-2589
+        </a>
+        <span class="mx-2">|</span>
+        <a href="mailto:info@contourcosmeticclinic.com" class="contact text-decoration-none">
+          <i class="bi bi-envelope me-1"></i>info@contourcosmeticclinic.com
+        </a>
+      </span>
+    </small>
+    <br/>
+  
+      <small> 2nd floor, Lakshmidevi Complex, 80 Ft Rd, Vishweshwaraiah Road, 6th Stage, Phase 2, BTM Layout, Bengaluru, Karnataka 560076</small>
     </div>
     <div class="mt-2 mt-md-0 social-icons">
       <a href="https://www.facebook.com/share/1AiswEWwo9/?mibextid=wwXIfr" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook" ></i></a>
@@ -316,62 +378,15 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <!-- <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 mb-4">
-          <h4><strong> Contour Cosmetic Clinic </strong></h4>
-          <p>We finish with care, welcome change, and stay centered on your confidence.</p>
-          <div class="social-icons">
-            <a href="https://www.facebook.com/share/1AiswEWwo9/?mibextid=wwXIfr" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook" ></i></a>
-            <a href="https://www.linkedin.com/company/contour-cosmetic-clinic/" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
-            <a href="https://www.instagram.com/contour_bengaluru?igsh=Nzh4MXRzbTdwejdy" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
-            <a href="https://whatsapp.com/channel/0029Vb67pxUAe5Vnd0f6Rp0A" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
-          </div>
-        </div>
-        <div class="col-md-3 mb-4">
-          <h5>Contact</h5>
-          <p><i class="bi bi-telephone"></i> +91-866-043-2589 </p>
-          <p><i class="bi bi-envelope"></i> www.contourcosmeticclinic.com </p>
-          <p><i class="bi bi-geo-alt"></i> 2nd Floor, Above Samsung Showroom, DLF City Road, Arekere, Bangalore, India </p>
-        </div>
-        
-        <div class="col-md-3 mb-4">
-          <h5>Links</h5>
-          <p><a href="#">Home</a></p>
-          <p><a href="#">Services</a></p>
-          <p><a href="#">FAQ</a></p>
-          <p><a href="#">About Us</a></p>
-        </div>
-        <div class="col-md-3 mb-4">
-          <h5>Newsletter</h5>
-          <h4><strong>GET IN TOUCH</strong></h4>
-          <form action="https://formsubmit.co/info@contourcosmeticclinic.com" method="POST" class="appointment-form">
-            
-            <input type="email" name="email_address" class="form-control" placeholder="Your Email" required>
-              <input type="text" class="form-control" name="mobile_number" placeholder="Mobile number" required>
-              
-          
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://contourcosmeticclinic.com/thank-you.html">
-          
-            <button class="btn btn-light btn-sm mt-2">Submit</button>
-          </form>
-          
-          
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <!-- Footer -->
+
+ <!-- Footer -->
 <footer class="text-white py-5" style="background-color: #7B4F3D;">
   <div class="container">
     <div class="row">
       <!-- Logo & Description -->
       <div class="col-md-3 mb-4">
-        <h3 class="fw-bold">Contour</h3>
+        <!-- <img src="assests/logo.jpeg" alt="Contour Cosmetic Clinic Logo" style="max-width: 100%; height: auto;" /> -->
+        <h4 class="fw-bold">Contour Cosmetic Clinic</h3>
         <p>We finish with care, welcome change, and stay centered on your confidence.</p>
         <div class="social-icons">
           <a href="https://www.facebook.com/share/1AiswEWwo9/?mibextid=wwXIfr" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook" ></i></a>
@@ -385,21 +400,27 @@
       <!-- Contact Info -->
       <div class="col-md-3 mb-4">
         <h5 class="fw-bold">Contact</h5>
-        <p><i class="bi bi-telephone me-2"></i>+91-866-043-2589</p>
-        <p><i class="bi bi-envelope me-2"></i>info@contourcosmeticclinic.com</p>
-        <p><i class="bi bi-geo-alt me-2"></i>2nd Floor, Above Samsung Showroom, DLF City Road, Arekere, Bangalore, India</p>
-      </div>
+        <a href="tel:+918660432589" class="location-icon">
+          <i class="bi bi-telephone me-2"></i>+91-866-043-2589</p>
+        </a>
+        <a href="mailto:info@contourcosmeticclinic.com" class="location-icon">
+          <i class="bi bi-envelope me-2"></i>info@contourcosmeticclinic.com</p>
+        </a>
+        <a href="https://maps.app.goo.gl/A2KoWS7rxQWHtMRw7?g_st=com.google.maps.preview.copy" target="_blank" class="location-icon text-decoration-none">
+          <i class="bi bi-geo-alt me-2"></i> 2nd floor, Lakshmidevi Complex, 80 Ft Rd, Vishweshwaraiah Road, 6th Stage, Phase 2, BTM Layout, Bengaluru, Karnataka 560076
+      </a>
+     </div>
 
       <!-- Quick Links -->
       <div class="col-md-3 mb-4">
         <h5 class="fw-bold">Links</h5>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-          <li><a href="pages/about.html" class="text-white text-decoration-none">About Us</a></li>
-          <li><a href="pages/blogs.html" class="text-white text-decoration-none">Blogs</a></li>
-          <li><a href="pages/contact.html" class="text-white text-decoration-none">Contact</a></li>
+            <li><a href="#" class="text-white text-decoration-none link-hover">Home</a></li>
+            <li><a href="pages/about.html" class="text-white text-decoration-none link-hover">About Us</a></li>
+            <li><a href="pages/blogs.html" class="text-white text-decoration-none link-hover">Blogs</a></li>
+            <li><a href="pages/contact.html" class="text-white text-decoration-none link-hover">Contact</a></li>
         </ul>
-      </div>
+    </div>
 
       <!-- Newsletter -->
 <div class ="col-md-3 mb_4">
