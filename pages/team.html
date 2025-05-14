@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blogs</title>
+  <title>Our Team</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -57,55 +57,21 @@
       margin-top: 0.5rem;
     }
 
-    .blogs-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      padding: 4rem 2rem;
-    }
-
-    .blog-card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .blog-card img {
+    .doctor-img {
       width: 100%;
-      height: auto;
+      max-width: 300px;
+      border-radius: 12px;
+      object-fit: cover;
     }
-
-    .blog-content {
-      padding: 1.5rem;
+    .doctor-card {
+      margin-bottom: 60px;
     }
-
-    .blog-date {
-      font-size: 0.9rem;
-      color: #5d2c2c;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+    .specialty {
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #6c757d;
     }
-
-    .blog-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .blog-description {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .blog-link {
-      font-weight: 600;
-      color: #5d2c2c;
-      text-decoration: none;
-    }
-
     footer {
       background-color: #5d2c2c;
       color: white;
@@ -255,36 +221,73 @@
     <nav>
         <a href="../index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="blogs.html" class="active">Blogs</a>
+        <a href="team.html" class="active">Our Team</a>
         <a href="contact.html" >Contact</a>
     </nav>
     <button style="background-color: #5d2c2c; color: white; padding: 0.6rem 1.2rem; border: none; border-radius: 4px; font-weight: 600;">Appointment</button>
   </header>
 
-  <div class="hero">
-    <h1>Our Blog</h1>
-    <div class="breadcrumb">Home > Blogs</div>
-  </div>
+  
 
-  <div class="blogs-container">
-    <div class="blog-card">
-      <img src="Sirpi-Service-Img-1.webp" alt="Blog 1">
-      <div class="blog-content">
-        <div class="blog-date">JUN 6, 2023</div>
-        <div class="blog-title">HOW TO PICK THE BEST COSMETIC SURGEON</div>
-        <div class="blog-description">Justo nec ultrices dui sapien eget mi proin vestibulum rhoncus.</div>
-        <a class="blog-link" href="https://sirpi.wpengine.com/how-to-pick-the-best-cosmetic-surgeon/" target="_blank">READ MORE →</a>
+  <div class="container py-5">
+    <h1 class="text-center mb-5">Meet Our Doctors</h1>
+
+    <!-- Doctor 1 -->
+    <div class="row align-items-center doctor-card" id="saket-jha">
+      <div class="col-md-4 text-center">
+        <img src="../saket-jha.JPG" class="doctor-img" alt="Dr. Saket Jha">
+      </div>
+      <div class="col-md-8">
+        <h3>Dr. Saket Jha</h3>
+        <p class="specialty">Maxillofacial & Facial cosmetic surgeon | Hair transplant Specialist</p>
+        <p>
+          Dr. Saket is a renowned maxillofacial and facial cosmetic surgeon with specialized expertise in FUE hair transplantation. With a pan-India presence, he performs advanced hair restoration procedures from North to South India and serves as the leading surgeon for several reputed cosmetic chains in Bangalore.
+
+          A graduate of Rajiv Gandhi University of Health Sciences, Dr. Saket has undergone intensive training and has worked alongside some of the most esteemed doctors in India. His clinical journey spans premier institutions such as Tata Medical Center (Kolkata), RCC Trivandrum, Jubilee Mission Medical College (Thrissur), Karnataka Institute of Medical Sciences (KIMS), and NIMHANS (Bangalore), among others.
+
+          Known for blending surgical precision with artistic vision, Dr. Saket brings a decade of experience in facial aesthetics, reconstructive surgery, and advanced hair restoration, making him a trusted name in the field of facial transformation and cosmetic excellence.
+        </p>
       </div>
     </div>
-    <div class="blog-card">
-      <img src="Sirpi-Service-Img-2.webp" alt="Blog 2">
-      <div class="blog-content">
-        <div class="blog-date">JUN 6, 2023</div>
-        <div class="blog-title">COSMETIC SURGERY COMPLICATIONS AND BENEFITS</div>
-        <div class="blog-description">Tincidunt nunc pulvinar sapien et ligula ullamcorper proin.</div>
-        <a class="blog-link" href="#" target="_blank">READ MORE →</a>
+
+    <!-- Doctor 2 -->
+    <div class="row align-items-center doctor-card" id="spriha-singh">
+      <div class="col-md-4 text-center">
+        <img src="../spriha-singh.JPG" class="card-img-top rounded" alt="Dr. Spriha Singh">
+      </div>
+      <div class="col-md-8">
+        <h3>Dr. Spriha Singh</h3>
+        <p class="specialty">Maxillofacial prsothesis and Smile Design specialist</p>
+        <p>
+          Dr. Spriha Singh is a highly skilled Maxillofacial Prosthetist and Smile Design specialist with a passion for transforming smiles and facial aesthetics. With a postgraduate degree from Rajiv Gandhi University of Health Sciences, Dr. Spriha brings a unique blend of precision and artistry to her work, specializing in smile design, dental implants, and facial prosthetics.
+
+          Currently collaborating with some of the most renowned cosmetic chains in Bangalore, Dr. Spriha excels in creating natural, harmonious smiles that restore both function and beauty. Her expertise in facial prosthesis allows her to offer customized solutions for patients with facial disfigurements, enhancing their quality of life through advanced prosthetic techniques.
+
+          Dedicated to innovation and patient-centered care, Dr. Spriha combines cutting-edge technologies with her deep understanding of facial aesthetics, making her a trusted name in the realm of maxillofacial rehabilitation and smile enhancement.
+        </p>
       </div>
     </div>
+
+    <!-- Doctor 3 -->
+    
+
+    <div class="row align-items-center doctor-card" id="shambhavi-shukla">
+      <div class="col-md-4 text-center">
+        <img src="../shambhavi-shukla.PNG" class="card-img-top rounded" alt="Dr. Shambhavi Shukla">
+      </div>
+      <div class="col-md-8">
+        <h3>Dr. Shambhavi Shukla</h3>
+        <p class="specialty">Ms ent fellow head & neck oncologist</p>
+        <p>
+          Dr. Shambhavi Shukla is a renowned ENT surgeon with specialized fellowship training in Head and Neck Oncology from Tata Medical Center, combining expertise in oncologic surgery with a strong focus on facial reconstruction. Recognized for her ability to provide comprehensive care in complex head and neck cancer cases, she excels in both the surgical management of tumors and the restoration of facial features, enabling patients to regain not only their health but also their appearance and confidence.
+
+          A graduate of Command Hospital, Kolkata, Dr. Shambhavi completed her postgraduate studies (MS) in ENT, honing her skills in one of India’s most prestigious military healthcare institutions. At Tata Medical Center, she further specialized in head and neck oncology, refining her proficiency in state-of-the-art surgical and reconstructive techniques for facial restoration.
+
+          Her compassionate approach and dedication to advanced reconstructive methods, including the integration of aesthetic principles, make Dr. Shambhavi a leader in the field of head and neck onco. She combines cutting-edge technologies with a deep understanding of facial anatomy to provide life-changing results for patients undergoing head and neck surgeries.
+        </p>
+      </div>
+    </div>
+
   </div>
 
   <footer class="text-white py-5" style="background-color: #7B4F3D;">
@@ -324,7 +327,7 @@
           <ul class="list-unstyled">
               <li><a href="#" class="text-white text-decoration-none link-hover">Home</a></li>
               <li><a href="pages/about.html" class="text-white text-decoration-none link-hover">About Us</a></li>
-              <li><a href="pages/blogs.html" class="text-white text-decoration-none link-hover">Blogs</a></li>
+              <li><a href="pages/team.html" class="text-white text-decoration-none link-hover">Our Team</a></li>
               <li><a href="pages/contact.html" class="text-white text-decoration-none link-hover">Contact</a></li>
           </ul>
       </div>
