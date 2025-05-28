@@ -381,7 +381,110 @@
   border-radius: 50% 0 0 50% / 100% 0 0 100%;
 }
 
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 
+.popup-content {
+  position: relative;
+  background: #fff6f0;
+  display: flex;
+  max-width: 700px;
+  max-height: 700px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+
+.popup-img {
+  width: auto;
+  object-fit: cover;
+}
+
+.popup-text {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.popup-text h2 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center
+}
+
+.popup-text form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.popup-text input[type="email"] {
+  padding: 10px;
+  border: none;
+  flex-grow: 1;
+}
+
+.popup-text button {
+  background: #532d22;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: #532d22;
+  cursor: pointer;
+  display: none;
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#hover-exit {
+  position: absolute;
+  font-size: 48px;
+  color: white;
+  pointer-events: none; /* Let clicks pass through except when explicitly clicked */
+  display: none;
+  z-index: 10000;
+  transition: transform 0.1s ease;
+}
+
+#popup:hover #hover-exit {
+  display: block;
+}
+
+.popup-overlay.hide-cursor {
+  cursor: none;
+}
 
   </style>
 </head>
@@ -420,7 +523,6 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
-     
     </div>
     <ul class="menu">
       <li>
@@ -456,7 +558,8 @@
             <img src="pages/hair-treatment.PNG" class="img-fluid rounded" alt="Slide 4">
             <img src="home-1-slide-3.jpg" class="img-fluid rounded" alt="Slide 1">
             <img src="hom1-banner-content-2.webp" class="img-fluid rounded" alt="Slide 2">
-            <img src="skin-treatment.webp" class="img-fluid rounded" alt="Slide 3">
+            <img src="laser-shoulder.webp" class="img-fluid rounded" alt="Slide 3">
+            <img src="injectables.webp" class="img-fluid rounded" alt="Slide 3">
           </div>
         </div>
         <!-- Optional floating emergency info -->
@@ -603,75 +706,6 @@
 </div>
 
 <!-- Appointment Form -->
-<!-- <div class="container py-5">
-  <div class="row">
-    <div class="col-md-8">
-      <h4>Book Your Slot</h4>
-      <form action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST" class="appointment-form">
-        <input type="text" class="form-control" name="name" placeholder="Name" required>
-        <input type="text" class="form-control" name="reason" placeholder="Reason for Appointment" required>
-        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-        <input type="datetime-local" class="form-control" name="datetime" required>
-        <select class="form-select" name="treatment" required>
-          <option value="">Select Treatment Type</option>
-          <option value="Peel Treatments">Hair Transplant</option>
-          <option value="Skin Rejuvenation">Skin treatment</option>
-          <option value="Laser Resurfacing">Laser Resurfacing</option>
-          <option value="Peel Treatments">Cosmetic Surgery</option>
-          <option value="Peel Treatments">Injectables</option>
-        </select>
-        <button type="submit" class="btn btn-brown mt-2">Appointment</button>
-      </form>
-    </div>
-  </div>
-</div> -->
-
-<!-- <section class="appointment-section">
-  <div class="container py-5">
-    <form action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST" class="appointment-form"></form>
-    <div class="row gx-5">
-      <div class="col-md-9">
-          <div class="row mb-4">
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control custom-input" placeholder="Your Name" required>
-            </div>
-            <div class="col-md-6">
-              <input type="text" name="reason" class="form-control custom-input" placeholder="Reason for Appointment" required>
-            </div>
-          </div>
-          <div class="row mb-4">
-            <div class="col-md-4">
-              <input type="email" name="email" class="form-control custom-input" placeholder="Email" required>
-            </div>
-            <div class="col-md-4">
-              <input type="datetime-local" name="datetime" class="form-control custom-input" required>
-            </div>
-            <div class="col-md-4">
-              <select name="treatment" class="form-select custom-input" placeholder="Treatment Type" required>
-                <option value="">Select Treatment Type</option>
-                <option value="Peel Treatments">Hair Transplant</option>
-                <option value="Skin Rejuvenation">Skin treatment</option>
-                <option value="Laser Resurfacing">Laser Resurfacing</option>
-                <option value="Peel Treatments">Cosmetic Surgery</option>
-                <option value="Peel Treatments">Injectables</option>
-              </select>
-            </div>
-          </div>
-        
-      </div>
-
-     
-      <div class="col-md-3 d-flex flex-column justify-content-center align-items-start position-relative">
-        <h3 class="fw-bold text-uppercase mb-3" style="margin-left: 100px;">Book Your<br>Slot</h3>
-        <button type="submit" class="btn btn-brown px-4 py-2 text-uppercase" style="margin-left: 100px;">Appointment</button>
-      </div>
-    </div>
-          
-        
-     
-  </form>
-  </div>
-</section> -->
 
 <section class="appointment-section">
   <div class="container">
@@ -792,6 +826,22 @@
   <i class="bi bi-download"></i>
 </button>
 
+<!-- Popup Container -->
+<div id="popup" class="popup-overlay">
+  <div id="hover-exit" title="Close">×</div>
+  <div class="popup-content" id="popupContent">
+    <img src="hair-prp.png" alt="Skin Treatment" class="popup-img" />
+    <div class="popup-text">
+      <h2 class="align-items-center">CONNECT WITH US</h2>
+      <p>Got questions or ready to start your transformation journey? Our friendly team will be in touch soon. Let’s shape your story together!</p>
+      <form  action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST" style="display: flex; width: 100%;">
+        <input style="flex: 0 0 80%; padding: 10px; border: 1px solid #ccc; border-right: none; border-top-left-radius: 6px; border-bottom-left-radius: 6px;" type="tel" name="phone" placeholder="Enter your Phone number" required>
+        <button style="flex: 0 0 20%; background-color: #4b2e2e; color: white; border: 1px solid #4b2e2e; border-left: none; border-top-right-radius: 6px; border-bottom-right-radius: 6px;" type="submit" class="btn-brown">SEND <span>&#10148;</span></button>
+      </form>
+    </div>
+  </div>
+</div>
+
 <script>
   function downloadBrochure() {
     fetch('assests/contour-brochure.pdf')
@@ -871,6 +921,94 @@
   // Set the default value
   document.getElementById('datetime').value = getCurrentDateTimeLocal();
 </script>
+
+<!-- <script>
+  const popup = document.getElementById('popup');
+  const popupContent = document.querySelector('.popup-content');
+  const closePopup = document.getElementById('close-popup');
+  const hoverExit = document.getElementById('hover-exit');
+
+  function checkCursorOutsidePopup(x, y) {
+    const rect = popupContent.getBoundingClientRect();
+    const isOutside =
+      x < rect.left || x > rect.right || y < rect.top || y > rect.bottom;
+
+    if (isOutside) {
+      popup.classList.add('hide-cursor');
+      hoverExit.style.display = 'block';
+      hoverExit.style.left = `${x}px`;
+      hoverExit.style.top = `${y}px`;
+    } else {
+      popup.classList.remove('hide-cursor');
+      hoverExit.style.display = 'none';
+    }
+  }
+
+  // Check once on load using current cursor position
+  document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('mousemove', (e) => {
+      checkCursorOutsidePopup(e.clientX, e.clientY);
+    });
+
+    // Trigger once on page load if mouse is already somewhere
+    if (typeof window.event !== 'undefined') {
+      checkCursorOutsidePopup(window.event.clientX, window.event.clientY);
+    }
+  });
+
+  // Close popup on outside click
+  popup.addEventListener('click', (e) => {
+    if (!popupContent.contains(e.target)) {
+      popup.style.display = 'none';
+    }
+  });
+
+  closePopup.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+</script> -->
+
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const popup = document.getElementById('popup');
+    const popupContent = document.querySelector('.popup-content');
+    const hoverExit = document.getElementById('hover-exit');
+
+    popup.addEventListener('mousemove', (e) => {
+  const rect = popupContent.getBoundingClientRect();
+  const isOutside =
+    e.clientX < rect.left ||
+    e.clientX > rect.right ||
+    e.clientY < rect.top ||
+    e.clientY > rect.bottom;
+
+  if (isOutside) {
+    popup.classList.add('hide-cursor');
+    hoverExit.style.display = 'block';
+    hoverExit.style.left = `${e.clientX}px`;
+    hoverExit.style.top = `${e.clientY}px`;
+  } else {
+    popup.classList.remove('hide-cursor');
+    hoverExit.style.display = 'none';
+  }
+});
+
+    // Clicking outside popup content closes popup
+    popup.addEventListener('click', (e) => {
+      if (!popupContent.contains(e.target)) {
+        popup.style.display = 'none';
+      }
+    });
+
+    // Clicking the cross also closes popup
+    hoverExit.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+  });
+</script>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
