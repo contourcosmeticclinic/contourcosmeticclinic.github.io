@@ -246,6 +246,7 @@
     .contact {
         color: black; /* Default color *//* Space between icon and text */
         transition: color 0.3s ease; /* Smooth transition */
+        font-size: medium;
     }
 
     /* Change color on hover */
@@ -362,12 +363,15 @@
         <a href="mailto:contact@contourcosmeticclinic.com" class="contact text-decoration-none">
           <i class="bi bi-envelope me-1"></i>contact@contourcosmeticclinic.com
         </a>
+        <span class="mx-2">|</span>
+        <a href="https://maps.app.goo.gl/A2KoWS7rxQWHtMRw7?g_st=com.google.maps.preview.copy" target="_blank" class="contact text-decoration-none">
+          <i class="bi bi-geo-alt me-2"></i> Visit Us
+      </a>
       </span>
     </small>
     <br/>
   
-      <small> 2nd floor, Lakshmidevi Complex, 80 Ft Rd, Vishweshwaraiah Road, 6th Stage, Phase 2, BTM Layout, Bengaluru, Karnataka 560076</small>
-    </div>
+      </div>
     <div class="mt-2 mt-md-0 social-icons">
       <a href="https://www.facebook.com/share/1AiswEWwo9/?mibextid=wwXIfr" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook" ></i></a>
       <a href="https://www.linkedin.com/company/contour-cosmetic-clinic/" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
@@ -465,29 +469,7 @@
     </div>
   </div>
 
-  <!-- Appointment Form -->
-  <div class="container py-5">
-    <div class="row">
-      <div class="col-md-8">
-        <h4>Book Your Slot</h4>
-        <form action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST" class="appointment-form">
-          <input type="text" class="form-control" name="name" placeholder="Name" required>
-          <input type="text" class="form-control" name="reason" placeholder="Reason for Appointment" required>
-          <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-          <input type="datetime-local" class="form-control" name="datetime" required>
-          <select class="form-select" name="treatment" required>
-            <option value="">Select Treatment Type</option>
-            <option value="Peel Treatments">Hair Transplant</option>
-            <option value="Skin Rejuvenation">Skin treatment</option>
-            <option value="Laser Resurfacing">Laser Resurfacing</option>
-            <option value="Peel Treatments">Cosmetic Surgery</option>
-            <option value="Peel Treatments">Injectables</option>
-          </select>
-          <button type="submit" class="btn btn-brown mt-2">Appointment</button>
-        </form>
-      </div>
-    </div>
-  </div>
+  
 
   <!-- Procedures -->
   <div class="container py-5">
@@ -542,7 +524,7 @@
             <div class="card-body text-center">
               <h5 class="card-title fw-bold">Dr. Shambhavi Shukla</h5>
               <p class="text-uppercase text-muted small" style="letter-spacing: 1px;">
-                Ms ENT Fellow<br>Head & Neck Oncologist
+                MS(DNB) ENT <br/> HEAD AND NECK ONCOSURGERY (FELLOW)
               </p>
             </div>
           </div>
@@ -584,7 +566,29 @@
   </div>
 </div>
 
-
+<!-- Appointment Form -->
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-8">
+      <h4>Book Your Slot</h4>
+      <form action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST" class="appointment-form">
+        <input type="text" class="form-control" name="name" placeholder="Name" required>
+        <input type="text" class="form-control" name="reason" placeholder="Reason for Appointment" required>
+        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+        <input type="datetime-local" class="form-control" name="datetime" required>
+        <select class="form-select" name="treatment" required>
+          <option value="">Select Treatment Type</option>
+          <option value="Peel Treatments">Hair Transplant</option>
+          <option value="Skin Rejuvenation">Skin treatment</option>
+          <option value="Laser Resurfacing">Laser Resurfacing</option>
+          <option value="Peel Treatments">Cosmetic Surgery</option>
+          <option value="Peel Treatments">Injectables</option>
+        </select>
+        <button type="submit" class="btn btn-brown mt-2">Appointment</button>
+      </form>
+    </div>
+  </div>
+</div>
 
  <!-- Footer -->
 <footer class="text-white py-5" style="background-color: #7B4F3D;">
