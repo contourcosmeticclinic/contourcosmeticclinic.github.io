@@ -445,14 +445,20 @@
   cursor: pointer;
 }
 
-.close-btn {
+.close-popup-btn {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 24px;
-  color: #532d22;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: black;
+  z-index: 100;
   cursor: pointer;
-  display: none;
+}
+
+.close-popup-btn:hover {
+  color: #532d22; /* Optional hover effect */
 }
 
 #popup {
@@ -467,7 +473,6 @@
   align-items: center;
   z-index: 9999;
 }
-
 #hover-exit {
   position: absolute;
   font-size: 48px;
@@ -485,6 +490,46 @@
 .popup-overlay.hide-cursor {
   cursor: none;
 }
+
+.gallery-section {
+  padding: 50px 20px;
+  background-color: #fdf4ef;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #4b2e2e;
+}
+
+.gallery-section p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 90%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
 
   </style>
 </head>
@@ -675,6 +720,7 @@
 
 
 
+
 <!-- Before-After section -->
 <div class="container py-5">
   <h2 class="text-center mb-4">BEFORE & AFTER GALLERY</h2>
@@ -704,6 +750,143 @@
 
   </div>
 </div>
+
+<!-- clinic gallery -->
+<section id="gallery" class="gallery-section">
+  <h2>Our Clinic & Transformations</h2>
+  <p>Take a glimpse inside our clinic and see our team in action.</p>
+  
+  <div class="gallery-grid">
+    <img src="clinic1.jpeg" alt="Clinic Interior" />
+    <img src="clinic2.jpeg" alt="Clinic Equipment" />
+    <img src="clinic3.jpeg" alt="Clinic Equipment" />
+    <img src="clinic4.jpeg" alt="Clinic Equipment" />
+    <img src="clinic5.jpeg" alt="Clinic Equipment" />
+    <img src="clinic6.jpeg" alt="Clinic Equipment" />
+    <img src="clinic7.jpeg" alt="Clinic Equipment" />
+    <img src="clinic8.jpeg" alt="Clinic Equipment" />
+    <img src="clinic9.jpeg" alt="Clinic Equipment" />
+    <img src="clinic10.jpeg" alt="Clinic Equipment" />
+    <img src="clinic11.jpeg" alt="Clinic Equipment" />
+    <img src="doc1.jpeg" alt="Doctor Performing Surgery" />
+    <img src="doc2.jpeg" alt="Doctor Performing Surgery" />
+    <img src="doc3.jpeg" alt="Doctor Performing Surgery" />
+    <img src="doc4.jpeg" alt="Doctor Performing Surgery" />
+    <img src="doc5.jpeg" alt="Doctor Performing Surgery" />
+  </div>
+</section>
+
+<!-- gallery -->
+<section id="gallery" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold text-uppercase">Before & After Results</h2>
+    <div class="row g-4">
+      
+      <!-- Gallery Item -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="row g-0">
+            <div class="col-6">
+              <img src="before-ear.jpeg" class="img-fluid rounded-start" alt="Before">
+            </div>
+            <div class="col-6">
+              <img src="after-ear.jpeg" class="img-fluid rounded-end" alt="After">
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Skin Rejuvenation – 4 Weeks Later</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat for more cases -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="row g-0">
+            <div class="col-6">
+              <img src="before-hair.jpg" class="img-fluid rounded-start" alt="Before">
+            </div>
+            <div class="col-6">
+              <img src="after-hair.jpg" class="img-fluid rounded-end" alt="After">
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Hair Transplant – 6 Months Later</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more as needed -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="row g-0">
+            <div class="col-6">
+              <img src="before-hair2.jpeg" class="img-fluid rounded-start" alt="Before">
+            </div>
+            <div class="col-6">
+              <img src="after-hair2.jpeg" class="img-fluid rounded-end" alt="After">
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Hair Transplant – 6 Months Later</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="row g-0">
+            <div class="col-6">
+              <img src="before-hair1.jpeg" class="img-fluid rounded-start" alt="Before">
+            </div>
+            <div class="col-6">
+              <img src="after-hair1.jpeg" class="img-fluid rounded-end" alt="After">
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Hair Transplant – 4 Months Later</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="row g-0">
+            <div class="col-6">
+              <img src="before-skin1.jpeg" class="img-fluid rounded-start" alt="Before">
+            </div>
+            <div class="col-6">
+              <img src="after-skin1.jpeg" class="img-fluid rounded-end" alt="After">
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Skin Rejuvenation – 2 Weeks Later</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="row g-0">
+            <div class="col-6">
+              <img src="before-dp.png" class="img-fluid rounded-start" alt="Before">
+            </div>
+            <div class="col-6">
+              <img src="after-dp.png" class="img-fluid rounded-end" alt="After">
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Dimplasty – 1 Weeks Later</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
 
 <!-- Appointment Form -->
 
@@ -828,15 +1011,16 @@
 
 <!-- Popup Container -->
 <div id="popup" class="popup-overlay">
-  <div id="hover-exit" title="Close">×</div>
   <div class="popup-content" id="popupContent">
+    <button class="close-popup-btn" onclick="closePopup()">×</button>
     <img src="hair-prp.png" alt="Skin Treatment" class="popup-img" />
     <div class="popup-text">
-      <h2 class="align-items-center">CONNECT WITH US</h2>
+      <h2>CONNECT WITH US</h2>
       <p>Got questions or ready to start your transformation journey? Our friendly team will be in touch soon. Let’s shape your story together!</p>
       <form  action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST" style="display: flex; width: 100%;">
-        <input style="flex: 0 0 80%; padding: 10px; border: 1px solid #ccc; border-right: none; border-top-left-radius: 6px; border-bottom-left-radius: 6px;" type="tel" name="phone" placeholder="Enter your Phone number" required>
-        <button style="flex: 0 0 20%; background-color: #4b2e2e; color: white; border: 1px solid #4b2e2e; border-left: none; border-top-right-radius: 6px; border-bottom-right-radius: 6px;" type="submit" class="btn-brown">SEND <span>&#10148;</span></button>
+        <input style="flex: 0 0 40%; border: None; border-bottom: 1px solid #7f4a3d; background-color: #fdf4ef ;" type="name" name="name" placeholder="Enter your Name" required>
+        <input style="flex: 0 0 35%; margin-left: 20px; border: None; border-bottom: 1px solid #7f4a3d;; background-color: #fdf4ef " type="tel" name="phone" placeholder="Enter your Phone number" required>
+        <button style="flex: 0 0 20%; margin-left: 20px; background-color: #4b2e2e; color: white; border: 1px solid #4b2e2e; border-left: none; border-radius: 6px;" type="submit" class="btn-brown">SEND <span>&#10148;</span></button>
       </form>
     </div>
   </div>
@@ -922,93 +1106,12 @@
   document.getElementById('datetime').value = getCurrentDateTimeLocal();
 </script>
 
-<!-- <script>
-  const popup = document.getElementById('popup');
-  const popupContent = document.querySelector('.popup-content');
-  const closePopup = document.getElementById('close-popup');
-  const hoverExit = document.getElementById('hover-exit');
-
-  function checkCursorOutsidePopup(x, y) {
-    const rect = popupContent.getBoundingClientRect();
-    const isOutside =
-      x < rect.left || x > rect.right || y < rect.top || y > rect.bottom;
-
-    if (isOutside) {
-      popup.classList.add('hide-cursor');
-      hoverExit.style.display = 'block';
-      hoverExit.style.left = `${x}px`;
-      hoverExit.style.top = `${y}px`;
-    } else {
-      popup.classList.remove('hide-cursor');
-      hoverExit.style.display = 'none';
-    }
-  }
-
-  // Check once on load using current cursor position
-  document.addEventListener('DOMContentLoaded', () => {
-    document.addEventListener('mousemove', (e) => {
-      checkCursorOutsidePopup(e.clientX, e.clientY);
-    });
-
-    // Trigger once on page load if mouse is already somewhere
-    if (typeof window.event !== 'undefined') {
-      checkCursorOutsidePopup(window.event.clientX, window.event.clientY);
-    }
-  });
-
-  // Close popup on outside click
-  popup.addEventListener('click', (e) => {
-    if (!popupContent.contains(e.target)) {
-      popup.style.display = 'none';
-    }
-  });
-
-  closePopup.addEventListener('click', () => {
-    popup.style.display = 'none';
-  });
-</script> -->
-
-
 <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const popup = document.getElementById('popup');
-    const popupContent = document.querySelector('.popup-content');
-    const hoverExit = document.getElementById('hover-exit');
-
-    popup.addEventListener('mousemove', (e) => {
-  const rect = popupContent.getBoundingClientRect();
-  const isOutside =
-    e.clientX < rect.left ||
-    e.clientX > rect.right ||
-    e.clientY < rect.top ||
-    e.clientY > rect.bottom;
-
-  if (isOutside) {
-    popup.classList.add('hide-cursor');
-    hoverExit.style.display = 'block';
-    hoverExit.style.left = `${e.clientX}px`;
-    hoverExit.style.top = `${e.clientY}px`;
-  } else {
-    popup.classList.remove('hide-cursor');
-    hoverExit.style.display = 'none';
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+    document.body.style.cursor = "default"; // Reset cursor if you had hidden it
   }
-});
-
-    // Clicking outside popup content closes popup
-    popup.addEventListener('click', (e) => {
-      if (!popupContent.contains(e.target)) {
-        popup.style.display = 'none';
-      }
-    });
-
-    // Clicking the cross also closes popup
-    hoverExit.addEventListener('click', () => {
-      popup.style.display = 'none';
-    });
-  });
 </script>
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
