@@ -109,7 +109,8 @@
     }
 
     .btn-brown:hover {
-      background-color: #5e2f23;
+      background-color: #a44024; 
+  color: white;
     }
 
     .bg-light-brown {
@@ -122,7 +123,9 @@
 
 
     .service-card {
-      background-color: #d2b099;
+      /* background-color: #d2b099; */
+      /* background-color: #846550; */
+      background-color: #7a3d2c;
       color: white;
       padding: 2rem;
       text-align: center;
@@ -135,7 +138,7 @@
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   cursor: pointer;
-  background-color: #846550;
+  background-color: #a44024;
 }
 
     .procedure-list li {
@@ -197,7 +200,8 @@
 }
 
 .download-brochure-btn:hover {
-  background-color: #7a3d2c; /* Slightly darker on hover */
+  background-color: #a44024; 
+  color: white; /* Slightly darker on hover */
 }
 
 .download-brochure-btn i {
@@ -531,6 +535,46 @@
 }
 
 
+.btn-brown {
+  background-color: #7f4a3d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Blinking animation */
+@keyframes blinkBackground {
+  0%, 100% {
+    background-color: #7f4a3d; 
+  }
+  50% {
+    background-color: #a44024; 
+  }
+}
+
+.blink-btn {
+  background-color: #7f4a3d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  animation: blinkBackground 1s infinite;
+  transition: background-color 0.3s ease;
+}
+
+/* Stop blinking on hover */
+.blink-btn:hover {
+  animation: none;
+  background-color: #a44024; 
+  color: white;
+}
+
+
+
   </style>
 </head>
 
@@ -586,15 +630,21 @@
     <div class="row align-items-center">
       <!-- Left Content -->
       <div class="col-md-6 ps-md-5 text-center text-md-start">
-        <img src="logo_with_tagline_cropped.png" alt="Contour Cosmetic Clinic Logo" style="max-width: 50%; height: auto; margin-bottom: 3em;" />
-        <p class="text-uppercase text-danger fw-bold">HAIR | SKIN | LASER </p>
+        <!-- Logo and Button side by side -->
+        <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-4">
+          <img src="logo_with_tagline_cropped.png" alt="Contour Cosmetic Clinic Logo" style="max-width: 50%; height: auto; margin-bottom: 0;" />
+          <a href="pages/contact.html" class="btn btn-brown blink-btn ms-3" style="white-space: nowrap;">Book Appointment</a>
+        </div>
+      
+        <p class="text-uppercase text-danger fw-bold">HAIR | SKIN | LASER</p>
         <h1 class="display-5 fw-bold">FACIAL AESTHETIC & <br/>COSMETIC SURGERY</h1>
         
         <h6>Experience bespoke facial aesthetics and cosmetic surgery in the hands of experts.
           <br/>
-          Discreet elegance, flawless results, and timeless beauty.</h6>
-        
+          Discreet elegance, flawless results, and timeless beauty.
+        </h6>
       </div>
+      
   
       <!-- Right Slideshow -->
       <div class="col-md-6 mt-4 mt-md-0 position-relative">
@@ -624,30 +674,32 @@
   <div  class="section py-5" style="padding: 0px;">
     <div class="row text-center">
       <div class="col-md-3 col-sm-6" style="padding: 1px;">
-        <div class="service-card transition-card">
-          <a href="pages/about.html#hair-treatment-section" style="color: white; text-decoration: none;">
+        <a href="pages/about.html#hair-treatment-section" style="color: white; text-decoration: none;">
+          <div class="service-card transition-card">
             Hair Transplant
-          </a>
-          
-        </div>
+          </div>
+        </a>
       </div>
       <div class="col-md-3 col-sm-6" style="padding: 1px;" >
+        <a href="pages/about.html#cosmetic-surgery-section" style="color: white; text-decoration: none;">
         <div class="service-card transition-card">
-          <a href="pages/about.html#cosmetic-surgery-section" style="color: white; text-decoration: none;">
-          Facial plastics</a>
+          Facial plastics
         </div>
+      </a>
       </div>
       <div class="col-md-3 col-sm-6" style="padding: 1px;">
+        <a href="pages/about.html#skin-treatment-section" style="color: white; text-decoration: none;">
         <div class="service-card transition-card">
-          <a href="pages/about.html#skin-treatment-section" style="color: white; text-decoration: none;">
-          Skin Rejuvenation</a>
+          Skin Rejuvenation
         </div>
+      </a>
       </div>
       <div class="col-md-3 col-sm-6" style="padding: 1px;">
+        <a href="pages/about.html#skin-treatment-section" style="color: white; text-decoration: none;">
         <div class="service-card transition-card">
-          <a href="pages/about.html#skin-treatment-section" style="color: white; text-decoration: none;">
-          Laser Resurfacing</a>
+          Laser Resurfacing
         </div>
+      </a>
       </div>
      
     </div>
