@@ -621,17 +621,20 @@
     <div>
       <small>
         <span class="d-inline-flex align-items-center">
-          <a href="tel:+918660432589" class="contact text-decoration-none me-2">
-            <i class="bi bi-telephone me-1"></i>+91-866-043-2589
+          <a href="tel:+918660432589" class="contact text-decoration-none">
+            <i class="bi bi-telephone me-1"></i>
+            <span class="d-none d-sm-inline">+91-866-043-2589</span>
           </a>
-          <span class="mx-2">|</span>
+          <span class="mx-2 d-none d-sm-inline">|</span>
           <a href="mailto:contact@contourcosmeticclinic.com" class="contact text-decoration-none">
-            <i class="bi bi-envelope me-1"></i>contact@contourcosmeticclinic.com
+            <i class="bi bi-envelope me-1"></i>
+            <span class="d-none d-sm-inline">contact@contourcosmeticclinic.com</span>
           </a>
-          <span class="mx-2">|</span>
+          <span class="mx-2 d-none d-sm-inline">|</span>
           <a href="https://maps.app.goo.gl/A2KoWS7rxQWHtMRw7?g_st=com.google.maps.preview.copy" target="_blank"
             class="contact text-decoration-none">
-            <i class="bi bi-geo-alt me-2"></i> Visit Us
+            <i class="bi bi-geo-alt"></i>
+            <span class="d-none d-sm-inline">Visit Us</span>
           </a>
         </span>
       </small>
@@ -654,15 +657,22 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">
+    <!-- <div class="logo"></div> -->
+    <!-- Book Appointment Button -->
+    <div class="mb-4 d-flex justify-content-center" style="margin-left: 80px;"></div>
+      <a href="pages/contact.html" class="btn btn-brown blink-btn btn-lg px-5 fs-4" style="white-space: nowrap; height: 70px; display: flex; align-items: center; justify-content: center;">Book Appointment</a>
     </div>
-    <ul class="menu">
-      <li>
-        <a href="#">Home</a>
-
-      </li>
+    <ul class="menu d-none d-md-flex" style="font-size: 1.25rem; font-weight: bold;">
+      <li><a href="#">Home</a></li>
       <li><a href="pages/about.html">About Us</a></li>
       <li><a href="pages/team.html">Our Team</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+    </ul>
+    <!-- Mobile menu -->
+    <ul class="menu d-flex d-md-none" style="font-size: 1.25rem; font-weight: bold;">
+      <li><a href="#">Home</a></li>
+      <li><a href="pages/about.html">About</a></li>
+      <li><a href="pages/team.html">Team</a></li>
       <li><a href="pages/contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -673,17 +683,16 @@
     <div class="row align-items-center">
       <!-- Left Content -->
       <div class="col-md-6 ps-md-5 text-center text-md-start">
-        <!-- Logo and Button side by side -->
-        <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-4">
+        <!-- Logo -->
+        <div class="mb-4">
           <img src="logo_with_tagline_cropped.png" alt="Contour Cosmetic Clinic Logo"
-            style="max-width: 50%; height: auto; margin-bottom: 0;" />
-          <a href="pages/contact.html" class="btn btn-brown blink-btn ms-3" style="white-space: nowrap;">Book
-            Appointment</a>
+            style="max-width: 88%; height: auto; margin-bottom: 0;" />
         </div>
+
 
         <p class="text-uppercase text-danger fw-bold">HAIR | SKIN | LASER. FACIAL AESTHETIC & COSMETIC SURGERY. Experience bespoke facial aesthetics and cosmetic surgery in the hands of experts.
         </p>
-        <h6><br>
+        <h6>
           Discreet elegance, flawless results, and timeless beauty.
         </h6>
       </div>
