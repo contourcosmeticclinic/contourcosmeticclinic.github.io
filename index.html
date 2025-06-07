@@ -1161,6 +1161,11 @@
 <script>
   function closePopup() {
     document.getElementById("popup").style.display = "none";
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+      document.getElementById('popup').style.display = 'flex';
+      }, 3000);
+    });
     document.body.style.cursor = "default"; // Reset cursor if you had hidden it
   }
 </script>
