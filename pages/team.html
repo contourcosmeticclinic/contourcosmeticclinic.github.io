@@ -247,19 +247,56 @@
       color: black;
       margin: 0 5px;
     }
+
+    /* Add zoom-on-hover effect */
+    .zoom-on-hover {
+      transition: transform 0.3s ease;
+    }
+    .zoom-on-hover:hover {
+      transform: scale(1.08);
+      z-index: 2;
+    }
   </style>
 </head>
 
 <body>
-  <header>
+<header>
     <a href="../index.html">
       <div class="logo"><img src="../logo_cropped.png" height="40"></div>
     </a>
-    <nav>
-      <a href="../index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="team.html" class="active">Our Team</a>
-      <a href="contact.html">Contact</a>
+    <nav class="navbar navbar-expand-lg p-0" style="background: none; box-shadow: none;">
+      <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link px-3">
+              <span class="d-none d-lg-inline">Home</span>
+              <span class="d-inline d-lg-none">Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link px-3 active">
+              <span class="d-none d-lg-inline">About Us</span>
+              <span class="d-inline d-lg-none">About</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="team.html" class="nav-link px-3">
+              <span class="d-none d-lg-inline">Our Team</span>
+              <span class="d-inline d-lg-none">Team</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link px-3">
+              <span class="d-none d-lg-inline">Contact</span>
+              <span class="d-inline d-lg-none">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <a href="contact.html">
       <button
@@ -269,15 +306,16 @@
 
 
 
+
   <div class="container py-5">
-    <h1 class="text-center mb-5">Meet Our Doctors</h1>
+    <h1 class="text-center fw-bold mb-5" style="font-size: 2.8rem;">Meet Our Doctors</h1>
 
     <!-- Doctor 1 -->
     <div class="row align-items-center doctor-card" id="saket-jha">
       <div class="col-md-4 text-center">
-        <img src="../saket-jha.JPG" class="doctor-img" alt="Dr. Saket Jha">
+        <img src="../saket-jha.JPG" class="doctor-img zoom-on-hover" alt="Dr. Saket Jha">
       </div>
-      <div class="col-md-8">
+      <div class="col-md-8"><br><br>
         <h3>Dr. Saket Jha</h3>
         <p class="specialty">Maxillofacial & Facial cosmetic surgeon | Hair transplant Specialist</p>
         <p>
@@ -302,9 +340,9 @@
 
     <div class="row align-items-center doctor-card" id="shambhavi-shukla">
       <div class="col-md-4 text-center">
-        <img src="../shambhavi-shukla.PNG" class="card-img-top rounded" alt="Dr. Shambhavi Shukla">
+        <img src="../shambhavi-shukla.PNG" class="card-img-top rounded zoom-on-hover" alt="Dr. Shambhavi Shukla">
       </div>
-      <div class="col-md-8">
+      <div class="col-md-8"><br><br>
         <h3>Dr. Shambhavi Shukla</h3>
         <p class="specialty text-uppercase">MS(DNB) ENT HEAD AND NECK ONCOSURGERY (FELLOW)</p>
         <p>
@@ -329,77 +367,101 @@
 
   </div>
 
+
+
+  <!-- Footer -->
   <footer class="text-white py-5" style="background-color: #7B4F3D;">
     <div class="container">
       <div class="row">
         <!-- Logo & Description -->
-        <div class="col-md-3 mb-4">
-          <!-- <img src="assests/logo.jpeg" alt="Contour Cosmetic Clinic Logo" style="max-width: 100%; height: auto;" /> -->
-          <h4 class="fw-bold">Contour Cosmetic Clinic</h3>
-            <p>We finish with care, welcome change, and stay centered on your confidence.</p>
-            <div class="social-icons">
-              <a href="https://www.facebook.com/share/1AiswEWwo9/?mibextid=wwXIfr" class="me-2" target="_blank"
-                rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.linkedin.com/company/contour-cosmetic-clinic/" class="me-2" target="_blank"
-                rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
-              <a href="https://www.instagram.com/contour_bengaluru?igsh=Nzh4MXRzbTdwejdy" class="me-2" target="_blank"
-                rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
-              <a href="https://youtube.com/@shapeyourstory?si=szaqr58VYWUBpQBV" class="me-2" target="_blank"
-                rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
-              <a href="https://whatsapp.com/channel/0029Vb67pxUAe5Vnd0f6Rp0A" class="me-2" target="_blank"
-                rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
-            </div>
+        <div class="col-12 col-md-3 mb-4 text-center text-md-start">
+          <h4 class="fw-bold">Contour Cosmetic Clinic</h4>
+          <p>We finish with care, welcome change, and stay centered on your confidence.</p>
+          <div class="social-icons justify-content-center justify-content-md-start">
+            <a href="https://www.facebook.com/share/1AiswEWwo9/?mibextid=wwXIfr" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/contour-cosmetic-clinic/" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/contour_bengaluru?igsh=Nzh4MXRzbTdwejdy" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com/@shapeyourstory?si=szaqr58VYWUBpQBV" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+            <a href="https://whatsapp.com/channel/0029Vb67pxUAe5Vnd0f6Rp0A" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+          </div>
         </div>
 
         <!-- Contact Info -->
-        <div class="col-md-3 mb-4">
+        <div class="col-12 col-md-3 mb-4 text-center text-md-start">
           <h5 class="fw-bold">Contact</h5>
-          <a href="tel:+918660432589" class="location-icon">
-            <i class="bi bi-telephone me-2"></i>+91-866-043-2589</p>
-          </a>
-          <a href="mailto:contact@contourcosmeticclinic.com" class="location-icon">
-            <i class="bi bi-envelope me-2"></i>contact@contourcosmeticclinic.com</p>
-          </a>
-          <a href="https://maps.app.goo.gl/A2KoWS7rxQWHtMRw7?g_st=com.google.maps.preview.copy" target="_blank"
-            class="location-icon text-decoration-none">
-            <i class="bi bi-geo-alt me-2"></i> 2nd floor, Lakshmidevi Complex, 80 Ft Rd, Vishweshwaraiah Road, 6th
-            Stage, Phase 2, BTM Layout, Bengaluru, Karnataka 560076
-          </a>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="tel:+918660432589" class="location-icon text-decoration-none d-flex justify-content-center justify-content-md-start align-items-center">
+                <i class="bi bi-telephone me-2"></i>
+                <span>+91-866-043-2589</span>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="mailto:contact@contourcosmeticclinic.com" class="location-icon text-decoration-none d-flex justify-content-center justify-content-md-start align-items-center">
+                <i class="bi bi-envelope me-2"></i>
+                <span>contact@contourcosmeticclinic.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://maps.app.goo.gl/A2KoWS7rxQWHtMRw7?g_st=com.google.maps.preview.copy" target="_blank" class="location-icon text-decoration-none d-flex justify-content-center justify-content-md-start align-items-start">
+                <i class="bi bi-geo-alt me-2"></i>
+                <span>2nd floor, Lakshmidevi Complex, 80 Ft Rd, Vishweshwaraiah Road, 6th Stage, Phase 2, BTM Layout, Bengaluru, Karnataka 560076</span>
+              </a>
+            </li>
+          </ul>
         </div>
 
         <!-- Quick Links -->
-        <div class="col-md-3 mb-4">
-          <h5 class="fw-bold">Links</h5>
+        <div class="col-12 col-md-3 mb-4 text-center text-md-start">
+          <h5 class="fw-bold">Explore</h5>
           <ul class="list-unstyled">
             <li><a href="#" class="text-white text-decoration-none link-hover">Home</a></li>
-            <li><a href="pages/about.html" class="text-white text-decoration-none link-hover">About Us</a></li>
-            <li><a href="pages/team.html" class="text-white text-decoration-none link-hover">Our Team</a></li>
-            <li><a href="pages/contact.html" class="text-white text-decoration-none link-hover">Contact</a></li>
+            <li><a href="about.html" class="text-white text-decoration-none link-hover">About Us</a></li>
+            <li><a href="team.html" class="text-white text-decoration-none link-hover">Our Team</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none link-hover">Contact</a></li>
           </ul>
         </div>
 
         <!-- Newsletter -->
-        <div class="col-md-3 mb_4">
-          <div class="newsletter-block text-white p-4" style="background-color: #7B4F3D;">
-            <small class="text-uppercase fw-semibold" style="letter-spacing: 2px;">Newsletter</small>
-            <h2 class="fw-bold">GET IN TOUCH</h2>
-            <form action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST"
-              class="position-relative mt-4">
-              <div class="input-group align-items-center border-bottom" style="border-color: #fff;">
-                <input type="email" name="email" class="form-control bg-transparent border-0 text-white ps-0"
-                  placeholder="Your Email" required style="box-shadow: none;">
-                <button type="submit" class="btn text-white" style="box-shadow: none;">
-                  <i class="bi bi-send-fill fs-5"></i>
-                </button>
-              </div>
-              <!-- <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://contourcosmeticclinic.com/thank-you.html"> -->
-            </form>
-          </div>
+        <div class="col-12 col-md-3 mb-4 text-center text-md-start">
+          <h5 class="fw-bold">Newsletter</h5>
+          <h5 class="fw-bold mb-3" style="font-size: 1.5rem;">GET IN TOUCH</h5>
+          <form action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST" class="position-relative mt-4" target="_blank">
+            <div class="input-group align-items-center border-bottom pb-2" style="border-color: #fff;">
+              <input type="email" name="email" class="form-control bg-transparent border-0 text-white ps-0"
+                placeholder="Your Email" required style="box-shadow: none; font-size: 1rem;">
+              <button type="submit" class="btn text-white" style="box-shadow: none;">
+                <i class="bi bi-send-fill fs-5"></i>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
+    <div class="text-center mt-4" style="font-size: 0.95rem; color: #f5e7df;">
+      &copy; <span id="footer-year"></span> Contour Cosmetic Clinic. All rights reserved.
+    </div>
+    <style>
+      @media (max-width: 767.98px) {
+        .footer .row > div {
+          text-align: center !important;
+          margin-bottom: 2rem;
+        }
+        .footer .social-icons {
+          justify-content: center !important;
+        }
+        .footer .input-group {
+          justify-content: center !important;
+        }
+      }
+    </style>
   </footer>
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+
+
+
   <button onclick="downloadBrochure()" class="download-brochure-btn" title="Download our brochure">
     <i class="bi bi-download"></i>
   </button>
