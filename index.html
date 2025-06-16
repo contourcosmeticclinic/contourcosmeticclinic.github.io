@@ -725,6 +725,98 @@
       height: 50px;
     }
 
+    .offers-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .offer-text {
+      flex: 1 1 300px;
+    }
+
+    .offer-text h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .offer-text p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .slideshow-container {
+      width: 500px;
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all 0.8s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+    }
+
+    .slide img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .slide.active {
+      left: 0;
+      opacity: 1;
+    }
+
+    .slide.prev {
+      left: -100%;
+    }
+
+    @media (max-width: 768px) {
+      .offers-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .offer-text {
+        max-width: 90%;
+      }
+    }
+
+
+.offer-btn {
+  margin-top: 1.5rem;
+  display: inline-block;
+  background-color: #5d2c2c;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.offer-btn:hover {
+  cursor: pointer;
+  background-color: #ce5144 ;
+}
+
+
+
   </style>
 </head>
 
@@ -901,6 +993,21 @@
     </div>
   </div>
 
+  <section class="offers-section">
+    <div class="offer-text">
+      <h2>Exciting Offers Just For You!</h2>
+      <p>At Contour Cosmetic Clinic, we believe exceptional care should also be accessible. Explore our limited-time offers on popular treatments like laser hair reduction, skin rejuvenation, hair restoration, and more. Avail exclusive packages designed to help you look and feel your best—because confidence should never be out of reach.</p>
+      <a href="pages/contact.html" class="offer-btn">Book a Free Consultation</a>
+    </div>
+
+    <div class="slideshow-container" id="slideshow">
+      <div class="slide active"><img src="Hair Transplant Square.png" alt="Poster 1"></div>
+      <div class="slide"> <img src="laser.png" alt="Poster 2"></div>
+      <div class="slide"><img src="Chemical Peels Sq.png" alt="Poster 3"></div>
+    </div>
+  </section>
+  
+
 
 
   <!-- Procedures -->
@@ -1067,7 +1174,6 @@
           </div>
         </div>
 
-        <!-- Repeat for more cases -->
         <div class="col-md-4">
           <div class="card shadow-sm">
             <div class="row g-0">
@@ -1079,7 +1185,7 @@
               </div>
             </div>
             <div class="card-body text-center">
-              <p class="card-text">Hair Transplant – 6 Months Later</p>
+              <p class="card-text">Non surgical Hair restoration</p>
             </div>
           </div>
         </div>
@@ -1459,7 +1565,25 @@
       heroTrack.style.transform = `translateX(-${slideIndex * 100}%)`;
     }
 
-    setInterval(cycleSlides, 4000); // Every 4 seconds
+
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+
+    function showNextSlide() {
+      slides[current].classList.remove('active');
+      slides[current].classList.add('prev');
+
+      current = (current + 1) % slides.length;
+
+      slides.forEach((slide, i) => {
+        if (i !== current) slide.classList.remove('active', 'prev');
+      });
+
+      slides[current].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 3000);
+    
   </script>
 
   <script>
@@ -1553,6 +1677,7 @@
   // Initial review
   showReview(0);
 </script>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
