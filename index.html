@@ -63,7 +63,7 @@
     .menu {
       list-style: none;
       display: flex;
-      gap: 40px;
+      gap: 5px;
       margin: 0;
       padding: 0;
     }
@@ -74,15 +74,22 @@
 
     .menu a {
       text-decoration: none;
-      font-size: 16px;
+      font-size: 20px;
       color: #000;
       font-weight: 600;
-      padding: 10px;
+      padding: 10px 20px;
       transition: all 0.3s ease;
     }
 
     .menu a:hover {
-      color: #b25a4d;
+      color: white;
+      background-color: #7a3d2c;
+      border-radius: 4px;
+    }
+    .menu a.active {
+      color: white;
+      background-color: #7a3d2c;
+      border-radius: 4px;
     }
 
     .submenu {
@@ -283,17 +290,14 @@
 
     .contact {
       color: black;
-      /* Default color */
-      /* Space between icon and text */
       transition: color 0.3s ease;
-      /* Smooth transition */
       font-size: medium;
     }
 
-    /* Change color on hover */
+    
     .contact :hover {
       color: #887670;
-      /* Change to desired color on hover */
+      
     }
 
     .separator {
@@ -883,55 +887,32 @@
       <br />
 
     </div>
-    <div class="mt-2 mt-md-0 social-icons">
-      <a href="https://www.facebook.com/share/1AiswEWwo9/?mibextid=wwXIfr" class="me-2" target="_blank"
-        rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.linkedin.com/company/contour-cosmetic-clinic/" class="me-2" target="_blank"
-        rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
-      <a href="https://www.instagram.com/contour_bengaluru?igsh=Nzh4MXRzbTdwejdy" class="me-2" target="_blank"
-        rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
-      <a href="https://youtube.com/@shapeyourstory?si=szaqr58VYWUBpQBV" class="me-2" target="_blank"
-        rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
-      <a href="https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0" class="me-2" target="_blank"
-        rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+    
+  <div class="mb-4 d-flex justify-content-center" style="align-self: center;"></div>
+    <a href="pages/contact.html" class="btn btn-brown blink-btn px-5 fs-6"
+      style="white-space: nowrap; height: 50px; display: flex; align-items: center; justify-content: center;">Book
+      Appointment</a>
     </div>
-    <style>
-      @media (max-width: 576px) {
-        .social-icons a {
-          width: 44px !important;
-          height: 44px !important;
-        }
-
-        .social-icons a i {
-          font-size: 28px !important;
-        }
-      }
-    </style>
-  </div>
 
   <!-- Navbar -->
   <nav class="navbar">
-    <!-- <div class="logo"></div> -->
-    <!-- Book Appointment Button -->
-    <div class="mb-4 d-flex justify-content-center" style="align-self: center;"></div>
-    <a href="pages/contact.html" class="btn btn-brown blink-btn btn-lg px-5 fs-4"
-      style="white-space: nowrap; height: 70px; display: flex; align-items: center; justify-content: center;">Book
-      Appointment</a>
-    </div>
-    <ul class="menu d-none d-md-flex" style="font-size: 1.25rem; font-weight: bold;">
-      <li><a href="#">Home</a></li>
-      <li><a href="pages/about.html">About Us</a></li>
-      <li><a href="pages/team.html">Our Team</a></li>
-      <li><a href="pages/contact.html">Contact</a></li>
+    <!-- Desktop Menu -->
+    <ul class="menu d-none d-md-flex justify-content-center w-100 m-0" style="font-size: 1.25rem; font-weight: bold; list-style: none; padding-left: 0;">
+      <li class="px-3"><a href="#" class="active">Home</a></li>
+      <li class="px-3"><a href="pages/about.html">About Us</a></li>
+      <li class="px-3"><a href="pages/team.html">Our Team</a></li>
+      <li class="px-3"><a href="pages/contact.html">Contact</a></li>
     </ul>
-    <!-- Mobile menu -->
-    <ul class="menu d-flex d-md-none" style="font-size: 1.25rem; font-weight: bold;">
-      <li><a href="#">Home</a></li>
-      <li><a href="pages/about.html">About</a></li>
-      <li><a href="pages/team.html">Team</a></li>
-      <li><a href="pages/contact.html">Contact</a></li>
+  
+    <!-- Mobile Menu -->
+    <ul class="menu d-flex d-md-none justify-content-center w-100 m-0" style="font-size: 1.25rem; font-weight: bold; list-style: none; padding-left: 0;">
+      <li class="px-2"><a href="#">Home</a></li>
+      <li class="px-2"><a href="pages/about.html">About</a></li>
+      <li class="px-2"><a href="pages/team.html">Team</a></li>
+      <li class="px-2"><a href="pages/contact.html">Contact</a></li>
     </ul>
   </nav>
+  
 
   <!-- Hero Section -->
 
