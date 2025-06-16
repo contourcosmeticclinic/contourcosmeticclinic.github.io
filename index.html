@@ -841,6 +841,75 @@
       }
     }
 
+    .gallery-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fdf4ef;
+}
+
+.gallery-slides-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Stack vertically on small screens */
+}
+
+.show-container {
+  width: 350px;
+  height: 465px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  position: relative;
+  cursor: pointer;
+}
+
+.slide-track {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slide-track img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+  background-color: #f5f5f5;
+}
+
+.video-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.video-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.mute-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.7);
+  border: none;
+  border-radius: 50%;
+  padding: 6px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.slider-link {
+  text-decoration: none;
+}
+.show-container:hover {
+  outline: 2px solid #c19a6b33;
+}
+
 
 
   </style>
@@ -1054,6 +1123,8 @@
     </div>
   </div>
 
+
+  <!-- Offers Section -->
   <section class="offers-section">
     <div class="offer-text">
       <h2>Exciting Offers Just For You!</h2>
@@ -1067,9 +1138,6 @@
       <div class="slide"><img src="Chemical Peels Sq.png" alt="Poster 3"></div>
     </div>
   </section>
-  
-
-
 
   <!-- Procedures -->
   <div class="container py-5">
@@ -1154,9 +1222,6 @@
     </div>
   </section>
 
-
-
-
   <!-- Before-After section -->
   <div class="container py-5">
     <h2 class="text-center mb-4">BEFORE & AFTER GALLERY</h2>
@@ -1188,7 +1253,7 @@
   </div>
 
   <!-- clinic gallery -->
-  <section id="gallery" class="gallery-section">
+  <!-- <section id="gallery" class="gallery-section">
     <h2>Our Clinic & Transformations</h2>
     <p>Take a glimpse inside our clinic and see our team in action.</p>
 
@@ -1210,9 +1275,51 @@
       <img src="doc4.jpeg" alt="Doctor Performing Surgery" />
       <img src="doc5.jpeg" alt="Doctor Performing Surgery" />
     </div>
-  </section>
+  </section> -->
 
-  <!-- gallery -->
+  <section id="gallery" class="gallery-section">
+    <h2>Our Clinic & Transformations</h2>
+    <p>Take a glimpse inside our clinic and see our team in action.</p>
+  
+    <div class="gallery-slides-container">
+      
+      <!-- Clinic Images -->
+      <a href="pages/about.html" class="slider-link">
+      <div class="show-container">
+        <div class="slide-track" id="clinicSlider">
+          <img src="clinic1.jpeg" alt="">
+          <img src="clinic2.jpeg" alt="">
+          <img src="clinic3.jpeg" alt="">
+        </div>
+      </div>
+      </a>
+      <!-- Doctor Images -->
+      <a href="pages/about.html" class="slider-link">
+      <div class="show-container">
+        <div class="slide-track" id="doctorSlider">
+          <img src="doc1.jpeg" alt="">
+          <img src="doc2.jpeg" alt="">
+          <img src="doc3.jpeg" alt="">
+        </div>
+      </div>
+      </a>
+  
+      <!-- Video -->
+      <a href="pages/about.html" class="slider-link">
+      <div class="show-container">
+        <div class="video-slide">
+          <video src="AcneScar2.mp4" muted autoplay loop></video>
+          <button class="mute-btn" onclick="toggleMute(this)">🔇</button>
+        </div>
+      </div>
+      </a>
+  
+    </div>
+  </section>
+  
+  
+
+  <!-- results -->
   <section id="gallery" class="py-5">
     <div class="container">
       <h2 class="text-center mb-5 fw-bold text-uppercase">Before & After Results</h2>
@@ -1737,6 +1844,28 @@
 
   // Initial review
   showReview(0);
+</script>
+
+<script>
+  function startSlider(id, interval = 4000) {
+    const track = document.getElementById(id);
+    const slides = track.children.length;
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % slides;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }, interval);
+  }
+
+  startSlider("clinicSlider", 4000);
+  startSlider("doctorSlider", 4500);
+
+  function toggleMute(button) {
+    const video = button.previousElementSibling;
+    video.muted = !video.muted;
+    button.textContent = video.muted ? "🔇" : "🔊";
+  }
 </script>
 
 
