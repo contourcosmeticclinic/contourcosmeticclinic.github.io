@@ -1150,19 +1150,35 @@
 
   <!-- Offers Section -->
   <section class="container-fluid py-5">
-    <div class = "offers-section">
-    <div class="offer-text">
-      <h2>Exciting Offers Just For You!</h2>
-      <p>At Contour Cosmetic Clinic, we believe exceptional care should also be accessible. Explore our limited-time offers on popular treatments like laser hair reduction, skin rejuvenation, hair restoration, and more. Avail exclusive packages designed to help you look and feel your best—because confidence should never be out of reach.</p>
-      <a href="pages/contact.html" class="offer-btn">Book a Free Consultation</a>
-    </div>
+    <div class="offers-section">
+      <div class="offer-text text-center text-md-start">
+        <h2>Exciting Offers Just For You!</h2>
+        <p>At Contour Cosmetic Clinic, we believe exceptional care should also be accessible. Explore our limited-time offers on popular treatments like laser hair reduction, skin rejuvenation, hair restoration, and more. Avail exclusive packages designed to help you look and feel your best—because confidence should never be out of reach.</p>
+        <a href="pages/contact.html" class="offer-btn">Book a Free Consultation</a>
+      </div>
 
-    <div class="slideshow-container" id="slideshow">
-      <div class="slide active"><img src="Hair Transplant Square.png" alt="Poster 1"></div>
-      <div class="slide"> <img src="laser.png" alt="Poster 2"></div>
-      <div class="slide"><img src="Chemical Peels Sq.png" alt="Poster 3"></div>
+      <div class="slideshow-container" id="slideshow">
+        <div class="slide active"><img src="Hair Transplant Square.png" alt="Poster 1"></div>
+        <div class="slide"> <img src="laser.png" alt="Poster 2"></div>
+        <div class="slide"><img src="Chemical Peels Sq.png" alt="Poster 3"></div>
+      </div>
     </div>
-    </div>
+    <style>
+      @media (max-width: 768px) {
+        .offers-section {
+          flex-direction: column !important;
+          align-items: center !important;
+          text-align: center !important;
+        }
+        .offer-text {
+          text-align: center !important;
+          margin-bottom: 2rem;
+        }
+        .slideshow-container {
+          margin: 0 auto;
+        }
+      }
+    </style>
   </section>
 
   <!-- Procedures -->
