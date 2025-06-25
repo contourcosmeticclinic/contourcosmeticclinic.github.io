@@ -150,21 +150,26 @@
         <a href="../index.html">
             <div class="logo"><img src="../logo_cropped.png" height="40"></div>
         </a>
-        <ul class="menu">
+        <ul class="menu" style="gap: 40px;">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="team.html">Our Team</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Team</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="faq.html" style="color:#b25a4d;">FAQ</a></li>
         </ul>
-        <!-- Mobile Menu -->
-        <ul class="menu d-flex d-md-none justify-content-center w-100 m-0"
-            style="font-size: 1.25rem; font-weight: bold; list-style: none; padding-left: 0;">
-            <li class="px-2"><a href="../index.html">Home</a></li>
-            <li class="px-2"><a href="pages/about.html">About</a></li>
-            <li class="px-2"><a href="pages/team.html">Team</a></li>
-            <li class="px-2"><a href="pages/contact.html">Contact</a></li>
-        </ul>
+        <style>
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 12px 10px;
+            }
+            .menu {
+                gap: 16px !important;
+            }
+            .menu a {
+                font-size: 15px;
+                padding: 6px;
+            }
+        }
+        </style>
     </nav>
 
     <div class="faq-section">
