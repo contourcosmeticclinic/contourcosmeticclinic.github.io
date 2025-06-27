@@ -26,7 +26,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contour Cosmetic Clinic</title>
   <meta name="title" content="Contour Cosmetic Clinic - Expert Facial Aesthetics & Cosmetic Surgery">
-  <meta name="description" content="Get up to 40% off hair restoration at Contour Cosmetic Clinic. Trusted hair transplant experts in Bangalore. Book your free consultation today!" />
+  <meta name="description"
+    content="Get up to 40% off hair restoration at Contour Cosmetic Clinic. Trusted hair transplant experts in Bangalore. Book your free consultation today!" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
@@ -83,9 +84,10 @@
 
     .menu a:hover {
       color: white;
-      background-color: #7a3d2c;
+      background-color: #dca394;
       border-radius: 4px;
     }
+
     .menu a.active {
       color: white;
       background-color: #7a3d2c;
@@ -131,7 +133,7 @@
 
 
     .section-title {
-      color: #7a3d2c;
+      color: #cc8875;
       letter-spacing: 2px;
       font-weight: bold;
     }
@@ -220,7 +222,7 @@
 
     .wa-btn {
       position: fixed;
-      bottom: 30px;
+      bottom: 40px;
       left: 30px;
       z-index: 1000;
       background: #25d366;
@@ -230,27 +232,31 @@
       padding: 14px 32px 14px 22px;
       font-weight: 700;
       font-size: 1.15rem;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
       display: flex;
       align-items: center;
       gap: 10px;
       transition: background 0.2s, box-shadow 0.2s;
       text-decoration: none;
     }
+
     .wa-btn:hover {
       background: #1ebe57;
       color: #fff;
       text-decoration: none;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
     }
+
     .wa-btn i {
       font-size: 26px !important;
       margin-right: 10px;
     }
+
     .wa-btn span {
       font-weight: 700;
       font-size: 1.15rem;
     }
+
     @media (max-width: 600px) {
       .wa-btn {
         left: 10px;
@@ -258,10 +264,12 @@
         padding: 10px 18px 10px 14px;
         font-size: 1rem;
       }
+
       .wa-btn i {
         font-size: 20px !important;
         margin-right: 6px;
       }
+
       .wa-btn span {
         font-size: 1rem;
       }
@@ -316,10 +324,10 @@
       font-size: medium;
     }
 
-    
+
     .contact :hover {
       color: #887670;
-      
+
     }
 
     .separator {
@@ -775,12 +783,13 @@
     }
 
     .slideshow-container {
-      width: 400px;
-      height: 400px;
+      width: 330px;
+      height: 330px;
+      right: 20px;
       position: relative;
       overflow: hidden;
       border-radius: 16px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       flex-shrink: 0;
     }
 
@@ -826,22 +835,22 @@
     }
 
 
-.offer-btn {
-  margin-top: 1.5rem;
-  display: inline-block;
-  background-color: #5d2c2c;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  text-decoration: none;
-  border-radius: 6px;
-}
+    .offer-btn {
+      margin-top: 1.5rem;
+      display: inline-block;
+      background-color: #5d2c2c;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+    }
 
-.offer-btn:hover {
-  cursor: pointer;
-  background-color: #ce5144 ;
-}
+    .offer-btn:hover {
+      cursor: pointer;
+      background-color: #ce5144;
+    }
 
-.why-icon {
+    .why-icon {
       font-size: 20px;
       color: #3498db;
       min-width: 24px;
@@ -864,76 +873,75 @@
     }
 
     .gallery-section {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #fdf4ef;
-}
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #fdf4ef;
+    }
 
-.gallery-slides-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap; /* Stack vertically on small screens */
-}
+    .gallery-slides-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      /* Stack vertically on small screens */
+    }
 
-.show-container {
-  width: 350px;
-  height: 465px;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  position: relative;
-  cursor: pointer;
-}
+    .show-container {
+      width: 350px;
+      height: 465px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      position: relative;
+      cursor: pointer;
+    }
 
-.slide-track {
-  display: flex;
-  transition: transform 1s ease-in-out;
-}
+    .slide-track {
+      display: flex;
+      transition: transform 1s ease-in-out;
+    }
 
-.slide-track img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  flex-shrink: 0;
-  background-color: #f5f5f5;
-}
+    .slide-track img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      flex-shrink: 0;
+      background-color: #f5f5f5;
+    }
 
-.video-slide {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
+    .video-slide {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
 
-.video-slide video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background-color: #000;
-  border-radius: 10px;
-}
+    .video-slide video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background-color: #000;
+      border-radius: 10px;
+    }
 
-.mute-btn {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(255,255,255,0.7);
-  border: none;
-  border-radius: 50%;
-  padding: 6px 10px;
-  font-size: 16px;
-  cursor: pointer;
-}
+    .mute-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.7);
+      border: none;
+      border-radius: 50%;
+      padding: 6px 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
 
-.slider-link {
-  text-decoration: none;
-}
-.show-container:hover {
-  outline: 2px solid #c19a6b33;
-}
+    .slider-link {
+      text-decoration: none;
+    }
 
-
-
+    .show-container:hover {
+      outline: 2px solid #c19a6b33;
+    }
   </style>
 </head>
 
@@ -947,23 +955,28 @@
     class="container-fluid p-3 d-flex flex-column flex-md-row justify-content-between align-items-center bg-light-brown border-bottom text-center text-md-start">
     <div>
       <small>
-        <span class="d-inline-flex align-items-center flex-wrap">
-          <a href="tel:+918660432589" class="contact text-decoration-none contact-icon">
-            <i class="bi bi-telephone me-1"></i>
-            <span class="d-none d-sm-inline">+91-866-043-2589</span>
+        <span class="d-inline-flex align-items-center flex-wrap gap-2" style="font-size: 1.08rem;">
+          <!-- Phone -->
+          <a href="tel:+918660432589" class="contact text-decoration-none contact-icon px-2 py-1 rounded-pill shadow-sm"
+            style="background: #fff6f0; transition: background 0.2s;">
+            <i class="bi bi-telephone me-1" style="color:#25d366;"></i>
+            <span class="d-none d-sm-inline fw-semibold" style="color:#7a3d2c;">+91-866-043-2589</span>
           </a>
-          <span class="mx-2 d-none d-sm-inline">|</span>
-          <span class="mx-2 d-inline d-sm-none">|</span>
-          <a href="mailto:contact@contourcosmeticclinic.com" class="contact text-decoration-none contact-icon">
-            <i class="bi bi-envelope me-1"></i>
-            <span class="d-none d-sm-inline">contact@contourcosmeticclinic.com</span>
+          <span class="mx-2" style="color:#ffb347;font-weight:bold;">•</span>
+          <!-- Email -->
+          <a href="mailto:contact@contourcosmeticclinic.com"
+            class="contact text-decoration-none contact-icon px-2 py-1 rounded-pill shadow-sm"
+            style="background: #fff6f0; transition: background 0.2s;">
+            <i class="bi bi-envelope me-1" style="color:#ff6b9d;"></i>
+            <span class="d-none d-sm-inline fw-semibold" style="color:#7a3d2c;">contact@contourcosmeticclinic.com</span>
           </a>
-          <span class="mx-2 d-none d-sm-inline">|</span>
-          <span class="mx-2 d-inline d-sm-none">|</span>
+          <span class="mx-2" style="color:#ffb347;font-weight:bold;">•</span>
+          <!-- Location -->
           <a href="https://maps.app.goo.gl/A2KoWS7rxQWHtMRw7?g_st=com.google.maps.preview.copy" target="_blank"
-            class="contact text-decoration-none contact-icon">
-            <i class="bi bi-geo-alt"></i>
-            <span class="d-none d-sm-inline">Visit Us</span>
+            class="contact text-decoration-none contact-icon px-2 py-1 rounded-pill shadow-sm"
+            style="background: #fff6f0; transition: background 0.2s;">
+            <i class="bi bi-geo-alt" style="color:#7a3d2c;"></i>
+            <span class="d-none d-sm-inline fw-semibold" style="color:#7a3d2c;">Visit Us</span>
           </a>
         </span>
       </small>
@@ -978,34 +991,29 @@
       <br />
 
     </div>
-    
-  <div class="mb-4 d-flex justify-content-center" style="align-self: center;"></div>
-    <a href="pages/contact.html" class="btn btn-brown blink-btn px-5 fs-6"
-      style="white-space: nowrap; height: 50px; display: flex; align-items: center; justify-content: center;">Book
-      Appointment</a>
-    </div>
-    
+
+    <div class="mb-4 d-flex justify-content-center" style="align-self: center;"></div>
+    <a href="pages/contact.html"
+      class="btn btn-brown blink-btn px-4 py-2 fs-6 shadow rounded-pill d-flex align-items-center gap-2"
+      style="white-space: nowrap; min-height: 48px; background: linear-gradient(90deg, #d6ab88 0%, #be4f30 100%); border: none; font-weight: 600; letter-spacing: 1px; box-shadow: 0 4px 16px rgba(122,61,44,0.10); transition: background 0.3s;"
+      onmouseover="this.style.background='linear-gradient(90deg,#be4f30 0%,#d6ab88 100%)'"
+      onmouseout="this.style.background='linear-gradient(90deg,#d6ab88 0%,#be4f30 100%)'">
+      <i class="bi bi-calendar2-check-fill me-2" style="font-size: 1.2rem; color: #fff;"></i>
+      Book Appointment
+    </a>
+  </div>
+
 
   <!-- Navbar -->
-  <nav class="navbar">
-    <!-- Desktop Menu -->
-    <ul class="menu d-none d-md-flex justify-content-center w-100 m-0" style="font-size: 1.25rem; font-weight: bold; list-style: none; padding-left: 0;">
-      <li class="px-3"><a href="#" class="active">Home</a></li>
-      <li class="px-3"><a href="pages/about.html">About Us</a></li>
-      <li class="px-3"><a href="pages/team.html">Our Team</a></li>
-      <li class="px-3"><a href="pages/contact.html">Contact</a></li>
-      <li class="px-3"><a href="pages/faq.html">FAQs</a></li>
-    </ul>
-  
-    <!-- Mobile Menu -->
-    <ul class="menu d-flex d-md-none justify-content-center w-100 m-0" style="font-size: 1.25rem; font-weight: bold; list-style: none; padding-left: 0;">
-      <li class="px-2"><a href="pages/about.html">About</a></li>
-      <li class="px-2"><a href="pages/team.html">Team</a></li>
-      <li class="px-2"><a href="pages/contact.html">Contact</a></li>
-      <li class="px-2"><a href="pages/faq.html">FAQs</a></li>
+  <nav class="navbar justify-content-center" style="padding: 10px 0;">
+    <ul class="menu" style="gap: 18px;">
+      <li><a href="pages/about.html" style="font-size: 1rem; font-weight: 500; padding: 6px 14px;">About</a></li>
+      <li><a href="pages/team.html" style="font-size: 1rem; font-weight: 500; padding: 6px 14px;">Team</a></li>
+      <li><a href="pages/contact.html" style="font-size: 1rem; font-weight: 500; padding: 6px 14px;">Contact</a></li>
+      <li><a href="pages/faq.html" style="font-size: 1rem; font-weight: 500; padding: 6px 14px;">FAQ</a></li>
     </ul>
   </nav>
-  
+
 
   <!-- Hero Section -->
 
@@ -1013,14 +1021,62 @@
     <div class="row align-items-center">
       <!-- Left Content -->
       <div class="col-md-6 ps-md-5 text-center text-md-start">
+
         <!-- Logo -->
         <div class="mb-4">
           <img src="logo_with_tagline_cropped.png" alt="Contour Cosmetic Clinic Logo"
             style="max-width: 88%; height: auto; margin-bottom: 0;" />
         </div>
-        <p class="text-uppercase text-danger fw-bold">HAIR | SKIN | LASER. FACIAL AESTHETIC & COSMETIC SURGERY.
-          Discreet elegance, flawless results, and timeless beauty
-        </p>
+
+
+        <div class="glowing-tagline text-center text-md-start mb-4" style="position: relative;">
+          <br>
+          <span style="
+            display: block;
+            margin-top: 10px;
+            font-size: 1.08rem;
+            color: #ff6b9d;
+            letter-spacing: 2.5px;
+            text-shadow: 0 0 10px #ff6b9d99, 0 0 8px #fff6;
+            font-weight: 600;
+            ">
+            <i class="fa-solid fa-droplet" style="color:#ffb347;"></i> Skin &nbsp;|&nbsp;
+            <i class="fa-solid fa-hat-cowboy" style="color:#7a3d2c;"></i> Hair &nbsp;|&nbsp;
+            <i class="fa-solid fa-bolt-lightning" style="color:#ff6b9d;"></i> Laser
+          </span>
+          <span style="
+            display: block;
+            margin-top: 18px;
+            font-size: 1.25rem;
+            color: #7a3d2c;
+            font-weight: 600;
+            text-shadow: 0 0 8px #ffb34755, 0 2px 8px #fff6;
+            letter-spacing: 1.5px;
+            ">
+            Where Science <i class="fa-solid fa-flask-vial" style="color:#d1ac82;"></i>
+            dances with <span style="color:#ffb347; font-weight:700;">Art</span> <i class="fa-solid fa-palette"
+              style="color:#ffb347;"></i>
+            to reveal your <span style="color:#ff6b9d;">finest self</span>!
+          </span>
+
+        </div>
+        <style>
+          .glowing-tagline span:first-child {
+            animation: glowPulse 1.5s infinite alternate;
+          }
+
+          @keyframes glowPulse {
+            0% {
+              box-shadow: 0 0 18px 2px #ff6b9d99, 0 0 32px 8px #ffb34755;
+              text-shadow: 0 0 8px #fff6, 0 0 16px #ff6b9d;
+            }
+
+            100% {
+              box-shadow: 0 0 32px 8px #ffb347cc, 0 0 48px 16px #ff6b9d99;
+              text-shadow: 0 0 16px #fff, 0 0 32px #ffb347;
+            }
+          }
+        </style>
       </div>
 
 
@@ -1032,77 +1088,141 @@
             <img src="home-1-slide-3.jpg" class="img-fluid rounded" alt="Slide 1">
             <img src="hom1-banner-content-2.webp" class="img-fluid rounded" alt="Slide 2">
             <img src="laser-shoulder.webp" class="img-fluid rounded" alt="Slide 3">
-            <img src="injectables.webp" class="img-fluid rounded" alt="Slide 3">
+            <img src="injectables.webp" class="img-fluid rounded" alt="Slide 5">
           </div>
         </div>
         <!-- Optional floating emergency info -->
-        <div class="position-absolute bg-white rounded shadow px-3 py-2 d-flex align-items-center"
-          style="bottom: 30px; left: 30px;">
-          <i class="bi bi-headset text-danger fs-4 me-2"></i>
+        <div class="position-absolute bg-white rounded shadow px-3 py-2 d-flex align-items-center whatsapp-emergency"
+          style="bottom: 30px; left: 30px; cursor: pointer;" onclick="openWhatsAppChat()"
+          onmouseover="this.classList.add('wa-hover')" onmouseout="this.classList.remove('wa-hover')">
+          <i class="bi bi-whatsapp text-success fs-4 me-2"></i>
           <div>
-            <small class="text-danger fw-bold d-block">24/7 Emergency</small>
-            <a href="https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0" class="contact text-decoration-none me-2" target="_blank"><strong>+91-866-043-2589</strong></a>
+            <small class="text-success fw-bold d-block">Chat Now</small>
           </div>
         </div>
+        <script>
+          function openWhatsAppChat() {
+            window.open('https://api.whatsapp.com/send/?phone=918660432589&text=Hi%2C%20I%20need%20emergency%20assistance.&type=phone_number&app_absent=0', '_blank');
+          }
+        </script>
+        <style>
+          .whatsapp-emergency.wa-hover {
+            background: #25d366 !important;
+            color: #fff !important;
+            transition: background 0.2s;
+          }
+
+          .whatsapp-emergency.wa-hover .bi-whatsapp,
+          .whatsapp-emergency.wa-hover .text-success,
+          .whatsapp-emergency.wa-hover small,
+          .whatsapp-emergency.wa-hover strong {
+            color: #fff !important;
+          }
+        </style>
       </div>
     </div>
   </div>
 
   <!-- Why Choose Us Section -->
-  <section class="why-section">
+  <section class="why-section py-5"
+    style="background: linear-gradient(120deg, #fff6f0 60%, #ffe3ef 100%); border-radius: 24px; box-shadow: 0 8px 32px rgba(255,107,157,0.07); margin-bottom: 40px;">
     <div class="container">
-      <div class="row gy-4">
+      <div class="row align-items-center gy-5">
         <!-- Left Column -->
-        <div class="col-lg-5">
-          <h2 class="mb-3">Why Choose Our Clinic?</h2>
-          <p class="text-muted">
-            Indulge in bespoke facial aesthetics and premium cosmetic surgery, expertly crafted by renowned specialists — all at surprisingly affordable rates. Discover the gold standard in hair restoration, featuring certified doctors, cutting-edge techniques, and effortlessly natural results. 
+        <div class="col-lg-5 mb-4 mb-lg-0 d-flex flex-column justify-content-center align-items-start">
+          <h2 class="mb-3 fw-bold" style="
+            font-size: 2rem;
+            background: linear-gradient(90deg, #dcab67 0%, #eaa63f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 12px #ffb34733, 0 0 8px #ff6b9d22;
+            display: inline-block;">
+            Why Choose Our Clinic?
+          </h2>
+          <p class="text-muted" style="font-size: 1.13rem; line-height: 1.7; text-align: justify;">
+            Indulge in bespoke facial aesthetics and premium cosmetic surgery, expertly crafted by renowned specialists
+            — all at surprisingly affordable rates. Discover the gold standard in hair restoration, featuring certified
+            doctors, cutting-edge techniques, and effortlessly natural results.
           </p>
-          <button onclick="downloadBrochure()" class="btn offer-btn mt-3" title="Download Brochure">Learn More</Button>
+          <button onclick="downloadBrochure()" class="btn offer-btn mt-3 px-4 py-2 shadow" title="Download Brochure"
+            style="font-size: 1.08rem; border-radius: 30px; background: linear-gradient(90deg, #ffb347 0%, #cb8548 100%); border: none; color: #fff; font-weight: 600; letter-spacing: 1px;">
+            <i class="fa-solid fa-download me-2"></i>Our Services
+          </button>
         </div>
         <!-- Right Column -->
         <div class="col-lg-7">
-          <div class="row gy-4">
-            <div class="col-sm-6 d-flex">
-              <i class="fas fa-shield-alt why-icon me-3" style="color: #591d09;"></i>
+          <div class="row g-4">
+            <div class="col-sm-6 d-flex align-items-start">
+              <span class="why-icon me-3" style="font-size: 2.1rem; color: #ffb347;">
+                <i class="fa-solid fa-shield-heart"></i>
+              </span>
               <div>
-                <div class="feature-title">Totally Safe</div>
-                <p class="text-muted small">Strict protocols ensure 100% safety across all procedures.</p>
+                <div class="feature-title"
+                  style="font-size: 1.18rem; font-weight: 700; color: #7a3d2c; letter-spacing: 1px;">Totally Safe</div>
+                <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">Strict protocols ensure
+                  <span style="color:#ff6b9d;font-weight:600;">100% safety</span> across all procedures.
+                </p>
               </div>
             </div>
-            <div class="col-sm-6 d-flex">
-              <i class="fas fa-leaf why-icon me-3" style="color: #591d09;"></i>
+            <div class="col-sm-6 d-flex align-items-start">
+              <span class="why-icon me-3" style="font-size: 2.1rem; color: #7a3d2c;">
+                <i class="fa-solid fa-leaf"></i>
+              </span>
               <div>
-                <div class="feature-title">Natural Result</div>
-                <p class="text-muted small">Control over graft placement ensures 100% natural appearance.</p>
+                <div class="feature-title"
+                  style="font-size: 1.18rem; font-weight: 700; color: #7a3d2c; letter-spacing: 1px;">Natural Result
+                </div>
+                <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">Meticulous graft
+                  placement for a <span style="color:#ffb347;font-weight:600;">100% natural</span> appearance.</p>
               </div>
             </div>
-            <div class="col-sm-6 d-flex">
-              <i class="fas fa-smile why-icon me-3" style="color: #591d09;"></i>
+            <div class="col-sm-6 d-flex align-items-start">
+              <span class="why-icon me-3" style="font-size: 2.1rem; color: #ff6b9d;">
+                <i class="fa-solid fa-face-laugh-beam"></i>
+              </span>
               <div>
-                <div class="feature-title">Painless</div>
-                <p class="text-muted small">Minimally invasive tools (≤1mm) ensure a pain-free experience.</p>
+                <div class="feature-title"
+                  style="font-size: 1.18rem; font-weight: 700; color: #7a3d2c; letter-spacing: 1px;">Painless</div>
+                <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">Ultra-fine tools (≤1mm)
+                  for a <span style="color:#ffb347;font-weight:600;">pain-free</span> experience.</p>
               </div>
             </div>
-            <div class="col-sm-6 d-flex">
-              <i class="fas fa-heartbeat why-icon me-3" style="color: #591d09;"></i>
+            <div class="col-sm-6 d-flex align-items-start">
+              <span class="why-icon me-3" style="font-size: 2.1rem; color: #be4f30;">
+                <i class="fa-solid fa-seedling"></i>
+              </span>
               <div>
-                <div class="feature-title">Maximum Viability</div>
-                <p class="text-muted small">Over 90% graft survival rate – above industry average.</p>
+                <div class="feature-title"
+                  style="font-size: 1.18rem; font-weight: 700; color: #7a3d2c; letter-spacing: 1px;">Maximum Viability
+                </div>
+                <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">Over <span
+                    style="color:#ff6b9d;font-weight:600;">90% graft survival</span> – above industry average.</p>
               </div>
             </div>
-            <div class="col-sm-6 d-flex">
-              <i class="fas fa-user-md why-icon me-3" style="color: #591d09;"></i>
+            <div class="col-sm-6 d-flex align-items-start">
+              <span class="why-icon me-3" style="font-size: 2.1rem; color: #cb8548;">
+                <i class="fa-solid fa-user-doctor"></i>
+              </span>
               <div>
-                <div class="feature-title">Only by Doctors</div>
-                <p class="text-muted small">All procedures performed by certified medical professionals.</p>
+                <div class="feature-title"
+                  style="font-size: 1.18rem; font-weight: 700; color: #7a3d2c; letter-spacing: 1px;">Only by Doctors
+                </div>
+                <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">All procedures by <span
+                    style="color:#ffb347;font-weight:600;">certified medical professionals</span>.</p>
               </div>
             </div>
-            <div class="col-sm-6 d-flex">
-              <i class="fas fa-seedling why-icon me-3" style="color: #591d09;"></i>
+            <div class="col-sm-6 d-flex align-items-start">
+              <span class="why-icon me-3" style="font-size: 2.1rem; color: #ffb347;">
+                <i class="fa-solid fa-infinity"></i>
+              </span>
               <div>
-                <div class="feature-title">Growth for Lifetime</div>
-                <p class="text-muted small">Only healthy follicles are chosen for lifelong results.</p>
+                <div class="feature-title"
+                  style="font-size: 1.18rem; font-weight: 700; color: #7a3d2c; letter-spacing: 1px;">Growth for Lifetime
+                </div>
+                <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">Only healthy follicles
+                  chosen for <span style="color:#ff6b9d;font-weight:600;">lifelong results</span>.</p>
               </div>
             </div>
           </div>
@@ -1113,37 +1233,45 @@
 
 
   <!-- Services -->
-  <div class="section py-5" style="padding: 0px;">
-    <div class="row text-center">
+  <div class="section py-3"
+    style="padding: 0px; background: linear-gradient(90deg, #fdf6f2 60%, #f5e7df 100%); border-radius: 18px; box-shadow: 0 4px 24px rgba(205, 170, 125, 0.08); margin-bottom: 32px;">
+    <div class="row text-center g-2 align-items-center" style="min-height:unset;">
       <div class="col-md-3 col-sm-6" style="padding: 1px;">
-        <a href="pages/about.html#hair-treatment-section" style="color: white; text-decoration: none;">
-          <div class="service-card transition-card">
+        <a href="pages/about.html#hair-treatment-section" style="color: #7a3d2c; text-decoration: none;">
+          <div class="service-card transition-card"
+            style="background: #f5e7df; color: #7a3d2c; border-radius: 14px; border: 1px solid #e7d3c0; box-shadow: 0 2px 10px #e7d3c033; padding: 1.2rem 0; font-size: 1.1rem;">
+            <i class="fa-solid fa-hat-cowboy mb-2" style="font-size: 1.6rem; color: #be4f30;"></i><br>
             Hair Transplant
           </div>
         </a>
       </div>
       <div class="col-md-3 col-sm-6" style="padding: 1px;">
-        <a href="pages/about.html#cosmetic-surgery-section" style="color: white; text-decoration: none;">
-          <div class="service-card transition-card">
-            Facial plastics
+        <a href="pages/about.html#cosmetic-surgery-section" style="color: #7a3d2c; text-decoration: none;">
+          <div class="service-card transition-card"
+            style="background: #f5e7df; color: #7a3d2c; border-radius: 14px; border: 1px solid #e7d3c0; box-shadow: 0 2px 10px #e7d3c033; padding: 1.2rem 0; font-size: 1.1rem;">
+            <i class="fa-solid fa-face-smile mb-2" style="font-size: 1.6rem; color: #ffb347;"></i><br>
+            Facial Plastics
           </div>
         </a>
       </div>
       <div class="col-md-3 col-sm-6" style="padding: 1px;">
-        <a href="pages/about.html#skin-treatment-section" style="color: white; text-decoration: none;">
-          <div class="service-card transition-card">
+        <a href="pages/about.html#skin-treatment-section" style="color: #7a3d2c; text-decoration: none;">
+          <div class="service-card transition-card"
+            style="background: #f5e7df; color: #7a3d2c; border-radius: 14px; border: 1px solid #e7d3c0; box-shadow: 0 2px 10px #e7d3c033; padding: 1.2rem 0; font-size: 1.1rem;">
+            <i class="fa-solid fa-droplet mb-2" style="font-size: 1.6rem; color: #ff6b9d;"></i><br>
             Skin Rejuvenation
           </div>
         </a>
       </div>
       <div class="col-md-3 col-sm-6" style="padding: 1px;">
-        <a href="pages/about.html#skin-treatment-section" style="color: white; text-decoration: none;">
-          <div class="service-card transition-card">
+        <a href="pages/about.html#skin-treatment-section" style="color: #7a3d2c; text-decoration: none;">
+          <div class="service-card transition-card"
+            style="background: #f5e7df; color: #7a3d2c; border-radius: 14px; border: 1px solid #e7d3c0; box-shadow: 0 2px 10px #e7d3c033; padding: 1.2rem 0; font-size: 1.1rem;">
+            <i class="fa-solid fa-bolt-lightning mb-2" style="font-size: 1.6rem; color: #be4f30;"></i><br>
             Laser Resurfacing
           </div>
         </a>
       </div>
-
     </div>
   </div>
 
@@ -1151,12 +1279,36 @@
   <!-- Offers Section -->
   <section class="container-fluid py-5">
     <div class="offers-section">
-      <div class="offer-text text-center text-md-start">
-        <h2>Exciting Offers Just For You!</h2>
-        <p>At Contour Cosmetic Clinic, we believe exceptional care should also be accessible. Explore our limited-time offers on popular treatments like laser hair reduction, skin rejuvenation, hair restoration, and more. Avail exclusive packages designed to help you look and feel your best—because confidence should never be out of reach.</p>
-        <a href="pages/contact.html" class="offer-btn">Book a Free Consultation</a>
+      <div class="offer-text col-lg-5 mb-4 mb-lg-0 d-flex flex-column justify-content-center align-items-start">
+        <h2 class="mb-3 fw-bold" style="
+          font-size: 2rem;
+          background: linear-gradient(90deg, #dcab67 0%, #eaa63f 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          letter-spacing: 1px;
+          text-shadow: 0 2px 12px #ffb34733, 0 0 8px #ff6b9d22;
+          display: inline-block;">
+          Exciting Offers Just For You!
+        </h2>
+        <p style="text-align: justify;">
+          At Contour Cosmetic Clinic, we believe exceptional care should also be accessible. Explore our limited-time
+          offers on popular treatments like laser hair reduction, skin rejuvenation, hair restoration, and more. Avail
+          exclusive packages designed to help you look and feel your best—because confidence should never be out of
+          reach.
+        </p>
+        <br>
+        <div class="w-100 d-flex justify-content-center">
+          <a href="pages/contact.html"
+            class="btn btn-brown blink-btn px-4 py-2 fs-6 shadow rounded-pill d-flex align-items-center gap-2"
+            style="white-space: nowrap; min-height: 48px; background: linear-gradient(90deg, #d6ab88 0%, #be4f30 100%); border: none; font-weight: 600; letter-spacing: 1px; box-shadow: 0 4px 16px rgba(122,61,44,0.10); transition: background 0.3s;"
+            onmouseover="this.style.background='linear-gradient(90deg,#be4f30 0%,#d6ab88 100%)'"
+            onmouseout="this.style.background='linear-gradient(90deg,#d6ab88 0%,#be4f30 100%)'">
+            <i class="bi bi-calendar2-check-fill me-2" style="font-size: 1.2rem; color: #fff;"></i>
+            Book a Free Consultation
+          </a>
+        </div>
       </div>
-
       <div class="slideshow-container" id="slideshow">
         <div class="slide active"><img src="Hair Transplant Square.png" alt="Poster 1"></div>
         <div class="slide"> <img src="laser.png" alt="Poster 2"></div>
@@ -1170,10 +1322,12 @@
           align-items: left !important;
           text-align: left !important;
         }
+
         .offer-text {
           text-align: left !important;
           margin-bottom: 2rem;
         }
+
         .slideshow-container {
           margin: 0 auto;
         }
@@ -1181,37 +1335,60 @@
     </style>
   </section>
 
-  <!-- Procedures -->
-  <div class="container py-5">
-    <div class="row align-items-center">
-      <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
-        <img src="home-1-instagram-2.webp" class="img-fluid rounded" alt="Procedure">
-      </div>
-      <div class="col-md-6">
-        <p class="section-title">What We Do</p>
-        <h3><strong>Advanced Cosmetic Surgeries</strong></h3>
-        <p>Thoughtful treatments. Precise results. Beauty with intention.</p>
-        <ul class="procedure-list">
-          <li>Surgical Rhinoplasty</li>
-          <li>Facial Trauma Repair</li>
-          <li>Smile Design</li>
-          <li>Dimple Creation</li>
-          <li>Jaw Contouring</li>
-          <li>Scar Revision</li>
-        </ul>
-        <a href="pages/contact.html" class="btn btn-outline-dark">Book Appointment</a>
+  <!-- Reviews -->
+  <section class="reviews-section">
+    <div class="reviews-header">
+      <p class="subtitle"
+        style="font-size: 1.1rem; color: #b66c26; font-weight: 700; letter-spacing: 2px; margin-bottom: 0;">
+        CLIENT REVIEWS
+      </p>
+      <h2 class="title"
+        style="font-size: 2.5rem; font-weight: 800; background: linear-gradient(90deg, #ffb347 0%, #c39727 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 2px; margin-bottom: 0.5rem;">
+        WHAT PEOPLE SAY
+      </h2>
+      <div class="quote-smile" style="margin-bottom: 0;">
+        <div class="smile-eyes" style="font-size: 3rem; color: #ffb347; letter-spacing: 0.5rem;">❝❞</div>
+        <svg class="smile-curve" viewBox="0 0 100 50" style="margin-top: -10px;">
+          <path d="M10,10 Q50,50 90,10" stroke="#ff6b9d" stroke-width="4" fill="none" />
+        </svg>
       </div>
     </div>
-  </div>
+
+    <div class="review-card" style="max-width: 700px;">
+      <div class="review-content" id="review-content"
+        style="border-left: 6px solid #ffb347; border-radius: 18px 0 0 18px; background: transparent; padding: 2.5rem 2rem;">
+        <p class="review-text" id="review-text"
+          style="font-size: 1.15rem; color: #7a3d2c; font-style: italic; line-height: 1.7; margin-bottom: 1.5rem; letter-spacing: 0.2px; text-align: justify;">
+        </p>
+        <div class="d-flex align-items-center justify-content-between">
+          <p class="review-author" id="review-author"
+            style="font-size: 1rem; color: #be4f30; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0;">
+          </p>
+          <div class="review-stars" id="review-stars" style="font-size: 1.2rem; color: #ffb347; letter-spacing: 2px;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pagination-dots" style="margin-top: 2.5rem;">
+      <span class="dot active" style="background: #FFD700; border-radius: 8px; width: 18px; height: 8px;"></span>
+      <span class="dot" style="background: #000; border-radius: 8px; width: 18px; height: 8px;"></span>
+      <span class="dot" style="background: #FFD700; border-radius: 8px; width: 18px; height: 8px;"></span>
+      <span class="dot" style="background: #000; border-radius: 8px; width: 18px; height: 8px;"></span>
+      <span class="dot" style="background: #FFD700; border-radius: 8px; width: 18px; height: 8px;"></span>
+      <span class="dot" style="background: #000; border-radius: 8px; width: 18px; height: 8px;"></span>
+    </div>
+  </section>
+
 
   <!-- Doctors Section -->
+  <!--    
   <section class="py-5 bg-white text-center">
     <div class="container">
       <p class="text-uppercase text-danger fw-semibold mb-2" style="letter-spacing: 2px;">Our Doctors</p>
       <h2 class="fw-bold display-5 mb-4">Meet Our Expert Team</h2>
 
       <div class="row justify-content-center g-4">
-        <!-- Doctor 1 -->
         <div class="col-12 col-md-5 col-lg-4">
           <a href="pages/team.html#saket-jha" class="text-decoration-none text-dark">
             <div class="card border-0 h-100 shadow-sm">
@@ -1236,7 +1413,6 @@
           </a>
         </div>
 
-        <!-- Doctor 2 -->
         <div class="col-12 col-md-5 col-lg-4">
           <a href="pages/team.html#shambhavi-shukla" class="text-decoration-none text-dark">
             <div class="card border-0 h-100 shadow-sm">
@@ -1262,10 +1438,10 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Before-After section -->
-  <div class="container py-5">
+  <!-- <div class="container py-5">
     <h2 class="text-center mb-4">BEFORE & AFTER GALLERY</h2>
     <div class="row align-items-center">
 
@@ -1292,46 +1468,46 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
 
   <!-- clinic gallery -->
 
   <section id="gallery" class="gallery-section">
     <h2>Our Clinic & Transformations</h2>
     <p>Take a glimpse inside our clinic and see our team in action.</p>
-  
+
     <div class="gallery-slides-container">
-      
+
       <!-- Clinic Images -->
       <a href="pages/about.html" class="slider-link">
-      <div class="show-container">
-        <div class="slide-track" id="clinicSlider">
-          <img src="clinic1.jpeg" alt="">
-          <img src="clinic2.jpeg" alt="">
-          <img src="clinic3.jpeg" alt="">
-          <img src="clinic4.jpeg" alt="">
-          <img src="clinic5.jpeg" alt="">
-          <img src="clinic6.jpeg" alt="">
-          <img src="clinic7.jpeg" alt="">
-          <img src="clinic8.jpeg" alt="">
-          <img src="clinic9.jpeg" alt="">
-          <img src="clinic10.jpeg" alt="">
-          <img src="clinic11.jpeg" alt="">
+        <div class="show-container">
+          <div class="slide-track" id="clinicSlider">
+            <img src="clinic1.jpeg" alt="">
+            <img src="clinic2.jpeg" alt="">
+            <img src="clinic3.jpeg" alt="">
+            <img src="clinic4.jpeg" alt="">
+            <img src="clinic5.jpeg" alt="">
+            <img src="clinic6.jpeg" alt="">
+            <img src="clinic7.jpeg" alt="">
+            <img src="clinic8.jpeg" alt="">
+            <img src="clinic9.jpeg" alt="">
+            <img src="clinic10.jpeg" alt="">
+            <img src="clinic11.jpeg" alt="">
+          </div>
         </div>
-      </div>
       </a>
       <!-- Doctor Images -->
       <a href="pages/about.html" class="slider-link">
-      <div class="show-container">
-        <div class="slide-track" id="doctorSlider">
-          <img src="doc1.jpeg" alt="">
-          <img src="doc2.jpeg" alt="">
-          <img src="doc3.jpeg" alt="">
-          <img src="doc5.jpeg" alt="">   
+        <div class="show-container">
+          <div class="slide-track" id="doctorSlider">
+            <img src="doc1.jpeg" alt="">
+            <img src="doc2.jpeg" alt="">
+            <img src="doc3.jpeg" alt="">
+            <img src="doc5.jpeg" alt="">
+          </div>
         </div>
-      </div>
       </a>
-  
+
       <!-- Video -->
       <div class="show-container">
         <div class="video-slide">
@@ -1339,11 +1515,11 @@
           <button class="mute-btn" onclick="toggleMute(this)">🔇</button>
         </div>
       </div>
-  
+
     </div>
   </section>
-  
-  
+
+
 
   <!-- results -->
   <section id="gallery" class="py-5">
@@ -1352,142 +1528,112 @@
       <div class="row g-4">
 
         <!-- Gallery Item -->
+
         <div class="col-md-4">
-          <div class="card shadow-sm">
+          <div class="card shadow-sm" style="background-color: #000; color: #f5f5dc;">
             <div class="row g-0">
               <div class="col-6">
-                <img src="before-ear.jpeg" class="img-fluid rounded-start" alt="Before">
+                <img src="before-hair2.jpeg" class="img-fluid rounded-start" alt="Before"
+                  style="background-color: #000;">
               </div>
               <div class="col-6">
-                <img src="after-ear.jpeg" class="img-fluid rounded-end" alt="After">
+                <img src="after-hair2.jpeg" class="img-fluid rounded-end" alt="After" style="background-color: #000;">
               </div>
             </div>
             <div class="card-body text-center">
-              <p class="card-text">Lobuloplasty</p>
+              <p class="card-text" style="color: #f5f5dc;">Hair Transplant – 6 Months Later</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm" style="background-color: #000; color: #f5f5dc;">
+            <div class="row g-0">
+              <div class="col-6">
+                <img src="before-ear.jpeg" class="img-fluid rounded-start" alt="Before" style="background-color: #000;">
+              </div>
+              <div class="col-6">
+                <img src="after-ear.jpeg" class="img-fluid rounded-end" alt="After" style="background-color: #000;">
+              </div>
+            </div>
+            <div class="card-body text-center">
+              <p class="card-text" style="color: #f5f5dc;">Lobuloplasty</p>
             </div>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="card shadow-sm">
+          <div class="card shadow-sm" style="background-color: #000; color: #f5f5dc;">
             <div class="row g-0">
               <div class="col-6">
-                <img src="before-hair.jpg" class="img-fluid rounded-start" alt="Before">
+                <img src="before-hair.jpg" class="img-fluid rounded-start" alt="Before" style="background-color: #000;">
               </div>
               <div class="col-6">
-                <img src="after-hair.jpg" class="img-fluid rounded-end" alt="After">
+                <img src="after-hair.jpg" class="img-fluid rounded-end" alt="After" style="background-color: #000;">
               </div>
             </div>
             <div class="card-body text-center">
-              <p class="card-text">Non surgical Hair restoration</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Add more as needed -->
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <div class="row g-0">
-              <div class="col-6">
-                <img src="before-hair2.jpeg" class="img-fluid rounded-start" alt="Before">
-              </div>
-              <div class="col-6">
-                <img src="after-hair2.jpeg" class="img-fluid rounded-end" alt="After">
-              </div>
-            </div>
-            <div class="card-body text-center">
-              <p class="card-text">Hair Transplant – 6 Months Later</p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <div class="row g-0">
-              <div class="col-6">
-                <img src="before-hair1.jpeg" class="img-fluid rounded-start" alt="Before">
-              </div>
-              <div class="col-6">
-                <img src="after-hair1.jpeg" class="img-fluid rounded-end" alt="After">
-              </div>
-            </div>
-            <div class="card-body text-center">
-              <p class="card-text">Hair ReGrowth – Post 5 Sessions</p>
+              <p class="card-text" style="color: #f5f5dc;">Non surgical Hair restoration</p>
             </div>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="card shadow-sm">
+          <div class="card shadow-sm" style="background-color: #000; color: #f5f5dc;">
             <div class="row g-0">
               <div class="col-6">
-                <img src="before-skin1.jpeg" class="img-fluid rounded-start" alt="Before">
+                <img src="before-skin1.jpeg" class="img-fluid rounded-start" alt="Before"
+                  style="background-color: #000;">
               </div>
               <div class="col-6">
-                <img src="after-skin1.jpeg" class="img-fluid rounded-end" alt="After">
+                <img src="after-skin1.jpeg" class="img-fluid rounded-end" alt="After" style="background-color: #000;">
               </div>
             </div>
             <div class="card-body text-center">
-              <p class="card-text">Acne Scar Treatment – After 4 Sessions</p>
+              <p class="card-text" style="color: #f5f5dc;">Acne Scar Treatment – After 4 Sessions</p>
             </div>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="card shadow-sm">
+          <div class="card shadow-sm" style="background-color: #000; color: #f5f5dc;">
             <div class="row g-0">
               <div class="col-6">
-                <img src="before-dp.png" class="img-fluid rounded-start" alt="Before">
+                <img src="before-dp.png" class="img-fluid rounded-start" alt="Before" style="background-color: #000;">
               </div>
               <div class="col-6">
-                <img src="after-dp.png" class="img-fluid rounded-end" alt="After">
+                <img src="after-dp.png" class="img-fluid rounded-end" alt="After" style="background-color: #000;">
               </div>
             </div>
             <div class="card-body text-center">
-              <p class="card-text">Dimpleplasty – 1 Week Later</p>
+              <p class="card-text" style="color: #f5f5dc;">Dimpleplasty – 1 Week Later</p>
             </div>
           </div>
         </div>
 
+        <div class="col-md-4">
+          <div class="card shadow-sm" style="background-color: #000; color: #f5f5dc;">
+            <div class="row g-0">
+              <div class="col-6">
+                <img src="before-hair1.jpeg" class="img-fluid rounded-start" alt="Before"
+                  style="background-color: #000;">
+              </div>
+              <div class="col-6">
+                <img src="after-hair1.jpeg" class="img-fluid rounded-end" alt="After" style="background-color: #000;">
+              </div>
+            </div>
+            <div class="card-body text-center">
+              <p class="card-text" style="color: #f5f5dc;">Hair ReGrowth – Post 5 Sessions</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Reviews -->
-  <section class="reviews-section">
-    <div class="reviews-header">
-      <p class="subtitle">CLIENT REVIEWS</p>
-      <h2 class="title">WHAT PEOPLE SAYS</h2>
-      <div class="quote-smile">
-        <div class="smile-eyes">❝❞</div>
-        <svg class="smile-curve" viewBox="0 0 100 50">
-          <path d="M10,10 Q50,50 90,10" stroke="black" stroke-width="4" fill="none" />
-        </svg>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="review-content" id="review-content">
-        <p class="review-text" id="review-text"></p>
-        <p class="review-author" id="review-author"></p>
-        <div class="review-stars" id="review-stars"></div>
-      </div>
-    </div>
-
-    <div class="pagination-dots">
-      <span class="dot active" data-index="0"></span>
-      <span class="dot" data-index="1"></span>
-      <span class="dot" data-index="2"></span>
     </div>
   </section>
 
   <!-- Appointment Form -->
-
+  <!-- 
   <section class="appointment-section">
     <div class="container">
-
-
       <form action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST" class="appointment-form">
         <div class="row gx-5">
           <div class="col-md-9">
@@ -1532,34 +1678,31 @@
       </form>
 
     </div>
-  </section>
+  </section> -->
 
-
-
-
-
+  <hr style="border: none; border-top: 1.5px solid #bbb; margin: 40px 0 30px 0; width: 90%; background: transparent;">
 
   <!-- Footer -->
-  <footer class="text-white py-5" style="background-color: #7B4F3D;">
+  <footer class="py-5" style="background-color: #fff6f0; color: #222;">
     <div class="container">
       <div class="row">
         <!-- Logo & Description -->
         <div class="col-md-3 mb-4">
           <!-- <img src="white_logo.png" alt="Contour Cosmetic Clinic Logo" style="max-width: 100%; height: auto; margin: 0px;" /> -->
-          <h4 class="fw-bold">Contour Cosmetic Clinic</h3>
-            <p>We finish with care, welcome change, and stay centered on your confidence.</p>
-            <div class="social-icons">
-              <a href="https://www.facebook.com/share/1AiswEWwo9/?mibextid=wwXIfr" class="me-2" target="_blank"
+          <h4 class="fw-bold">Contour Cosmetic Clinic</h4>
+          <p>We finish with care, welcome change, and stay centered on your confidence.</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/share/1AiswEWwo9/?mibextid=wwXIfr" class="me-2" target="_blank"
               rel="noopener noreferrer"><i class="bi bi-facebook" style="color: #1877f3;"></i></a>
-              <a href="https://www.linkedin.com/company/contour-cosmetic-clinic/" class="me-2" target="_blank"
+            <a href="https://www.linkedin.com/company/contour-cosmetic-clinic/" class="me-2" target="_blank"
               rel="noopener noreferrer"><i class="bi bi-linkedin" style="color: #0077b5;"></i></a>
-              <a href="https://www.instagram.com/contour_bengaluru?igsh=Nzh4MXRzbTdwejdy" class="me-2" target="_blank"
+            <a href="https://www.instagram.com/contour_bengaluru?igsh=Nzh4MXRzbTdwejdy" class="me-2" target="_blank"
               rel="noopener noreferrer"><i class="bi bi-instagram" style="color: #E1306C;"></i></a>
-              <a href="https://youtube.com/@shapeyourstory?si=szaqr58VYWUBpQBV" class="me-2" target="_blank"
+            <a href="https://youtube.com/@shapeyourstory?si=szaqr58VYWUBpQBV" class="me-2" target="_blank"
               rel="noopener noreferrer"><i class="bi bi-youtube" style="color: #FF0000;"></i></a>
-              <a href="https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0" class="me-2" target="_blank"
-              rel="noopener noreferrer"><i class="bi bi-whatsapp" style="color: #25D366;"></i></a>
-            </div>
+            <a href="https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0" class="me-2"
+              target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp" style="color: #25D366;"></i></a>
+          </div>
         </div>
 
         <!-- Contact Info -->
@@ -1567,21 +1710,22 @@
           <h5 class="fw-bold">Contact</h5>
           <ul class="list-unstyled">
             <li class="mb-2">
-              <a href="tel:+918660432589" class="location-icon text-decoration-none d-flex align-items-center">
+              <a href="tel:+918660432589" class="location-icon text-decoration-none d-flex align-items-center"
+                style="color: #222;">
                 <i class="bi bi-telephone me-2"></i>
                 <span>+91-866-043-2589</span>
               </a>
             </li>
             <li class="mb-2">
               <a href="mailto:contact@contourcosmeticclinic.com"
-                class="location-icon text-decoration-none d-flex align-items-center">
+                class="location-icon text-decoration-none d-flex align-items-center" style="color: #222;">
                 <i class="bi bi-envelope me-2"></i>
                 <span>contact@contourcosmeticclinic.com</span>
               </a>
             </li>
             <li>
               <a href="https://maps.app.goo.gl/A2KoWS7rxQWHtMRw7?g_st=com.google.maps.preview.copy" target="_blank"
-                class="location-icon text-decoration-none d-flex align-items-start">
+                class="location-icon text-decoration-none d-flex align-items-start" style="color: #222;">
                 <i class="bi bi-geo-alt me-2"></i>
                 <span>2nd floor, Lakshmidevi Complex, 80 Ft Rd, Vishweshwaraiah Road, 6th Stage, Phase 2, BTM Layout,
                   Bengaluru, Karnataka 560076</span>
@@ -1594,10 +1738,13 @@
         <div class="col-md-3 mb-4 align-items-center" style="width: 200px;">
           <h5 class="fw-bold">Explore</h5>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-white text-decoration-none link-hover">Home</a></li>
-            <li><a href="pages/about.html" class="text-white text-decoration-none link-hover">About Us</a></li>
-            <li><a href="pages/team.html" class="text-white text-decoration-none link-hover">Our Team</a></li>
-            <li><a href="pages/contact.html" class="text-white text-decoration-none link-hover">Contact</a></li>
+            <li><a href="#" class="text-decoration-none link-hover" style="color: #222;">Home</a></li>
+            <li><a href="pages/about.html" class="text-decoration-none link-hover" style="color: #222;">About Us</a>
+            </li>
+            <li><a href="pages/team.html" class="text-decoration-none link-hover" style="color: #222;">Our Team</a></li>
+            <li><a href="pages/contact.html" class="text-decoration-none link-hover" style="color: #222;">Contact</a>
+            </li>
+            <li><a href="pages/gallery.html" class="text-decoration-none link-hover" style="color: #222;">Gallery</a></li>
           </ul>
         </div>
 
@@ -1606,37 +1753,20 @@
           <h5 class="fw-bold mb-3" style="font-size: 1.5rem;">GET IN TOUCH</h5>
           <form action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST"
             class="position-relative mt-4" target="_blank">
-            <div class="input-group align-items-center border-bottom pb-2" style="border-color: #fff;">
-              <input type="email" name="email" class="form-control bg-transparent border-0 text-white ps-0"
-                placeholder="Your Email" required style="box-shadow: none; font-size: 1rem;">
-              <button type="submit" class="btn text-white" style="box-shadow: none;">
-                <i class="bi bi-send-fill fs-5"></i>
+            <div class="input-group align-items-center border-bottom pb-2" style="border-color: #222;">
+              <input type="email" name="email" class="form-control bg-transparent border-0 ps-0"
+                placeholder="Your Email" required style="box-shadow: none; font-size: 1rem; color: #222;">
+              <button type="submit" class="btn" style="box-shadow: none; color: #222;"></button>
+              <i class="bi bi-send-fill fs-5"></i>
               </button>
             </div>
           </form>
         </div>
 
-        <!-- Newsletter -->
-        <!-- <div class="col-md-3 mb-4">
-          <div class="newsletter-block text-white p-4 h-100" style="background-color: #7B4F3D; border-radius: 10px;">
-            <h5 class="fw-bold">Newsletter</h5>
-            <h5 class="fw-bold mb-3" style="font-size: 1.5rem;">GET IN TOUCH</h5>
-            <form action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST" class="position-relative mt-4" target="_blank">
-              <div class="input-group align-items-center border-bottom pb-2" style="border-color: #fff;">
-                <input type="email" name="email" class="form-control bg-transparent border-0 text-white ps-0"
-                  placeholder="Your Email" required style="box-shadow: none; font-size: 1rem;">
-                <button type="submit" class="btn text-white" style="box-shadow: none;">
-                  <i class="bi bi-send-fill fs-5"></i>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div> -->
-
       </div>
     </div>
     </div>
-    <div class="text-center mt-4" style="font-size: 0.95rem; color: #f5e7df;">
+    <div class="text-center mt-4" style="font-size: 0.95rem; color: #030100;">
       &copy; <span id="footer-year"></span> Contour Cosmetic Clinic. All rights reserved.
     </div>
   </footer>
@@ -1644,7 +1774,9 @@
     document.getElementById('footer-year').textContent = new Date().getFullYear();
   </script>
 
-  <a href="https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0" class="wa-btn d-flex align-items-center" title="Contact Us on WhatsApp" target="_blank" style="padding: 12px 22px; border-radius: 30px; font-weight: 600; font-size: 1rem;">
+  <a href="https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0"
+    class="wa-btn d-flex align-items-center" title="Contact Us on WhatsApp" target="_blank"
+    style="padding: 12px 22px; border-radius: 30px; font-weight: 600; font-size: 1rem;">
     <i class="bi bi-whatsapp me-2" style="font-size: 22px;"></i>
     <span>Chat Now</span>
   </a>
@@ -1760,6 +1892,8 @@
       heroTrack.style.transform = `translateX(-${slideIndex * 100}%)`;
     }
 
+    // Start cycling the hero slideshow every 3 seconds
+    setInterval(cycleSlides, 2000);
 
     const slides = document.querySelectorAll('.slide');
     let current = 0;
@@ -1777,8 +1911,8 @@
       slides[current].classList.add('active');
     }
 
-    setInterval(showNextSlide, 3000);
-    
+    setInterval(showNextSlide, 2000);
+
   </script>
 
   <script>
@@ -1794,106 +1928,106 @@
     document.getElementById('datetime').value = getCurrentDateTimeLocal();
   </script>
 
-<script>
-  const reviews = [
-    {
-      text: "I battled acne scars for years, and it really affected my self-esteem. I avoided selfies and always wore makeup to cover the marks. I finally went for professional treatment after a friend recommended it. The doctor suggested a combination of microneedling and laser sessions. After 4 sessions, the difference is incredible—my skin is smoother, and the scars have faded significantly. People keep asking what skincare I’m using! I feel confident and beautiful without makeup now. The staff was warm, and the doctor explained everything patiently. It’s honestly the best self-care decision I’ve ever made.",
-      author: "MAMTA (31) – DOCTOR",
-      stars: "★ ★ ★ ★ ☆",
-      duration: 8000 // 8 seconds
-    },
-    {
-      text: "I always loved dimples and thought they added so much charm to a smile. After researching for months, I finally went ahead with dimple creation. The procedure was super quick—about 30 minutes—and done under local anesthesia. There was slight swelling for a few days, but it healed beautifully. Now, my smile looks so cute and natural! I get compliments all the time, and no one believes it’s a cosmetic procedure. It’s boosted my confidence on camera and in real life. I’m so happy I chose the right doctor. It’s my favorite little feature now!",
-      author: "Beenish S (28) – Sports Athlete",
-      stars: "★ ★ ★ ★ ★",
-      duration: 6000 // 6 seconds
-    },
-    {
-      text: "As a fitness coach, appearance matters. When I started balding at the crown, I felt less confident during sessions. The transplant changed that. The clinic explained everything in detail, and I went ahead with FUE. No major pain, minimal downtime. After 7 months, I had full growth where I was bald. Clients and colleagues keep asking what I did! It looks completely natural, and I feel like myself again. Totally worth it.",
-      author: "Sameer P (29) – Fitness Trainer",
-      stars: "★ ★ ★ ★ ☆",
-      duration: 4000 // 4 seconds
-    },
-    {
-      text: "Being the face of my startup, I felt pressure to always look sharp. My hair loss became a major concern. I did the transplant during a break in my schedule, and the results have exceeded expectations. Growth started around 3 months and continued steadily. It’s been a year, and the change is unbelievable. I look younger and feel far more confident walking into investor meetings.",
-      author: "Deepak L (31) – Entrepreneur",
-      stars: "★ ★ ★ ★ ★",
-      duration: 4000 // 4 seconds
-    },
-    {
-      text: "I was losing modeling work because of my receding hairline. It was tough. I did my transplant last year and followed every post-op instruction. Today, my hairline is sharp and full, and I’m back to doing shoots regularly. The camera picks it up beautifully. People think I just styled it better—no one suspects a transplant. It’s given me my career back. I’m forever grateful.",
-      author: "Rahul T (28) – Model",
-      stars: "★ ★ ★ ★ ☆",
-      duration: 4000 // 4 seconds
-    },
-    {
-      text: "I spent years hiding my bald spots with creative hairstyles and hats. It got to a point where I didn’t want to attend weddings or social events. I finally decided to get a hair transplant after seeing a friend’s results. The experience was professional, painless, and surprisingly quick. It’s been 10 months, and the results are beyond what I imagined. My hairline is back, my confidence is back, and I feel like a better version of myself. Even my mom was shocked at how natural it looks. Honestly, I wish I had done this much earlier.",
-      author: "Abhishek S (33) – Software Developer",
-      stars: "★ ★ ★ ☆ ☆",
-      duration: 4000 // 4 seconds
+  <script>
+    const reviews = [
+      {
+        text: "I battled acne scars for years, and it really affected my self-esteem. I avoided selfies and always wore makeup to cover the marks. I finally went for professional treatment after a friend recommended it. The doctor suggested a combination of microneedling and laser sessions. After 4 sessions, the difference is incredible—my skin is smoother, and the scars have faded significantly. People keep asking what skincare I’m using! I feel confident and beautiful without makeup now. The staff was warm, and the doctor explained everything patiently. It’s honestly the best self-care decision I’ve ever made.",
+        author: "MAMTA (31) – DOCTOR",
+        stars: "★ ★ ★ ★ ☆",
+        duration: 8000 // 8 seconds
+      },
+      {
+        text: "I always loved dimples and thought they added so much charm to a smile. After researching for months, I finally went ahead with dimple creation. The procedure was super quick—about 30 minutes—and done under local anesthesia. There was slight swelling for a few days, but it healed beautifully. Now, my smile looks so cute and natural! I get compliments all the time, and no one believes it’s a cosmetic procedure. It’s boosted my confidence on camera and in real life. I’m so happy I chose the right doctor. It’s my favorite little feature now!",
+        author: "Beenish S (28) – Sports Athlete",
+        stars: "★ ★ ★ ★ ★",
+        duration: 6000 // 6 seconds
+      },
+      {
+        text: "As a fitness coach, appearance matters. When I started balding at the crown, I felt less confident during sessions. The transplant changed that. The clinic explained everything in detail, and I went ahead with FUE. No major pain, minimal downtime. After 7 months, I had full growth where I was bald. Clients and colleagues keep asking what I did! It looks completely natural, and I feel like myself again. Totally worth it.",
+        author: "Sameer P (29) – Fitness Trainer",
+        stars: "★ ★ ★ ★ ☆",
+        duration: 4000 // 4 seconds
+      },
+      {
+        text: "Being the face of my startup, I felt pressure to always look sharp. My hair loss became a major concern. I did the transplant during a break in my schedule, and the results have exceeded expectations. Growth started around 3 months and continued steadily. It’s been a year, and the change is unbelievable. I look younger and feel far more confident walking into investor meetings.",
+        author: "Deepak L (31) – Entrepreneur",
+        stars: "★ ★ ★ ★ ★",
+        duration: 4000 // 4 seconds
+      },
+      {
+        text: "I was losing modeling work because of my receding hairline. It was tough. I did my transplant last year and followed every post-op instruction. Today, my hairline is sharp and full, and I’m back to doing shoots regularly. The camera picks it up beautifully. People think I just styled it better—no one suspects a transplant. It’s given me my career back. I’m forever grateful.",
+        author: "Rahul T (28) – Model",
+        stars: "★ ★ ★ ★ ☆",
+        duration: 4000 // 4 seconds
+      },
+      {
+        text: "I spent years hiding my bald spots with creative hairstyles and hats. It got to a point where I didn’t want to attend weddings or social events. I finally decided to get a hair transplant after seeing a friend’s results. The experience was professional, painless, and surprisingly quick. It’s been 10 months, and the results are beyond what I imagined. My hairline is back, my confidence is back, and I feel like a better version of myself. Even my mom was shocked at how natural it looks. Honestly, I wish I had done this much earlier.",
+        author: "Abhishek S (33) – Software Developer",
+        stars: "★ ★ ★ ☆ ☆",
+        duration: 4000 // 4 seconds
+      }
+    ];
+
+    const reviewText = document.getElementById("review-text");
+    const reviewAuthor = document.getElementById("review-author");
+    const reviewStars = document.getElementById("review-stars");
+    const dots = document.querySelectorAll(".dot");
+
+    let currentIndex = 0;
+    let timer;
+
+    function showReview(index) {
+      const review = reviews[index];
+      reviewText.textContent = review.text;
+      reviewAuthor.textContent = review.author;
+      reviewStars.textContent = review.stars;
+
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[index].classList.add("active");
+
+      currentIndex = index;
+
+      // Restart the timer with the new duration
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        const nextIndex = (currentIndex + 1) % reviews.length;
+        showReview(nextIndex);
+      }, review.duration);
     }
-  ];
 
-  const reviewText = document.getElementById("review-text");
-  const reviewAuthor = document.getElementById("review-author");
-  const reviewStars = document.getElementById("review-stars");
-  const dots = document.querySelectorAll(".dot");
-
-  let currentIndex = 0;
-  let timer;
-
-  function showReview(index) {
-    const review = reviews[index];
-    reviewText.textContent = review.text;
-    reviewAuthor.textContent = review.author;
-    reviewStars.textContent = review.stars;
-
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[index].classList.add("active");
-
-    currentIndex = index;
-
-    // Restart the timer with the new duration
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      const nextIndex = (currentIndex + 1) % reviews.length;
-      showReview(nextIndex);
-    }, review.duration);
-  }
-
-  // Handle dot click
-  dots.forEach((dot, index) => {
-    dot.setAttribute("data-index", index);
-    dot.addEventListener("click", () => {
-      showReview(index);
+    // Handle dot click
+    dots.forEach((dot, index) => {
+      dot.setAttribute("data-index", index);
+      dot.addEventListener("click", () => {
+        showReview(index);
+      });
     });
-  });
 
-  // Initial review
-  showReview(0);
-</script>
+    // Initial review
+    showReview(0);
+  </script>
 
-<script>
-  function startSlider(id, interval = 4000) {
-    const track = document.getElementById(id);
-    const slides = track.children.length;
-    let index = 0;
+  <script>
+    function startSlider(id, interval = 4000) {
+      const track = document.getElementById(id);
+      const slides = track.children.length;
+      let index = 0;
 
-    setInterval(() => {
-      index = (index + 1) % slides;
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }, interval);
-  }
+      setInterval(() => {
+        index = (index + 1) % slides;
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }, interval);
+    }
 
-  startSlider("clinicSlider", 4000);
-  startSlider("doctorSlider", 4500);
+    startSlider("clinicSlider", 4000);
+    startSlider("doctorSlider", 4500);
 
-  function toggleMute(button) {
-    const video = button.previousElementSibling;
-    video.muted = !video.muted;
-    button.textContent = video.muted ? "🔇" : "🔊";
-  }
-</script>
+    function toggleMute(button) {
+      const video = button.previousElementSibling;
+      video.muted = !video.muted;
+      button.textContent = video.muted ? "🔇" : "🔊";
+    }
+  </script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
