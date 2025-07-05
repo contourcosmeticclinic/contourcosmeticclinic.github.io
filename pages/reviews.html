@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews | Contour Cosmetic Clinic</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../common.css">
+  <style>
+    body {
+      background: #fff;
+      color: black;
+    }
+    .reviews-section {
+      background: #fef8f2;
+      padding: 48px 0 32px 0;
+    }
+    .reviews-section h2 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: black;
+      margin-bottom: 0.7em;
+      text-align: left;
+    }
+    .reviews-section .subtitle {
+      font-size: 1.15rem;
+      color: black;
+      margin-bottom: 2.2em;
+      text-align: left;
+      max-width: 900px;
+    }
+    .google-link {
+      display: inline-block;
+      background: #fff;
+      color: #1a73e8;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-weight: 500;
+      text-decoration: none;
+      margin-bottom: 32px;
+      transition: background 0.2s;
+    }
+    .google-link:hover {
+      background: #fef8f2;
+      color: #174ea6;
+    }
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 28px;
+      margin-top: 18px;
+    }
+    .review-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      padding: 24px 22px 18px 22px;
+      border: 1px solid #f3e7d9;
+      display: flex;
+      flex-direction: column;
+      min-height: 220px;
+      position: relative;
+    }
+    .review-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .review-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #fef8f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #bfa07a;
+      margin-right: 14px;
+    }
+    .review-name {
+      font-weight: 700;
+      color: black;
+      font-size: 1.08rem;
+      margin-right: 6px;
+    }
+    .review-date {
+      color: #888;
+      font-size: 0.97rem;
+    }
+    .review-google {
+      margin-left: auto;
+      font-size: 1.3rem;
+      color: #4285f4;
+    }
+    .review-stars {
+      color: #fbbc04;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+    .review-verified {
+      color: #1a73e8;
+      font-size: 1.1em;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+    .review-text {
+      color: black;
+      font-size: 1.05rem;
+      margin-bottom: 0;
+      margin-top: 8px;
+    }
+    @media (max-width: 700px) {
+      .reviews-section { padding: 24px 0 16px 0; }
+      .review-card { padding: 14px 6px 10px 10px; }
+      .review-grid { gap: 14px; }
+      .reviews-section h2, .reviews-section .subtitle { text-align: left; }
+    }
+    .footer {
+      background: #fef8f2;
+      color: black;
+    }
+    .footer a, .footer .text-white {
+      color: black !important;
+    }
+    .footer .input-group input,
+    .footer .input-group .btn {
+      color: black !important;
+      background: #fff !important;
+      border-color: #f3e7d9 !important;
+    }
+    .footer .input-group input::placeholder {
+      color: #888 !important;
+    }
+    .footer .fw-bold { color: black; }
+    .footer .social-icons a { color: black; }
+    .footer .location-icon { color: black; }
+    .footer .location-icon i { color: #bfa07a; }
+    .footer .newsletter-title { color: black; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../logo_with_tagline_cropped.png" alt="Contour Cosmetic Clinic Logo" style="height: 40px; margin-right: 10px;">Contour Cosmetic Clinic
+    </div>
+    <ul class="menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="reviews.html" style="color:#b25a4d;">Reviews</a></li>
+    </ul>
+  </nav>
+
+  <section class="reviews-section">
+    <div class="container">
+      <h2 class="mb-2">What Our Patients Say!</h2>
+      <div class="subtitle mb-4">
+        At Contour Cosmetic Clinic, we are dedicated to providing personalized, cutting-edge cosmetic and hair transplant treatments that deliver transformative results. With a strong focus on customer satisfaction, we ensure that every patient’s experience is seamless, comfortable, and truly satisfactory. But don’t just take our word for it – explore our patient reviews and witness the life-changing outcomes for yourself!
+      </div>
+      <a class="google-link mb-4" href="https://www.google.com/maps/place/Contour+Cosmetic+Clinic/@12.8813824,77.6098557,17z/data=!4m18!1m9!3m8!1s0x3bae15d7fb43d6bb:0xfb657e8296bf16f2!2sContour+Cosmetic+Clinic!8m2!3d12.8813824!4d77.6098557!9m1!1b1!16s%2Fg%2F11x930dypq!3m7!1s0x3bae15d7fb43d6bb:0xfb657e8296bf16f2!8m2!3d12.8813824!4d77.6098557!9m1!1b1!16s%2Fg%2F11x930dypq?entry=ttu" target="_blank" rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google logo" style="height: 1.2em; vertical-align: middle; margin-right: 7px;">See all Google Reviews
+      </a>
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">A</div>
+            <span class="review-name">Ankita S</span>
+            <span class="review-date">3 July 2025</span>
+            <span class="review-google"><i class="bi bi-google"></i></span>
+          </div>
+          <div class="review-stars">★★★★★ <span class="review-verified"><i class="bi bi-patch-check-fill"></i></span></div>
+          <div class="review-text">I had a great experience at Contour Cosmetic Clinic. The doctors and staff are very professional and caring. Highly recommended!</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">R</div>
+            <span class="review-name">Rohit Kumar</span>
+            <span class="review-date">2 July 2025</span>
+            <span class="review-google"><i class="bi bi-google"></i></span>
+          </div>
+          <div class="review-stars">★★★★★ <span class="review-verified"><i class="bi bi-patch-check-fill"></i></span></div>
+          <div class="review-text">I'm 7 months in and really happy with the results so far, the hairline looks natural and overall hair is looking dense.</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">S</div>
+            <span class="review-name">Sneha Rao</span>
+            <span class="review-date">28 June 2025</span>
+            <span class="review-google"><i class="bi bi-google"></i></span>
+          </div>
+          <div class="review-stars">★★★★★ <span class="review-verified"><i class="bi bi-patch-check-fill"></i></span></div>
+          <div class="review-text">The staff is very friendly and the clinic is super clean. I saw great results after my skin treatment. Thank you!</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">P</div>
+            <span class="review-name">Priya Singh</span>
+            <span class="review-date">20 June 2025</span>
+            <span class="review-google"><i class="bi bi-google"></i></span>
+          </div>
+          <div class="review-stars">★★★★★ <span class="review-verified"><i class="bi bi-patch-check-fill"></i></span></div>
+          <div class="review-text">Very clean clinic and the staff made me feel comfortable throughout the procedure. Thank you Contour team!</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">M</div>
+            <span class="review-name">Manoj V</span>
+            <span class="review-date">15 June 2025</span>
+            <span class="review-google"><i class="bi bi-google"></i></span>
+          </div>
+          <div class="review-stars">★★★★★ <span class="review-verified"><i class="bi bi-patch-check-fill"></i></span></div>
+          <div class="review-text">Excellent service and great results. The doctors explained everything clearly and made me feel at ease.</div>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">A</div>
+            <span class="review-name">Amit Sharma</span>
+            <span class="review-date">10 June 2025</span>
+            <span class="review-google"><i class="bi bi-google"></i></span>
+          </div>
+          <div class="review-stars">★★★★★ <span class="review-verified"><i class="bi bi-patch-check-fill"></i></span></div>
+          <div class="review-text">Extremely satisfied with my experience at Contour Cosmetic Clinic. The doctors are very professional and explained every step of my treatment. Highly recommended!</div>
+        </div>
+      </div>
+      <p class="mt-4" style="color: #888; font-size: 1rem;">For more reviews, visit our <a href="https://www.google.com/maps/place/Contour+Cosmetic+Clinic/@12.8813824,77.6098557,17z/data=!4m18!1m9!3m8!1s0x3bae15d7fb43d6bb:0xfb657e8296bf16f2!2sContour+Cosmetic+Clinic!8m2!3d12.8813824!4d77.6098557!9m1!1b1!16s%2Fg%2F11x930dypq!3m7!1s0x3bae15d7fb43d6bb:0xfb657e8296bf16f2!8m2!3d12.8813824!4d77.6098557!9m1!1b1!16s%2Fg%2F11x930dypq?entry=ttu" target="_blank" style="color: #1a73e8; text-decoration: underline;">Google page</a>.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <h4 class="fw-bold">Contour Cosmetic Clinic</h4>
+          <p>We finish with care, welcome change, and stay centered on your confidence.</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/share/1AiswEWwo9/?mibextid=wwXIfr" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/contour-cosmetic-clinic/" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/contour_bengaluru?igsh=Nzh4MXRzbTdwejdy" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com/@shapeyourstory?si=szaqr58VYWUBpQBV" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0" class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold">Contact</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="tel:+918660432589" class="location-icon text-decoration-none d-flex align-items-center"><i class="bi bi-telephone me-2"></i><span>+91-866-043-2589</span></a></li>
+            <li class="mb-2"><a href="mailto:contact@contourcosmeticclinic.com" class="location-icon text-decoration-none d-flex align-items-center"><i class="bi bi-envelope me-2"></i><span>contact@contourcosmeticclinic.com</span></a></li>
+            <li><a href="https://maps.app.goo.gl/A2KoWS7rxQWHtMRw7?g_st=com.google.maps.preview.copy" target="_blank" class="location-icon text-decoration-none d-flex align-items-start"><i class="bi bi-geo-alt me-2"></i><span>2nd floor, Lakshmidevi Complex, 80 Ft Rd, Vishweshwaraiah Road, 6th Stage, Phase 2, BTM Layout, Bengaluru, Karnataka 560076</span></a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold">Explore</h5>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-decoration-none link-hover">Home</a></li>
+            <li><a href="about.html" class="text-decoration-none link-hover">About Us</a></li>
+            <li><a href="team.html" class="text-decoration-none link-hover">Our Team</a></li>
+            <li><a href="contact.html" class="text-decoration-none link-hover">Contact</a></li>
+            <li><a href="gallery.html" class="text-decoration-none link-hover">Gallery</a></li>
+            <li><a href="faq.html" class="text-decoration-none link-hover">FAQ</a></li>
+            <li><a href="reviews.html" class="text-decoration-none link-hover">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold">Newsletter</h5>
+          <h5 class="fw-bold mb-3" style="font-size: 1.5rem;">GET IN TOUCH</h5>
+          <form action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST" class="position-relative mt-4" target="_blank">
+            <div class="input-group align-items-center border-bottom pb-2">
+              <input type="email" name="email" class="form-control bg-transparent border-0 ps-0" placeholder="Your Email" required style="box-shadow: none; font-size: 1rem;">
+              <button type="submit" class="btn" style="box-shadow: none;"><i class="bi bi-send-fill fs-5"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4" style="font-size: 0.95rem; color: #bfa07a;">&copy; <span id="footer-year"></span> Contour Cosmetic Clinic. All rights reserved.</div>
+  </footer>
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

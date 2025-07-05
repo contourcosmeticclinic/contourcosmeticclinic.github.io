@@ -1,0 +1,25 @@
+<script>
+    function showBlog(service, btn) {
+        document.querySelectorAll('.service-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const title = document.getElementById('blog-title');
+        const content = document.getElementById('blog-content');
+        title.textContent = service;
+        content.textContent = 'Loading...';
+
+        // Convert service name to filename (e.g., "Hair Transplant" -> "Hair_Transplant.txt")
+        const filename = service.replace(/\s+/g, '_') + '.txt';
+
+        fetch(filename)
+            .then(response => {
+                if (!response.ok) throw new Error('Not found');
+                return response.text();
+            })
+            .then(text => {
+                content.textContent = text;
+            })
+            .catch(() => {
+                content.textContent = 'Could not load service details. Please try again later.';
+            });
+    }
+</script>
