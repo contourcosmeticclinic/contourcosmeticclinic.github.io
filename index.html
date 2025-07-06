@@ -114,23 +114,30 @@
 
             <!-- Patient Review Dropdown Menu -->
             <div class="dropdown" style="display: inline-block;">
-              <a href="#" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill dropdown-toggle"
-                id="reviewDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="background: #ffffff;">
+              <a href="pages/reviews.html" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill">
                 Patient Reviews
               </a>
-              <ul class="dropdown-menu" aria-labelledby="reviewDropdown" style="min-width: 230px; font-size: 1rem;">
-                <li><a class="dropdown-item" href="pages/reviews.html">All Reviews</a></li>
-                <li><a class="dropdown-item" href="pages/reviews.html#hair">Hair Transplant Reviews</a></li>
-                <li><a class="dropdown-item" href="pages/reviews.html#skin">Skin Treatment Reviews</a></li>
-                <li><a class="dropdown-item" href="pages/reviews.html#cosmetic">Cosmetic Surgery Reviews</a></li>
-              </ul>
-              <style>
-                .dropdown-menu .dropdown-item:hover,
-                .dropdown-menu .dropdown-item:focus {
-                  background-color: #fef8f2 !important;
-                  font-weight: 600;
-                }
-              </style>
+            </div>
+
+            <!-- Gallery -->
+            <div class="dropdown" style="display: inline-block;">
+              <a href="pages/gallery.html" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill">
+                Gallery
+              </a>
+            </div>
+
+            <!-- Doctors -->
+            <div class="dropdown" style="display: inline-block;">
+              <a href="pages/team.html" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill">
+                Doctors
+              </a>
+            </div>
+
+            <!-- FAQ -->
+            <div class="dropdown" style="display: inline-block;">
+              <a href="pages/faq.html" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill">
+                FAQS
+              </a>
             </div>
 
             <!-- Contact -->
@@ -184,18 +191,23 @@
 
               <!-- Patient Reviews Dropdown -->
               <div class="dropdown">
-                <a href="#" class="dropdown-item d-flex justify-content-between align-items-center"
-                  onclick="toggleMobileSubmenu('reviewsSubmenu', event)">
+                <a href="pages/reviews.html" class="dropdown-item d-flex justify-content-between align-items-center">
                   Patient Reviews
-                  <span style="font-size:1rem;">&#9662;</span>
                 </a>
-                <div id="reviewsSubmenu" class="dropdown-menu"
-                  style="display:none; position:static; float:none; box-shadow:none; margin-left:1rem;">
-                  <a class="dropdown-item" href="pages/reviews.html">All Reviews</a>
-                  <a class="dropdown-item" href="pages/reviews.html#hair">Hair Transplant Reviews</a>
-                  <a class="dropdown-item" href="pages/reviews.html#skin">Skin Treatment Reviews</a>
-                  <a class="dropdown-item" href="pages/reviews.html#cosmetic">Cosmetic Surgery Reviews</a>
-                </div>
+              </div>
+
+              <!-- Gallery -->
+              <div class="dropdown">
+                <a href="pages/gallery.html" class="dropdown-item d-flex justify-content-between align-items-center">
+                  Gallery
+                </a>
+              </div>
+
+              <!-- FAQ -->
+              <div class="dropdown">
+                <a href="pages/faq.html" class="dropdown-item d-flex justify-content-between align-items-center">
+                  FAQ
+                </a>
               </div>
 
               <!-- Contact -->
@@ -204,6 +216,7 @@
                   Contact
                 </a>
               </div>
+
 
             </div>
             <style>
@@ -273,44 +286,150 @@
 
   <div class="container-fluid py-5">
     <div class="row align-items-center">
-
-      <!-- Right Slideshow -->
       <div class="col-md-5 position-relative">
-        <div class="hero-slideshow overflow-hidden rounded">
-          <div class="hero-track d-flex">
-            <img src="pages/hair-treatment.PNG" class="img-fluid rounded" alt="Slide 4">
-            <img src="home-1-slide-3.jpg" class="img-fluid rounded" alt="Slide 1">
-            <img src="hom1-banner-content-2.webp" class="img-fluid rounded" alt="Slide 2">
-            <img src="hair-prp.png" class="img-fluid rounded" alt="Slide 3">
-            <img src="injectables.webp" class="img-fluid rounded" alt="Slide 5">
-          </div>
-        </div>
-        <!-- Optional floating emergency info -->
-        <div class="position-absolute bg-white rounded shadow px-3 py-2 d-flex align-items-center whatsapp-emergency"
-          style="bottom: 30px; left: 30px; cursor: pointer;" onclick="openWhatsAppChat()"
-          onmouseover="this.classList.add('wa-hover')" onmouseout="this.classList.remove('wa-hover')">
-          <i class="bi bi-whatsapp text-success fs-4 me-2"></i>
-          <div>
-            <small class="text-success fw-bold d-block">Chat Now</small>
+        <div class="hero-slideshow overflow-hidden rounded"
+          style="width: 100%; aspect-ratio: 16/9; background: #000; position: relative;">
+          <div id="heroVideoCarousel" style="width:100%; height:100%; position:relative;">
+            <video id="heroVideo1" class="hero-video-slide" src="Gallery/video/1.mov" poster="Gallery/video/1.mov"
+              style="width:100%; height:100%; object-fit:cover; display:block; border-radius: 8px;" autoplay muted loop
+              playsinline></video>
+            <video id="heroVideo2" class="hero-video-slide" src="Gallery/video/2.mov" poster="Gallery/video/2.mov"
+              style="width:100%; height:100%; object-fit:cover; display:none; border-radius: 8px;" autoplay muted loop
+              playsinline></video>
+            <video id="heroVideo3" class="hero-video-slide" src="Gallery/video/3.mp4" poster="Gallery/video/3.mp4"
+              style="width:100%; height:100%; object-fit:cover; display:none; border-radius: 8px;" autoplay muted loop
+              playsinline></video>
+            <video id="heroVideo4" class="hero-video-slide" src="Gallery/video/4.mp4" poster="Gallery/video/4.mp4"
+              style="width:100%; height:100%; object-fit:cover; display:none; border-radius: 8px;" autoplay muted loop
+              playsinline></video>
+            <video id="heroVideo5" class="hero-video-slide" src="Gallery/video/HT1.mp4" poster="Gallery/video/HT1.mp4"
+              style="width:100%; height:100%; object-fit:cover; display:none; border-radius: 8px;" autoplay muted loop
+              playsinline></video>
+            <video id="heroVideo6" class="hero-video-slide" src="Gallery/video/HT2.mp4" poster="Gallery/video/HT2.mp4"
+              style="width:100%; height:100%; object-fit:cover; display:none; border-radius: 8px;" autoplay muted loop
+              playsinline></video>
+            <video id="heroVideo7" class="hero-video-slide" src="Gallery/video/HT4.mp4" poster="Gallery/video/HT4.mp4"
+              style="width:100%; height:100%; object-fit:cover; display:none; border-radius: 8px;" autoplay muted loop
+              playsinline></video>
+            <!-- Navigation Buttons -->
+            <button id="heroVideoPrev" aria-label="Previous video"
+              style="position:absolute; left:10px; top:50%; transform:translateY(-50%); background:#fff; border:none; border-radius:50%; width:36px; height:36px; box-shadow:0 2px 8px rgba(0,0,0,0.08); z-index:2;">&#60;</button>
+            <button id="heroVideoNext" aria-label="Next video"
+              style="position:absolute; right:10px; top:50%; transform:translateY(-50%); background:#fff; border:none; border-radius:50%; width:36px; height:36px; box-shadow:0 2px 8px rgba(0,0,0,0.08); z-index:2;">&#62;</button>
+            <!-- Dots -->
+            <div id="heroVideoDots" class="d-flex justify-content-center mt-2"
+              style="position:absolute; bottom:10px; left:0; right:0; z-index:2;"></div>
           </div>
         </div>
         <script>
-          function openWhatsAppChat() {
-            window.open('https://api.whatsapp.com/send/?phone=918660432589&text=Hi%2C%20I%20need%20emergency%20assistance.&type=phone_number&app_absent=0', '_blank');
+          // Video carousel logic with navigation and aspect ratio 16:9
+          const heroVideos = document.querySelectorAll('.hero-video-slide');
+          const heroPrevBtn = document.getElementById('heroVideoPrev');
+          const heroNextBtn = document.getElementById('heroVideoNext');
+          const heroDots = document.getElementById('heroVideoDots');
+          let heroVidIdx = 0;
+          let heroTimer = null;
+
+          function showHeroVideo(idx) {
+            heroVideos.forEach((vid, i) => {
+              vid.style.display = i === idx ? 'block' : 'none';
+              if (i === idx) {
+                vid.currentTime = 0;
+                vid.play();
+              } else {
+                vid.pause();
+              }
+            });
+            // Dots update
+            if (heroDots) {
+              Array.from(heroDots.children).forEach((dot, i) => {
+                dot.classList.toggle('active', i === idx);
+              });
+            }
+            heroVidIdx = idx;
+            resetHeroTimer();
           }
+          function nextHeroVideo() {
+            showHeroVideo((heroVidIdx + 1) % heroVideos.length);
+          }
+          function prevHeroVideo() {
+            showHeroVideo((heroVidIdx - 1 + heroVideos.length) % heroVideos.length);
+          }
+          function resetHeroTimer() {
+            if (heroTimer) clearInterval(heroTimer);
+            heroTimer = setInterval(nextHeroVideo, 5000);
+          }
+          // Dots
+          if (heroDots) {
+            heroDots.innerHTML = '';
+            heroVideos.forEach((_, i) => {
+              const dot = document.createElement('button');
+              dot.className = 'dot' + (i === 0 ? ' active' : '');
+              dot.setAttribute('aria-label', `Go to video ${i + 1}`);
+              dot.style.width = '10px';
+              dot.style.height = '10px';
+              dot.style.borderRadius = '50%';
+              dot.style.background = 'gray';
+              dot.style.margin = '0 3px';
+              dot.style.border = 'none';
+              dot.style.outline = 'none';
+              dot.style.cursor = 'pointer';
+              dot.style.transition = 'background 0.2s';
+              dot.onclick = () => showHeroVideo(i);
+              heroDots.appendChild(dot);
+            });
+          }
+          if (heroPrevBtn) heroPrevBtn.onclick = prevHeroVideo;
+          if (heroNextBtn) heroNextBtn.onclick = nextHeroVideo;
+          showHeroVideo(0);
+
+          // Optional: Keyboard navigation
+          document.addEventListener('keydown', function (e) {
+            if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') return;
+            if (e.key === 'ArrowLeft') prevHeroVideo();
+            if (e.key === 'ArrowRight') nextHeroVideo();
+          });
         </script>
         <style>
-          .whatsapp-emergency.wa-hover {
-            background: #25d366 !important;
-            color: #fff !important;
-            transition: background 0.2s;
+          .hero-slideshow {
+            aspect-ratio: 16/9;
+            background: #000;
+            width: 100%;
+            max-width: 100vw;
+            position: relative;
           }
 
-          .whatsapp-emergency.wa-hover .bi-whatsapp,
-          .whatsapp-emergency.wa-hover .text-success,
-          .whatsapp-emergency.wa-hover small,
-          .whatsapp-emergency.wa-hover strong {
-            color: #fff !important;
+          .hero-video-slide {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            background: #000;
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          .hero-video-slide:first-child {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          #heroVideoDots .dot.active {
+            background: #000;
+            width: 18px;
+            border-radius: 8px;
+          }
+
+          @media (max-width: 768px) {
+            .hero-slideshow {
+              aspect-ratio: 16/9;
+              width: 100vw;
+              max-width: 100vw;
+            }
           }
         </style>
       </div>
@@ -318,12 +437,11 @@
   </div>
 
   <!-- Why Choose Us Section -->
-  <section class="why-section py-5" style="background: white; border-radius: 24px; margin-bottom: 40px;">
-    <div class="container">
-      <div class="row align-items-center gy-5">
-        <!-- Left Column -->
-        <div class="col-lg-5 mb-4 mb-lg-0 d-flex flex-column justify-content-center align-items-start">
-          <h2 class="mb-3 fw-bold" style="
+  <section class="why-section py-5" style="background: white; ">
+    <div class="row align-items-center gy-5">
+      <!-- Left Column -->
+      <div class="col-lg-5 mb-4 mb-lg-0 d-flex flex-column justify-content-center align-items-start">
+        <h2 class="mb-3 fw-bold" style="
             font-size: 2rem;
             background: white;
             -webkit-background-clip: text;
@@ -331,93 +449,92 @@
             background-clip: text;
             letter-spacing: 1px;
             display: inline-block;">
-            Why Choose Our Clinic?
-          </h2>
-          <p class="text-muted" style="font-size: 1.13rem; line-height: 1.7; text-align: justify;">
-            Indulge in bespoke facial aesthetics and premium cosmetic surgery, expertly crafted by renowned specialists
-            — all at surprisingly affordable rates. Discover the gold standard in hair restoration, featuring certified
-            doctors, cutting-edge techniques, and effortlessly natural results.
-          </p>
-          <button onclick="downloadBrochure()"
-            class="btn px-3 py-1 fs-6 shadow-sm rounded-pill d-flex align-items-center gap-2"
-            style="white-space: nowrap; min-height: 48px; background: #ffffff; border: none;"
-            onmouseover="this.style.background='#fef8f2'" onmouseout="this.style.background='#ffffff'">
-            <i class="fa-solid fa-download me-2"></i>Our Services
-          </button>
-        </div>
-        <!-- Right Column -->
-        <div class="col-lg-7">
-          <div class="row g-4">
-            <div class="col-sm-6 d-flex align-items-start">
-              <span class="why-icon me-3" style="font-size: 2.1rem; color: black;">
-                <i class="fa-solid fa-shield-heart"></i>
-              </span>
-              <div>
-                <div class="feature-title"
-                  style="font-size: 1.18rem; font-weight: 700; color: black; letter-spacing: 1px;">Totally Safe</div>
-                <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">Strict protocols ensure
-                  <span style="color:#000000;font-weight: 700;">100% safety</span> across all procedures.
-                </p>
-              </div>
+          Why Choose Our Clinic?
+        </h2>
+        <p class="text-muted" style="font-size: 1.13rem; line-height: 1.7; text-align: justify;">
+          Indulge in bespoke facial aesthetics and premium cosmetic surgery, expertly crafted by renowned specialists
+          — all at surprisingly affordable rates. Discover the gold standard in hair restoration, featuring certified
+          doctors, cutting-edge techniques, and effortlessly natural results.
+        </p>
+        <button onclick="downloadBrochure()"
+          class="btn px-3 py-1 fs-6 shadow-sm rounded-pill d-flex align-items-center gap-2"
+          style="white-space: nowrap; min-height: 48px; background: #ffffff; border: none;"
+          onmouseover="this.style.background='#fef8f2'" onmouseout="this.style.background='#ffffff'">
+          <i class="fa-solid fa-download me-2"></i>Our Services
+        </button>
+      </div>
+      <!-- Right Column -->
+      <div class="col-lg-7">
+        <div class="row g-4">
+          <div class="col-sm-6 d-flex align-items-start">
+            <span class="why-icon me-3" style="font-size: 2.1rem; color: black;">
+              <i class="fa-solid fa-shield-heart"></i>
+            </span>
+            <div>
+              <div class="feature-title"
+                style="font-size: 1.18rem; font-weight: 700; color: black; letter-spacing: 1px;">Totally Safe</div>
+              <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">Strict protocols ensure
+                <span style="color:#000000;font-weight: 700;">100% safety</span> across all procedures.
+              </p>
             </div>
-            <div class="col-sm-6 d-flex align-items-start">
-              <span class="why-icon me-3" style="font-size: 2.1rem; color: black;">
-                <i class="fa-solid fa-leaf"></i>
-              </span>
-              <div>
-                <div class="feature-title"
-                  style="font-size: 1.18rem; font-weight: 700; color: black; letter-spacing: 1px;">Natural Result
-                </div>
-                <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">Meticulous graft
-                  placement for a <span style="color:#000000;font-weight:700;">100% natural</span> appearance.</p>
+          </div>
+          <div class="col-sm-6 d-flex align-items-start">
+            <span class="why-icon me-3" style="font-size: 2.1rem; color: black;">
+              <i class="fa-solid fa-leaf"></i>
+            </span>
+            <div>
+              <div class="feature-title"
+                style="font-size: 1.18rem; font-weight: 700; color: black; letter-spacing: 1px;">Natural Result
               </div>
+              <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">Meticulous graft
+                placement for a <span style="color:#000000;font-weight:700;">100% natural</span> appearance.</p>
             </div>
-            <div class="col-sm-6 d-flex align-items-start">
-              <span class="why-icon me-3" style="font-size: 2.1rem; color: black;">
-                <i class="fa-solid fa-face-laugh-beam"></i>
-              </span>
-              <div>
-                <div class="feature-title"
-                  style="font-size: 1.18rem; font-weight: 700; color: black; letter-spacing: 1px;">Painless</div>
-                <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">Ultra-fine tools (≤1mm)
-                  for a <span style="color:black;font-weight:700;">pain-free</span> experience.</p>
-              </div>
+          </div>
+          <div class="col-sm-6 d-flex align-items-start">
+            <span class="why-icon me-3" style="font-size: 2.1rem; color: black;">
+              <i class="fa-solid fa-face-laugh-beam"></i>
+            </span>
+            <div>
+              <div class="feature-title"
+                style="font-size: 1.18rem; font-weight: 700; color: black; letter-spacing: 1px;">Painless</div>
+              <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">Ultra-fine tools (≤1mm)
+                for a <span style="color:black;font-weight:700;">pain-free</span> experience.</p>
             </div>
-            <div class="col-sm-6 d-flex align-items-start">
-              <span class="why-icon me-3" style="font-size: 2.1rem; color: black;">
-                <i class="fa-solid fa-seedling"></i>
-              </span>
-              <div>
-                <div class="feature-title"
-                  style="font-size: 1.18rem; font-weight: 700; color: black; letter-spacing: 1px;">Maximum Viability
-                </div>
-                <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">Over <span
-                    style="color:black;font-weight:700;">90% graft survival</span> – above industry average.</p>
+          </div>
+          <div class="col-sm-6 d-flex align-items-start">
+            <span class="why-icon me-3" style="font-size: 2.1rem; color: black;">
+              <i class="fa-solid fa-seedling"></i>
+            </span>
+            <div>
+              <div class="feature-title"
+                style="font-size: 1.18rem; font-weight: 700; color: black; letter-spacing: 1px;">Maximum Viability
               </div>
+              <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">Over <span
+                  style="color:black;font-weight:700;">90% graft survival</span> – above industry average.</p>
             </div>
-            <div class="col-sm-6 d-flex align-items-start">
-              <span class="why-icon me-3" style="font-size: 2.1rem; color: black;">
-                <i class="fa-solid fa-user-doctor"></i>
-              </span>
-              <div>
-                <div class="feature-title"
-                  style="font-size: 1.18rem; font-weight: 700; color: black; letter-spacing: 1px;">Only by Doctors
-                </div>
-                <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">All procedures by <span
-                    style="color:black;font-weight:700;">certified medical professionals</span>.</p>
+          </div>
+          <div class="col-sm-6 d-flex align-items-start">
+            <span class="why-icon me-3" style="font-size: 2.1rem; color: black;">
+              <i class="fa-solid fa-user-doctor"></i>
+            </span>
+            <div>
+              <div class="feature-title"
+                style="font-size: 1.18rem; font-weight: 700; color: black; letter-spacing: 1px;">Only by Doctors
               </div>
+              <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">All procedures by <span
+                  style="color:black;font-weight:700;">certified medical professionals</span>.</p>
             </div>
-            <div class="col-sm-6 d-flex align-items-start">
-              <span class="why-icon me-3" style="font-size: 2.1rem; color: black;">
-                <i class="fa-solid fa-infinity"></i>
-              </span>
-              <div>
-                <div class="feature-title"
-                  style="font-size: 1.18rem; font-weight: 700; color: black; letter-spacing: 1px;">Growth for Lifetime
-                </div>
-                <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">Only healthy follicles
-                  chosen for <span style="color:black;font-weight:700;">lifelong results</span>.</p>
+          </div>
+          <div class="col-sm-6 d-flex align-items-start">
+            <span class="why-icon me-3" style="font-size: 2.1rem; color: black;">
+              <i class="fa-solid fa-infinity"></i>
+            </span>
+            <div>
+              <div class="feature-title"
+                style="font-size: 1.18rem; font-weight: 700; color: black; letter-spacing: 1px;">Growth for Lifetime
               </div>
+              <p class="text-muted" style="font-size: 1.04rem; font-family: 'Georgia', serif;">Only healthy follicles
+                chosen for <span style="color:black;font-weight:700;">lifelong results</span>.</p>
             </div>
           </div>
         </div>
@@ -427,8 +544,7 @@
 
 
   <!-- Services -->
-  <div class="section py-3"
-    style="padding: 0px; background: white; border-radius: 18px; margin-bottom: 32px;">
+  <div class="section py-3" style="padding: 0px; background: white; border-radius: 18px; margin-bottom: 32px;">
     <div class="row text-center g-2 align-items-center" style="min-height:unset;">
       <div class="col-md-3 col-sm-6" style="padding: 1px;">
         <a href="pages/about.html#hair-treatment-section" style="color: black; text-decoration: none;">
@@ -471,10 +587,11 @@
 
 
   <!-- Offers Section -->
-  <section class="container-fluid py-5">
-    <div class="offers-section">
-      <div class="offer-text col-lg-5 mb-4 mb-lg-0 d-flex flex-column justify-content-center align-items-start">
-        <h2 class="mb-3 fw-bold" style="
+  <section class="offers-section d-flex flex-wrap align-items-stretch justify-content-center py-5"
+    style="width: 100%; background: #fff;">
+    <div class="offer-text col-auto col-lg-6 d-flex flex-column justify-content-center align-items-start"
+      style="min-width: 320px; max-width: 540px;">
+      <h2 class="mb-3 fw-bold" style="
           font-size: 2rem;
           background: white;
           -webkit-background-clip: text;
@@ -482,185 +599,362 @@
           background-clip: text;
           letter-spacing: 1px;
           display: inline-block;">
-          Exciting Offers Just For You!
-        </h2>
-        <p style="text-align: justify;">
-          At Contour Cosmetic Clinic, we believe exceptional care should also be accessible. Explore our limited-time
-          offers on popular treatments like laser hair reduction, skin rejuvenation, hair restoration, and more. Avail
-          exclusive packages designed to help you look and feel your best—because confidence should never be out of
-          reach.
-        </p>
-        <br>
-        <div class="w-100 d-flex justify-content-center">
-          <a href="pages/contact.html"
-            class="btn px-3 py-1 fs-6 shadow-sm rounded-pill d-flex align-items-center gap-2"
-            style="white-space: nowrap; min-height: 48px; background: #ffffff; border: none;"
-            onmouseover="this.style.background='#fef8f2'" onmouseout="this.style.background='#ffffff'">
-            <i class="fa-solid fa-user-doctor me-2"></i>
-            Book a Free Consultation
-          </a>
-        </div>
-      </div>
-      <div class="slideshow-container" id="slideshow">
-        <div class="slide active"><img src="Hair Transplant Square.png" alt="Poster 1"></div>
-        <div class="slide"> <img src="laser.png" alt="Poster 2"></div>
-        <div class="slide"><img src="Chemical Peels Sq.png" alt="Poster 3"></div>
+        Exciting Offers Just For You!
+      </h2>
+      <p class="offer-desc" style="text-align: justify;">
+        At Contour Cosmetic Clinic, we're committed to making exceptional aesthetic care accessible to everyone.
+        We understand that investing in yourself shouldn't be a luxury reserved for a few. That's why we've carefully
+        curated limited-time promotional packages that bring our most sought-after treatments within reach, without
+        compromising on quality or results.
+      </p>
+      <ul class="offer-list" style="list-style-type: disc; padding-left: 1.5em;">
+        <li>
+          <strong>Advanced Laser Hair Reduction</strong> – Experience the freedom of smooth, hair-free skin with our
+          state-of-the-art laser technology. Our comprehensive packages cover multiple sessions to ensure optimal,
+          long-lasting results across all treatment areas.
+        </li>
+        <li>
+          <strong>Comprehensive Skin Rejuvenation</strong> – Turn back the clock with our multi-faceted approach to
+          skin renewal. From addressing fine lines and age spots to improving texture and tone, our rejuvenation
+          treatments are designed to restore your skin's natural radiance and vitality.
+        </li>
+        <li>
+          <strong>Professional Hair Restoration Solutions</strong> – Regain your confidence with our advanced hair
+          restoration treatments. Whether you're dealing with early signs of thinning or more advanced hair loss, our
+          personalized approach combines cutting-edge techniques with proven results.
+        </li>
+        <li>
+          <strong>Additional Specialized Treatments</strong> – Our promotional packages extend beyond our signature
+          services to include a wide range of cosmetic procedures tailored to your unique aesthetic goals.
+        </li>
+      </ul>
+      <div class="w-100 d-flex justify-content-center">
+        <a href="pages/contact.html" class="btn px-3 py-1 fs-6 shadow-sm rounded-pill d-flex align-items-center gap-2"
+          style="white-space: nowrap; min-height: 48px; background: #ffffff; border: none;"
+          onmouseover="this.style.background='#fef8f2'" onmouseout="this.style.background='#ffffff'">
+          <i class="fa-solid fa-user-doctor me-2"></i>
+          Book a Free Consultation
+        </a>
       </div>
     </div>
+    <div style="width:50px; min-width:50px; max-width:50px;"></div>
+    <!-- Offer Images Slideshow -->
+    <div class="offer-slideshow d-flex flex-column justify-content-center align-items-center col-lg-5"
+      style="max-width: 480px; min-width: 280px; position: relative;">
+      <div class="offer-slides" id="offerSlides" style="position: relative; overflow: hidden; width:100%;">
+        <img src="offers/1.png" class="offer-slide-img active" alt="Offer 1" style="width:100%; border-radius: 12px;">
+        <img src="offers/2.png" class="offer-slide-img" alt="Offer 2" style="width:100%; border-radius: 12px;">
+        <img src="offers/3.jpg" class="offer-slide-img" alt="Offer 3" style="width:100%; border-radius: 12px;">
+        <img src="offers/4.png" class="offer-slide-img" alt="Offer 4" style="width:100%; border-radius: 12px;">
+        <img src="offers/5.png" class="offer-slide-img" alt="Offer 5" style="width:100%; border-radius: 12px;">
+        <img src="offers/6.png" class="offer-slide-img" alt="Offer 6" style="width:100%; border-radius: 12px;">
+        <img src="offers/7.png" class="offer-slide-img" alt="Offer 7" style="width:100%; border-radius: 12px;">
+        <img src="offers/8.png" class="offer-slide-img" alt="Offer 8" style="width:100%; border-radius: 12px;">
+        <img src="offers/9.png" class="offer-slide-img" alt="Offer 9" style="width:100%; border-radius: 12px;">
+        <img src="offers/10.png" class="offer-slide-img" alt="Offer 10" style="width:100%; border-radius: 12px;">
+      </div>
+      <button class="offer-nav prev" id="offerPrevBtn" aria-label="Previous offer"
+        style="position:absolute; left:10px; top:50%; transform:translateY(-50%); background:#fff; border:none; border-radius:50%; width:36px; height:36px; box-shadow:0 2px 8px rgba(0,0,0,0.08); z-index:2;">&#60;</button>
+      <button class="offer-nav next" id="offerNextBtn" aria-label="Next offer"
+        style="position:absolute; right:10px; top:50%; transform:translateY(-50%); background:#fff; border:none; border-radius:50%; width:36px; height:36px; box-shadow:0 2px 8px rgba(0,0,0,0.08); z-index:2;">&#62;</button>
+      <div class="offer-dots d-flex justify-content-center mt-2" id="offerSliderDots"></div>
+    </div>
     <style>
-      @media (max-width: 768px) {
+      .offers-section {
+        gap: 20px;
+      }
+
+      .offer-slide-img {
+        transition: opacity 0.4s;
+      }
+
+      .offer-slide-img.active {
+        display: block;
+        opacity: 1;
+      }
+
+      .offer-slide-img:not(.active) {
+        display: none;
+        opacity: 0;
+      }
+
+      .offer-dots .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: gray;
+        margin: 0 3px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .offer-dots .dot.active {
+        background: #000000;
+        width: 18px;
+        border-radius: 8px;
+      }
+
+      @media (max-width: 991px) {
         .offers-section {
-          flex-direction: row !important;
-          align-items: left !important;
-          text-align: left !important;
+          flex-direction: column;
+          gap: 24px;
         }
 
-        .offer-text {
-          text-align: left !important;
-          margin-bottom: 2rem;
+        .offer-text,
+        .offer-slideshow {
+          max-width: 100% !important;
+          width: 100%;
         }
 
-        .slideshow-container {
-          margin: 0 auto;
+        .offer-slideshow {
+          margin-left: 0 !important;
+        }
+      }
+
+      @media (max-width: 768px) {
+
+        .offer-desc,
+        .offer-list {
+          text-align: justify !important;
         }
       }
     </style>
+    <script>
+      (function () {
+        const slides = document.querySelectorAll('.offer-slide-img');
+        const dotsContainer = document.getElementById('offerSliderDots');
+        let idx = 0, timer = null;
+
+        function showSlide(i) {
+          slides.forEach((img, j) => img.classList.toggle('active', j === i));
+          document.querySelectorAll('.offer-dots .dot').forEach((dot, j) => dot.classList.toggle('active', j === i));
+          idx = i;
+          resetTimer();
+        }
+        function next() { showSlide((idx + 1) % slides.length); }
+        function prev() { showSlide((idx - 1 + slides.length) % slides.length); }
+        function resetTimer() {
+          if (timer) clearInterval(timer);
+          timer = setInterval(next, 3500);
+        }
+        // Dots
+        dotsContainer.innerHTML = '';
+        slides.forEach((_, i) => {
+          const dot = document.createElement('button');
+          dot.className = 'dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', `Go to offer ${i + 1}`);
+          dot.onclick = () => showSlide(i);
+          dotsContainer.appendChild(dot);
+        });
+        document.getElementById('offerPrevBtn').onclick = prev;
+        document.getElementById('offerNextBtn').onclick = next;
+        showSlide(0);
+      })();
+    </script>
   </section>
 
   <!-- Reviews -->
-  <section class="reviews-section">
-    <div class="reviews-header">
-      <p class="subtitle"
-        style="font-size: 1.1rem; color: #b66c26; font-weight: 700; letter-spacing: 2px; margin-bottom: 0;">
-        CLIENT REVIEWS
-      </p>
-      <h2 class="title"
-        style="font-size: 2.5rem; font-weight: 800; background: linear-gradient(90deg, #ffb347 0%, #c39727 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 2px; margin-bottom: 0.5rem;">
-        WHAT PEOPLE SAY
-      </h2>
-      <div class="quote-smile" style="margin-bottom: 0;">
-        <div class="smile-eyes" style="font-size: 3rem; color: #ffb347; letter-spacing: 0.5rem;">❝❞</div>
-        <svg class="smile-curve" viewBox="0 0 100 50" style="margin-top: -10px;">
-          <path d="M10,10 Q50,50 90,10" stroke="#ff6b9d" stroke-width="4" fill="none" />
-        </svg>
-      </div>
-    </div>
-
-    <div class="review-card" style="max-width: 700px;">
-      <div class="review-content" id="review-content"
-        style="border-left: 6px solid #ffb347; border-radius: 18px 0 0 18px; background: transparent; padding: 2.5rem 2rem;">
-        <p class="review-text" id="review-text"
-          style="font-size: 1.15rem; color: #7a3d2c; font-style: italic; line-height: 1.7; margin-bottom: 1.5rem; letter-spacing: 0.2px; text-align: justify;">
-        </p>
-        <div class="d-flex align-items-center justify-content-between">
-          <p class="review-author" id="review-author"
-            style="font-size: 1rem; color: #be4f30; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0;">
-          </p>
-          <div class="review-stars" id="review-stars" style="font-size: 1.2rem; color: #ffb347; letter-spacing: 2px;">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pagination-dots" style="margin-top: 2.5rem;">
-      <span class="dot active" style="background: #FFD700; border-radius: 8px; width: 18px; height: 8px;"></span>
-      <span class="dot" style="background: #000; border-radius: 8px; width: 18px; height: 8px;"></span>
-      <span class="dot" style="background: #FFD700; border-radius: 8px; width: 18px; height: 8px;"></span>
-      <span class="dot" style="background: #000; border-radius: 8px; width: 18px; height: 8px;"></span>
-      <span class="dot" style="background: #FFD700; border-radius: 8px; width: 18px; height: 8px;"></span>
-      <span class="dot" style="background: #000; border-radius: 8px; width: 18px; height: 8px;"></span>
-    </div>
-  </section>
-
-
-  <!-- Doctors Section -->
-  <!--    
-  <section class="py-5 bg-white text-center">
+  <section class="reviews-section py-5" style="background: #fff;">
     <div class="container">
-      <p class="text-uppercase text-danger fw-semibold mb-2" style="letter-spacing: 2px;">Our Doctors</p>
-      <h2 class="fw-bold display-5 mb-4">Meet Our Expert Team</h2>
-
-      <div class="row justify-content-center g-4">
-        <div class="col-12 col-md-5 col-lg-4">
-          <a href="pages/team.html#saket-jha" class="text-decoration-none text-dark">
-            <div class="card border-0 h-100 shadow-sm">
-              <img src="saket-jha.JPG" class="card-img-top rounded doctor-img-zoom" alt="Dr. Saket Jha">
-              <style>
-                .doctor-img-zoom {
-                  transition: transform 0.3s ease;
-                }
-
-                .doctor-img-zoom:hover {
-                  transform: scale(1.08);
-                  z-index: 2;
-                }
-              </style>
-              <div class="card-body text-center"><br>
-                <h5 class="card-title fw-bold">Dr. Saket Jha</h5>
-                <p class="text-uppercase text-muted small" style="letter-spacing: 1px;">
-                  Maxillofacial & Facial cosmetic surgeon<br>Hair transplant Specialist
-                </p>
-              </div>
-            </div>
-          </a>
+      <div class="reviews-header text-center mb-4">
+        <p class="subtitle"
+          style="font-size: 1.1rem; color: #000; font-weight: 700; letter-spacing: 2px; margin-bottom: 0;">
+          CLIENT REVIEWS
+        </p>
+        <h2 class="title"
+          style="font-size: 2.2rem; font-weight: 800; background:white; -webkit-background-clip: text; background-clip: text; letter-spacing: 2px; margin-bottom: 0.5rem;">
+          WHAT PEOPLE SAY
+        </h2>
+        <div class="quote-smile" style="margin-bottom: 0;">
+          <div class="smile-eyes" style="font-size: 2.2rem; color: #000; letter-spacing: 0.5rem;">❝❞</div>
+          <svg class="smile-curve" viewBox="0 0 100 50" style="margin-top: -10px; width: 80px; height: 30px;">
+            <path d="M10,10 Q50,50 90,10" stroke="#000" stroke-width="4" fill="none" />
+          </svg>
         </div>
+      </div>
 
-        <div class="col-12 col-md-5 col-lg-4">
-          <a href="pages/team.html#shambhavi-shukla" class="text-decoration-none text-dark">
-            <div class="card border-0 h-100 shadow-sm">
-              <img src="shambhavi-shukla.PNG" class="card-img-top rounded doctor-img-zoom" alt="Dr. Shambhavi Shukla">
-              <style>
-                .doctor-img-zoom {
-                  transition: transform 0.3s ease;
-                }
-
-                .doctor-img-zoom:hover {
-                  transform: scale(1.08);
-                  z-index: 2;
-                }
-              </style>
-              <div class="card-body text-center"><br>
-                <h5 class="card-title fw-bold">Dr. Shambhavi Shukla</h5>
-                <p class="text-uppercase text-muted small" style="letter-spacing: 1px;">
-                  MS(DNB) ENT <br /> HEAD AND NECK ONCOSURGERY (FELLOW)
-                </p>
-              </div>
-            </div>
-          </a>
+      <!-- Responsive Image Slider for Reviews -->
+      <div class="review-image-slider mx-auto position-relative" style="max-width: 500px;">
+        <button class="carousel-nav btn btn-light px-2 py-1 position-absolute" id="reviewPrevBtn"
+          aria-label="Previous review"
+          style="border-radius:50%; left: 10px; top: 50%; transform: translateY(-50%); z-index:2;"><span
+            style="font-size:1.5rem;">&#60;</span></button>
+        <div class="review-slider-inner" id="reviewSliderInner">
+          <img src="/reviews/1.jpg" alt="Review 1" class="review-slide-img active" loading="lazy">
+          <img src="/reviews/2.jpg" alt="Review 2" class="review-slide-img" loading="lazy">
+          <img src="/reviews/3.jpg" alt="Review 3" class="review-slide-img" loading="lazy">
+          <img src="/reviews/4.jpg" alt="Review 4" class="review-slide-img" loading="lazy">
+          <img src="/reviews/5.jpg" alt="Review 5" class="review-slide-img" loading="lazy">
+          <img src="/reviews/6.jpg" alt="Review 6" class="review-slide-img" loading="lazy">
+          <img src="/reviews/7.jpg" alt="Review 7" class="review-slide-img" loading="lazy">
+          <img src="/reviews/8.jpg" alt="Review 8" class="review-slide-img" loading="lazy">
+          <img src="/reviews/9.jpg" alt="Review 9" class="review-slide-img" loading="lazy">
+          <img src="/reviews/10.jpg" alt="Review 10" class="review-slide-img" loading="lazy">
+          <img src="/reviews/11.jpg" alt="Review 11" class="review-slide-img" loading="lazy">
+          <img src="/reviews/12.jpg" alt="Review 12" class="review-slide-img" loading="lazy">
+          <img src="/reviews/13.jpg" alt="Review 13" class="review-slide-img" loading="lazy">
+          <img src="/reviews/14.jpg" alt="Review 14" class="review-slide-img" loading="lazy">
+          <img src="/reviews/15.jpg" alt="Review 15" class="review-slide-img" loading="lazy">
         </div>
+        <button class="carousel-nav btn btn-light px-2 py-1 position-absolute" id="reviewNextBtn"
+          aria-label="Next review"
+          style="border-radius:50%; right: 10px; top: 50%; transform: translateY(-50%); z-index:2;"><span
+            style="font-size:1.5rem;">&#62;</span></button>
+        <div class="carousel-dots w-100 d-flex justify-content-center mt-3" id="reviewSliderDots"></div>
       </div>
     </div>
-  </section> -->
 
-  <!-- Before-After section -->
-  <!-- <div class="container py-5">
-    <h2 class="text-center mb-4">BEFORE & AFTER GALLERY</h2>
-    <div class="row align-items-center">
+    <style>
+      .review-image-slider {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 2px 16px rgba(60, 64, 67, 0.08);
+        padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+        position: relative;
+        min-height: 260px;
+        width: 100%;
+      }
 
-      <div class="ba-container col-md-6">
-        <img src="after-ht.png" class="ba-img" alt="Before">
-        <div class="ba-overlay">
-          <img src="before-ht.png" class="ba-img" alt="After">
-        </div>
-        <div class="ba-slider">
-          <div class="ba-line"></div>
-          <div class="ba-bubble">DRAG</div>
-        </div>
-      </div>
+      .review-slider-inner {
+        width: 100%;
+        overflow: hidden;
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
 
-      <div class="ba-container col-md-6">
-        <img src="after-skin.png" class="ba-img" alt="Before">
-        <div class="ba-overlay">
-          <img src="before-skin.png" class="ba-img" alt="After">
-        </div>
-        <div class="ba-slider">
-          <div class="ba-line"></div>
-          <div class="ba-bubble">DRAG</div>
-        </div>
-      </div>
+      .review-slide-img {
+        display: none;
+        width: 100%;
+        max-width: 340px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(60, 64, 67, 0.08);
+        object-fit: cover;
+        margin: 0 auto;
+        transition: opacity 0.4s;
+      }
 
-    </div>
-  </div> -->
+      .review-slide-img.active {
+        display: block;
+        opacity: 1;
+      }
+
+      .carousel-dots {
+        display: flex;
+        gap: 0.4rem;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .carousel-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: gray;
+        cursor: pointer;
+        transition: background 0.2s;
+        border: none;
+        outline: none;
+        margin: 0 2px;
+        display: inline-block;
+      }
+
+      .carousel-dot.active {
+        background: black;
+        width: 18px;
+        border-radius: 8px;
+      }
+
+      @media (max-width: 600px) {
+        .review-image-slider {
+          padding: 1rem 0.5rem 1rem 0.5rem;
+          min-height: 180px;
+        }
+
+        .review-slide-img {
+          max-width: 98vw;
+        }
+
+        .review-slider-inner {
+          min-height: 120px;
+        }
+      }
+    </style>
+
+    <script>
+      // Responsive image slider logic
+      const reviewImages = document.querySelectorAll('.review-slide-img');
+      const reviewDotsContainer = document.getElementById('reviewSliderDots');
+      let reviewIndex = 0;
+      let reviewTimer = null;
+
+      function showReviewImage(idx) {
+        reviewImages.forEach((img, i) => {
+          img.classList.toggle('active', i === idx);
+        });
+        const dots = document.querySelectorAll('.carousel-dot');
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === idx);
+        });
+        reviewIndex = idx;
+        resetReviewTimer();
+      }
+
+      function nextReviewImage() {
+        reviewIndex = (reviewIndex + 1) % reviewImages.length;
+        showReviewImage(reviewIndex);
+      }
+
+      function prevReviewImage() {
+        reviewIndex = (reviewIndex - 1 + reviewImages.length) % reviewImages.length;
+        showReviewImage(reviewIndex);
+      }
+
+      function resetReviewTimer() {
+        if (reviewTimer) clearInterval(reviewTimer);
+        reviewTimer = setInterval(nextReviewImage, 4000);
+      }
+
+      // Create dots
+      reviewDotsContainer.innerHTML = '';
+      reviewImages.forEach((img, idx) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (idx === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Go to review ${idx + 1}`);
+        dot.addEventListener('click', () => showReviewImage(idx));
+        reviewDotsContainer.appendChild(dot);
+      });
+
+      document.getElementById('reviewPrevBtn').onclick = prevReviewImage;
+      document.getElementById('reviewNextBtn').onclick = nextReviewImage;
+
+      // Touch support
+      let startX = 0;
+      let endX = 0;
+      const sliderInner = document.getElementById('reviewSliderInner');
+      sliderInner.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+      });
+      sliderInner.addEventListener('touchend', e => {
+        endX = e.changedTouches[0].clientX;
+        if (endX - startX > 40) prevReviewImage();
+        else if (startX - endX > 40) nextReviewImage();
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowLeft') prevReviewImage();
+        if (e.key === 'ArrowRight') nextReviewImage();
+      });
+
+      // Initial show and timer
+      showReviewImage(0);
+    </script>
+  </section>
 
   <!-- clinic gallery -->
 
@@ -669,46 +963,58 @@
     <p>Take a glimpse inside our clinic and see our team in action.</p>
 
     <div class="gallery-slides-container">
-
       <!-- Clinic Images -->
       <a href="pages/about.html" class="slider-link">
-        <div class="show-container">
-          <div class="slide-track" id="clinicSlider">
-            <img src="clinic1.jpeg" alt="">
-            <img src="clinic2.jpeg" alt="">
-            <img src="clinic3.jpeg" alt="">
-            <img src="clinic4.jpeg" alt="">
-            <img src="clinic5.jpeg" alt="">
-            <img src="clinic6.jpeg" alt="">
-            <img src="clinic7.jpeg" alt="">
-            <img src="clinic8.jpeg" alt="">
-            <img src="clinic9.jpeg" alt="">
-            <img src="clinic10.jpeg" alt="">
-            <img src="clinic11.jpeg" alt="">
+        <div class="show-container img-show-container" id="clinicShowContainer"
+          style="aspect-ratio: 16/9; overflow: hidden;">
+          <div class="slide-track" id="clinicSlider" style="height: 100%;">
+            <img src="Gallery/clinic/1.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="Gallery/clinic/2.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="Gallery/clinic/3.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="Gallery/clinic/4.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="Gallery/clinic/5.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="Gallery/clinic/6.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="Gallery/clinic/7.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="Gallery/clinic/8.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="Gallery/clinic/9.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="Gallery/clinic/10.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="Gallery/clinic/11.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       </a>
       <!-- Doctor Images -->
       <a href="pages/about.html" class="slider-link">
-        <div class="show-container">
-          <div class="slide-track" id="doctorSlider">
-            <img src="doc1.jpeg" alt="">
-            <img src="doc2.jpeg" alt="">
-            <img src="doc3.jpeg" alt="">
-            <img src="doc5.jpeg" alt="">
+        <div class="show-container" style="aspect-ratio: 16/9; overflow: hidden;">
+          <div class="slide-track" id="doctorSlider" style="height: 100%;">
+            <img src="Gallery/doctors/doc1.jpeg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="Gallery/doctors/doc2.jpeg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="Gallery/doctors/doc3.jpeg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="Gallery/doctors/doc4.jpeg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="Gallery/doctors/doc5.jpeg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       </a>
 
       <!-- Video -->
-      <div class="show-container">
-        <div class="video-slide">
-          <video src="AcneScar2.mp4" muted autoplay loop></video>
-          <button class="mute-btn" onclick="toggleMute(this)">🔇</button>
+      <div class="show-container video-gallery-slider"
+        style="aspect-ratio: 16/9; overflow: hidden; position: relative;">
+        <div class="video-slide-track" id="videoSlideTrack" style="display: flex; transition: transform 0.5s;">
+          <div class="video-slide"
+            style="flex: 0 0 100%; height: 100%; position: relative; display: flex; align-items: center; justify-content: center;">
+            <video src="Gallery/video/HT2.mp4" muted autoplay loop playsinline
+              style="width: 100%; height: 100%; object-fit: cover; display: block; max-width: 100vw; max-height: 100%;"></video>
+            <button class="mute-btn" onclick="toggleMute(this)"
+              style="position: absolute; bottom: 12px; right: 12px; z-index: 2;">🔇</button>
+          </div>
+          <div class="video-slide"
+            style="flex: 0 0 100%; height: 100%; position: relative; display: flex; align-items: center; justify-content: center;">
+            <video src="Gallery/video/3.mp4" muted autoplay loop playsinline
+              style="width: 100%; height: 100%; object-fit: cover; display: block; max-width: 100vw; max-height: 100%;"></video>
+            <button class="mute-btn" onclick="toggleMute(this)"
+              style="position: absolute; bottom: 12px; right: 12px; z-index: 2;">🔇</button>
+          </div>
         </div>
       </div>
-
-    </div>
   </section>
 
 
@@ -719,163 +1025,130 @@
       <h2 class="text-center mb-5 fw-bold text-uppercase">Before & After Results</h2>
       <div class="row g-4">
 
-        <!-- Gallery Item -->
-
-        <div class="col-md-4">
-          <div class="card shadow-sm" style="background-color: #000; color: #f5f5dc;">
-            <div class="row g-0">
-              <div class="col-6">
-                <img src="before-hair2.jpeg" class="img-fluid rounded-start" alt="Before"
-                  style="background-color: #000;">
-              </div>
-              <div class="col-6">
-                <img src="after-hair2.jpeg" class="img-fluid rounded-end" alt="After" style="background-color: #000;">
-              </div>
+        <!-- Gallery Item 1 -->
+        <div class="col-md-4 col-12">
+          <div class="card shadow-none" style="background: transparent;">
+            <div class="ratio ratio-4x3">
+              <img src="BA/ht-02.png" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;"
+                alt="Hair Transplant – 6 Months Later">
             </div>
-            <div class="card-body text-center">
-              <p class="card-text" style="color: #f5f5dc;">Hair Transplant – 6 Months Later</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card shadow-sm" style="background-color: #000; color: #f5f5dc;">
-            <div class="row g-0">
-              <div class="col-6">
-                <img src="before-ear.jpeg" class="img-fluid rounded-start" alt="Before" style="background-color: #000;">
-              </div>
-              <div class="col-6">
-                <img src="after-ear.jpeg" class="img-fluid rounded-end" alt="After" style="background-color: #000;">
-              </div>
-            </div>
-            <div class="card-body text-center">
-              <p class="card-text" style="color: #f5f5dc;">Lobuloplasty</p>
+            <div class="card-body text-center p-2">
+              <p class="card-text" style="color: #000;">Hair Transplant – 6 Months Later</p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="card shadow-sm" style="background-color: #000; color: #f5f5dc;">
-            <div class="row g-0">
-              <div class="col-6">
-                <img src="before-hair.jpg" class="img-fluid rounded-start" alt="Before" style="background-color: #000;">
-              </div>
-              <div class="col-6">
-                <img src="after-hair.jpg" class="img-fluid rounded-end" alt="After" style="background-color: #000;">
-              </div>
+        <!-- Gallery Item 2 -->
+        <div class="col-md-4 col-12">
+          <div class="card shadow-none" style="background: transparent;">
+            <div class="ratio ratio-4x3">
+              <img src="BA/ear-01.png" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
             </div>
-            <div class="card-body text-center">
-              <p class="card-text" style="color: #f5f5dc;">Non surgical Hair restoration</p>
+            <div class="card-body text-center p-2">
+              <p class="card-text" style="color: #000;">Lobuloplasty</p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="card shadow-sm" style="background-color: #000; color: #f5f5dc;">
-            <div class="row g-0">
-              <div class="col-6">
-                <img src="before-skin1.jpeg" class="img-fluid rounded-start" alt="Before"
-                  style="background-color: #000;">
-              </div>
-              <div class="col-6">
-                <img src="after-skin1.jpeg" class="img-fluid rounded-end" alt="After" style="background-color: #000;">
-              </div>
+        <!-- Gallery Item 3 -->
+        <div class="col-md-4 col-12">
+          <div class="card shadow-none" style="background: transparent;">
+            <div class="ratio ratio-4x3">
+              <img src="BA/hair-patch-01.png" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
             </div>
-            <div class="card-body text-center">
-              <p class="card-text" style="color: #f5f5dc;">Acne Scar Treatment – After 4 Sessions</p>
+            <div class="card-body text-center p-2">
+              <p class="card-text" style="color: #000;">Non surgical Hair restoration</p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="card shadow-sm" style="background-color: #000; color: #f5f5dc;">
-            <div class="row g-0">
-              <div class="col-6">
-                <img src="before-dp.png" class="img-fluid rounded-start" alt="Before" style="background-color: #000;">
-              </div>
-              <div class="col-6">
-                <img src="after-dp.png" class="img-fluid rounded-end" alt="After" style="background-color: #000;">
-              </div>
+        <!-- Gallery Item 4 -->
+        <div class="col-md-4 col-12">
+          <div class="card shadow-none" style="background: transparent;">
+            <div class="ratio ratio-4x3">
+              <img src="BA/skin-01.png" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
             </div>
-            <div class="card-body text-center">
-              <p class="card-text" style="color: #f5f5dc;">Dimpleplasty – 1 Week Later</p>
+            <div class="card-body text-center p-2">
+              <p class="card-text" style="color: #000;">Acne Scar Treatment – After 4 Sessions</p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="card shadow-sm" style="background-color: #000; color: #f5f5dc;">
-            <div class="row g-0">
-              <div class="col-6">
-                <img src="before-hair1.jpeg" class="img-fluid rounded-start" alt="Before"
-                  style="background-color: #000;">
-              </div>
-              <div class="col-6">
-                <img src="after-hair1.jpeg" class="img-fluid rounded-end" alt="After" style="background-color: #000;">
-              </div>
+        <!-- Gallery Item 5 -->
+        <div class="col-md-4 col-12">
+          <div class="card shadow-none" style="background: transparent;">
+            <div class="ratio ratio-4x3">
+              <img src="BA/dp-01.png" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
             </div>
-            <div class="card-body text-center">
-              <p class="card-text" style="color: #f5f5dc;">Hair ReGrowth – Post 5 Sessions</p>
+            <div class="card-body text-center p-2">
+              <p class="card-text" style="color: #000;">Dimpleplasty – 1 Week Later</p>
             </div>
           </div>
         </div>
+
+        <!-- Gallery Item 6 -->
+        <div class="col-md-4 col-12">
+          <div class="card shadow-none" style="background: transparent;">
+            <div class="ratio ratio-4x3">
+              <img src="BA/ht-01.png" class="img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
+            </div>
+            <div class="card-body text-center p-2">
+              <p class="card-text" style="color: #000;">Hair ReGrowth – Post 5 Sessions</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
+    <style>
+      #gallery .card {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+      }
+
+      #gallery .ratio {
+        position: relative;
+        overflow: hidden;
+        background: #f8f8f8;
+      }
+
+      #gallery .ratio img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: none;
+        background: transparent;
+      }
+
+      #gallery .ratio img.position-absolute {
+        left: 50%;
+        width: 50%;
+        z-index: 2;
+      }
+
+      #gallery .ratio img:first-child {
+        position: absolute;
+        left: 0;
+        width: 50%;
+        z-index: 1;
+      }
+
+      #gallery .card-body {
+        background: transparent !important;
+        border: none !important;
+      }
+    </style>
   </section>
 
-  <!-- Appointment Form -->
-  <!-- 
-  <section class="appointment-section">
-    <div class="container">
-      <form action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST" class="appointment-form">
-        <div class="row gx-5">
-          <div class="col-md-9">
 
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <input type="text" name="name" class="form-control custom-input" placeholder="Your Name" required>
-              </div>
-              <div class="col-md-6">
-                <input type="text" name="reason" class="form-control custom-input" placeholder="Reason for Appointment"
-                  required>
-              </div>
-            </div>
-            <div class="row mb-4">
-              <div class="col-md-4">
-                <input type="email" name="email" class="form-control custom-input" placeholder="Email" required>
-              </div>
-              <div class="col-md-4">
-                <input type="datetime-local" id="datetime" name="datetime" class="form-control custom-input" required>
-              </div>
-              <div class="col-md-4">
-                <select name="treatment" class="form-select custom-input" placeholder="Treatment Type" required>
-                  <option value="">Select Treatment Type</option>
-                  <option value="Peel Treatments">Hair Transplant</option>
-                  <option value="Skin Rejuvenation">Skin treatment</option>
-                  <option value="Laser Resurfacing">Laser Resurfacing</option>
-                  <option value="Peel Treatments">Cosmetic Surgery</option>
-                  <option value="Peel Treatments">Injectables</option>
-                </select>
-              </div>
-            </div>
-
-          </div>
-
-
-          <div class="col-md-3 d-flex flex-column justify-content-center align-items-start position-relative">
-            <h3 class="fw-bold text-uppercase mb-3" style="margin-left: 100px;">Book Your<br>Slot</h3>
-            <button type="submit" class="btn btn-brown px-4 py-2 text-uppercase"
-              style="margin-left: 100px;">Appointment</button>
-          </div>
-        </div>
-      </form>
-
-    </div>
-  </section> -->
-
-  <hr style="border: none; border-top: 1.5px solid #bbb; margin: 40px 0 30px 0; width: 90%; background: transparent;">
+  <hr style="border: none; border-top: 1.5px solid #fff; margin: 40px 0 30px 0; width: 90%; background: transparent;">
 
   <!-- Footer -->
-  <footer class="py-5" style="background-color: #fff6f0; color: #222;">
+  <footer class="py-5" style="background-color: #fff; color: #000;">
     <div class="container">
       <div class="row">
         <!-- Logo & Description -->
@@ -903,21 +1176,21 @@
           <ul class="list-unstyled">
             <li class="mb-2">
               <a href="tel:+918660432589" class="location-icon text-decoration-none d-flex align-items-center"
-                style="color: #222;">
+                style="color: #000;">
                 <i class="bi bi-telephone me-2"></i>
                 <span>+91-866-043-2589</span>
               </a>
             </li>
             <li class="mb-2">
               <a href="mailto:contact@contourcosmeticclinic.com"
-                class="location-icon text-decoration-none d-flex align-items-center" style="color: #222;">
+                class="location-icon text-decoration-none d-flex align-items-center" style="color: #000;">
                 <i class="bi bi-envelope me-2"></i>
                 <span>contact@contourcosmeticclinic.com</span>
               </a>
             </li>
             <li>
               <a href="https://maps.app.goo.gl/A2KoWS7rxQWHtMRw7?g_st=com.google.maps.preview.copy" target="_blank"
-                class="location-icon text-decoration-none d-flex align-items-start" style="color: #222;">
+                class="location-icon text-decoration-none d-flex align-items-start" style="color: #000;">
                 <i class="bi bi-geo-alt me-2"></i>
                 <span>2nd floor, Lakshmidevi Complex, 80 Ft Rd, Vishweshwaraiah Road, 6th Stage, Phase 2, BTM Layout,
                   Bengaluru, Karnataka 560076</span>
@@ -930,13 +1203,13 @@
         <div class="col-md-3 mb-4 align-items-center" style="width: 200px;">
           <h5 class="fw-bold">Explore</h5>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-decoration-none link-hover" style="color: #222;">Home</a></li>
-            <li><a href="pages/about.html" class="text-decoration-none link-hover" style="color: #222;">About Us</a>
+            <li><a href="#" class="text-decoration-none link-hover" style="color: #000;">Home</a></li>
+            <li><a href="pages/about.html" class="text-decoration-none link-hover" style="color: #000;">About Us</a>
             </li>
-            <li><a href="pages/team.html" class="text-decoration-none link-hover" style="color: #222;">Our Team</a></li>
-            <li><a href="pages/contact.html" class="text-decoration-none link-hover" style="color: #222;">Contact</a>
+            <li><a href="pages/team.html" class="text-decoration-none link-hover" style="color: #000;">Our Team</a></li>
+            <li><a href="pages/contact.html" class="text-decoration-none link-hover" style="color: #000;">Contact</a>
             </li>
-            <li><a href="pages/gallery.html" class="text-decoration-none link-hover" style="color: #222;">Gallery</a>
+            <li><a href="pages/gallery.html" class="text-decoration-none link-hover" style="color: #000;">Gallery</a>
             </li>
           </ul>
         </div>
@@ -946,10 +1219,10 @@
           <h5 class="fw-bold mb-3" style="font-size: 1.5rem;">GET IN TOUCH</h5>
           <form action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST"
             class="position-relative mt-4" target="_blank">
-            <div class="input-group align-items-center border-bottom pb-2" style="border-color: #222;">
+            <div class="input-group align-items-center border-bottom pb-2" style="border-color: #000;">
               <input type="email" name="email" class="form-control bg-transparent border-0 ps-0"
-                placeholder="Your Email" required style="box-shadow: none; font-size: 1rem; color: #222;">
-              <button type="submit" class="btn" style="box-shadow: none; color: #222;"></button>
+                placeholder="Your Email" required style="box-shadow: none; font-size: 1rem; color: #000;">
+              <button type="submit" class="btn" style="box-shadow: none; color: #000;"></button>
               <i class="bi bi-send-fill fs-5"></i>
               </button>
             </div>
@@ -959,7 +1232,7 @@
       </div>
     </div>
     </div>
-    <div class="text-center mt-4" style="font-size: 0.95rem; color: #030100;">
+    <div class="text-center mt-4" style="font-size: 0.95rem; color: #000;">
       &copy; <span id="footer-year"></span> Contour Cosmetic Clinic. All rights reserved.
     </div>
   </footer>
@@ -968,8 +1241,8 @@
   </script>
 
   <a href="https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0"
-    class="wa-btn d-flex align-items-center" title="Contact Us on WhatsApp" target="_blank"
-    style="padding: 12px 22px; border-radius: 30px; font-weight: 600; font-size: 1rem;">
+    class="wa-btn" title="Contact Us on WhatsApp" target="_blank"
+    style="font-weight: 600; font-size: 1rem; padding: 10px 20px 10px 20px;">
     <i class="bi bi-whatsapp me-2" style="font-size: 22px;"></i>
     <span>Chat Now</span>
   </a>
@@ -985,15 +1258,12 @@
         <form action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST" target="_blank"
           style="display: flex; flex-direction: column; gap: 16px;">
           <div style="display: flex; gap: 20px;">
-            <input style="flex: 1 1 0; border: none; border-bottom: 1px solid #7f4a3d; background-color: #fdf4ef;"
-              type="text" name="name" placeholder="Enter your Name" required>
-            <input style="flex: 1 1 0; border: none; border-bottom: 1px solid #7f4a3d; background-color: #fdf4ef;"
-              type="tel" name="phone" placeholder="Enter your Phone number" required>
+            <input style="flex: 1 1 0; border: none; border-bottom: 1px solid #fff; background-color: #fff;" type="text"
+              name="name" placeholder="Enter your Name" required>
+            <input style="flex: 1 1 0; border: none; border-bottom: 1px solid #fff; background-color: #fff;" type="tel"
+              name="phone" placeholder="Enter your Phone number" required>
           </div>
-          <button onclick="closePopup()" type="submit" class="btn-brown blink-btn"
-            style="background-color: #4b2e2e; color: white; border: 1px solid #4b2e2e; border-radius: 6px; align-self: center; width: 150px;">
-            SUBMIT
-          </button>
+          <button onclick="closePopup()" type="submit" class="btn-submit">SUBMIT</button>
         </form>
       </div>
     </div>
@@ -1119,85 +1389,6 @@
 
     // Set the default value
     document.getElementById('datetime').value = getCurrentDateTimeLocal();
-  </script>
-
-  <script>
-    const reviews = [
-      {
-        text: "I battled acne scars for years, and it really affected my self-esteem. I avoided selfies and always wore makeup to cover the marks. I finally went for professional treatment after a friend recommended it. The doctor suggested a combination of microneedling and laser sessions. After 4 sessions, the difference is incredible—my skin is smoother, and the scars have faded significantly. People keep asking what skincare I’m using! I feel confident and beautiful without makeup now. The staff was warm, and the doctor explained everything patiently. It’s honestly the best self-care decision I’ve ever made.",
-        author: "MAMTA (31) – DOCTOR",
-        stars: "★ ★ ★ ★ ☆",
-        duration: 8000 // 8 seconds
-      },
-      {
-        text: "I always loved dimples and thought they added so much charm to a smile. After researching for months, I finally went ahead with dimple creation. The procedure was super quick—about 30 minutes—and done under local anesthesia. There was slight swelling for a few days, but it healed beautifully. Now, my smile looks so cute and natural! I get compliments all the time, and no one believes it’s a cosmetic procedure. It’s boosted my confidence on camera and in real life. I’m so happy I chose the right doctor. It’s my favorite little feature now!",
-        author: "Beenish S (28) – Sports Athlete",
-        stars: "★ ★ ★ ★ ★",
-        duration: 6000 // 6 seconds
-      },
-      {
-        text: "As a fitness coach, appearance matters. When I started balding at the crown, I felt less confident during sessions. The transplant changed that. The clinic explained everything in detail, and I went ahead with FUE. No major pain, minimal downtime. After 7 months, I had full growth where I was bald. Clients and colleagues keep asking what I did! It looks completely natural, and I feel like myself again. Totally worth it.",
-        author: "Sameer P (29) – Fitness Trainer",
-        stars: "★ ★ ★ ★ ☆",
-        duration: 4000 // 4 seconds
-      },
-      {
-        text: "Being the face of my startup, I felt pressure to always look sharp. My hair loss became a major concern. I did the transplant during a break in my schedule, and the results have exceeded expectations. Growth started around 3 months and continued steadily. It’s been a year, and the change is unbelievable. I look younger and feel far more confident walking into investor meetings.",
-        author: "Deepak L (31) – Entrepreneur",
-        stars: "★ ★ ★ ★ ★",
-        duration: 4000 // 4 seconds
-      },
-      {
-        text: "I was losing modeling work because of my receding hairline. It was tough. I did my transplant last year and followed every post-op instruction. Today, my hairline is sharp and full, and I’m back to doing shoots regularly. The camera picks it up beautifully. People think I just styled it better—no one suspects a transplant. It’s given me my career back. I’m forever grateful.",
-        author: "Rahul T (28) – Model",
-        stars: "★ ★ ★ ★ ☆",
-        duration: 4000 // 4 seconds
-      },
-      {
-        text: "I spent years hiding my bald spots with creative hairstyles and hats. It got to a point where I didn’t want to attend weddings or social events. I finally decided to get a hair transplant after seeing a friend’s results. The experience was professional, painless, and surprisingly quick. It’s been 10 months, and the results are beyond what I imagined. My hairline is back, my confidence is back, and I feel like a better version of myself. Even my mom was shocked at how natural it looks. Honestly, I wish I had done this much earlier.",
-        author: "Abhishek S (33) – Software Developer",
-        stars: "★ ★ ★ ☆ ☆",
-        duration: 4000 // 4 seconds
-      }
-    ];
-
-    const reviewText = document.getElementById("review-text");
-    const reviewAuthor = document.getElementById("review-author");
-    const reviewStars = document.getElementById("review-stars");
-    const dots = document.querySelectorAll(".dot");
-
-    let currentIndex = 0;
-    let timer;
-
-    function showReview(index) {
-      const review = reviews[index];
-      reviewText.textContent = review.text;
-      reviewAuthor.textContent = review.author;
-      reviewStars.textContent = review.stars;
-
-      dots.forEach(dot => dot.classList.remove("active"));
-      dots[index].classList.add("active");
-
-      currentIndex = index;
-
-      // Restart the timer with the new duration
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-        const nextIndex = (currentIndex + 1) % reviews.length;
-        showReview(nextIndex);
-      }, review.duration);
-    }
-
-    // Handle dot click
-    dots.forEach((dot, index) => {
-      dot.setAttribute("data-index", index);
-      dot.addEventListener("click", () => {
-        showReview(index);
-      });
-    });
-
-    // Initial review
-    showReview(0);
   </script>
 
   <script>

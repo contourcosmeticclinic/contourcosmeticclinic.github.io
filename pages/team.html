@@ -28,251 +28,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #fff7f2;
-      color: #2e2e2e;
-    }
-
-    header {
-      background: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #000;
-      margin: 0 1rem;
-      font-weight: 600;
-    }
-
-    nav a.active {
-      background-color: #f4e2dd;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-    }
-
-    .hero {
-      background-image: url('https://via.placeholder.com/1920x400');
-      background-size: cover;
-      background-position: center;
-      padding: 6rem 2rem 3rem;
-      text-align: center;
-      color: #000;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
-
-    .breadcrumb {
-      color: #e25f4f;
-      font-weight: 500;
-      margin-top: 0.5rem;
-    }
-
-    .doctor-img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 12px;
-      object-fit: cover;
-    }
-
-    .doctor-card {
-      margin-bottom: 60px;
-    }
-
-    .specialty {
-      text-transform: uppercase;
-      font-weight: 500;
-      letter-spacing: 1px;
-      color: #6c757d;
-    }
-
-    footer {
-      background-color: #5d2c2c;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      margin-top: 4rem;
-    }
-
-    /* WhatsApp Chat Now Button - pill style */
-    .wa-btn {
-      position: fixed;
-      bottom: 30px;
-      left: 30px;
-      z-index: 1000;
-      background: #25d366;
-      color: #fff;
-      border: none;
-      border-radius: 40px;
-      padding: 14px 32px 14px 22px;
-      font-weight: 700;
-      font-size: 1.15rem;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      transition: background 0.2s, box-shadow 0.2s;
-      text-decoration: none;
-    }
-
-    .wa-btn:hover {
-      background: #1ebe57;
-      color: #fff;
-      text-decoration: none;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
-    }
-
-    .wa-btn i {
-      font-size: 26px !important;
-      margin-right: 10px;
-    }
-
-    .wa-btn span {
-      font-weight: 700;
-      font-size: 1.15rem;
-    }
-
-    @media (max-width: 600px) {
-      .wa-btn {
-        left: 10px;
-        bottom: 10px;
-        padding: 10px 18px 10px 14px;
-        font-size: 1rem;
-      }
-
-      .wa-btn i {
-        font-size: 20px !important;
-        margin-right: 6px;
-      }
-
-      .wa-btn span {
-        font-size: 1rem;
-      }
-    }
-
-    .footer {
-      background-color: #7a3d2c;
-      color: white;
-      padding: 4rem 2rem;
-    }
-
-    .footer a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
-    }
-
-
-
-    .social-icons a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 30px;
-      height: 30px;
-      margin: 5px;
-      background-color: #5e2f23;
-      /* dark brown */
-      color: white;
-      border-radius: 50%;
-      /* make it round */
-      font-size: 15px;
-      text-decoration: none;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    .social-icons a:hover {
-      background-color: #7a3d2c;
-      /* lighter brown on hover */
-      color: white;
-    }
-
-
-    .link-hover {
-      position: relative;
-      display: inline-block;
-      overflow: hidden;
-    }
-
-    .link-hover:before {
-      content: '';
-      position: absolute;
-      background: #591d09;
-      /* Change to any color you like */
-      width: 100%;
-      height: 3px;
-      bottom: 0;
-      left: -100%;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .link-hover:hover:before {
-      left: 0;
-    }
-
-    /* Add a smooth color change on hover */
-    .link-hover:hover {
-      color: #7a3d2c;
-      /* Change text color when hovered */
-    }
-
-    .location-icon {
-      color: white;
-      /* Default color */
-      margin-right: 8px;
-      /* Space between icon and text */
-      transition: color 0.3s ease;
-      /* Smooth transition */
-    }
-
-    /* Change color on hover */
-    .location-icon:hover {
-      color: #887670;
-      /* Change to desired color on hover */
-    }
-
-    .contact {
-      color: black;
-      /* Default color */
-      /* Space between icon and text */
-      transition: color 0.3s ease;
-      /* Smooth transition */
-    }
-
-    /* Change color on hover */
-    .contact :hover {
-      color: #887670;
-      /* Change to desired color on hover */
-    }
-
-    .separator {
-      color: black;
-      margin: 0 5px;
-    }
-
-    /* Add zoom-on-hover effect */
-    .zoom-on-hover {
-      transition: transform 0.3s ease;
-    }
-
-    .zoom-on-hover:hover {
-      transform: scale(1.08);
-      z-index: 2;
-    }
-  </style>
+  <!-- common css stylesheet -->
+  <link rel="stylesheet" href="../common.css">
 </head>
 
 <body>
@@ -280,232 +37,446 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDC36237" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <header>
-    <a href="../index.html">
-      <div class="logo"><img src="../logo_cropped.png" height="40"></div>
-    </a>
-    <nav class="navbar navbar-expand-lg p-0" style="background: none; box-shadow: none;">
-      <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a href="../index.html" class="nav-link px-3">
-              <span class="d-none d-lg-inline">Home</span>
-              <span class="d-inline d-lg-none">Home</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link px-3">
-              <span class="d-none d-lg-inline">About Us</span>
-              <span class="d-inline d-lg-none">About</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="team.html" class="nav-link px-3 active">
-              <span class="d-none d-lg-inline">Our Team</span>
-              <span class="d-inline d-lg-none">Team</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link px-3">
-              <span class="d-none d-lg-inline">Contact</span>
-              <span class="d-inline d-lg-none">Contact</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="faq.html" class="nav-link px-3">
-              <span class="d-none d-lg-inline">FAQs</span>
-              <span class="d-inline d-lg-none">FAQs</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <a href="contact.html">
-      <button
-        style="background-color: #5d2c2c; color: white; padding: 0.6rem 1.2rem; border: none; border-radius: 4px; font-weight: 600;">Appointment</button>
-    </a>
-  </header>
 
+  <body class="bg-header-white">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDC36237" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
+    <div
+      class="container-fluid p-3 d-flex flex-column flex-md-row justify-content-between align-items-center bg-header-white border-bottom text-center text-md-start">
+      <div>
+        <small>
+          <span class="d-inline-flex align-items-center flex-wrap gap-2" style="font-size: 1.08rem;">
+            <!-- Logo and Brand Name -->
+            <span style="display: inline-block; position: relative;">
+              <img src="../Header/ContourHeader.png"
+                style="height: 48px; vertical-align: middle; transition: height 0.2s;" />
+              <img src="../Header/brand-name.png" alt="Contour Cosmetic Clinic"
+                style="height: 48px; vertical-align: middle;" />
+            </span>
 
+            <!-- Desktop Dropdown Menu -->
+            <div class="d-none d-md-inline-block" style="position: relative;">
 
-  <div class="container py-5">
-    <h1 class="text-center fw-bold mb-5" style="font-size: 2.8rem;">Meet Our Doctors</h1>
+              <!-- About Dropdown Menu -->
+              <div class="dropdown" style="display: inline-block;">
+                <a href="#" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill dropdown-toggle"
+                  id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="background: #ffffff;">
+                  About
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="aboutDropdown" style="min-width: 230px; font-size: 1rem;">
+                  <li><a class="dropdown-item" href="about.html">About Contour</a></li>
+                  <li><a class="dropdown-item" href="team.html#saket-jha">Dr. Saket Jha</a></li>
+                  <li><a class="dropdown-item" href="team.html#shambhavi-shukla">Dr. shambhavi shukla</a></li>
+                  <li><a class="dropdown-item" href="reviews.html">Patient Reviews</a></li>
+                  <li><a class="dropdown-item" href="faq.html">FAQS</a></li>
+                </ul>
+                <style>
+                  .dropdown-menu .dropdown-item:hover,
+                  .dropdown-menu .dropdown-item:focus {
+                    background-color: #fef8f2 !important;
+                    font-weight: 600;
+                  }
+                </style>
+              </div>
 
-    <!-- Doctor 1 -->
-    <div class="row align-items-center doctor-card" id="saket-jha">
-      <div class="col-md-4 text-center">
-        <img src="../saket-jha.JPG" class="doctor-img zoom-on-hover" alt="Dr. Saket Jha">
-      </div>
-      <div class="col-md-8"><br><br>
-        <h3>Dr. Saket Jha</h3>
-        <p class="specialty">Maxillofacial & Facial cosmetic surgeon | Hair transplant Specialist</p>
-        <p>
-          Dr. Saket is a renowned maxillofacial and facial cosmetic surgeon with specialized expertise in FUE hair
-          transplantation. With a pan-India presence, he performs advanced hair restoration procedures from North to
-          South India and serves as the leading surgeon for several reputed cosmetic chains in Bangalore.
+              <!-- Services Dropdown Menu -->
+              <div class="dropdown" style="display: inline-block;">
+                <a href="#" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill dropdown-toggle"
+                  id="serviceDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="background: #ffffff;">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="serviceDropdown" style="min-width: 230px; font-size: 1rem;">
+                  <li><a class="dropdown-item" href="services/hair-transplant.html">Hair Transplant</a></li>
+                  <li><a class="dropdown-item" href="services/cosmetic-patch.html">Cosmetic Hair Patch</a></li>
+                  <li><a class="dropdown-item" href="services/PRP.html">PRP</a></li>
+                  <li><a class="dropdown-item" href="services/GFC.html">GFC</a></li>
+                  <li><a class="dropdown-item" href="services/Skin.html">Skin</a></li>
+                </ul>
+                <style>
+                  .dropdown-menu .dropdown-item:hover,
+                  .dropdown-menu .dropdown-item:focus {
+                    background-color: #fef8f2 !important;
+                    font-weight: 600;
+                  }
+                </style>
+              </div>
 
-          A graduate of Rajiv Gandhi University of Health Sciences, Dr. Saket has undergone intensive training and has
-          worked alongside some of the most esteemed doctors in India. His clinical journey spans premier institutions
-          such as Tata Medical Center (Kolkata), RCC Trivandrum, Jubilee Mission Medical College (Thrissur), Karnataka
-          Institute of Medical Sciences (KIMS), and NIMHANS (Bangalore), among others.
+              <!-- Patient Review Dropdown Menu -->
+              <div class="dropdown" style="display: inline-block;">
+                <a href="reviews.html" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill">
+                  Patient Reviews
+                </a>
+              </div>
 
-          Known for blending surgical precision with artistic vision, Dr. Saket brings a decade of experience in facial
-          aesthetics, reconstructive surgery, and advanced hair restoration, making him a trusted name in the field of
-          facial transformation and cosmetic excellence.
-        </p>
-      </div>
-    </div>
+              <!-- Gallery -->
+              <div class="dropdown" style="display: inline-block;">
+                <a href="gallery.html" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill">
+                  Gallery
+                </a>
+              </div>
 
-    <!-- Doctor 2 -->
+              <!-- Doctors -->
+              <div class="dropdown" style="display: inline-block;">
+                <a href="team.html" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill">
+                  Doctors
+                </a>
+              </div>
 
+              <!-- FAQ -->
+              <div class="dropdown" style="display: inline-block;">
+                <a href="faq.html" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill">
+                  FAQS
+                </a>
+              </div>
 
-    <div class="row align-items-center doctor-card" id="shambhavi-shukla">
-      <div class="col-md-4 text-center">
-        <img src="../shambhavi-shukla.PNG" class="card-img-top rounded zoom-on-hover" alt="Dr. Shambhavi Shukla">
-      </div>
-      <div class="col-md-8"><br><br>
-        <h3>Dr. Shambhavi Shukla</h3>
-        <p class="specialty text-uppercase">MS(DNB) ENT HEAD AND NECK ONCOSURGERY (FELLOW)</p>
-        <p>
-          Dr. Shambhavi Shukla is a renowned ENT surgeon with specialized fellowship training in Head and Neck Oncology
-          from Tata Medical Center, combining expertise in oncologic surgery with a strong focus on facial
-          reconstruction. Recognized for her ability to provide comprehensive care in complex head and neck cancer
-          cases, she excels in both the surgical management of tumors and the restoration of facial features, enabling
-          patients to regain not only their health but also their appearance and confidence.
-
-          A graduate of Command Hospital, Kolkata, Dr. Shambhavi completed her postgraduate studies (MS) in ENT, honing
-          her skills in one of India’s most prestigious military healthcare institutions. At Tata Medical Center, she
-          further specialized in head and neck oncology, refining her proficiency in state-of-the-art surgical and
-          reconstructive techniques for facial restoration.
-
-          Her compassionate approach and dedication to advanced reconstructive methods, including the integration of
-          aesthetic principles, make Dr. Shambhavi a leader in the field of head and neck onco. She combines
-          cutting-edge technologies with a deep understanding of facial anatomy to provide life-changing results for
-          patients undergoing head and neck surgeries.
-        </p>
-      </div>
-    </div>
-
-  </div>
-
-
-
-  <!-- Footer -->
-  <footer class="text-white py-5" style="background-color: #7B4F3D;">
-    <div class="container">
-      <div class="row">
-        <!-- Logo & Description -->
-        <div class="col-12 col-md-3 mb-4 text-center text-md-start">
-          <h4 class="fw-bold">Contour Cosmetic Clinic</h4>
-          <p>We finish with care, welcome change, and stay centered on your confidence.</p>
-          <div class="social-icons">
-              <a href="https://www.facebook.com/share/1AiswEWwo9/?mibextid=wwXIfr" class="me-2" target="_blank"
-              rel="noopener noreferrer"><i class="bi bi-facebook" style="color: #1877f3;"></i></a>
-              <a href="https://www.linkedin.com/company/contour-cosmetic-clinic/" class="me-2" target="_blank"
-              rel="noopener noreferrer"><i class="bi bi-linkedin" style="color: #0077b5;"></i></a>
-              <a href="https://www.instagram.com/contour_bengaluru?igsh=Nzh4MXRzbTdwejdy" class="me-2" target="_blank"
-              rel="noopener noreferrer"><i class="bi bi-instagram" style="color: #E1306C;"></i></a>
-              <a href="https://youtube.com/@shapeyourstory?si=szaqr58VYWUBpQBV" class="me-2" target="_blank"
-              rel="noopener noreferrer"><i class="bi bi-youtube" style="color: #FF0000;"></i></a>
-              <a href="https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0" class="me-2" target="_blank"
-              rel="noopener noreferrer"><i class="bi bi-whatsapp" style="color: #25D366;"></i></a>
+              <!-- Contact -->
+              <div class="dropdown" style="display: inline-block;">
+                <a href="contact.html" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill">
+                  Contact
+                </a>
+              </div>
             </div>
-        </div>
 
-        <!-- Contact Info -->
-        <div class="col-12 col-md-3 mb-4 text-center text-md-start">
-          <h5 class="fw-bold">Contact</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2">
-              <a href="tel:+918660432589"
-                class="location-icon text-decoration-none d-flex justify-content-center justify-content-md-start align-items-center">
-                <i class="bi bi-telephone me-2"></i>
-                <span>+91-866-043-2589</span>
-              </a>
-            </li>
-            <li class="mb-2">
-              <a href="mailto:contact@contourcosmeticclinic.com"
-                class="location-icon text-decoration-none d-flex justify-content-center justify-content-md-start align-items-center">
-                <i class="bi bi-envelope me-2"></i>
-                <span>contact@contourcosmeticclinic.com</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://maps.app.goo.gl/A2KoWS7rxQWHtMRw7?g_st=com.google.maps.preview.copy" target="_blank"
-                class="location-icon text-decoration-none d-flex justify-content-center justify-content-md-start align-items-start">
-                <i class="bi bi-geo-alt me-2"></i>
-                <span>2nd floor, Lakshmidevi Complex, 80 Ft Rd, Vishweshwaraiah Road, 6th Stage, Phase 2, BTM Layout,
-                  Bengaluru, Karnataka 560076</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="col-12 col-md-3 mb-4 text-center text-md-start">
-          <h5 class="fw-bold">Explore</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white text-decoration-none link-hover">Home</a></li>
-            <li><a href="about.html" class="text-white text-decoration-none link-hover">About Us</a></li>
-            <li><a href="team.html" class="text-white text-decoration-none link-hover">Our Team</a></li>
-            <li><a href="contact.html" class="text-white text-decoration-none link-hover">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Newsletter -->
-        <div class="col-12 col-md-3 mb-4 text-center text-md-start">
-          <h5 class="fw-bold">Newsletter</h5>
-          <h5 class="fw-bold mb-3" style="font-size: 1.5rem;">GET IN TOUCH</h5>
-          <form action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST"
-            class="position-relative mt-4" target="_blank">
-            <div class="input-group align-items-center border-bottom pb-2" style="border-color: #fff;">
-              <input type="email" name="email" class="form-control bg-transparent border-0 text-white ps-0"
-                placeholder="Your Email" required style="box-shadow: none; font-size: 1rem;">
-              <button type="submit" class="btn text-white" style="box-shadow: none;">
-                <i class="bi bi-send-fill fs-5"></i>
+            <!-- Mobile Hamburger Menu -->
+            <div class="d-md-none" style="display: inline-block; position: relative;">
+              <button class="btn px-2 py-1 rounded-pill shadow-sm" type="button" id="mobileMenuBtn"
+                style="background: #ffffff; color: #000000; font-weight: 100;">
+                <i class="bi bi-list" style="font-size: 1rem;"></i>
               </button>
+              <div id="mobileDropdownMenu" class="dropdown-menu" style="min-width: 220px;">
+
+                <!-- About Dropdown -->
+                <div class="dropdown">
+                  <a href="#" class="dropdown-item d-flex justify-content-between align-items-center"
+                    onclick="toggleMobileSubmenu('aboutSubmenu', event)">
+                    About
+                    <span style="font-size:1rem;">&#9662;</span>
+                  </a>
+                  <div id="aboutSubmenu" class="dropdown-menu"
+                    style="display:none; position:static; float:none; box-shadow:none; margin-left:1rem;">
+                    <a class="dropdown-item" href="about.html">About Contour</a>
+                    <a class="dropdown-item" href="team.html#saket-jha">Dr. Saket Jha</a>
+                    <a class="dropdown-item" href="team.html#shambhavi-shukla">Dr. shambhavi shukla</a>
+                    <a class="dropdown-item" href="reviews.html">Patient Reviews</a>
+                    <a class="dropdown-item" href="faq.html">FAQS</a>
+                  </div>
+                </div>
+
+                <!-- Services Dropdown -->
+                <div class="dropdown">
+                  <a href="#" class="dropdown-item d-flex justify-content-between align-items-center"
+                    onclick="toggleMobileSubmenu('servicesSubmenu', event)">
+                    Services
+                    <span style="font-size:1rem;">&#9662;</span>
+                  </a>
+                  <div id="servicesSubmenu" class="dropdown-menu"
+                    style="display:none; position:static; float:none; box-shadow:none; margin-left:1rem;">
+                    <a class="dropdown-item" href="about.html#hair-treatment-section">Hair Transplant</a>
+                    <a class="dropdown-item" href="about.html#cosmetic-surgery-section">Facial Plastics</a>
+                    <a class="dropdown-item" href="about.html#skin-treatment-section">Skin Rejuvenation</a>
+                    <a class="dropdown-item" href="about.html#skin-treatment-section">Laser Resurfacing</a>
+                  </div>
+                </div>
+
+                <!-- Patient Reviews -->
+                <div class="dropdown">
+                <a href="reviews.html" class="dropdown-item d-flex justify-content-between align-items-center">
+                  Patient Reviews
+                </a>
+              </div>
+
+                <!-- Gallery -->
+                <div class="dropdown">
+                  <a href="gallery.html" class="dropdown-item d-flex justify-content-between align-items-center">
+                    Gallery
+                  </a>
+                </div>
+
+                <!-- FAQ -->
+                <div class="dropdown">
+                  <a href="faq.html" class="dropdown-item d-flex justify-content-between align-items-center">
+                    FAQ
+                  </a>
+                </div>
+
+                <!-- Contact -->
+                <div class="dropdown">
+                  <a href="contact.html" class="dropdown-item d-flex justify-content-between align-items-center">
+                    Contact
+                  </a>
+                </div>
+
+
+              </div>
+              <style>
+                /* Remove internal border for submenu when open */
+                .dropdown-menu .dropdown-menu {
+                  border: none !important;
+                  box-shadow: none !important;
+                }
+              </style>
+
+              <script>
+                function toggleMobileSubmenu(id, event) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  var submenu = document.getElementById(id);
+                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                  // Optionally close other submenus
+                  ['aboutSubmenu', 'servicesSubmenu', 'reviewsSubmenu'].forEach(function (otherId) {
+                    if (otherId !== id) {
+                      var el = document.getElementById(otherId);
+                      if (el) el.style.display = "none";
+                    }
+                  });
+                }
+              </script>
+              <script>
+                // Mobile hamburger toggle
+                document.getElementById('mobileMenuBtn').onclick = function (e) {
+                  e.stopPropagation();
+                  var menu = document.getElementById('mobileDropdownMenu');
+                  menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+                };
+                // Hide menu on outside click
+                document.addEventListener('click', function () {
+                  var menu = document.getElementById('mobileDropdownMenu');
+                  if (menu) menu.style.display = 'none';
+                });
+                // Prevent menu from closing when clicking inside
+                document.getElementById('mobileDropdownMenu').onclick = function (e) {
+                  e.stopPropagation();
+                };
+              </script>
             </div>
-          </form>
+          </span>
+        </small>
+      </div>
+
+      <div class="mb-4 d-flex" style="align-self: center;"></div>
+      <!-- Phone -->
+      <div class="d-flex gap-3">
+        <a href="tel:+918660432589" class="btn px-2 py-1 fs-6 shadow-sm rounded-pill d-flex align-items-center gap-2"
+          style="white-space: nowrap; min-height: 48px; background: #ffffff; border: none;"
+          onmouseover="this.style.background='#fef8f2'" onmouseout="this.style.background='#ffffff'">
+          <i class="bi bi-telephone me-1" style="color: black;"></i>
+          Call Now
+        </a>
+        <a href="pages/contact.html" class="btn px-2 py-1 fs-6 shadow-sm rounded-pill d-flex align-items-center gap-2"
+          style="white-space: nowrap; min-height: 48px; background: #ffffff; border: none;"
+          onmouseover="this.style.background='#fef8f2'" onmouseout="this.style.background='#ffffff'">
+          <i class="bi bi-calendar2-check-fill me-2" style="font-size: 1rem; color: #000000;"></i>
+          Free Assessment
+        </a>
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <h1 class="text-center fw-bold mb-5" style="font-size: 2.8rem;">Meet Our Doctors</h1>
+
+      <!-- Doctor 1 -->
+      <div class="row align-items-center doctor-card" id="saket-jha">
+        <div class="col-md-4 text-center">
+          <img src="../assests/saket-jha.JPG" class="card-img-top rounded zoom-on-hover" alt="Dr. Saket Jha">
+        </div>
+        <div class="col-md-8"><br><br>
+          <h3>Dr. Saket Jha</h3>
+          <p class="specialty">Maxillofacial & Facial cosmetic surgeon | Hair transplant Specialist</p>
+          <p>
+            Dr. Saket is a renowned maxillofacial and facial cosmetic surgeon with specialized expertise in FUE hair
+            transplantation. With a pan-India presence, he performs advanced hair restoration procedures from North to
+            South India and serves as the leading surgeon for several reputed cosmetic chains in Bangalore.
+
+            A graduate of Rajiv Gandhi University of Health Sciences, Dr. Saket has undergone intensive training and has
+            worked alongside some of the most esteemed doctors in India. His clinical journey spans premier institutions
+            such as Tata Medical Center (Kolkata), RCC Trivandrum, Jubilee Mission Medical College (Thrissur), Karnataka
+            Institute of Medical Sciences (KIMS), and NIMHANS (Bangalore), among others.
+
+            Known for blending surgical precision with artistic vision, Dr. Saket brings a decade of experience in
+            facial
+            aesthetics, reconstructive surgery, and advanced hair restoration, making him a trusted name in the field of
+            facial transformation and cosmetic excellence.
+          </p>
+        </div>
+      </div>
+
+      <!-- Doctor 2 -->
+
+
+      <div class="row align-items-center doctor-card" id="shambhavi-shukla">
+        <div class="col-md-8"><br><br>
+          <h3>Dr. Shambhavi Shukla</h3>
+          <p class="specialty text-uppercase">MS(DNB) ENT HEAD AND NECK ONCOSURGERY (FELLOW)</p>
+          <p>
+            Dr. Shambhavi Shukla is a renowned ENT surgeon with specialized fellowship training in Head and Neck
+            Oncology
+            from Tata Medical Center, combining expertise in oncologic surgery with a strong focus on facial
+            reconstruction. Recognized for her ability to provide comprehensive care in complex head and neck cancer
+            cases, she excels in both the surgical management of tumors and the restoration of facial features, enabling
+            patients to regain not only their health but also their appearance and confidence.
+
+            A graduate of Command Hospital, Kolkata, Dr. Shambhavi completed her postgraduate studies (MS) in ENT,
+            honing
+            her skills in one of India’s most prestigious military healthcare institutions. At Tata Medical Center, she
+            further specialized in head and neck oncology, refining her proficiency in state-of-the-art surgical and
+            reconstructive techniques for facial restoration.
+
+            Her compassionate approach and dedication to advanced reconstructive methods, including the integration of
+            aesthetic principles, make Dr. Shambhavi a leader in the field of head and neck onco. She combines
+            cutting-edge technologies with a deep understanding of facial anatomy to provide life-changing results for
+            patients undergoing head and neck surgeries.
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="../assests/shambhavi-shukla.PNG" class="card-img-top rounded zoom-on-hover" alt="Dr. Shambhavi Shukla">
         </div>
       </div>
     </div>
-    <div class="text-center mt-4" style="font-size: 0.95rem; color: #f5e7df;">
-      &copy; <span id="footer-year"></span> Contour Cosmetic Clinic. All rights reserved.
-    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="py-5" style="background-color: #fff;">
+      <div class="container">
+        <div class="row">
+          <!-- Logo & Description -->
+          <div class="col-12 col-md-3 mb-4 text-center text-md-start">
+            <h4 class="fw-bold">Contour Cosmetic Clinic</h4>
+            <p>We finish with care, welcome change, and stay centered on your confidence.</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/share/1AiswEWwo9/?mibextid=wwXIfr" class="me-2" target="_blank"
+                rel="noopener noreferrer"><i class="bi bi-facebook" style="color: #1877f3;"></i></a>
+              <a href="https://www.linkedin.com/company/contour-cosmetic-clinic/" class="me-2" target="_blank"
+                rel="noopener noreferrer"><i class="bi bi-linkedin" style="color: #0077b5;"></i></a>
+              <a href="https://www.instagram.com/contour_bengaluru?igsh=Nzh4MXRzbTdwejdy" class="me-2" target="_blank"
+                rel="noopener noreferrer"><i class="bi bi-instagram" style="color: #E1306C;"></i></a>
+              <a href="https://youtube.com/@shapeyourstory?si=szaqr58VYWUBpQBV" class="me-2" target="_blank"
+                rel="noopener noreferrer"><i class="bi bi-youtube" style="color: #FF0000;"></i></a>
+              <a href="https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0"
+                class="me-2" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"
+                  style="color: #25D366;"></i></a>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-12 col-md-3 mb-4 text-center text-md-start">
+            <h5 class="fw-bold">Contact</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="tel:+918660432589"
+                  class="location-icon text-decoration-none d-flex justify-content-center justify-content-md-start align-items-center">
+                  <i class="bi bi-telephone me-2"></i>
+                  <span>+91-866-043-2589</span>
+                </a>
+              </li>
+              <li class="mb-2">
+                <a href="mailto:contact@contourcosmeticclinic.com"
+                  class="location-icon text-decoration-none d-flex justify-content-center justify-content-md-start align-items-center">
+                  <i class="bi bi-envelope me-2"></i>
+                  <span>contact@contourcosmeticclinic.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://maps.app.goo.gl/A2KoWS7rxQWHtMRw7?g_st=com.google.maps.preview.copy" target="_blank"
+                  class="location-icon text-decoration-none d-flex justify-content-center justify-content-md-start align-items-start">
+                  <i class="bi bi-geo-alt me-2"></i>
+                  <span>2nd floor, Lakshmidevi Complex, 80 Ft Rd, Vishweshwaraiah Road, 6th Stage, Phase 2, BTM Layout,
+                    Bengaluru, Karnataka 560076</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-12 col-md-3 mb-4 text-center text-md-start">
+            <h5 class="fw-bold">Explore</h5>
+            <ul class="list-unstyled">
+              <li><a href="../index.html" class=" text-decoration-none text-black link-hover">Home</a></li>
+              <li><a href="about.html" class=" text-decoration-none text-black link-hover">About Us</a></li>
+              <li><a href="team.html" class=" text-decoration-none text-black link-hover">Our Team</a></li>
+              <li><a href="contact.html" class=" text-decoration-none text-black link-hover">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-12 col-md-3 mb-4 text-center text-md-start">
+            <h5 class="fw-bold">Newsletter</h5>
+            <h5 class="fw-bold mb-3" style="font-size: 1.5rem;">GET IN TOUCH</h5>
+            <form action="https://formsubmit.co/contact@contourcosmeticclinic.com" method="POST"
+              class="position-relative mt-4" target="_blank">
+              <div class="input-group align-items-center border-bottom pb-2" style="border-color: #fff;">
+                <input type="email" name="email" class="form-control bg-transparent border-0  ps-0"
+                  placeholder="Your Email" required style="box-shadow: none; font-size: 1rem;">
+                <button type="submit" class="btn " style="box-shadow: none;">
+                  <i class="bi bi-send-fill fs-5"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4" style="font-size: 0.95rem; color: #000000;">
+        &copy; <span id="footer-year"></span> Contour Cosmetic Clinic. All rights reserved.
+      </div>
+      <style>
+        @media (max-width: 767.98px) {
+          .footer .row>div {
+            text-align: center !important;
+            margin-bottom: 2rem;
+          }
+
+          .footer .social-icons {
+            justify-content: center !important;
+          }
+
+          .footer .input-group {
+            justify-content: center !important;
+          }
+        }
+      </style>
+    </footer>
+    <script>
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+    </script>
+
+    <a href="https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0" class="wa-btn"
+      title="Contact Us on WhatsApp" target="_blank">
+      <i class="bi bi-whatsapp"></i>
+      <span>Chat Now</span>
+    </a>
     <style>
-      @media (max-width: 767.98px) {
-        .footer .row>div {
-          text-align: center !important;
-          margin-bottom: 2rem;
-        }
+      .wa-btn {
+        position: fixed;
+        top: 150px;
+        left: 20px;
+        z-index: 1000;
+        background: #25d366;
+        color: #fff;
+        border: none;
+        border-radius: 40px;
+        padding: 7px 7px;
+        font-weight: 700;
+        font-size: 1.15rem;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: background 0.2s, box-shadow 0.2s;
+        text-decoration: none;
+      }
 
-        .footer .social-icons {
-          justify-content: center !important;
-        }
-
-        .footer .input-group {
-          justify-content: center !important;
-        }
+      .wa-btn:hover {
+        background: #fef8f2;
+        color: #1ebe57;
+        text-decoration: none;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
       }
     </style>
-  </footer>
-  <script>
-    document.getElementById('footer-year').textContent = new Date().getFullYear();
-  </script>
 
-
-
-  <a href="https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0" class="wa-btn" title="Contact Us on WhatsApp" target="_blank">
-    <i class="bi bi-whatsapp"></i>
-    <span>Chat Now</span>
-  </a>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 
 </html>

@@ -1,162 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reviews | Contour Cosmetic Clinic</title>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NDC36237');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17041035401"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17041035401');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Team</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- common css stylesheet -->
   <link rel="stylesheet" href="../common.css">
-  <style>
-    body {
-      background: #fff;
-      color: black;
-    }
-    .reviews-section {
-      background: #fef8f2;
-      padding: 48px 0 32px 0;
-    }
-    .reviews-section h2 {
-      font-size: 2.1rem;
-      font-weight: 700;
-      color: black;
-      margin-bottom: 0.7em;
-      text-align: left;
-    }
-    .reviews-section .subtitle {
-      font-size: 1.15rem;
-      color: black;
-      margin-bottom: 2.2em;
-      text-align: left;
-      max-width: 900px;
-    }
-    .google-link {
-      display: inline-block;
-      background: #fff;
-      color: #1a73e8;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 10px 18px;
-      font-weight: 500;
-      text-decoration: none;
-      margin-bottom: 32px;
-      transition: background 0.2s;
-    }
-    .google-link:hover {
-      background: #fef8f2;
-      color: #174ea6;
-    }
-    .review-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 28px;
-      margin-top: 18px;
-    }
-    .review-card {
-      background: #fff;
-      border-radius: 14px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-      padding: 24px 22px 18px 22px;
-      border: 1px solid #f3e7d9;
-      display: flex;
-      flex-direction: column;
-      min-height: 220px;
-      position: relative;
-    }
-    .review-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 8px;
-    }
-    .review-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #fef8f2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #bfa07a;
-      margin-right: 14px;
-    }
-    .review-name {
-      font-weight: 700;
-      color: black;
-      font-size: 1.08rem;
-      margin-right: 6px;
-    }
-    .review-date {
-      color: #888;
-      font-size: 0.97rem;
-    }
-    .review-google {
-      margin-left: auto;
-      font-size: 1.3rem;
-      color: #4285f4;
-    }
-    .review-stars {
-      color: #fbbc04;
-      font-size: 1.1rem;
-      margin-bottom: 6px;
-    }
-    .review-verified {
-      color: #1a73e8;
-      font-size: 1.1em;
-      margin-left: 4px;
-      vertical-align: middle;
-    }
-    .review-text {
-      color: black;
-      font-size: 1.05rem;
-      margin-bottom: 0;
-      margin-top: 8px;
-    }
-    @media (max-width: 700px) {
-      .reviews-section { padding: 24px 0 16px 0; }
-      .review-card { padding: 14px 6px 10px 10px; }
-      .review-grid { gap: 14px; }
-      .reviews-section h2, .reviews-section .subtitle { text-align: left; }
-    }
-    .footer {
-      background: #fef8f2;
-      color: black;
-    }
-    .footer a, .footer .text-white {
-      color: black !important;
-    }
-    .footer .input-group input,
-    .footer .input-group .btn {
-      color: black !important;
-      background: #fff !important;
-      border-color: #f3e7d9 !important;
-    }
-    .footer .input-group input::placeholder {
-      color: #888 !important;
-    }
-    .footer .fw-bold { color: black; }
-    .footer .social-icons a { color: black; }
-    .footer .location-icon { color: black; }
-    .footer .location-icon i { color: #bfa07a; }
-    .footer .newsletter-title { color: black; }
-  </style>
 </head>
+
 <body>
-  <nav class="navbar">
-    <div class="logo">
-      <img src="../logo_with_tagline_cropped.png" alt="Contour Cosmetic Clinic Logo" style="height: 40px; margin-right: 10px;">Contour Cosmetic Clinic
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDC36237" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <body class="bg-header-white">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDC36237" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div
+      class="container-fluid p-3 d-flex flex-column flex-md-row justify-content-between align-items-center bg-header-white border-bottom text-center text-md-start">
+      <div>
+        <small>
+          <span class="d-inline-flex align-items-center flex-wrap gap-2" style="font-size: 1.08rem;">
+            <!-- Logo and Brand Name -->
+            <span style="display: inline-block; position: relative;">
+              <img src="../Header/ContourHeader.png"
+                style="height: 48px; vertical-align: middle; transition: height 0.2s;" />
+              <img src="../Header/brand-name.png" alt="Contour Cosmetic Clinic"
+                style="height: 48px; vertical-align: middle;" />
+            </span>
+
+            <!-- Desktop Dropdown Menu -->
+            <div class="d-none d-md-inline-block" style="position: relative;">
+
+              <!-- About Dropdown Menu -->
+              <div class="dropdown" style="display: inline-block;">
+                <a href="#" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill dropdown-toggle"
+                  id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="background: #ffffff;">
+                  About
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="aboutDropdown" style="min-width: 230px; font-size: 1rem;">
+                  <li><a class="dropdown-item" href="about.html">About Contour</a></li>
+                  <li><a class="dropdown-item" href="team.html#saket-jha">Dr. Saket Jha</a></li>
+                  <li><a class="dropdown-item" href="team.html#shambhavi-shukla">Dr. shambhavi shukla</a></li>
+                  <li><a class="dropdown-item" href="reviews.html">Patient Reviews</a></li>
+                  <li><a class="dropdown-item" href="faq.html">FAQS</a></li>
+                </ul>
+                <style>
+                  .dropdown-menu .dropdown-item:hover,
+                  .dropdown-menu .dropdown-item:focus {
+                    background-color: #fef8f2 !important;
+                    font-weight: 600;
+                  }
+                </style>
+              </div>
+
+              <!-- Services Dropdown Menu -->
+              <div class="dropdown" style="display: inline-block;">
+                <a href="#" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill dropdown-toggle"
+                  id="serviceDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="background: #ffffff;">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="serviceDropdown" style="min-width: 230px; font-size: 1rem;">
+                  <li><a class="dropdown-item" href="services/hair-transplant.html">Hair Transplant</a></li>
+                  <li><a class="dropdown-item" href="services/cosmetic-patch.html">Cosmetic Hair Patch</a></li>
+                  <li><a class="dropdown-item" href="services/PRP.html">PRP</a></li>
+                  <li><a class="dropdown-item" href="services/GFC.html">GFC</a></li>
+                  <li><a class="dropdown-item" href="services/Skin.html">Skin</a></li>
+                </ul>
+                <style>
+                  .dropdown-menu .dropdown-item:hover,
+                  .dropdown-menu .dropdown-item:focus {
+                    background-color: #fef8f2 !important;
+                    font-weight: 600;
+                  }
+                </style>
+              </div>
+
+              <!-- Patient Review Dropdown Menu -->
+              <div class="dropdown" style="display: inline-block;">
+                <a href="reviews.html" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill">
+                  Patient Reviews
+                </a>
+              </div>
+
+              <!-- Gallery -->
+              <div class="dropdown" style="display: inline-block;">
+                <a href="gallery.html" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill">
+                  Gallery
+                </a>
+              </div>
+
+              <!-- Doctors -->
+              <div class="dropdown" style="display: inline-block;">
+                <a href="team.html" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill">
+                  Doctors
+                </a>
+              </div>
+
+              <!-- FAQ -->
+              <div class="dropdown" style="display: inline-block;">
+                <a href="faq.html" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill">
+                  FAQS
+                </a>
+              </div>
+
+              <!-- Contact -->
+              <div class="dropdown" style="display: inline-block;">
+                <a href="contact.html" class="head-dropdown text-decoration-none px-2 py-1 rounded-pill">
+                  Contact
+                </a>
+              </div>
+            </div>
+
+            <!-- Mobile Hamburger Menu -->
+            <div class="d-md-none" style="display: inline-block; position: relative;">
+              <button class="btn px-2 py-1 rounded-pill shadow-sm" type="button" id="mobileMenuBtn"
+                style="background: #ffffff; color: #000000; font-weight: 100;">
+                <i class="bi bi-list" style="font-size: 1rem;"></i>
+              </button>
+              <div id="mobileDropdownMenu" class="dropdown-menu" style="min-width: 220px;">
+
+                <!-- About Dropdown -->
+                <div class="dropdown">
+                  <a href="#" class="dropdown-item d-flex justify-content-between align-items-center"
+                    onclick="toggleMobileSubmenu('aboutSubmenu', event)">
+                    About
+                    <span style="font-size:1rem;">&#9662;</span>
+                  </a>
+                  <div id="aboutSubmenu" class="dropdown-menu"
+                    style="display:none; position:static; float:none; box-shadow:none; margin-left:1rem;">
+                    <a class="dropdown-item" href="about.html">About Contour</a>
+                    <a class="dropdown-item" href="team.html#saket-jha">Dr. Saket Jha</a>
+                    <a class="dropdown-item" href="team.html#shambhavi-shukla">Dr. shambhavi shukla</a>
+                    <a class="dropdown-item" href="reviews.html">Patient Reviews</a>
+                    <a class="dropdown-item" href="faq.html">FAQS</a>
+                  </div>
+                </div>
+
+                <!-- Services Dropdown -->
+                <div class="dropdown">
+                  <a href="#" class="dropdown-item d-flex justify-content-between align-items-center"
+                    onclick="toggleMobileSubmenu('servicesSubmenu', event)">
+                    Services
+                    <span style="font-size:1rem;">&#9662;</span>
+                  </a>
+                  <div id="servicesSubmenu" class="dropdown-menu"
+                    style="display:none; position:static; float:none; box-shadow:none; margin-left:1rem;">
+                    <a class="dropdown-item" href="about.html#hair-treatment-section">Hair Transplant</a>
+                    <a class="dropdown-item" href="about.html#cosmetic-surgery-section">Facial Plastics</a>
+                    <a class="dropdown-item" href="about.html#skin-treatment-section">Skin Rejuvenation</a>
+                    <a class="dropdown-item" href="about.html#skin-treatment-section">Laser Resurfacing</a>
+                  </div>
+                </div>
+
+                <!-- Patient Reviews Dropdown -->
+                <div class="dropdown">
+                <a href="reviews.html" class="dropdown-item d-flex justify-content-between align-items-center">
+                  Patient Reviews
+                </a>
+              </div>
+
+                <!-- Gallery -->
+                <div class="dropdown">
+                  <a href="gallery.html" class="dropdown-item d-flex justify-content-between align-items-center">
+                    Gallery
+                  </a>
+                </div>
+
+                <!-- FAQ -->
+                <div class="dropdown">
+                  <a href="faq.html" class="dropdown-item d-flex justify-content-between align-items-center">
+                    FAQ
+                  </a>
+                </div>
+
+                <!-- Contact -->
+                <div class="dropdown">
+                  <a href="contact.html" class="dropdown-item d-flex justify-content-between align-items-center">
+                    Contact
+                  </a>
+                </div>
+
+
+              </div>
+              <style>
+                /* Remove internal border for submenu when open */
+                .dropdown-menu .dropdown-menu {
+                  border: none !important;
+                  box-shadow: none !important;
+                }
+              </style>
+
+              <script>
+                function toggleMobileSubmenu(id, event) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  var submenu = document.getElementById(id);
+                  submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                  // Optionally close other submenus
+                  ['aboutSubmenu', 'servicesSubmenu', 'reviewsSubmenu'].forEach(function (otherId) {
+                    if (otherId !== id) {
+                      var el = document.getElementById(otherId);
+                      if (el) el.style.display = "none";
+                    }
+                  });
+                }
+              </script>
+              <script>
+                // Mobile hamburger toggle
+                document.getElementById('mobileMenuBtn').onclick = function (e) {
+                  e.stopPropagation();
+                  var menu = document.getElementById('mobileDropdownMenu');
+                  menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+                };
+                // Hide menu on outside click
+                document.addEventListener('click', function () {
+                  var menu = document.getElementById('mobileDropdownMenu');
+                  if (menu) menu.style.display = 'none';
+                });
+                // Prevent menu from closing when clicking inside
+                document.getElementById('mobileDropdownMenu').onclick = function (e) {
+                  e.stopPropagation();
+                };
+              </script>
+            </div>
+          </span>
+        </small>
+      </div>
+
+      <div class="mb-4 d-flex" style="align-self: center;"></div>
+      <!-- Phone -->
+      <div class="d-flex gap-3">
+        <a href="tel:+918660432589" class="btn px-2 py-1 fs-6 shadow-sm rounded-pill d-flex align-items-center gap-2"
+          style="white-space: nowrap; min-height: 48px; background: #ffffff; border: none;"
+          onmouseover="this.style.background='#fef8f2'" onmouseout="this.style.background='#ffffff'">
+          <i class="bi bi-telephone me-1" style="color: black;"></i>
+          Call Now
+        </a>
+        <a href="contact.html" class="btn px-2 py-1 fs-6 shadow-sm rounded-pill d-flex align-items-center gap-2"
+          style="white-space: nowrap; min-height: 48px; background: #ffffff; border: none;"
+          onmouseover="this.style.background='#fef8f2'" onmouseout="this.style.background='#ffffff'">
+          <i class="bi bi-calendar2-check-fill me-2" style="font-size: 1rem; color: #000000;"></i>
+          Free Assessment
+        </a>
+      </div>
     </div>
-    <ul class="menu">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="team.html">Our Team</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="reviews.html" style="color:#b25a4d;">Reviews</a></li>
-    </ul>
-  </nav>
+
+
 
   <section class="reviews-section">
     <div class="container">
