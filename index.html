@@ -1462,13 +1462,13 @@
 
   <script>
     function downloadBrochure() {
-      fetch('/assets/contour-brochure.pdf')
+      fetch('/assests/contour-brochure.pdf')
         .then(response => response.blob())
         .then(blob => {
           const url = window.URL.createObjectURL(blob);
           const a = document.createElement('a');
           a.href = url;
-          a.download = '/assets/contour-brochure.pdf';
+          a.download = '/assests/contour-brochure.pdf';
           a.click();
           window.URL.revokeObjectURL(url); // Clean up
         })
