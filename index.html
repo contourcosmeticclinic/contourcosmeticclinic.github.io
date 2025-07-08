@@ -332,9 +332,9 @@
             style="width: 100%; aspect-ratio: 16/9; background: #000; position: relative;">
             <!-- WhatsApp Button Over Video Carousel -->
             <a href="https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0"
-              class="wa-btn-over-video d-flex align-items-center justify-content-center" title="Contact Us on WhatsApp"
+              class="wa-btn-over-video d-flex align-items-center justify-content-center" title="Let's Plan Your Transformation Journey"
               target="_blank"
-              style="position:absolute; top:36px; right:16px; z-index:10; background:#25D366; color:#fff; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:24px; box-shadow:0 2px 8px rgba(0,0,0,0.10); text-decoration:none;">
+              style="position:absolute; top:36px; right:16px; z-index:10; background:#fff; color:black; font-weight:600; font-size:1rem; padding:8px 18px; border-radius:24px; box-shadow:0 2px 8px rgba(0,0,0,0.10); text-decoration:none;">
               <i class="bi bi-whatsapp me-2" style="font-size: 22px;"></i>
               <span>Chat Now</span>
             </a>
@@ -764,13 +764,29 @@
         </li>
       </ul>
       <div class="w-100 d-flex justify-content-center">
-        <a href="/pages/contact.html" class="btn px-3 py-1 fs-6 shadow-sm rounded-pill d-flex align-items-center gap-2"
-          style="white-space: nowrap; min-height: 48px; background: #ffffff; border: none;"
-          onmouseover="this.style.background='#fef8f2'" onmouseout="this.style.background='#ffffff'">
+        <a href="/pages/contact.html" class="btn btn-outline-dark blink-appointment"
+            style="max-width: 800px; margin: 0 auto; font-size: 1.2rem; line-height: 1.6; background-color: #fef8f2; border-color: #e25f4f; color: #000000; font-weight: 700; transition: background 0.2s, color 0.2s;">
           <i class="fa-solid fa-user-doctor me-2"></i>
           Book a Free Consultation
         </a>
       </div>
+      <style>
+          @keyframes blink {
+
+            0%,
+            100% {
+              opacity: 1;
+            }
+
+            50% {
+              opacity: 0.4;
+            }
+          }
+
+          .blink-appointment {
+            animation: blink 1s infinite;
+          }
+        </style>
     </div>
     <div style="width:50px; min-width:50px; max-width:50px;"></div>
     <!-- Offer Images Slideshow -->

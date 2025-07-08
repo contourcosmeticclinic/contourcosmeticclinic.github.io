@@ -1194,3 +1194,17 @@ body {
   background: #fef8f2;
   color: #222;
 }
+
+#mobileDropdownMenu {
+  right: 0; /* Align to the right edge of its positioned parent */
+  left: auto; /* Override default left alignment */
+}
+
+/* Add media query for responsiveness */
+@media (max-width: 767.98px) {
+  /* This ensures these styles only apply on mobile */
+  #mobileDropdownMenu {
+    right: 0;
+    left: auto;
+  }
+}

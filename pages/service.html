@@ -25,6 +25,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -308,60 +309,421 @@
     </div>
   </div>
 
-
-
-  <div class="container my-5">
-    <br><br><br><br>
-    <div class="mb-4" style="display: none;">
-      <label for="serviceFileInput" class="form-label">Enter Service Text File Path (e.g.,
-        <code>../services/hair-transplant.txt</code>):</label>
-      <input type="text" id="serviceFileInput" class="form-control" placeholder="../services/hair-transplant.txt" />
-      <button id="loadServiceBtn" class="btn btn-primary mt-2">Load Service Content</button>
+  <div class="w-full bg-white rounded-xl shadow-lg p-6 sm:p-8 lg:p-10">
+    <br><br><br>
+    <div class="block sm:hidden">
+      <br><br><br>
     </div>
-    <div id="serviceContent" class="border rounded p-4 bg-light" style="min-height: 200px;">
-      <em>Service content will appear here.</em>
+
+    <!-- Main container for scrollable content and navigation arrows -->
+    <div class="relative flex items-center">
+      <!-- Left Scroll Button -->
+      <button id="scrollLeft" class="
+                absolute left-0 z-10
+                bg-header-white text-black p-2 rounded-full shadow-lg
+                hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2
+                transition-all duration-200 ease-in-out
+                transform -translate-x-1/2 sm:-translate-x-1/4 lg:-translate-x-1/2
+                opacity-50 hover:opacity-100
+                hidden sm:block /* Hide on very small screens, show on sm and up */
+            ">
+        &lt;
+      </button>
+
+      <!-- Scrollable Container for Service Buttons -->
+      <div id="servicesContainer" class="
+                flex flex-nowrap overflow-x-auto hide-scrollbar scroll-smooth
+                py-2 px-4 sm:px-6 lg:px-8
+                w-full
+            ">
+        <!-- Hair Transplant -->
+        <a href="service.html#HT" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5 /* Margin to create gap between buttons */
+                ">
+          Hair Transplant
+        </a>
+        <!-- Cosmetic Hair Patch -->
+        <a href="service.html#CHP" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Cosmetic Hair Patch
+        </a>
+        <!-- PRP -->
+        <a href="service.html#PRP" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          PRP
+        </a>
+        <!-- GFC -->
+        <a href="service.html#GFC" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          GFC
+        </a>
+        <!-- SMP -->
+        <a href="service.html#SMP" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          SMP
+        </a>
+        <!-- Derma Fillers -->
+        <a href="service.html#DF" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Derma Fillers
+        </a>
+        <!-- Receding Hairline Restoration -->
+        <a href="service.html#RHR" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Receding Hairline Restoration
+        </a>
+        <!-- Beard Restoration -->
+        <a href="service.html#BR" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Beard Restoration
+        </a>
+        <!-- Eyebrow Restoration -->
+        <a href="service.html#ER" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Eyebrow Restoration
+        </a>
+        <!-- Scar Revision -->
+        <a href="service.html#SR" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Scar Revision
+        </a>
+        <!-- Exosome Hair Therapy -->
+        <a href="service.html#EHT" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Exosome Hair Therapy
+        </a>
+        <!-- Microdermabrasion -->
+        <a href="service.html#MDB" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Microdermabrasion
+        </a>
+        <!-- Laser Hair Removal -->
+        <a href="service.html#LHR" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Laser Hair Removal
+        </a>
+        <!-- Laser Skin Resurfacing -->
+        <a href="service.html#LSR" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Laser Skin Resurfacing
+        </a>
+        <!-- Intense Pulsed Light -->
+        <a href="service.html#IPL" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Intense Pulsed Light
+        </a>
+        <!-- Microneedling -->
+        <a href="service.html#MN" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Microneedling
+        </a>
+        <!-- Botox -->
+        <a href="service.html#BX" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Botox
+        </a>
+        <!-- Collagen Induction Therapy -->
+        <a href="service.html#CIT" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Collagen Induction Therapy
+        </a>
+        <!-- Hydrafacial -->
+        <a href="service.html#HF" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Hydrafacial
+        </a>
+        <!-- Dermaplaning -->
+        <a href="service.html#DP" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Dermaplaning
+        </a>
+        <!-- Chemical Peels -->
+        <a href="service.html#CP" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                    mr-3 sm:mr-4 lg:mr-5
+                ">
+          Chemical Peels
+        </a>
+        <!-- Combination Therapy -->
+        <a href="service.html#CT" class="
+                    inline-flex items-center justify-center flex-shrink-0
+                    px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3
+                    text-sm sm:text-base lg:text-lg font-medium
+                    text-black bg-white rounded-lg shadow-md
+                    hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-[#000000] focus:ring-offset-2
+                    transition-all duration-300 ease-in-out transform hover:scale-105
+                ">
+          Combination Therapy
+        </a>
+      </div>
+
+      <!-- Right Scroll Button -->
+      <button id="scrollRight" class="
+                absolute right-0 z-10
+                bg-header-white text-black p-2 rounded-full shadow-lg
+                hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2
+                transition-all duration-200 ease-in-out
+                transform translate-x-1/2 sm:translate-x-1/4 lg:translate-x-1/2
+                opacity-50 hover:opacity-100
+                hidden sm:block /* Hide on very small screens, show on sm and up */
+            ">
+        &gt;
+      </button>
     </div>
+    <style>
+      /* Custom styles for the Inter font */
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+
+      /* Ensure smooth scrolling when navigating to anchor links */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Hide scrollbar for a cleaner look, but allow scrolling */
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+      }
+    </style>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const servicesContainer = document.getElementById('servicesContainer');
+      const scrollLeftBtn = document.getElementById('scrollLeft');
+      const scrollRightBtn = document.getElementById('scrollRight');
+
+      // Function to scroll the container
+      const scrollAmount = 200; // Adjust scroll distance as needed
+
+      scrollLeftBtn.addEventListener('click', () => {
+        servicesContainer.scrollBy({
+          left: -scrollAmount,
+          behavior: 'smooth'
+        });
+      });
+
+      scrollRightBtn.addEventListener('click', () => {
+        servicesContainer.scrollBy({
+          left: scrollAmount,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+  <div class="mb-4" style="display: none;">
+    <label for="serviceFileInput" class="form-label">Enter Service Text File Path (e.g.,
+      <code>../services/HT.html</code>):</label>
+    <input type="text" id="serviceFileInput" class="form-control" placeholder="../services/HT.html" />
+    <button id="loadServiceBtn" class="btn btn-primary mt-2">Load Service Content</button>
+  </div>
+  <div id="serviceContent" class="border rounded p-4 bg-light" style="min-height: 200px;">
+    <em>Service content will appear here.</em>
+  </div>
   </div>
   <style>
-        h1, h2, h3 {
-            color: #2c3e50;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        h1 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        h2 {
-            font-size: 2rem;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 0.5rem;
-            margin-top: 2rem;
-        }
-        h3 {
-            font-size: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        p {
-            margin-bottom: 1rem;
-        }
-        ul {
-            list-style-type: disc;
-            margin-left: 0rem;
-            margin-bottom: 1rem;
-        }
-        
-        strong {
-            font-weight: 700;
-        }
-        a {
-            color: #3490dc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+    h1,
+    h2,
+    h3 {
+      color: #2c3e50;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 0rem;
+      margin-bottom: 1rem;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    a {
+      color: #3490dc;
+      text-decoration: none;
+    }
+
+    /* 
+    a:hover {
+      text-decoration: wavy underline;
+    } */
   </style>
   <script>
     // Map hash to file path
@@ -391,49 +753,49 @@
       // Add more mappings as needed
     };
 
-function loadServiceContent(filePath) {
-  var contentDiv = document.getElementById('serviceContent');
-  if (!filePath) {
-    contentDiv.innerHTML = "<span class='text-danger'>Please enter a file path.</span>";
-    return;
-  }
-  fetch(filePath)
-    .then(function(response) {
-      if (!response.ok) throw new Error('File not found or network error');
-      return response.text();
-    })
-    .then(function(text) {
-      // Directly set innerHTML to render HTML content
-      contentDiv.innerHTML = text;
-    })
-    .catch(function(err) {
-      contentDiv.innerHTML = "<span class='text-danger'>Could not load file: " + err.message + "</span>";
-    });
-}
+    function loadServiceContent(filePath) {
+      var contentDiv = document.getElementById('serviceContent');
+      if (!filePath) {
+        contentDiv.innerHTML = "<span class='text-danger'>Please enter a file path.</span>";
+        return;
+      }
+      fetch(filePath)
+        .then(function (response) {
+          if (!response.ok) throw new Error('File not found or network error');
+          return response.text();
+        })
+        .then(function (text) {
+          // Directly set innerHTML to render HTML content
+          contentDiv.innerHTML = text;
+        })
+        .catch(function (err) {
+          contentDiv.innerHTML = "<span class='text-danger'>Could not load file: " + err.message + "</span>";
+        });
+    }
 
-// Function to handle hash changes
-function handleHashChange() {
-  var hash = window.location.hash.replace('#', '');
-  if (hash && hashToFile[hash]) {
-    document.getElementById('serviceFileInput').value = hashToFile[hash];
-    loadServiceContent(hashToFile[hash]);
-  } else if (!hash) {
-    // Optional: Clear content or load a default service if no hash is present
-    document.getElementById('serviceContent').innerHTML = "<em>Select a service from the menu above.</em>";
-  }
-}
+    // Function to handle hash changes
+    function handleHashChange() {
+      var hash = window.location.hash.replace('#', '');
+      if (hash && hashToFile[hash]) {
+        document.getElementById('serviceFileInput').value = hashToFile[hash];
+        loadServiceContent(hashToFile[hash]);
+      } else if (!hash) {
+        // Optional: Clear content or load a default service if no hash is present
+        document.getElementById('serviceContent').innerHTML = "<em>Select a service from the menu above  or contact us for more information.</em>";
+      }
+    }
 
-// Button click handler (keep this for manual input if needed)
-document.getElementById('loadServiceBtn').onclick = function() {
-  var filePath = document.getElementById('serviceFileInput').value.trim();
-  loadServiceContent(filePath);
-};
+    // Button click handler (keep this for manual input if needed)
+    document.getElementById('loadServiceBtn').onclick = function () {
+      var filePath = document.getElementById('serviceFileInput').value.trim();
+      loadServiceContent(filePath);
+    };
 
-// On page load, check hash and load corresponding file
-window.addEventListener('DOMContentLoaded', handleHashChange);
+    // On page load, check hash and load corresponding file
+    window.addEventListener('DOMContentLoaded', handleHashChange);
 
-// Listen for hash changes
-window.addEventListener('hashchange', handleHashChange);  </script>
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);  </script>
 
   <hr style="border: none; border-top: 1.5px solid #fff; margin: 40px 0 30px 0; width: 90%; background: transparent;">
 
@@ -528,6 +890,7 @@ window.addEventListener('hashchange', handleHashChange);  </script>
   <script>
     document.getElementById('footer-year').textContent = new Date().getFullYear();
   </script>
+
 
   <a href="https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0" class="wa-btn1"
     title="Contact Us on WhatsApp" target="_blank">
