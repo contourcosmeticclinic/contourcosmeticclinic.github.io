@@ -106,9 +106,10 @@
                 <li><a class="dropdown-item" href="/pages/service.html#PRP">PRP</a></li>
                 <li><a class="dropdown-item" href="/pages/service.html#GFC">GFC</a></li>
                 <li><a class="dropdown-item" href="/pages/service.html#SMP">SMP</a></li>
-                <li><a class="dropdown-item" href="/pages/service.html#ET">Eyelash Transplant</a></li>
                 <li><a class="dropdown-item" href="/pages/service.html#RHR">Receding Hairline Restoration</a></li>
                 <li><a class="dropdown-item" href="/pages/service.html#BR">Beard Restoration</a></li>
+                <li><a class="dropdown-item" href="/pages/service.html#DF">Derma Fillers</a></li>
+                <li><a class="dropdown-item" href="/pages/service.html#ER">Eyebrow Restoration</a></li>
                 <li><a class="dropdown-item" href="/pages/service.html#SR">Scar Revision</a></li>
                 <li><a class="dropdown-item" href="/pages/service.html#EHT">Exosome Hair Therapy</a></li>
                 <li><a class="dropdown-item" href="/pages/service.html#MDB">Microdermabrasion</a></li>
@@ -207,10 +208,11 @@
                   <a class="dropdown-item" href="/pages/service.html#PRP">PRP</a>
                   <a class="dropdown-item" href="/pages/service.html#GFC">GFC</a>
                   <a class="dropdown-item" href="/pages/service.html#SMP">SMP</a>
-                  <a class="dropdown-item" href="/pages/service.html#ET">Eyelash Transplant</a>
                   <a class="dropdown-item" href="/pages/service.html#RHR">Receding Hairline Restoration</a>
                   <a class="dropdown-item" href="/pages/service.html#BR">Beard Restoration</a>
                   <a class="dropdown-item" href="/pages/service.html#SR">Scar Revision</a>
+                  <a class="dropdown-item" href="/pages/service.html#ER">Eyebrow Restoration</a>
+                  <a class="dropdown-item" href="/pages/service.html#DF">Derma Fillers</a>
                   <a class="dropdown-item" href="/pages/service.html#EHT">Exosome Hair Therapy</a>
                   <a class="dropdown-item" href="/pages/service.html#MDB">Microdermabrasion</a>
                   <a class="dropdown-item" href="/pages/service.html#LHR">Laser Hair Removal</a>
@@ -523,7 +525,7 @@
                 heroVideoSlider.value = 0;
                 return;
               }
-              heroVideoSlider.value = Math.floor((vid.currentTime / vid.duration) * 1000);
+              heroVideoSlider.value = Math.ceil((vid.currentTime / vid.duration) * 500);
             }
             // Update slider as video plays
             heroVideos.forEach((vid, i) => {

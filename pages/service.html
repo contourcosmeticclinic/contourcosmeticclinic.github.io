@@ -92,11 +92,12 @@
                 <li><a class="dropdown-item" href="service.html#CHP">Cosmetic Hair Patch</a></li>
                 <li><a class="dropdown-item" href="service.html#PRP">PRP</a></li>
                 <li><a class="dropdown-item" href="service.html#GFC">GFC</a></li>
+                <li><a class="dropdown-item" href="service.html#DF">Derma Fillers</a></li>
                 <li><a class="dropdown-item" href="service.html#SMP">SMP</a></li>
-                <li><a class="dropdown-item" href="service.html#ET">Eyelash Transplant</a></li>
                 <li><a class="dropdown-item" href="service.html#RHR">Receding Hairline Restoration</a></li>
                 <li><a class="dropdown-item" href="service.html#BR">Beard Restoration</a></li>
                 <li><a class="dropdown-item" href="service.html#SR">Scar Revision</a></li>
+                <li><a class="dropdown-item" href="service.html#ER">Eyebrow Restoration</a></li>
                 <li><a class="dropdown-item" href="service.html#EHT">Exosome Hair Therapy</a></li>
                 <li><a class="dropdown-item" href="service.html#MDB">Microdermabrasion</a></li>
                 <li><a class="dropdown-item" href="service.html#LHR">Laser Hair Removal</a></li>
@@ -194,9 +195,10 @@
                   <a class="dropdown-item" href="service.html#PRP">PRP</a>
                   <a class="dropdown-item" href="service.html#GFC">GFC</a>
                   <a class="dropdown-item" href="service.html#SMP">SMP</a>
-                  <a class="dropdown-item" href="service.html#ET">Eyelash Transplant</a>
+                  <a class="dropdown-item" href="service.html#DF">Derma Fillers</a>
                   <a class="dropdown-item" href="service.html#RHR">Receding Hairline Restoration</a>
                   <a class="dropdown-item" href="service.html#BR">Beard Restoration</a>
+                  <a class="dropdown-item" href="service.html#ER">Eyebrow Restoration</a>
                   <a class="dropdown-item" href="service.html#SR">Scar Revision</a>
                   <a class="dropdown-item" href="service.html#EHT">Exosome Hair Therapy</a>
                   <a class="dropdown-item" href="service.html#MDB">Microdermabrasion</a>
@@ -320,70 +322,118 @@
       <em>Service content will appear here.</em>
     </div>
   </div>
+  <style>
+        h1, h2, h3 {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 0rem;
+            margin-bottom: 1rem;
+        }
+        
+        strong {
+            font-weight: 700;
+        }
+        a {
+            color: #3490dc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+  </style>
   <script>
-      // Map hash to file path
-      const hashToFile = {
-        'HT': '../services/HT.txt', //hair transplant
-        'CHP': '../services/CHP.txt', //cosmetic hair patch
-        'PRP': '../services/PRP.txt', // PRP
-        'GFC': '../services/GFC.txt', // GFC
-        'SMP': '../services/SMP.txt', // Scalp Micro Pigmentation
-        'ER': '../services/ER.txt', // Eyebrow Restoration
-        'RHR': '../services/RHR.txt', // Receding Hairline Reconstruction
-        'BR': '../services/BR.txt', // Beard Reconstruction
-        'SR': '../services/SR.txt', // Scar Revision
-        'EHT': '../services/EHT.txt', // exosome hair therapy
-        'CP': '../services/CP.txt', // Chemical Peels
-        'MDB': '../services/MDB.txt', // Microdermabrasion
-        'LHR': '../services/LHR.txt', // Laser Hair Removal
-        'LSR': '../services/LSR.txt', // Laser Skin Resurfacing
-        'IPL': '../services/IPL.txt', // Intense Pulsed Light Therapy
-        'MN': '../services/MN.txt', // Microneedling
-        'BX': '../services/BX.txt', // Botox
-        'DF': '../services/DF.txt', // Derma Fillers
-        'CIT': '../services/CIT.txt', // Collagen Induction Therapy
-        'HF': '../services/HF.txt', // Hydrafacial
-        'DP': '../services/DP.txt', // Dermaplaning
-        'CT': '../services/CT.txt', // Combination Treatments
-        // Add more mappings as needed
-      };
+    // Map hash to file path
+    const hashToFile = {
+      'HT': '../services/HT.html', //hair transplant
+      'CHP': '../services/CHP.html', //cosmetic hair patch
+      'PRP': '../services/PRP.html', // PRP
+      'GFC': '../services/GFC.html', // GFC
+      'SMP': '../services/SMP.html', // Scalp Micro Pigmentation
+      'ER': '../services/ER.html', // Eyebrow Restoration
+      'RHR': '../services/RHR.html', // Receding Hairline Reconstruction
+      'BR': '../services/BR.html', // Beard Reconstruction
+      'SR': '../services/SR.html', // Scar Revision
+      'EHT': '../services/EHT.html', // exosome hair therapy
+      'CP': '../services/CP.html', // Chemical Peels
+      'MDB': '../services/MDB.html', // Microdermabrasion
+      'LHR': '../services/LHR.html', // Laser Hair Removal
+      'LSR': '../services/LSR.html', // Laser Skin Resurfacing
+      'IPL': '../services/IPL.html', // Intense Pulsed Light Therapy
+      'MN': '../services/MN.html', // Microneedling
+      'BX': '../services/BX.html', // Botox
+      'DF': '../services/DF.html', // Derma Fillers
+      'CIT': '../services/CIT.html', // Collagen Induction Therapy
+      'HF': '../services/HF.html', // Hydrafacial
+      'DP': '../services/DP.html', // Dermaplaning
+      'CT': '../services/CT.html', // Combination Treatments
+      // Add more mappings as needed
+    };
 
-      function loadServiceContent(filePath) {
-        var contentDiv = document.getElementById('serviceContent');
-        if (!filePath) {
-          contentDiv.innerHTML = "<span class='text-danger'>Please enter a file path.</span>";
-          return;
-        }
-        fetch(filePath)
-          .then(function (response) {
-            if (!response.ok) throw new Error('File not found');
-            return response.text();
-          })
-          .then(function (text) {
-            contentDiv.innerHTML = "<pre style='white-space: pre-wrap;'>" +
-              text.replace(/</g, "&lt;").replace(/>/g, "&gt;") + "</pre>";
-          })
-          .catch(function (err) {
-            contentDiv.innerHTML = "<span class='text-danger'>Could not load file: " + err.message + "</span>";
-          });
-      }
+function loadServiceContent(filePath) {
+  var contentDiv = document.getElementById('serviceContent');
+  if (!filePath) {
+    contentDiv.innerHTML = "<span class='text-danger'>Please enter a file path.</span>";
+    return;
+  }
+  fetch(filePath)
+    .then(function(response) {
+      if (!response.ok) throw new Error('File not found or network error');
+      return response.text();
+    })
+    .then(function(text) {
+      // Directly set innerHTML to render HTML content
+      contentDiv.innerHTML = text;
+    })
+    .catch(function(err) {
+      contentDiv.innerHTML = "<span class='text-danger'>Could not load file: " + err.message + "</span>";
+    });
+}
 
-      // Button click handler
-      document.getElementById('loadServiceBtn').onclick = function () {
-        var filePath = document.getElementById('serviceFileInput').value.trim();
-        loadServiceContent(filePath);
-      };
+// Function to handle hash changes
+function handleHashChange() {
+  var hash = window.location.hash.replace('#', '');
+  if (hash && hashToFile[hash]) {
+    document.getElementById('serviceFileInput').value = hashToFile[hash];
+    loadServiceContent(hashToFile[hash]);
+  } else if (!hash) {
+    // Optional: Clear content or load a default service if no hash is present
+    document.getElementById('serviceContent').innerHTML = "<em>Select a service from the menu above.</em>";
+  }
+}
 
-      // On page load, check hash and load corresponding file
-      window.addEventListener('DOMContentLoaded', function () {
-        var hash = window.location.hash.replace('#', '');
-        if (hash && hashToFile[hash]) {
-          document.getElementById('serviceFileInput').value = hashToFile[hash];
-          loadServiceContent(hashToFile[hash]);
-        }
-      });
-  </script>
+// Button click handler (keep this for manual input if needed)
+document.getElementById('loadServiceBtn').onclick = function() {
+  var filePath = document.getElementById('serviceFileInput').value.trim();
+  loadServiceContent(filePath);
+};
 
+// On page load, check hash and load corresponding file
+window.addEventListener('DOMContentLoaded', handleHashChange);
+
+// Listen for hash changes
+window.addEventListener('hashchange', handleHashChange);  </script>
 
   <hr style="border: none; border-top: 1.5px solid #fff; margin: 40px 0 30px 0; width: 90%; background: transparent;">
 
@@ -476,7 +526,7 @@
     </div>
   </footer>
   <script>
-          document.getElementById('footer-year').textContent = new Date().getFullYear();
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
   </script>
 
   <a href="https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0" class="wa-btn1"
