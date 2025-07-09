@@ -88,12 +88,12 @@ body {
   transform: translateY(0);
 }
 
-
+/* 
 .section-title {
   color: #cc8875;
   letter-spacing: 2px;
   font-weight: bold;
-}
+} */
 
 .btn-brown {
   background-color: #ffffff;
@@ -244,7 +244,7 @@ body {
   color: black;
   margin: 0 5px;
 }
-
+/* 
 .ba-container {
   position: relative;
   overflow: hidden;
@@ -274,7 +274,7 @@ body {
   display: block;
   clip-path: inset(0 0 0 50%);
   /* Start revealing 50% from left */
-}
+/* } */
 
 .ba-slider {
   position: absolute;
@@ -317,7 +317,7 @@ body {
   background-color: #c9302c;
   /* hover color */
   cursor: pointer;
-}
+} */
 
 .hero-slideshow {
   height: 50%;
