@@ -1630,7 +1630,7 @@
             </div>
             <script>
               function validateEmail964312000000427034() {
-                var form = document.forms['WebToLeads964312000000427034'];
+                var form = document.forms['webform964312000000427034']; // Corrected form name
                 var emailFld = form.querySelectorAll('[ftype=email]');
                 var i;
                 for (i = 0; i < emailFld.length; i++) {
@@ -1649,11 +1649,12 @@
               }
               function checkMandatory964312000000427034() {
                 var mndFileds = new Array('Last Name', 'Email', 'Phone');
-                var fldLangVal = new Array('Full\x20Name', 'Email', 'Phone');
+                var fldLangVal = new Array('Full Name', 'Email', 'Phone');
+                var form = document.forms['webform964312000000427034']; // Corrected form name
                 for (i = 0; i < mndFileds.length; i++) {
-                  var fieldObj = document.forms['WebToLeads964312000000427034'][mndFileds[i]];
+                  var fieldObj = form[mndFileds[i]]; // Access field directly from the form object
                   if (fieldObj) {
-                    if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length == 0) {
+                    if (((fieldObj.value).replace(/^\\s+|\\s+$/g, '')).length == 0) {
                       if (fieldObj.type == 'file') {
                         alert('Please select a file to upload.');
                         fieldObj.focus();
@@ -1672,7 +1673,7 @@
                     }
                     else if (fieldObj.type == 'checkbox') {
                       if (fieldObj.checked == false) {
-                        alert('Please accept  ' + fldLangVal[i]);
+                        alert('Please accept  ' + fldLangVal[i]);
                         fieldObj.focus();
                         return false;
                       }
@@ -1699,6 +1700,7 @@
                   webform.appendChild(smarturlfield);
                 }
                 document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
+                return true; // Added to ensure the form submission proceeds if all checks pass
               }
               function tooltipShow964312000000427034(el) {
                 var tooltip = el.nextElementSibling;
