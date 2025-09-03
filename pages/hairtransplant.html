@@ -33,7 +33,7 @@
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 2 rem;
             color: var(--black);
         }
         
@@ -66,14 +66,211 @@
             padding: 0.8rem 0;
             border-bottom: 1px solid #e5e5e5;
         }
-        
+        .btn-beige{
+              background-color: beige;  
+              color: black;              
+              border: 1px solid #d2b48c; 
+        }
+
+        .btn-beige:hover {
+            background-color: #d2b48c; /* Darker beige on hover */
+            color: white;              /* Text color on hover */
+        }
         .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-            color: var(--white);
-            padding: 6rem 2rem 4rem;
+            position: relative;
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+            color: var(--beige);
+            padding: 8rem 2rem 6rem;
             text-align: center;
             margin-bottom: 2rem;
-            border-radius: 0 0 20px 20px;
+            border-radius: 0 0 50px 50px;
+            overflow: hidden;
+            min-height: 65vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 60%),
+                radial-gradient(circle at 75% 75%, rgba(255,255,255,0.08) 0%, transparent 50%),
+                linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.05) 50%, transparent 60%);
+            pointer-events: none;
+            animation: heroGlow 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroGlow {
+            0% {
+                opacity: 0.6;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: var(--beige);
+            clip-path: polygon(0 50%, 100% 80%, 100% 100%, 0% 100%);
+        }
+         .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: heroFadeIn 1.2s ease-out;
+        }
+
+        @keyframes heroFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.4);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .hero-section .lead {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            font-weight: 500;
+            text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+            line-height: 1.4;
+        }
+
+        .hero-cta-btn {
+            background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+            padding: 1.2rem 3.5rem;
+            font-weight: 600;
+            border-radius: 60px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(20px);
+            box-shadow: 
+                0 8px 32px rgba(0,0,0,0.3),
+                inset 0 1px 0 rgba(255,255,255,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .hero-cta-btn:hover::before {
+            left: 100%;
+        }
+
+        .hero-cta-btn:hover {
+            background: var(--white);
+            color: var(--black);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 
+                0 15px 50px rgba(0,0,0,0.4),
+                0 0 0 1px rgba(255,255,255,0.1);
+            border-color: var(--white);
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            animation: float 8s ease-in-out infinite;
+            backdrop-filter: blur(10px);
+        }
+
+        .floating-circle:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 15%;
+            left: 8%;
+            animation-delay: 0s;
+        }
+
+        .floating-circle:nth-child(2) {
+              width: 150px;
+            height: 150px;
+            top: 65%;
+            right: 12%;
+            animation-delay: 2.5s;
+        }
+
+        .floating-circle:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            top: 25%;
+            right: 20%;
+            animation-delay: 5s;
+        }
+
+        .floating-circle:nth-child(4) {
+            width: 60px;
+            height: 60px;
+            top: 70%;
+            left: 15%;
+            animation-delay: 7s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg) scale(1);
+                opacity: 0.4;
+            }
+            33% {
+                transform: translateY(-25px) rotate(120deg) scale(1.1);
+                opacity: 0.2;
+            }
+            66% {
+                transform: translateY(-15px) rotate(240deg) scale(0.9);
+                opacity: 0.6;
+            }
         }
         
         .bold-heading {
@@ -100,69 +297,174 @@
         }
         
         .content-to-reveal {
-            padding: 1rem;
-            margin: 0.5rem 0 1.5rem 1rem;
-            border-left: 3px solid var(--highlight);
-            background-color: var(--light-beige);
-            border-radius: 0 8px 8px 0;
+             padding: 1.5rem;
+            margin: 0.5rem 0 1.5rem 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+            border-radius: 12px;
             transition: all 0.3s ease;
+            box-shadow: 
+                0 8px 25px rgba(26, 26, 26, 0.08),
+                0 3px 10px rgba(26, 26, 26, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-to-reveal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(26, 86, 219, 0.03) 0%, transparent 50%);
+            pointer-events: none;
         }
         
         .card-feature {
             border: 1px solid #e5e5e5;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow:  
+                0 8px 25px rgba(0,0,0,0.08),
+                0 3px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
             height: 100%;
             background: var(--white);
         }
         
         .card-feature:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transform: translateY(-8px);
+            box-shadow:   
+                0 15px 40px rgba(0,0,0,0.12),
+                0 8px 20px rgba(0,0,0,0.08);
         }
         
         .highlight-box {
             background: var(--white);
-            border-radius: 8px;
+            border-radius: 15px;
             padding: 2rem;
             margin: 2rem 0;
-            border-left: 5px solid var(--black);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            box-shadow:  0 12px 35px rgba(26, 26, 26, 0.1),
+                0 5px 15px rgba(26, 26, 26, 0.06),
+                inset 0 2px 0 rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(15px);
+            position: relative;
+            overflow: hidden;
+        }
+         .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 15% 25%, rgba(26, 86, 219, 0.04) 0%, transparent 60%),
+                radial-gradient(circle at 85% 75%, rgba(26, 26, 26, 0.02) 0%, transparent 50%);
+            pointer-events: none;
         }
         
         .media-container {
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
             margin: 2rem 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12),
+                0 5px 15px rgba(0,0,0,0.08);
             border: 1px solid #e5e5e5;
+             min-height: 300px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
         }
         
+        .media-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 40%, rgba(26, 86, 219, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        
         .media-container img {
-            width: 100%;
+             max-width: 85%;
+            max-height: 85%;
+            width: auto;
             height: auto;
+            object-fit: contain;
             display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .media-container:hover img {
+            transform: scale(1.02);
+        }
+         .youtube-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 
+                0 8px 25px rgba(0,0,0,0.12),
+                0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .youtube-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
         
         .testimonial-card {
             background: var(--white);
             border-radius: 8px;
             padding: 2rem;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            box-shadow:  0 8px 25px rgba(0,0,0,0.08),
+                0 3px 10px rgba(0,0,0,0.05);
             margin: 1rem 0;
             border: 1px solid #e5e5e5;
         }
         
         .contact-section {
-            background: var(--white);
-            border-radius: 8px;
+            background:  linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+            border-radius: 20px;
             padding: 3rem;
             margin: 3rem 0;
             text-align: center;
             border: 1px solid #e5e5e5;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            box-shadow:    0 20px 50px rgba(26, 26, 26, 0.12),
+                0 8px 25px rgba(26, 26, 26, 0.08),
+                inset 0 2px 0 rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+         .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(26, 86, 219, 0.03) 0%, transparent 60%),
+                radial-gradient(circle at 80% 70%, rgba(26, 26, 26, 0.02) 0%, transparent 50%);
+            pointer-events: none;
         }
         
         .btn-primary {
@@ -179,6 +481,7 @@
             border-color: var(--dark-gray);
             transform: translateY(-2px);
         }
+        
         
         .footer {
             background-color: var(--white);
@@ -199,7 +502,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15),
+                0 3px 10px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s;
             background: var(--white);
             color: var(--black);
@@ -219,7 +523,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow:  0 8px 25px rgba(0, 0, 0, 0.15),
+                0 3px 10px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s;
             border: 1px solid #e5e5e5;
         }
@@ -228,11 +533,12 @@
             background: var(--white);
             color: var(--black);
             text-decoration: none;
-            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2),
+                0 5px 15px rgba(0, 0, 0, 0.12);
         }
         
         @media (max-width: 768px) {
-            h1 {
+           .hero-section h1 {
                 font-size: 2rem;
             }
             
@@ -240,8 +546,18 @@
                 font-size: 1.75rem;
             }
             
-            .hero-section {
-                padding: 5rem 1rem 3rem;
+             .hero-section {
+                padding: 6rem 1rem 4rem;
+                min-height: 60vh;
+            }
+            
+            .hero-section .lead {
+                font-size: 1.2rem;
+            }
+            
+            .hero-cta-btn {
+                padding: 1rem 2.5rem;
+                font-size: 1rem;
             }
             
             .content-container {
@@ -260,22 +576,27 @@
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <div>
                 <span class="d-inline-flex align-items-center">
-                    <a href="../index.html" class="d-inline-block me-2">
-                        <img src="https://i.ibb.co/jZJSFrWx/favicon.png" alt="Contour Cosmetic Clinic" style="height: 48px;" />
-                    </a>
+                        <img src="../Header/ContourHeader.png" alt="Contour Cosmetic Clinic" style="height: 58px;" />
+                        <img src="../Header/brand-name.png" alt="Brand name" class="img-fluid" style="height: 58px;"/>
                 </span>
             </div>
             <div>
-                <a href="#contact" class="btn btn-primary d-none d-md-inline-block">Book Consultation</a>
+                <a href="contact.html" target="_blank" class="btn btn-beige d-none d-md-inline-block">Book Consultation</a>
             </div>
         </div>
     </div>
 
     <div class="hero-section">
-        <div class="content-container">
+        <div class="floating-elements">
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+        </div>
+        <div class="hero-container">
             <h1 class="display-4 fw-bold">Hair Transplant: Your Complete Restoration Guide</h1>
             <p class="lead">Regain your confidence with permanent, natural-looking hair restoration</p>
-            <a href="#contact" class="btn btn-primary btn-lg mt-3">Start Your Journey Today</a>
+            <a href="contact.html" target="_blank" class="btn btn-primary btn-lg mt-3">Start Your Journey Today</a>
         </div>
     </div>
 
@@ -291,8 +612,13 @@
             </div>
             <div class="col-md-4">
                 <div class="card shadow-sm border-0">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="/Gallery/HT/HT01.mp4" style="border:none;object-fit: cover; width: 100%; height: 100%;" allowfullscreen></iframe>
+                    <div class="youtube-container">
+                       <iframe 
+                            src="https://www.youtube.com/embed/w3NtDx_R9yE" 
+                            title="Hair Transplant Results" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -310,8 +636,8 @@
                 <li>Early intervention leads to better treatment outcomes</li>
             </ul>
             
-            <div class="media-container mt-4">
-                <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hair loss pattern illustration">
+            <div class="media-container mt-4" style="min-height: 350px;">
+                <img src="https://i.shgcdn.com/75c86aba-2e0e-419c-aaf5-88436b48b7ad/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Hair loss pattern illustration" style="max-height: 320px; max-width: 90%;">
             </div>
         </div>
 
@@ -323,8 +649,8 @@
         <div id="transplantSolution" class="content-to-reveal">
             <p>These transplanted follicles are genetically resistant to DHT, ensuring <strong>permanent, natural-looking results</strong>.</p>
             
-            <div class="media-container mt-4">
-                <img src="https://images.unsplash.com/photo-1629909613654-28e377c5ca74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hair transplant process illustration">
+            <div class="media-container mt-4" style="min-height: 300px;">
+                <img src="https://bookingsurgery.com/uploads/hair_transplant_gorsel.jpg" alt="Hair transplant procedure and results" style="max-height: 270px; max-width: 85%;">
             </div>
         </div>
 
@@ -337,7 +663,7 @@
                         <h3>FUE (Follicular Unit Extraction) - Most Popular</h3>
                         
                         <div class="media-container">
-                            <img src="https://images.unsplash.com/photo-1594489573454-3a9e7b2c4ed3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="FUE Procedure">
+                            <img src="https://as2.ftcdn.net/v2/jpg/04/74/64/77/1000_F_474647799_kppkn09eHnZofxRZ8q7MCGz592hmkbPv.jpg" alt="FUE Hair Transplant Procedure">
                         </div>
 
                         <div class="bold-heading" data-target="fueBenefits">
@@ -517,7 +843,7 @@
         <h2>Why Choose Contour Cosmetic Clinic?</h2>
         
         <div class="media-container">
-            <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Clinic facility and team">
+            <img src="https://img.grouponcdn.com/deal/3mcbMPK5XZNqXLR1ygj6Xrf73rng/3m-2048x1228/v1/c870x524.jpg" alt="Modern clinic facility and expert medical team">
         </div>
 
         <div class="bold-heading" data-target="clinicBenefits">
@@ -546,8 +872,8 @@
         <div id="contact" class="contact-section">
             <h2>Start Your Hair Restoration Journey</h2>
             
-            <div class="media-container">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Patient testimonials">
+            <div class="media-container" style="min-height: 180px;">
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Happy patients after hair restoration">
             </div>
 
             <div class="bold-heading" data-target="ctaContent">
@@ -653,6 +979,18 @@
                 scrollToTopBtn.style.display = 'flex';
             } else {
                 scrollToTopBtn.style.display = 'none';
+            }
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(15px)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.backdropFilter = 'blur(10px)';
             }
         });
     </script>
