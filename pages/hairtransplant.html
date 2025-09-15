@@ -15,9 +15,10 @@
             --light-beige: #fafaf5;
             --dark-gray: #333333;
             --medium-gray: #666666;
+            --light-gray: #f8f9fa;
             --highlight: #1a56db;
         }
-        
+
         body {
             font-family: 'Montserrat', sans-serif;
             color: var(--dark-gray);
@@ -33,15 +34,34 @@
         }
         
         h1 {
-            font-size: 2 rem;
+            font-size: 2.5rem;
             color: var(--black);
         }
         
         h2 {
             font-size: 2rem;
-            border-left: 4px solid var(--black);
-            padding-left: 1rem;
-            margin-top: 2.5rem;
+            padding: 1rem 1.5rem;
+            margin: 2.5rem 0 1rem 0;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.05) 0%, rgba(26, 26, 26, 0.02) 100%);
+            border-radius: 12px;
+            box-shadow: 
+                0 4px 15px rgba(26, 26, 26, 0.1),
+                0 2px 8px rgba(26, 26, 26, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        h2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(45deg, var(--black), var(--dark-gray));
+            border-radius: 0 4px 4px 0;
         }
         
         h3 {
@@ -61,31 +81,29 @@
             left: 0;
             width: 100%;
             z-index: 1050;
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
             padding: 0.8rem 0;
-            border-bottom: 1px solid #e5e5e5;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
         }
-        .btn-beige{
-              background-color: beige;  
-              color: black;              
-              border: 1px solid #d2b48c; 
-        }
-
-        .btn-beige:hover {
-            background-color: #d2b48c; /* Darker beige on hover */
-            color: white;              /* Text color on hover */
-        }
+        
         .hero-section {
             position: relative;
-            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
-            color: var(--beige);
+            background:
+                linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(51, 51, 51, 0.8) 100%), /* Slightly less dark overlay */
+                url('https://thumbs.dreamstime.com/z/comparing-hair-loss-patterns-two-individuals-showcasing-different-stages-thinning-image-presents-behind-343136199.jpg?w=768');
+            background-size: cover; /* Cover the entire area */
+            background-position: center 25%; /* Adjusted position to show more of the top of the head */
+            background-repeat: no-repeat; /* Ensure image doesn't repeat */
+            color: var(--white);
             padding: 8rem 2rem 6rem;
             text-align: center;
             margin-bottom: 2rem;
             border-radius: 0 0 50px 50px;
             overflow: hidden;
-            min-height: 65vh;
+            min-height: 75vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -107,10 +125,10 @@
         }
 
         @keyframes heroGlow {
-            0% {
+            0%, 100% {
                 opacity: 0.6;
             }
-            100% {
+            50% {
                 opacity: 1;
             }
         }
@@ -125,7 +143,8 @@
             background: var(--beige);
             clip-path: polygon(0 50%, 100% 80%, 100% 100%, 0% 100%);
         }
-         .hero-content {
+
+        .hero-content {
             position: relative;
             z-index: 2;
             max-width: 900px;
@@ -235,7 +254,7 @@
         }
 
         .floating-circle:nth-child(2) {
-              width: 150px;
+            width: 150px;
             height: 150px;
             top: 65%;
             right: 12%;
@@ -297,7 +316,7 @@
         }
         
         .content-to-reveal {
-             padding: 1.5rem;
+            padding: 1.5rem;
             margin: 0.5rem 0 1.5rem 0;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
             border-radius: 12px;
@@ -326,7 +345,7 @@
             border: 1px solid #e5e5e5;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow:  
+            box-shadow: 
                 0 8px 25px rgba(0,0,0,0.08),
                 0 3px 10px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
@@ -336,24 +355,26 @@
         
         .card-feature:hover {
             transform: translateY(-8px);
-            box-shadow:   
+            box-shadow: 
                 0 15px 40px rgba(0,0,0,0.12),
                 0 8px 20px rgba(0,0,0,0.08);
         }
         
         .highlight-box {
-            background: var(--white);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
             border-radius: 15px;
             padding: 2rem;
             margin: 2rem 0;
-            box-shadow:  0 12px 35px rgba(26, 26, 26, 0.1),
+            box-shadow: 
+                0 12px 35px rgba(26, 26, 26, 0.1),
                 0 5px 15px rgba(26, 26, 26, 0.06),
                 inset 0 2px 0 rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(15px);
             position: relative;
             overflow: hidden;
         }
-         .highlight-box::before {
+
+        .highlight-box::before {
             content: '';
             position: absolute;
             top: 0;
@@ -370,10 +391,11 @@
             border-radius: 12px;
             overflow: hidden;
             margin: 2rem 0;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.12),
+            box-shadow: 
+                0 12px 35px rgba(0,0,0,0.12),
                 0 5px 15px rgba(0,0,0,0.08);
             border: 1px solid #e5e5e5;
-             min-height: 300px;
+            min-height: 300px;
             width: 100%;
             display: flex;
             align-items: center;
@@ -393,9 +415,8 @@
             pointer-events: none;
         }
         
-        
         .media-container img {
-             max-width: 85%;
+            max-width: 85%;
             max-height: 85%;
             width: auto;
             height: auto;
@@ -409,7 +430,8 @@
         .media-container:hover img {
             transform: scale(1.02);
         }
-         .youtube-container {
+        
+        .youtube-container {
             position: relative;
             width: 100%;
             height: 0;
@@ -432,29 +454,32 @@
         
         .testimonial-card {
             background: var(--white);
-            border-radius: 8px;
+            border-radius: 12px;
             padding: 2rem;
-            box-shadow:  0 8px 25px rgba(0,0,0,0.08),
+            box-shadow: 
+                0 8px 25px rgba(0,0,0,0.08),
                 0 3px 10px rgba(0,0,0,0.05);
             margin: 1rem 0;
             border: 1px solid #e5e5e5;
         }
         
         .contact-section {
-            background:  linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
             border-radius: 20px;
             padding: 3rem;
             margin: 3rem 0;
             text-align: center;
-            border: 1px solid #e5e5e5;
-            box-shadow:    0 20px 50px rgba(26, 26, 26, 0.12),
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 
+                0 20px 50px rgba(26, 26, 26, 0.12),
                 0 8px 25px rgba(26, 26, 26, 0.08),
                 inset 0 2px 0 rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(20px);
             position: relative;
             overflow: hidden;
         }
-         .contact-section::before {
+
+        .contact-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -482,7 +507,6 @@
             transform: translateY(-2px);
         }
         
-        
         .footer {
             background-color: var(--white);
             color: var(--dark-gray);
@@ -502,7 +526,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15),
+            box-shadow: 
+                0 8px 25px rgba(0, 0, 0, 0.15),
                 0 3px 10px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s;
             background: var(--white);
@@ -523,56 +548,234 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow:  0 8px 25px rgba(0, 0, 0, 0.15),
+            box-shadow: 
+                0 8px 25px rgba(0, 0, 0, 0.15),
                 0 3px 10px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s;
             border: 1px solid #e5e5e5;
         }
-
+        
         .wa-btn1:hover {
             background: var(--white);
             color: var(--black);
             text-decoration: none;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2),
+            box-shadow: 
+                0 12px 35px rgba(0, 0, 0, 0.2),
                 0 5px 15px rgba(0, 0, 0, 0.12);
         }
         
+        /* Enhanced Mobile Styles */
         @media (max-width: 768px) {
-           .hero-section h1 {
+            body {
+                padding-top: 70px;
+            }
+            
+            .header {
+                padding: 0.6rem 0;
+            }
+            
+            .header img {
+                height: 40px !important;
+            }
+            
+            .header .btn {
+                padding: 0.5rem 1rem !important;
+                font-size: 0.9rem;
+            }
+            
+            .hero-section {
+                padding: 4rem 1rem 3rem;
+                min-height: 50vh;
+                background-position: center 15%;
+                border-radius: 0 0 30px 30px;
+            }
+            
+            .hero-section::after {
+                height: 30px;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.2rem;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+                letter-spacing: 0;
+            }
+            
+            .hero-section .lead {
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+                line-height: 1.5;
+            }
+            
+            .hero-cta-btn {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+                border-radius: 40px;
+            }
+            
+            .content-container {
+                padding: 0 0.75rem;
+            }
+            
+            h1 {
                 font-size: 2rem;
             }
             
             h2 {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
+                padding: 0.75rem 1rem;
+                margin: 1.5rem 0 0.75rem 0;
             }
             
-             .hero-section {
-                padding: 6rem 1rem 4rem;
-                min-height: 60vh;
+            h3 {
+                font-size: 1.25rem;
             }
             
-            .hero-section .lead {
-                font-size: 1.2rem;
+            .content-to-reveal {
+                padding: 1rem;
+                margin: 0.5rem 0 1rem 0;
             }
             
-            .hero-cta-btn {
-                padding: 1rem 2.5rem;
-                font-size: 1rem;
+            .highlight-box {
+                padding: 1.5rem;
+                margin: 1.5rem 0;
             }
             
-            .content-container {
-                padding: 0 1rem;
+            .media-container {
+                min-height: 200px;
+                margin: 1.5rem 0;
+            }
+            
+            .media-container img {
+                max-width: 90%;
+                max-height: 90%;
             }
             
             .contact-section {
                 padding: 2rem 1rem;
+                margin: 2rem 0;
+                border-radius: 15px;
+            }
+            
+            .card-feature {
+                margin-bottom: 1.5rem;
+            }
+            
+            .card-feature .card-body {
+                padding: 1.5rem;
+            }
+            
+            /* Floating elements adjustments */
+            .floating-circle {
+                display: none; /* Hide on mobile for performance */
+            }
+            
+            /* Button spacing */
+            .btn {
+                margin-bottom: 0.5rem;
+            }
+            
+            /* Footer adjustments */
+            .footer {
+                padding: 2rem 0 1rem;
+            }
+            
+            .footer .col-md-3 {
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+            
+            /* WhatsApp button positioning */
+            .wa-btn1 {
+                width: 55px;
+                height: 55px;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .scrollToTop {
+                width: 45px;
+                height: 45px;
+                bottom: 80px;
+                right: 15px;
+            }
+        }
+        
+        /* Extra small devices */
+        @media (max-width: 576px) {
+            .hero-section h1 {
+                font-size: 1.9rem;
+            }
+            
+            .hero-section .lead {
+                font-size: 1rem;
+            }
+            
+            .hero-cta-btn {
+                padding: 0.9rem 1.75rem;
+                font-size: 0.95rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+                padding: 0.75rem;
+            }
+            
+            .content-container {
+                padding: 0 0.5rem;
+            }
+            
+            .contact-section {
+                padding: 1.5rem 0.75rem;
+            }
+            
+            .highlight-box {
+                padding: 1.25rem;
+            }
+            
+            /* Make sure buttons stack properly */
+            .btn {
+                width: 100%;
+                margin-bottom: 0.75rem;
+            }
+            
+            .btn:last-child {
+                margin-bottom: 0;
+            }
+            
+            /* Header adjustments for very small screens */
+            .header .container-fluid {
+                padding: 0 0.75rem;
+            }
+            
+            .header .btn {
+                width: auto !important;
+                padding: 0.4rem 0.8rem !important;
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* Landscape phone orientation */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .hero-section {
+                min-height: 70vh;
+                padding: 3rem 1rem 2rem;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section .lead {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="header">
+  <div class="header">
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <div>
                 <span class="d-inline-flex align-items-center">
@@ -593,10 +796,13 @@
             <div class="floating-circle"></div>
             <div class="floating-circle"></div>
         </div>
-        <div class="hero-container">
+        
+        <div class="hero-content">
             <h1 class="display-4 fw-bold">Hair Transplant: Your Complete Restoration Guide</h1>
-            <p class="lead">Regain your confidence with permanent, natural-looking hair restoration</p>
-            <a href="contact.html" target="_blank" class="btn btn-primary btn-lg mt-3">Start Your Journey Today</a>
+            <p class="lead">Experience natural, permanent hair restoration with cutting-edge techniques and expert care</p>
+            <a href="contact.html" class="hero-cta-btn">
+                <i class="bi bi-arrow-right me-2"></i>Begin Your Transformation
+            </a>
         </div>
     </div>
 
@@ -613,8 +819,8 @@
             <div class="col-md-4">
                 <div class="card shadow-sm border-0">
                     <div class="youtube-container">
-                       <iframe 
-                            src="https://www.youtube.com/embed/w3NtDx_R9yE" 
+                        <iframe 
+                            src="https://www.youtube.com/embed/w3NtDx_R9yE?autoplay=1&mute=1" 
                             title="Hair Transplant Results" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             allowfullscreen>
@@ -637,7 +843,7 @@
             </ul>
             
             <div class="media-container mt-4" style="min-height: 350px;">
-                <img src="https://i.shgcdn.com/75c86aba-2e0e-419c-aaf5-88436b48b7ad/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="Hair loss pattern illustration" style="max-height: 320px; max-width: 90%;">
+                <img src="https://www.drserkanaygin.com/wp-content/uploads/2023/12/9-signs-of-hair-loss-DR-SERKAN-AYGIN-1024x582.png" alt="Hair loss pattern illustration" style="width: 100%; height: auto; max-height: 320px;">
             </div>
         </div>
 
@@ -796,11 +1002,6 @@
         </div>
 
         <h2>Myths vs Reality</h2>
-        
-        <div class="media-container">
-            <img src="https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Before and after results">
-        </div>
-
         <div class="row">
             <div class="col-md-6">
                 <div class="card card-feature mb-4">
@@ -885,7 +1086,7 @@
                     <li>✓ Get expert assessment and treatment plan</li>
                     <li>✓ Learn about financing options</li>
                     <li>✓ See real patient results</li>
-                </ul>
+                    </ul>
 
                 <p class="mb-4"><em><strong>Contact Contour Cosmetic Clinic today</strong> and take the first step toward permanent hair restoration. Your natural hairline and confidence are within reach.</em></p>
                 
@@ -958,14 +1159,16 @@
             });
         });
         
-        // Initialize all content as hidden
+        // Initialize all content as visible (expanded by default)
         document.addEventListener('DOMContentLoaded', function() {
+            // Keep all content visible by default, don't hide anything
             document.querySelectorAll('.content-to-reveal').forEach(content => {
-                content.style.display = 'none';
+                content.style.display = 'block';
             });
             
+            // Set headings to expanded state (down arrow)
             document.querySelectorAll('.bold-heading').forEach(heading => {
-                heading.classList.add('collapsed');
+                heading.classList.remove('collapsed');
             });
             
             // Hide scroll to top button initially
