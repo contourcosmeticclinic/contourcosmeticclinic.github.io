@@ -8,11 +8,11 @@ import WhatsupIcon from "./icons/whatsapp";
 
 export default function Footer() {
   return (
-    <footer className="bg-forest-dark text-white py-16 px-6">
+    <footer className="bg-primary text-white py-16 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Column 1: Clinic Name & Social */}
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold font-playfair">
+          <h2 className="text-2xl font-bold text-bg-light font-playfair">
             Contour Cosmetic Clinic
           </h2>
           <p className="text-gray-300">
@@ -97,7 +97,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="bg-light-gray text-forest-dark font-semibold px-4 py-2 rounded-lg hover:bg-white transition"
+              className="bg-light-gray text-primary font-semibold px-4 py-2 rounded-lg hover:bg-white transition"
             >
               Subscribe
             </button>
@@ -106,7 +106,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom line */}
-      <div className="border-t border-gray-700 mt-10 pt-6 text-gray-400 text-sm text-center">
+      <div className="border-t border-bg-light/30 mt-10 pt-6 text-bg-light text-sm text-center">
         &copy; {new Date().getFullYear()} Contour Cosmetic Clinic. All rights
         reserved.
       </div>

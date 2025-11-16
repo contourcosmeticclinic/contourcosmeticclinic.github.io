@@ -7,7 +7,7 @@ import SlideUp from "../animations/slide-up";
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-beige-light py-2 md:py-28">
+    <section className="relative w-full overflow-hidden bg-bg-light py-2 md:py-28">
       {/* Background Soft Glows */}
 
       <div className="relative mx-auto max-w-7xl px-3 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -16,14 +16,14 @@ export default function Hero() {
           <div className="relative flex flex-col items-start space-y-6 p-6 md:p-10">
             {/* Heading */}
             <SlideUp>
-              <h1 className="font-playfair font-heading text-4xl md:text-5xl lg:text-6xl text-forest-dark leading-tight">
+              <h1 className="font-playfair font-heading text-4xl md:text-5xl lg:text-6xl text-primary leading-tight">
                 Contour Cosmetic Clinic
               </h1>
             </SlideUp>
 
             {/* Sub Heading */}
             <SlideUp>
-              <p className="text-charcol-wood font-body text-md md:text-lg max-w-lg">
+              <p className="text-body-text font-body text-md md:text-lg max-w-lg">
                 We finish with care, welcome change, and stay centered on your
                 confidence. Experience advanced cosmetic, skin & hair treatments
                 designed for timeless beauty.
@@ -42,7 +42,7 @@ export default function Hero() {
               <div className="mt-2 flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/book"
-                  className="rounded bg-forest-dark px-8 py-3 text-white font-medium font-inter 
+                  className="rounded bg-primary px-8 py-3 text-white font-medium font-inter 
                   shadow-md hover:shadow-xl hover:bg-[#1F3A3A] transition-all duration-300"
                 >
                   Book Appointment
@@ -50,8 +50,8 @@ export default function Hero() {
 
                 <Link
                   href="/services"
-                  className="rounded border border-forest-dark px-8 py-3 text-forest-dark font-medium 
-                  font-inter hover:bg-forest-dark hover:text-white transition-all duration-300"
+                  className="rounded border border-primary px-8 py-3 text-primary font-medium 
+                  font-inter hover:bg-primary hover:text-white transition-all duration-300"
                 >
                   Explore Services
                 </Link>

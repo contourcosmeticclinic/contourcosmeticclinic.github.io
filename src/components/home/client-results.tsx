@@ -13,9 +13,9 @@ interface ImageGridProps {
 
 export default function ClientResults({ images }: ImageGridProps) {
   return (
-    <div className="bg-beige-light w-full">
+    <div className="bg-bg-light w-full">
       <div className="w-full max-w-6xl mx-auto py-12 px-4">
-        <h2 className="font-playfair font-heading text-4xl md:text-5xl lg:text-6xl text-forest-dark leading-tight text-center mb-8">
+        <h2 className="font-playfair font-heading text-4xl md:text-5xl lg:text-6xl text-primary leading-tight text-center mb-8">
           Transformation Gallery
         </h2>
 
@@ -38,8 +38,8 @@ export default function ClientResults({ images }: ImageGridProps) {
         </div>
       </div>
 
-      <div className="py-8">
-        <h2 className="font-playfair font-heading text-4xl md:text-5xl lg:text-6xl text-forest-dark leading-tight text-center mb-8">
+      <div className="py-8 bg-bg-light">
+        <h2 className="font-playfair font-heading text-4xl md:text-5xl lg:text-6xl text-primary leading-tight text-center mb-8">
           Frequently Asked Questions
         </h2>
         <FAQSection />

@@ -95,7 +95,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item) => (
           <li
-            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-[#E5E7EB] bg-[linear-gradient(180deg,#FAFAFA,#F5F5F5)] px-8 py-6 md:w-[450px]"
+            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-[#E5E7EB] bg-white/60 px-8 py-6 md:w-[450px]"
             key={item.name}
           >
             <blockquote className="flex flex-col justify-between h-full">
@@ -128,7 +128,7 @@ export const InfiniteMovingCards = ({
                   )}
                 </div>
 
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#6B7280] text-white font-semibold text-sm overflow-hidden">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary text-white font-semibold text-sm overflow-hidden">
                   {item.imageUrl ? (
                     <Image
                       src={item.imageUrl}

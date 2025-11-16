@@ -6,9 +6,9 @@ import { InfiniteMovingCards, ReviewType } from "../ui/moving-cards";
 
 export function ReviewCards() {
   return (
-    <div className="rounded-md flex flex-col antialiased bg-beige-light items-center justify-center relative overflow-hidden py-12">
+    <div className="rounded-md flex flex-col antialiased bg-bg-light items-center justify-center relative overflow-hidden py-12">
       {/* Heading */}
-      <h2 className="font-playfair font-heading pb-4 text-4xl md:text-5xl lg:text-6xl text-forest-dark leading-tight">
+      <h2 className="font-playfair font-heading pb-4 text-4xl md:text-5xl lg:text-6xl text-primary leading-tight">
         Trusted By Thousands
       </h2>
 

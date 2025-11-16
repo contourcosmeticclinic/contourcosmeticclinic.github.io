@@ -63,20 +63,18 @@ const faqs: { question: string; answer: string }[] = [
 
 export default function FAQSection() {
   return (
-    <div className="w-full max-w-4xl mx-auto my-8 bg-white/60  rounded text-charcol-wood shadow">
+    <div className="w-full max-w-4xl mx-auto my-8 bg-white/60  rounded text-body-text shadow">
       <ul>
         {faqs.map((faq, idx) => (
           <Disclosure
             key={idx}
             as="li"
-            className="border-b border-charcol-wood/10"
+            className="border-b border-body-text/10 bg-white/60"
           >
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex font-body cursor-pointer justify-between w-full py-4 text-left px-4 focus:outline-none">
-                  <span className="font-medium text-forest-dark">
-                    {faq.question.trim()}
-                  </span>
+                <Disclosure.Button className="flex font-body bg-white/60 cursor-pointer justify-between w-full py-4 text-left px-4 focus:outline-none">
+                  <span className="font-medium">{faq.question.trim()}</span>
                   {!open ? (
                     <ChevronUpIcon className="h-5 w-5 ml-4 transform transition-transform duration-300" />
                   ) : (
@@ -91,7 +89,7 @@ export default function FAQSection() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.3 }}
-                        className="px-4 pb-4 pt-2 text-charcol-wood font-body"
+                        className="px-4 pb-4 pt-2 text-body-text/80 font-body font-normal bg-white/60"
                       >
                         {faq.answer.trim()}
                       </motion.div>

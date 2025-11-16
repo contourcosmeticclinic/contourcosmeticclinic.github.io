@@ -1,29 +1,26 @@
 @import "tailwindcss";
 
-:root {
-  --forest-green: #1f4d36;
-  --forest-green-dark: #4b2e2e;
-  -charcol-wood: #4a4a4a;
-  --beige: #f3e9d2;
-  --beige-dark: #e8dcc1;
-  --beige-secondary: #f7f3ee;
+::selection {
+  background-color: #564949; /* light beige */
+  color: #f5f0e1; /* dark brown text */
 }
 
 @theme {
-  --color-forest: #0b3d2e; /* Primary Forest Green */
-  --color-forest-dark: #4b2e2e; /* Darker Forest */
-  --color-forest-light: #7b4f4f; /* Emerald Secondary */
-  --color-charcol-wood: #4a4a4a;
+  /* Primary Brand Colors */
+  --color-primary: #4b2e2e; /* Main brand color */
+  --color-secondary: #7b4f4f; /* Bold headings / highlights */
 
-  --color-beige: #e7d9c4; /* Warm Beige */
-  --color-beige-light: #f7f2eb; /* Light Beige Background */
-  --color-beige-dark: #c9b8a4; /* Deep Beige */
+  /* Text Colors */
+  --color-body-text: #1e1e1e; /* Paragraphs, labels, body text */
+  --color-white: #ffffff; /* White text or backgrounds */
 
-  --color-gold: #c9a86a; /* Soft Gold Accent */
-  --color-gold-light: #e6d7b9;
+  /* Backgrounds */
+  --color-bg-light: #f7f2eb; /* Light beige background */
+  --color-bg-dark: #c9b8a4; /* Deep beige for sections/cards */
 
-  --color-charcoal: #1e1e1e; /* Rich Text Color */
-  --color-white: #ffff;
+  /* Accent Colors */
+  --color-accent: #c9a86a; /* Soft gold accent */
+  --color-accent-light: #e6d7b9; /* Light gold / subtle highlights */
 
   --animate-scroll: scroll var(--animation-duration, 40s)
     var(--animation-direction, forwards) linear infinite;

@@ -29,7 +29,7 @@ export default function Heading({
     <Tag
       className={clsx(
         sizeMap[level],
-        "font-heading text-forest-dark ",
+        "font-heading text-primary ",
         {
           "text-left": align === "left",
           "text-center": align === "center",

@@ -12,7 +12,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantStyles = {
-  primary: "bg-forest-dark text-white hover:bg-forest-light transition", // uses utilities above
+  primary: "bg-primary text-white hover:bg-forest-light transition", // uses utilities above
   secondary: "bg-beige text-forest hover:bg-beige-dark transition",
   outline:
     "border border-forest text-forest hover:bg-forest hover:text-white transition",

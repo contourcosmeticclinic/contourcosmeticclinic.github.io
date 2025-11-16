@@ -70,21 +70,21 @@ export default function Navbar() {
               >
                 <Link
                   href="/services/hair-transplant"
-                  className="block px-4 py-2 rounded-lg hover:bg-beige-light hover:text-forest transition"
+                  className="block px-4 py-2 rounded-lg hover:bg-bg-light hover:text-forest transition"
                 >
                   Hair Transplant
                 </Link>
 
                 <Link
                   href="/services/skin-treatment"
-                  className="block px-4 py-2 rounded-lg hover:bg-beige-light hover:text-forest transition"
+                  className="block px-4 py-2 rounded-lg hover:bg-bg-light hover:text-forest transition"
                 >
                   Skin Treatments
                 </Link>
 
                 <Link
                   href="/services/laser"
-                  className="block px-4 py-2 rounded-lg hover:bg-beige-light hover:text-forest transition"
+                  className="block px-4 py-2 rounded-lg hover:bg-bg-light hover:text-forest transition"
                 >
                   Laser Procedures
                 </Link>

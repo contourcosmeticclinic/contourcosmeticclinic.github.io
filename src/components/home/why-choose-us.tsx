@@ -40,18 +40,18 @@ const features = [
 
 export default function WhyChooseClinic() {
   return (
-    <section className="relative w-full bg-[#F7F3EE] py-20 md:py-28">
+    <section className="relative w-full py-20 md:py-28 bg-bg-light">
       <div className="relative mx-auto max-w-7xl px-6 text-center">
         {/* Section Heading */}
         <SlideUp>
-          <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-forest-dark font-heading leading-tight">
+          <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-primary font-heading leading-tight">
             Why Choose Our Clinic?
           </h2>
         </SlideUp>
 
         {/* Subheading */}
         <SlideUp className="mt-4">
-          <p className="mx-auto md:max-w-4xl md:mx-auto text-charcol-wood text-sm md:text-lg leading-relaxed font-body">
+          <p className="mx-auto md:max-w-4xl md:mx-auto text-body-text text-sm md:text-lg leading-relaxed font-body">
             Indulge in bespoke facial aesthetics and premium cosmetic surgery,
             expertly crafted by renowned specialists — all at surprisingly
             affordable rates. Discover the gold standard in hair restoration,
@@ -76,11 +76,11 @@ export default function WhyChooseClinic() {
                 </div>
 
                 {/* Content */}
-                <div>
-                  <h3 className="text-[#2E4F4F] font-semibold font-playfair text-xl md:text-2xl mb-2">
+                <div className="text-left">
+                  <h3 className="text-primary font-semibold font-playfair text-xl md:text-xl mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-[#3A3A3A] font-body text-base leading-relaxed">
+                  <p className="text-body-text text-sm font-body leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -92,7 +92,7 @@ export default function WhyChooseClinic() {
           <a
             href="/assets/contour-brochure.pdf"
             target="_blank"
-            className="bg-forest-dark flex items-center gap-4 text-white px-8 py-3 rounded-lg hover:bg-forest-light transition-all duration-300"
+            className="bg-primary flex items-center gap-4 text-white px-8 py-3 rounded-lg hover:bg-forest-light transition-all duration-300"
           >
             <ArrowDownTrayIcon width={20} /> Our Services
           </a>
