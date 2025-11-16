@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --forest-green: #1f4d36;
+  --forest-green-dark: #4b2e2e;
+  -charcol-wood: #4a4a4a;
+  --beige: #f3e9d2;
+  --beige-dark: #e8dcc1;
+  --beige-secondary: #f7f3ee;
+}
+
+@theme {
+  --color-forest: #0b3d2e; /* Primary Forest Green */
+  --color-forest-dark: #4b2e2e; /* Darker Forest */
+  --color-forest-light: #7b4f4f; /* Emerald Secondary */
+  --color-charcol-wood: #4a4a4a;
+
+  --color-beige: #e7d9c4; /* Warm Beige */
+  --color-beige-light: #f7f2eb; /* Light Beige Background */
+  --color-beige-dark: #c9b8a4; /* Deep Beige */
+
+  --color-gold: #c9a86a; /* Soft Gold Accent */
+  --color-gold-light: #e6d7b9;
+
+  --color-charcoal: #1e1e1e; /* Rich Text Color */
+  --color-white: #ffff;
+
+  --animate-scroll: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
+
+@utility green-beige-gradient {
+  background: linear-gradient(145deg, #0b3d2e, #0f5e49, #e7d9c4);
+}
+
+@utility green-gold-gradient {
+  background: linear-gradient(135deg, #0b3d2e, #0f5e49, #c9a86a);
+}
+
+@utility font-heading {
+  font-family: var(--font-playfair);
+}
+
+@utility font-body {
+  font-family: var(--font-inter);
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.25s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
