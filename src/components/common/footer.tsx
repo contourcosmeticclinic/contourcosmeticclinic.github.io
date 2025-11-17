@@ -5,6 +5,7 @@ import FacebookIcon from "./icons/facebook";
 import InstagramIcon from "./icons/instagram";
 import LinkedInIcon from "./icons/linkedin";
 import WhatsupIcon from "./icons/whatsapp";
+import YoutubeIcon from "./icons/youtube";
 
 export default function Footer() {
   return (
@@ -44,9 +45,16 @@ export default function Footer() {
             <a
               href="#"
               className="hover:text-gray-400 transition"
-              aria-label="LinkedIn"
+              aria-label="Whatsapp"
             >
               <WhatsupIcon />
+            </a>
+            <a
+              href="#"
+              className="hover:text-gray-400 transition"
+              aria-label="Youtube"
+            >
+              <YoutubeIcon />
             </a>
           </div>
         </div>

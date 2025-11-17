@@ -1,9 +1,9 @@
 "use client";
 
-import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
 import SlideUp from "../animations/slide-up";
+import DownloadIcon from "../common/icons/download";
 
 const features = [
   {
@@ -92,9 +92,9 @@ export default function WhyChooseClinic() {
           <a
             href="/assets/contour-brochure.pdf"
             target="_blank"
-            className="bg-primary flex items-center gap-4 text-white px-8 py-3 rounded-lg hover:bg-forest-light transition-all duration-300"
+            className="bg-primary rounded-full flex items-center gap-4 text-white px-8 py-3 hover:bg-forest-light transition-all duration-300"
           >
-            <ArrowDownTrayIcon width={20} /> Our Services
+            <DownloadIcon className="size-5" /> Our Services
           </a>
         </div>
       </div>

@@ -2,7 +2,8 @@
 
 import { Disclosure } from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MinusIcon, PlusIcon } from "@heroicons/react/24/solid";
+import PlusIcon from "./icons/plusicon";
+import MinusIcon from "./icons/minus";
 
 // Add your FAQ data here
 const faqs: { question: string; answer: string }[] = [

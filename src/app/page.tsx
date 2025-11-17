@@ -4,7 +4,6 @@ import { ReviewCards } from "../components/home/review";
 import ClientResults from "../components/home/client-results";
 import { clientResultImages } from "../lib/constant";
 import ConnectForm from "../components/common/connect-form";
-import Footer from "../components/common/footer";
 
 export default function Home() {
   return (
@@ -14,7 +13,6 @@ export default function Home() {
       <ReviewCards />
       <ClientResults images={clientResultImages} />
       <ConnectForm />
-      <Footer />
     </>
   );
 }

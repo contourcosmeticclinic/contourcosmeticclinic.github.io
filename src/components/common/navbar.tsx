@@ -1,10 +1,5 @@
 "use client";
 
-import {
-  ChevronDownIcon,
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -13,6 +8,10 @@ import NavLink from "./navlink";
 import SlideDown from "../animations/slide-down";
 import { StaggerContainer, StaggerItem } from "../animations/stagger";
 import Button from "../ui/button";
+import PhoneIconOutlined from "./icons/phone";
+import ChevronDownIcon from "./icons/chevron-down";
+import Bar3Icon from "./icons/bar3-icon";
+import XmarkIcon from "./icons/x-mark";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -93,6 +92,12 @@ export default function Navbar() {
           </StaggerItem>
 
           <StaggerItem>
+            <NavLink href="/doctors" className="hover:text-forest transition">
+              Doctros
+            </NavLink>
+          </StaggerItem>
+
+          <StaggerItem>
             <NavLink href="/gallery" className="hover:text-forest transition">
               Gallery
             </NavLink>
@@ -108,11 +113,21 @@ export default function Navbar() {
         {/* Right: Book Now */}
         <SlideDown>
           <div className="hidden md:block">
-            <Button className="rounded" size="md" variant="primary">
-              Book Now
-            </Button>
+            <div className="items-center flex flex-row gap-12">
+              <Button className="rounded-full" size="md" variant="primary">
+                Book Now
+              </Button>
+
+              <a
+                href="tel:+918660432589"
+                className="flex gap-3 items-center text-sm"
+              >
+                <PhoneIconOutlined className="size-4" /> 866-043-2589
+              </a>
+            </div>
           </div>
         </SlideDown>
+
         {/* Mobile Menu Button */}
         <SlideDown>
           <button
@@ -120,9 +135,9 @@ export default function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? (
-              <XMarkIcon className="w-7 h-7" />
+              <XmarkIcon className="w-7 h-7" />
             ) : (
-              <Bars3Icon className="w-7 h-7" />
+              <Bar3Icon className="w-7 h-7" />
             )}
           </button>
         </SlideDown>
@@ -165,6 +180,12 @@ export default function Navbar() {
               </details>
             </SlideDown>
 
+            <StaggerItem>
+              <NavLink href="/doctors" className="hover:text-forest transition">
+                Doctros
+              </NavLink>
+            </StaggerItem>
+
             <SlideDown>
               <NavLink href="/gallery" className="block py-2 hover:text-forest">
                 Gallery
@@ -177,7 +198,20 @@ export default function Navbar() {
             </SlideDown>
 
             <SlideDown>
-              <Button fullWidth className="mt-3">
+              <a
+                href="tel:+918660432589"
+                className="flex gap-3 py-2 items-center text-sm"
+              >
+                <PhoneIconOutlined className="size-4" /> 866-043-2589
+              </a>
+            </SlideDown>
+
+            <SlideDown>
+              <Button
+                className="rounded-full w-full"
+                size="md"
+                variant="primary"
+              >
                 Book Now
               </Button>
             </SlideDown>
