@@ -2,7 +2,7 @@
 
 import { Disclosure } from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
+import { MinusIcon, PlusIcon } from "@heroicons/react/24/solid";
 
 // Add your FAQ data here
 const faqs: { question: string; answer: string }[] = [
@@ -76,9 +76,9 @@ export default function FAQSection() {
                 <Disclosure.Button className="flex font-body bg-white/60 cursor-pointer justify-between w-full py-4 text-left px-4 focus:outline-none">
                   <span className="font-medium">{faq.question.trim()}</span>
                   {!open ? (
-                    <ChevronUpIcon className="h-5 w-5 ml-4 transform transition-transform duration-300" />
+                    <PlusIcon className="h-5 w-5 ml-4 transform transition-transform duration-300" />
                   ) : (
-                    <ChevronDownIcon className="h-5 w-5 ml-4 transform transition-transform duration-300" />
+                    <MinusIcon className="h-5 w-5 ml-4 transform transition-transform duration-300" />
                   )}
                 </Disclosure.Button>
                 <AnimatePresence>
