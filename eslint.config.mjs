@@ -36,7 +36,6 @@ const eslintConfig = defineConfig([
       "no-var": "error",
       "no-console": ["warn", { allow: ["warn", "error"] }],
       eqeqeq: ["error", "always"],
-      curly: ["error", "all"],
 
       "react/react-in-jsx-scope": "off",
 

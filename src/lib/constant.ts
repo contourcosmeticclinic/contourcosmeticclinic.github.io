@@ -1,3 +1,5 @@
+import { ImageType } from "./types";
+
 export const APP_NAME = "Contour Cosmetic Clinic";
 
 export const clientResultImages: {
@@ -13,11 +15,25 @@ export const clientResultImages: {
   { src: "/images/client-results/cr-6.png" },
 ];
 
-export const faqs: { question: string; answer: string }[] = [
-  {
-    question: "What is a hair transplant?",
-    answer: `A hair transplant is a surgical procedure that moves hair follicles from a donor area (usually
-                        the back or sides of the scalp) to areas with thinning or no hair. It is a permanent solution
-                        for hair loss.`,
-  },
+export const interiorImages: ImageType[] = [
+  { src: "/images/clinic/contourcosmeticclinic-interior1.jpg" },
+  { src: "/images/clinic/contourcosmeticclinic-interior2.jpg" },
+  { src: "/images/clinic/contourcosmeticclinic-interior3.jpg" },
+  { src: "/images/clinic/contourcosmeticclinic-interior4.jpg" },
+  { src: "/images/clinic/contourcosmeticclinic-interior5.jpg" },
+  { src: "/images/clinic/contourcosmeticclinic-interior6.jpg" },
+  { src: "/images/clinic/contourcosmeticclinic-interior7.jpg" },
+  { src: "/images/clinic/contourcosmeticclinic-interior9.jpg" },
+  { src: "/images/clinic/contourcosmeticclinic-interior10.jpg" },
+];
+
+export const reelVideos = [
+  { src: "/assets/reels/contourcosmeticclinic-acne-care.mp4" },
+  { src: "/assets/reels/contourcosmeticclinic-hair-transplant1.mp4" },
+  { src: "/assets/reels/contourcosmeticclinic-hair-transplant2.mp4" },
+  { src: "/assets/reels/contourcosmeticclinic-hair-transplant3.mp4" },
+  { src: "/assets/reels/contourcosmeticclinic-mirco-needling.mp4" },
+  { src: "/assets/reels/contourcosmeticclinic-post-hair-transplant.mp4" },
+  { src: "/assets/reels/contourcosmeticclinic-hydra-facial.mp4" },
+  { src: "/assets/reels/contourcosmeticclinic-hair-removal.mp4" },
 ];
