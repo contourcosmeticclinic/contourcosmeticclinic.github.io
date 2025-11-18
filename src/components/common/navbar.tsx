@@ -12,6 +12,7 @@ import PhoneIconOutlined from "./icons/phone";
 import ChevronDownIcon from "./icons/chevron-down";
 import Bar3Icon from "./icons/bar3-icon";
 import XmarkIcon from "./icons/x-mark";
+import { services } from "../../lib/constant";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -57,36 +58,38 @@ export default function Navbar() {
                 <ChevronDownIcon className="w-3 h-3" />
               </div>
 
-              {/* DROPDOWN PANEL */}
+              {/* DROPDOWN */}
               <div
                 className="
-                absolute left-0 mt-3 w-52 bg-white border border-gray-200 
-                rounded-xl shadow-lg opacity-0 invisible 
-                group-hover:opacity-100 group-hover:visible 
-                translate-y-2 group-hover:translate-y-0 
-                transition-all duration-200 p-2
-              "
+        absolute left-0 mt-3 w-[600px] bg-white border border-gray-200 
+        rounded-xl shadow-lg opacity-0 invisible 
+        group-hover:opacity-100 group-hover:visible 
+        translate-y-2 group-hover:translate-y-0 
+        transition-all duration-200 p-4
+      "
               >
-                <Link
-                  href="/services/hair-transplant"
-                  className="block px-4 py-2 rounded-lg hover:bg-bg-light hover:text-forest transition"
-                >
-                  Hair Transplant
+                {" "}
+                <Link href={"/services"}>
+                  <Button className="w-full my-2 rounded-full">
+                    Explore All Services
+                  </Button>
                 </Link>
-
-                <Link
-                  href="/services/skin-treatment"
-                  className="block px-4 py-2 rounded-lg hover:bg-bg-light hover:text-forest transition"
-                >
-                  Skin Treatments
-                </Link>
-
-                <Link
-                  href="/services/laser"
-                  className="block px-4 py-2 rounded-lg hover:bg-bg-light hover:text-forest transition"
-                >
-                  Laser Procedures
-                </Link>
+                {/* GRID 3 COLUMNS */}
+                <div className="grid grid-cols-3 gap-3 items-center">
+                  {services.map((item) => (
+                    <Link
+                      key={item.id}
+                      href={`/services/${item.code}`}
+                      className="
+              block px-3 py-2 rounded-lg 
+              hover:bg-bg-light hover:text-forest 
+              transition text-sm
+            "
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
           </StaggerItem>
@@ -146,7 +149,10 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {mobileOpen && (
         <SlideDown>
-          <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 transition">
+          <div
+            className="md:hidden bg-white border-t border-gray-100 px-6 py-4 
+      transition max-h-[80vh] overflow-y-auto"
+          >
             <SlideDown>
               <NavLink href="/about" className="block py-2 hover:text-forest">
                 About
@@ -161,21 +167,24 @@ export default function Navbar() {
                 </summary>
 
                 <div className="ml-4 mt-2 flex flex-col gap-2">
-                  <Link
-                    href="/services/hair-transplant"
-                    className="hover:text-forest"
-                  >
-                    Hair Transplant
+                  <Link href={"/services"}>
+                    <Button className="w-full my-2 rounded-full">
+                      Explore All Services
+                    </Button>
                   </Link>
-                  <Link
-                    href="/services/skin-treatment"
-                    className="hover:text-forest"
-                  >
-                    Skin Treatments
-                  </Link>
-                  <Link href="/services/laser" className="hover:text-forest">
-                    Laser Procedures
-                  </Link>
+
+                  {/* GRID 2 COLUMNS */}
+                  <div className="grid grid-cols-2 gap-3 items-center">
+                    {services.map((item) => (
+                      <Link
+                        key={item.id}
+                        href={`/services/${item.code}`}
+                        className="block px-3 py-2 rounded-lg hover:bg-bg-light hover:text-forest transition text-sm"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </details>
             </SlideDown>
