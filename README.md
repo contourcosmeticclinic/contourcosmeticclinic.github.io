@@ -59,3 +59,18 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 ```
+
+
+📄 MDX-Based Service Documentation
+
+Our project uses MDX (.mdx / .md) files to document and render all service details in a clean, structured, and maintainable format. This approach allows us to write content using Markdown, tables, lists, and HTML-like elements while keeping full React component support.
+
+src/docs/mdx/
+ ├── hair-transplant.mdx
+ ├── prp-therapy.mdx
+ ├── gfc-therapy.mdx
+ ├── cosmetic-hair-patch.mdx
+ ├── scalp-micropigmentation.mdx
+ └── derma-filler.mdx
+
+ use https://mdxeditor.dev/editor/demo to generate mdx source code
