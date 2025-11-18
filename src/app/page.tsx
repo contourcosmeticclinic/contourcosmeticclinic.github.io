@@ -1,9 +1,8 @@
 import WhyChooseClinic from "../components/home/why-choose-us";
 import Hero from "@/components/home/hero-section";
 import { ReviewCards } from "../components/home/review";
-import ClientResults from "../components/home/client-results";
-import { clientResultImages } from "../lib/constant";
 import ConnectForm from "../components/common/connect-form";
+import Faqs from "../components/home/faqs";
 
 export default function Home() {
   return (
@@ -11,7 +10,8 @@ export default function Home() {
       <Hero />
       <WhyChooseClinic />
       <ReviewCards />
-      <ClientResults images={clientResultImages} />
+      {/* <ClientResults images={clientResultImages} /> */}
+      <Faqs />
       <ConnectForm />
     </>
   );

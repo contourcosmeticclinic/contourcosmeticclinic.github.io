@@ -20,6 +20,12 @@ const playfair = Playfair_Display({
 export const metadata = {
   title: "Contour Cosmetic Clinic",
   description: "Luxury cosmetic and skin treatment clinic",
+  viewport: {
+    width: "device-width",
+    initialScale: 1.0,
+    maximumScale: 1.0,
+    userScalable: "no",
+  },
 };
 
 export default function RootLayout({

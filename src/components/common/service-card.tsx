@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { FC } from "react";
 
 type Prop = {
@@ -40,12 +41,12 @@ const ServiceCard: FC<Prop> = ({ service }) => {
           >
             Book Now
           </a>
-          <a
+          <Link
             href={`/services/${service.code}`}
             className="text-body-text text-sm font-semibold hover:underline"
           >
             Read More →
-          </a>
+          </Link>
         </div>
       </div>
     </div>

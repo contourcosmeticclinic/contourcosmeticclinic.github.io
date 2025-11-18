@@ -17,13 +17,13 @@ const InteriorGallery = () => {
     <div className="bg-bg-light">
       <div className="bg-bg-light flex flex-col items-center">
         <SlideUp>
-          <h2 className="font-playfair font-heading px-6 mt-6 text-xl md:text-3xl text-primary">
-            A Space Designed for Comfort, Luxury & Care
+          <h2 className="text-3xl font-heading  md:text-5xl text-primary tracking-tight py-8">
+            Comfort, Luxury & Care
           </h2>
         </SlideUp>
       </div>
 
-      <div className="mx-auto max-w-5xl py-12 px-4">
+      <div className="mx-auto max-w-5xl px-4">
         <div
           className="columns-1 sm:columns-2 md:columns-3 gap-14 [&>div]:mb-4
                   "

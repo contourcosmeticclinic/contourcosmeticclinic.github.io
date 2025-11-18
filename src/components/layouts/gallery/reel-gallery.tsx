@@ -25,7 +25,7 @@ export default function ReelsGallery({ videos }: ReelsGalleryProps) {
   return (
     <section className="w-full py-12 bg-bg-light">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="font-heading text-3xl md:text-4xl text-primary text-center mb-10">
+        <h2 className="text-3xl font-heading  md:text-5xl text-primary tracking-tight py-8 text-center">
           Clinic Reel Showcase
         </h2>
 

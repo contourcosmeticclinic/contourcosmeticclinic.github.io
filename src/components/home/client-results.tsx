@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import FAQSection from "../common/faq-section";
 
 interface ImageGridProps {
   images: {
@@ -15,7 +14,7 @@ export default function ClientResults({ images }: ImageGridProps) {
   return (
     <div className="bg-bg-light w-full">
       <div className="w-full max-w-6xl mx-auto py-12 px-4">
-        <h2 className="font-playfair font-heading text-4xl md:text-5xl lg:text-6xl text-primary leading-tight text-center mb-8">
+        <h2 className="text-3xl font-heading  md:text-5xl text-primary tracking-tight py-8 text-center">
           Transformation Gallery
         </h2>
 
@@ -36,13 +35,6 @@ export default function ClientResults({ images }: ImageGridProps) {
             </div>
           ))}
         </div>
-      </div>
-
-      <div className="py-8 bg-bg-light">
-        <h2 className="font-playfair font-heading text-4xl md:text-5xl lg:text-6xl text-primary leading-tight text-center mb-8">
-          Frequently Asked Questions
-        </h2>
-        <FAQSection />
       </div>
     </div>
   );

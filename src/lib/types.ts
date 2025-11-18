@@ -6,3 +6,27 @@ export type ImageType = {
 export type VideoType = {
   src: string;
 };
+
+export type ServiceCode =
+  | "hair-transplant"
+  | "cosmetic-hair-patch"
+  | "prp-therapy"
+  | "gfc-therapy"
+  | "scalp-micropigmentation"
+  | "receding-hairline-restoration"
+  | "beard-restoration"
+  | "derma-fillers"
+  | "eyebrow-restoration"
+  | "scar-revision"
+  | "exosome-hair-therapy"
+  | "microdermabrasion"
+  | "laser-hair-removal"
+  | "laser-skin-resurfacing"
+  | "intense-pulsed-light-ipl"
+  | "microneedling"
+  | "anti-wrinkle-injection"
+  | "collagen-induction-therapy"
+  | "hydrafacial"
+  | "dermaplaning"
+  | "chemical-peels"
+  | "combination-therapy";

@@ -1,5 +1,3 @@
-// FAQSection.jsx
-
 import { Disclosure } from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import PlusIcon from "./icons/plusicon";
@@ -62,19 +60,19 @@ const faqs: { question: string; answer: string }[] = [
   },
 ];
 
-export default function FAQSection() {
+const FAQDisclosure = () => {
   return (
-    <div className="w-full max-w-4xl mx-auto my-8 bg-white/60  rounded text-body-text shadow">
+    <div className="w-full max-w-4xl p-4 mx-auto my-8 bg-bg-light text-body-text">
       <ul>
         {faqs.map((faq, idx) => (
           <Disclosure
             key={idx}
             as="li"
-            className="border-b border-body-text/10 bg-white/60"
+            className="border-b rounded border-body-text/10 bg-white/60 "
           >
             {({ open }) => (
               <>
-                <Disclosure.Button className="flex font-body bg-white/60 cursor-pointer justify-between w-full py-4 text-left px-4 focus:outline-none">
+                <Disclosure.Button className="flex font-body rounded bg-white/60 cursor-pointer justify-between w-full py-4 text-left px-4 focus:outline-none">
                   <span className="font-medium">{faq.question.trim()}</span>
                   {!open ? (
                     <PlusIcon className="h-5 w-5 ml-4 transform transition-transform duration-300" />
@@ -104,4 +102,6 @@ export default function FAQSection() {
       </ul>
     </div>
   );
-}
+};
+
+export default FAQDisclosure;

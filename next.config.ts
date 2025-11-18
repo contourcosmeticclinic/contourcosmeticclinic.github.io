@@ -1,10 +1,9 @@
-import type { NextConfig } from "next";
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-});
-const nextConfig: NextConfig = {
-  /* config options here */
+// next.config.mjs
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // ...other Next.js config here
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
 };
-module.exports = withBundleAnalyzer(nextConfig);
+
 export default nextConfig;
