@@ -3,6 +3,8 @@ import path from "path";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { markdownComponents } from "../../../components/markdown";
+import { services } from "../../../lib/constant";
+import Image from "next/image";
 
 export default async function Page({
   params,
@@ -10,7 +12,7 @@ export default async function Page({
   params: { service_type: string };
 }) {
   const { service_type } = await params;
-
+  const image = services.find((s) => s.code === service_type);
   const filePath = path.join(
     process.cwd(),
     "src/docs/mdx",
@@ -35,7 +37,30 @@ export default async function Page({
 
   const markdown = fs.readFileSync(filePath, "utf8");
   return (
-    <section className="w-full bg-bg-light py-10">
+    <section className="w-full bg-bg-light">
+      <div className="relative w-full overflow-hidden">
+        {/* Next Image */}
+
+        <div className="relative w-full h-72">
+          <Image
+            src={image?.image ?? ""}
+            alt={service_type || ""}
+            fill
+            className="object-cover"
+          />
+
+          {/* This div covers the entire image */}
+          <h1
+            className="absolute z-1 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+               text-primary/50 text-6xl font-bold drop-shadow-lg"
+          >
+            {image?.name}
+          </h1>
+        </div>
+
+        {/* Bottom Mask Gradient */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent to-bg-light opacity-90"></div>
+      </div>
       <div className="px-4 max-w-4xl m-auto">
         <ReactMarkdown
           components={markdownComponents}
