@@ -7,12 +7,19 @@ interface NavLinkProps {
   href: string;
   children: React.ReactNode;
   className?: string;
+  onClick?: () => void;
 }
 
-export default function NavLink({ href, children, className }: NavLinkProps) {
+export default function NavLink({
+  href,
+  children,
+  className,
+  onClick,
+}: NavLinkProps) {
   return (
     <Link
       href={href}
+      onClick={onClick}
       className={clsx(
         `
           relative inline-block

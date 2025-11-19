@@ -16,7 +16,9 @@ import { services } from "../../lib/constant";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-
+  const handleMobileClick = () => {
+    setMobileOpen((prev) => !prev);
+  };
   return (
     <nav className="w-full bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
@@ -154,7 +156,11 @@ export default function Navbar() {
       transition max-h-[80vh] overflow-y-auto"
           >
             <SlideDown>
-              <NavLink href="/about" className="block py-2 hover:text-forest">
+              <NavLink
+                onClick={handleMobileClick}
+                href="/about"
+                className="block py-2 hover:text-forest"
+              >
                 About
               </NavLink>
             </SlideDown>
@@ -167,7 +173,7 @@ export default function Navbar() {
                 </summary>
 
                 <div className="ml-4 mt-2 flex flex-col gap-2">
-                  <Link href={"/services"}>
+                  <Link onClick={handleMobileClick} href={"/services"}>
                     <Button className="w-full my-2 rounded-full">
                       Explore All Services
                     </Button>
@@ -177,6 +183,7 @@ export default function Navbar() {
                   <div className="grid grid-cols-2 gap-3 items-center">
                     {services.map((item) => (
                       <Link
+                        onClick={handleMobileClick}
                         key={item.id}
                         href={`/services/${item.code}`}
                         className="block px-3 py-2 rounded-lg hover:bg-bg-light hover:text-forest transition text-sm"
@@ -190,18 +197,30 @@ export default function Navbar() {
             </SlideDown>
 
             <StaggerItem>
-              <NavLink href="/doctors" className="hover:text-forest transition">
+              <NavLink
+                onClick={handleMobileClick}
+                href="/doctors"
+                className="hover:text-forest transition"
+              >
                 Doctros
               </NavLink>
             </StaggerItem>
 
             <SlideDown>
-              <NavLink href="/gallery" className="block py-2 hover:text-forest">
+              <NavLink
+                onClick={handleMobileClick}
+                href="/gallery"
+                className="block py-2 hover:text-forest"
+              >
                 Gallery
               </NavLink>
             </SlideDown>
             <SlideDown>
-              <NavLink href="/contact" className="block py-2 hover:text-forest">
+              <NavLink
+                href="/contact"
+                onClick={handleMobileClick}
+                className="block py-2 hover:text-forest"
+              >
                 Contact
               </NavLink>
             </SlideDown>
