@@ -9,23 +9,23 @@ import { RotatingText } from "../ui/rotating-text";
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-bg-light md:py-28">
+    <section className="relative w-full overflow-hidden bg-bg-light md:py-14">
       {/* Background Soft Glows */}
 
-      <div className="relative mx-auto max-w-7xl px-3 grid grid-cols-1 md:bg-accent/30 rounded-3xl md:grid-cols-2 gap-12 items-center">
+      <div className="relative mx-auto max-w-6xl px-3 grid grid-cols-1 md:bg-accent/30 rounded-3xl md:grid-cols-2 gap-12 items-center">
         {/* Text + CTA */}
         <div className="relative">
-          <div className="relative flex flex-col items-center md:items-start space-y-6  md:p-10">
+          <div className="relative flex flex-1 flex-col items-center md:items-start space-y-6  md:p-8">
             {/* Heading */}
             <SlideUp>
-              <h1 className="font-playfair mt-12 md:mt-0 text-center sm:text-left font-heading text-5xl md:text-5xl lg:text-6xl text-primary leading-tight">
+              <h1 className="font-playfair mt-12 md:mt-0 text-center sm:text-left font-heading text-5xl md:text-5xl lg:text-5xl text-primary leading-tight">
                 Contour Cosmetic Clinic
               </h1>
             </SlideUp>
 
             {/* Sub Heading */}
             <SlideUp>
-              <p className="text-body-text text-center sm:text-left font-body text-sm md:text-lg max-w-lg">
+              <p className="text-body-text text-center sm:text-left font-body text-sm md:text-md max-w-lg">
                 We finish with care, welcome change, and stay centered on your
                 confidence. Experience advanced cosmetic, skin & hair treatments
                 designed for timeless beauty.
@@ -81,7 +81,7 @@ export default function Hero() {
               <div className="relative w-fit -mt-12">
                 <Image
                   loading="lazy"
-                  src="/images/hero-colseup.png"
+                  src="/images/hero-closeup.png"
                   height={100} // increase from 1020 → 1200 or even 1400
                   width={500}
                   alt="Cosmetic Model"

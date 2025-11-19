@@ -97,7 +97,7 @@ export default function Footer() {
         <div className="space-y-4">
           <h3 className="text-lg font-semibold mb-2">Newsletter</h3>
           <p className="text-gray-300">Subscribe to get our latest updates</p>
-          <form className="flex flex-col sm:flex-row gap-2">
+          <form className="flex flex-col flex-wrap sm:flex-row gap-2">
             <input
               type="email"
               placeholder="Enter your email"
@@ -105,7 +105,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="bg-light-gray text-primary font-semibold px-4 py-2 rounded-lg hover:bg-white transition"
+              className="bg-light-gray text-primary bg-white font-semibold px-4 py-2 rounded-lg hover:bg-white transition"
             >
               Subscribe
             </button>
