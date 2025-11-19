@@ -5,8 +5,8 @@ import ServiceCard from "../../components/common/service-card";
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 bg-bg-light">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-6 bg-bg-light">
+      <div className="max-w-7xl mx-auto md:px-24 px-8">
         {/* Heading */}
         <div className="text-center mb-14">
           <h2 className="text-3xl font-heading  md:text-5xl text-primary tracking-tight">

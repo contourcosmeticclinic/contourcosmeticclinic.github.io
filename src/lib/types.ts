@@ -7,6 +7,14 @@ export type VideoType = {
   src: string;
 };
 
+export type DoctorType = {
+  id: number | string;
+  name: string;
+  title: string;
+  image: string;
+  description: string;
+};
+
 export type ServiceCode =
   | "hair-transplant"
   | "cosmetic-hair-patch"

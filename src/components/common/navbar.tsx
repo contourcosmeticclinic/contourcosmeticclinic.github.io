@@ -119,9 +119,11 @@ export default function Navbar() {
         <SlideDown>
           <div className="hidden md:block">
             <div className="items-center flex flex-row gap-12">
-              <Button className="rounded-full" size="md" variant="primary">
-                Book Now
-              </Button>
+              <Link href={"/appointment"}>
+                <Button className="rounded-full" size="md" variant="primary">
+                  Book Now
+                </Button>
+              </Link>
 
               <a
                 href="tel:+918660432589"
@@ -235,13 +237,15 @@ export default function Navbar() {
             </SlideDown>
 
             <SlideDown>
-              <Button
-                className="rounded-full w-full"
-                size="md"
-                variant="primary"
-              >
-                Book Now
-              </Button>
+              <Link href={"/appointment"}>
+                <Button
+                  className="rounded-full w-full"
+                  size="md"
+                  variant="primary"
+                >
+                  Book Now
+                </Button>
+              </Link>
             </SlideDown>
           </div>
         </SlideDown>

@@ -40,7 +40,7 @@ const features = [
 
 export default function WhyChooseClinic() {
   return (
-    <section className="relative w-full py-20 md:py-28 bg-bg-light">
+    <section className="relative w-full py-12 bg-bg-light">
       <div className="relative mx-auto max-w-7xl px-6 text-center">
         {/* Section Heading */}
         <SlideUp>

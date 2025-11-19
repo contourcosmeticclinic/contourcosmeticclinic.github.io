@@ -6,6 +6,7 @@ import InstagramIcon from "./icons/instagram";
 import LinkedInIcon from "./icons/linkedin";
 import WhatsupIcon from "./icons/whatsapp";
 import YoutubeIcon from "./icons/youtube";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -20,42 +21,42 @@ export default function Footer() {
             Transforming lives, one treatment at a time.
           </p>
           <div className="flex space-x-4 mt-4">
-            <a
+            <Link
               href="#"
               className="hover:text-gray-400 transition"
               aria-label="Facebook"
             >
               <FacebookIcon />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="hover:text-gray-400 transition"
               aria-label="Instagram"
             >
               <InstagramIcon />
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="#"
               className="hover:text-gray-400 transition"
               aria-label="LinkedIn"
             >
               <LinkedInIcon />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="hover:text-gray-400 transition"
               aria-label="Whatsapp"
             >
               <WhatsupIcon />
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="hover:text-gray-400 transition"
               aria-label="Youtube"
             >
               <YoutubeIcon />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -77,19 +78,31 @@ export default function Footer() {
         <div className="space-y-2">
           <h3 className="text-lg font-semibold mb-2">Menu</h3>
           <ul className="space-y-1 text-gray-300">
-            <li className="hover:text-white transition cursor-pointer">Home</li>
-            <li className="hover:text-white transition cursor-pointer">
-              About
-            </li>
-            <li className="hover:text-white transition cursor-pointer">
-              Services
-            </li>
-            <li className="hover:text-white transition cursor-pointer">
-              Gallery
-            </li>
-            <li className="hover:text-white transition cursor-pointer">
-              Contact
-            </li>
+            <Link href={"/"}>
+              <li className="hover:text-white transition cursor-pointer">
+                Home
+              </li>
+            </Link>
+            <Link href={"/about"}>
+              <li className="hover:text-white transition cursor-pointer">
+                About
+              </li>
+            </Link>
+            <Link href={"/services"}>
+              <li className="hover:text-white transition cursor-pointer">
+                Services
+              </li>
+            </Link>
+            <Link href={"/gallery"}>
+              <li className="hover:text-white transition cursor-pointer">
+                Gallery
+              </li>
+            </Link>
+            <Link href="/appointment">
+              <li className="hover:text-white transition cursor-pointer">
+                Contact
+              </li>
+            </Link>
           </ul>
         </div>
 
