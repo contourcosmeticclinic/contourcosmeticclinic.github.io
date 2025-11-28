@@ -8,8 +8,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: `${APP_NAME} | About`,
-  description:
-    "Learn more about Contour Cosmetic Clinic, our doctors, experience, and mission.",
+  description: "Learn more about Contour Cosmetic Clinic, our doctors, experience, and mission.",
 };
 
 export default function AboutPage() {
@@ -20,7 +19,7 @@ export default function AboutPage() {
         <div className="flex flex-col items-center text-center mb-20">
           <div className="relative">
             <Image
-              src="/assets/cqube.gif"
+              src="/assets/contourcosmeticclinic-about.gif"
               alt="Contour Cosmetic Clinic Logo"
               width={180}
               height={180}
@@ -35,8 +34,8 @@ export default function AboutPage() {
           </SlideUp>
 
           <p className="text-body-text font-body text-base md:text-lg max-w-2xl mt-4">
-            At Contour, every transformation begins with trust, comfort, and a
-            deep understanding of your individuality.
+            At Contour, every transformation begins with trust, comfort, and a deep understanding of
+            your individuality.
           </p>
         </div>
 
@@ -48,18 +47,16 @@ export default function AboutPage() {
               <h3 className="font-heading text-3xl text-primary">Our Vision</h3>
 
               <p className="text-body-text leading-relaxed font-body text-base md:text-md">
-                To be the preeminent and most trusted name in cosmetic and
-                aesthetic care across India, renowned for our unwavering
-                commitment to client-centric excellence, innovative treatments,
-                and the harmonious blend of luxury experiences with accessible
-                affordability.
+                To be the preeminent and most trusted name in cosmetic and aesthetic care across
+                India, renowned for our unwavering commitment to client-centric excellence,
+                innovative treatments, and the harmonious blend of luxury experiences with
+                accessible affordability.
               </p>
 
               <p className="text-body-text leading-relaxed font-body text-base md:text-md">
-                We envision a future where every individual can confidently
-                embrace their unique beauty potential through our compassionate
-                expertise and cutting-edge solutions, setting new benchmarks for
-                quality and client satisfaction in the industry.
+                We envision a future where every individual can confidently embrace their unique
+                beauty potential through our compassionate expertise and cutting-edge solutions,
+                setting new benchmarks for quality and client satisfaction in the industry.
               </p>
             </div>
           </SlideUp>
@@ -67,27 +64,22 @@ export default function AboutPage() {
           {/* Mission */}
           <SlideUp>
             <div className="space-y-4">
-              <h3 className="font-heading text-3xl text-primary">
-                Our Mission
-              </h3>
+              <h3 className="font-heading text-3xl text-primary">Our Mission</h3>
 
               <p className="text-body-text leading-relaxed font-body text-base md:text-md">
-                At Contour Cosmetic Clinic, our mission is to empower
-                individuals to achieve their aesthetic aspirations through
-                personalized, ethical, and results-driven treatments.
+                At Contour Cosmetic Clinic, our mission is to empower individuals to achieve their
+                aesthetic aspirations through personalized, ethical, and results-driven treatments.
               </p>
 
               <p className="text-body-text leading-relaxed font-body text-base md:text-md">
-                We are dedicated to delivering unparalleled care through a
-                synergistic team of highly experienced and continuously evolving
-                aestheticians, doctors, and stylists.
+                We are dedicated to delivering unparalleled care through a synergistic team of
+                highly experienced and continuously evolving aestheticians, doctors, and stylists.
               </p>
 
               <p className="text-body-text leading-relaxed font-body text-base md:text-md">
-                By fostering an environment of trust, innovation, and
-                affordability, we provide luxury treatments that consistently
-                yield stunning and lasting results—ensuring every client feels
-                valued, understood, and beautifully confident.
+                By fostering an environment of trust, innovation, and affordability, we provide
+                luxury treatments that consistently yield stunning and lasting results—ensuring
+                every client feels valued, understood, and beautifully confident.
               </p>
             </div>
           </SlideUp>

@@ -201,3 +201,148 @@ export const doctors: DoctorType[] = [
       "Dr. Akanksha Thakur is a skilled ENT specialist with 7 years of extensive clinical and surgical experience and advanced training in Facial Plastic and Aesthetic Surgery. She completed her MBBS from Muzaffarnagar Medical College and Hospital, Uttar Pradesh, affiliated with Chaudhary Charan Singh University, Meerut. She has served as a Junior Resident under the Government of Delhi at Rao Tula Ram Memorial Hospital and Indira Gandhi Hospital, gaining valuable exposure in ENT and facial procedures. Currently pursuing her MS in ENT, Dr. Thakur combines medical precision with aesthetic expertise, delivering exceptional reconstructive and cosmetic care.",
   },
 ];
+
+export const serviceWithCategories = [
+  {
+    name: "Hair",
+    services: [
+      {
+        id: 1,
+        code: "hair-transplant",
+        name: "Hair Transplant",
+        image: "/images/services/contourcosmeticclinic-hair-transpant-service.png",
+      },
+      {
+        id: 2,
+        code: "cosmetic-hair-patch",
+        name: "Cosmetic Hair Patch",
+        image: "/images/services/contourcosmeticclinic-hair-patch.png",
+      },
+      {
+        id: 3,
+        code: "prp-therapy",
+        name: "PRP Therapy",
+        image: "/images/services/contourcosmeticclinic-prp-therapy.png",
+      },
+      {
+        id: 4,
+        code: "gfc-therapy",
+        name: "GFC Therapy",
+        image: "/images/services/contourcosmeticclinic-gfc-therapy.png",
+      },
+      {
+        id: 5,
+        code: "scalp-micropigmentation",
+        name: "Scalp Micropigmentation",
+        image: "/images/services/contourcosmeticclinic-scalp-micropigmentation.png",
+      },
+      {
+        id: 6,
+        code: "receding-hairline-restoration",
+        name: "Receding Hairline Restoration",
+        image: "/images/services/contourcosmeticclinic-hairline_restoration.png",
+      },
+      {
+        id: 7,
+        code: "beard-restoration",
+        name: "Beard Restoration",
+        image: "/images/services/contourcosmeticclinic-beard-restoration.png",
+      },
+      {
+        id: 9,
+        code: "eyebrow-restoration",
+        name: "Eyebrow Restoration",
+        image: "/images/services/contourcosmeticclinic-eyebrow-restoration.webp",
+      },
+      {
+        id: 11,
+        code: "exosome-hair-therapy",
+        name: "Exosome Hair Therapy",
+        image: "/images/services/contourcosmeticclinic-exosome-hair-therapy.webp",
+      },
+    ],
+  },
+  {
+    name: "Skin",
+    services: [
+      {
+        id: 8,
+        code: "derma-fillers",
+        name: "Derma Fillers",
+        image: "/images/services/contourcosmeticclinic-derma-filler.jpeg",
+      },
+      {
+        id: 10,
+        code: "scar-revision",
+        name: "Scar Revision",
+        image: "/images/services/contourcosmeticclinic-scar-revision.webp",
+      },
+      {
+        id: 12,
+        code: "microdermabrasion",
+        name: "Microdermabrasion",
+        image: "/images/services/contourcosmeticclinic-microdermabrasion.jpeg",
+      },
+      {
+        id: 13,
+        code: "laser-hair-removal",
+        name: "Laser Hair Removal",
+        image: "/images/services/contourcosmeticclinic-laser-hair-removal.webp",
+      },
+      {
+        id: 14,
+        code: "laser-skin-resurfacing",
+        name: "Laser Skin Resurfacing",
+        image: "/images/services/contourcosmeticclinic-laser-skin-resurfacing.jpeg",
+      },
+      {
+        id: 15,
+        code: "intense-pulsed-light-ipl",
+        name: "Intense Pulsed Light (IPL)",
+        image: "/images/services/contourcosmeticclinic-ipl-pigmentation.webp",
+      },
+      {
+        id: 16,
+        code: "microneedling",
+        name: "Microneedling",
+        image: "/images/services/contourcosmeticclinic-mirconeedling.webp",
+      },
+      {
+        id: 17,
+        code: "anti-wrinkle-injection",
+        name: "Anti-Wrinkle Injection",
+        image: "/images/services/contourcosmeticclinic-anti-wrinkle-Injection.jpeg",
+      },
+      {
+        id: 18,
+        code: "collagen-induction-therapy",
+        name: "Collagen Induction Therapy",
+        image: "/images/services/contourcosmeticclinic-collagen-Induction-therapy.webp",
+      },
+      {
+        id: 19,
+        code: "hydrafacial",
+        name: "Hydrafacial",
+        image: "/images/services/contourcosmeticclinic-hydrafacial.webp",
+      },
+      {
+        id: 20,
+        code: "dermaplaning",
+        name: "Dermaplaning",
+        image: "/images/services/contourcosmeticclinic-dermaplaning.webp",
+      },
+      {
+        id: 21,
+        code: "chemical-peels",
+        name: "Chemical Peels",
+        image: "/images/services/contourcosmeticclinic-chemical-peel.webp",
+      },
+      {
+        id: 22,
+        code: "combination-therapy",
+        name: "Combination Therapy",
+        image: "/images/services/contourcosmeticclinic-combination-therapy.jpeg",
+      },
+    ],
+  },
+];
