@@ -18,7 +18,7 @@ export default function Hero() {
           <div className="relative flex flex-1 flex-col items-center md:items-start space-y-6  md:p-8">
             {/* Heading */}
             <SlideUp>
-              <h1 className="font-playfair mt-12 md:px-0 px-8 md:mt-0 text-center sm:text-left font-heading text-4xl md:text-5xl lg:text-6xl text-primary leading-tight whitespace-nowrap">
+              <h1 className="font-playfair font-semibold mt-12  md:px-0 px-8 md:mt-0 text-center sm:text-left font-heading text-3xl md:text-5xl lg:text-6xl text-primary leading-tight whitespace-nowrap">
                 Contour Cosmetic Clinic
               </h1>
             </SlideUp>
