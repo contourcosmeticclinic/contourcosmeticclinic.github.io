@@ -12,7 +12,7 @@ export const galleryMetadata: Metadata = {
     siteName: "Contour Cosmetic Clinic",
     images: [
       {
-        url: "/og/gallery-og.png", // place the file under /public/og
+        url: `${process.env.NEXT_PUBLIC_APP_URL}/images/og-images/og-gallery.jpg`, // place the file under /public/og
         width: 1200,
         height: 630,
         alt: "Contour Cosmetic Clinic - Gallery",
