@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import SlideUp from "../animations/slide-up";
 import DownloadIcon from "../common/icons/download";
+import { sendToAnalytics } from "../../lib/gtag";
 
 const features = [
   {
@@ -52,10 +53,9 @@ export default function WhyChooseClinic() {
         {/* Subheading */}
         <SlideUp className="mt-4">
           <p className="mx-auto md:max-w-4xl md:mx-auto text-body-text text-sm md:text-lg leading-relaxed font-body">
-            Indulge in bespoke facial aesthetics and premium cosmetic surgery,
-            expertly crafted by renowned specialists — all at surprisingly
-            affordable rates. Discover the gold standard in hair restoration,
-            featuring certified doctors, cutting-edge techniques, and
+            Indulge in bespoke facial aesthetics and premium cosmetic surgery, expertly crafted by
+            renowned specialists — all at surprisingly affordable rates. Discover the gold standard
+            in hair restoration, featuring certified doctors, cutting-edge techniques, and
             effortlessly natural results.
           </p>
         </SlideUp>
@@ -90,6 +90,7 @@ export default function WhyChooseClinic() {
         </div>
         <div className="mt-10 flex justify-center">
           <a
+            onClick={() => sendToAnalytics("service_download_button_clicked")}
             href="/assets/contour-brochure.pdf"
             target="_blank"
             className="bg-primary rounded-full flex items-center gap-4 text-white px-8 py-3 hover:bg-forest-light transition-all duration-300"

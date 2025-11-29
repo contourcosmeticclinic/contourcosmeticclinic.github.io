@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { FC } from "react";
+import { sendToAnalytics } from "../../lib/gtag";
 
 type Prop = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -33,19 +34,23 @@ const ServiceCard: FC<Prop> = ({ service }) => {
           </h3>
 
           <p className="mt-2 text-sm text-gray-600">
-            Learn more about our latest {service.name.toLowerCase()} procedure
-            by exploring full details.
+            Learn more about our latest {service.name.toLowerCase()} procedure by exploring full
+            details.
           </p>
 
           {/* Buttons */}
           <div className="flex items-center justify-between mt-6">
             <Link
+              onClick={() => sendToAnalytics("service_book_now_clicked", { service: service.name })}
               href="/appointment"
               className="bg-color-primary border rounded-full  text-sm px-4 py-2  bg-primary text-white transition-colors duration-300"
             >
               Book Now
             </Link>
             <Link
+              onClick={() =>
+                sendToAnalytics("service_read_more_clicked", { service: service.name })
+              }
               href={`/services/${service.code}`}
               className="text-body-text text-sm font-semibold hover:underline"
             >

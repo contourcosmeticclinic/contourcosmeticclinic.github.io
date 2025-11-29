@@ -17,44 +17,22 @@ export default function Footer() {
           <h2 className="text-2xl font-bold text-bg-light font-playfair">
             Contour Cosmetic Clinic
           </h2>
-          <p className="text-gray-300">
-            Transforming lives, one treatment at a time.
-          </p>
+          <p className="text-gray-300">Transforming lives, one treatment at a time.</p>
           <div className="flex space-x-4 mt-4">
-            <Link
-              href="#"
-              className="hover:text-gray-400 transition"
-              aria-label="Facebook"
-            >
+            <Link href="#" className="hover:text-gray-400 transition" aria-label="Facebook">
               <FacebookIcon />
             </Link>
-            <Link
-              href="#"
-              className="hover:text-gray-400 transition"
-              aria-label="Instagram"
-            >
+            <Link href="#" className="hover:text-gray-400 transition" aria-label="Instagram">
               <InstagramIcon />
             </Link>
 
-            <Link
-              href="#"
-              className="hover:text-gray-400 transition"
-              aria-label="LinkedIn"
-            >
+            <Link href="#" className="hover:text-gray-400 transition" aria-label="LinkedIn">
               <LinkedInIcon />
             </Link>
-            <Link
-              href="#"
-              className="hover:text-gray-400 transition"
-              aria-label="Whatsapp"
-            >
+            <Link href="#" className="hover:text-gray-400 transition" aria-label="Whatsapp">
               <WhatsupIcon />
             </Link>
-            <Link
-              href="#"
-              className="hover:text-gray-400 transition"
-              aria-label="Youtube"
-            >
+            <Link href="#" className="hover:text-gray-400 transition" aria-label="Youtube">
               <YoutubeIcon />
             </Link>
           </div>
@@ -64,9 +42,10 @@ export default function Footer() {
         <div className="space-y-2">
           <h3 className="text-lg font-semibold mb-2">Address</h3>
           <p className="text-gray-300">
-            123 Forest Avenue
+            2nd Floor, Lakshmidevi Complex, 80 Ft Road, Vishweshwaraiah Road, 6th Stage, Phase 2,
+            BTM Layout
             <br />
-            Bhubaneswar, Odisha, India
+            Bengaluru, Karnataka 560076
             <br />
             Phone: +91 98765 43210
             <br />
@@ -79,29 +58,19 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-2">Menu</h3>
           <ul className="space-y-1 text-gray-300">
             <Link href={"/"}>
-              <li className="hover:text-white transition cursor-pointer">
-                Home
-              </li>
+              <li className="hover:text-white transition cursor-pointer">Home</li>
             </Link>
             <Link href={"/about"}>
-              <li className="hover:text-white transition cursor-pointer">
-                About
-              </li>
+              <li className="hover:text-white transition cursor-pointer">About</li>
             </Link>
             <Link href={"/services"}>
-              <li className="hover:text-white transition cursor-pointer">
-                Services
-              </li>
+              <li className="hover:text-white transition cursor-pointer">Services</li>
             </Link>
             <Link href={"/gallery"}>
-              <li className="hover:text-white transition cursor-pointer">
-                Gallery
-              </li>
+              <li className="hover:text-white transition cursor-pointer">Gallery</li>
             </Link>
             <Link href="/appointment">
-              <li className="hover:text-white transition cursor-pointer">
-                Contact
-              </li>
+              <li className="hover:text-white transition cursor-pointer">Contact</li>
             </Link>
           </ul>
         </div>
@@ -128,8 +97,7 @@ export default function Footer() {
 
       {/* Bottom line */}
       <div className="border-t border-bg-light/30 mt-10 pt-6 text-bg-light text-sm text-center">
-        &copy; {new Date().getFullYear()} Contour Cosmetic Clinic. All rights
-        reserved.
+        &copy; {new Date().getFullYear()} Contour Cosmetic Clinic. All rights reserved.
       </div>
     </footer>
   );
