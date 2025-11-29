@@ -1,14 +1,12 @@
 import { Metadata } from "next";
 import React from "react";
-
-import { APP_NAME } from "@/lib/constant";
 import Image from "next/image";
 import SlideUp from "../../components/animations/slide-up";
 import Link from "next/link";
+import { aboutMetadata } from "../../lib/metadata/aboutMetaData";
 
 export const metadata: Metadata = {
-  title: `${APP_NAME} | About`,
-  description: "Learn more about Contour Cosmetic Clinic, our doctors, experience, and mission.",
+  ...aboutMetadata,
 };
 
 export default function AboutPage() {

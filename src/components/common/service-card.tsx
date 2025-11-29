@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { FC } from "react";
-import { sendGAEvent } from "@next/third-parties/google";
+import { sendToAnalytics } from "../../lib/gtag";
 
 type Prop = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -42,7 +42,7 @@ const ServiceCard: FC<Prop> = ({ service }) => {
           <div className="flex items-center justify-between mt-6">
             <Link
               onClick={() =>
-                sendGAEvent({ event: `service_${service.name} Clicked`, value: service.name })
+                sendToAnalytics("service_book_now_click", { service_name: service.name })
               }
               href="/appointment"
               className="bg-color-primary border rounded-full  text-sm px-4 py-2  bg-primary text-white transition-colors duration-300"
@@ -51,7 +51,7 @@ const ServiceCard: FC<Prop> = ({ service }) => {
             </Link>
             <Link
               onClick={() =>
-                sendGAEvent({ event: "service_read_more_clicked", value: service.name })
+                sendToAnalytics("service_read_more_click", { service_name: service.name })
               }
               href={`/services/${service.code}`}
               className="text-body-text text-sm font-semibold hover:underline"

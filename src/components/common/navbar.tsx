@@ -13,6 +13,7 @@ import ChevronDownIcon from "./icons/chevron-down";
 import Bar3Icon from "./icons/bar3-icon";
 import XmarkIcon from "./icons/x-mark";
 import { serviceWithCategories } from "../../lib/constant";
+import { sendToAnalytics } from "../../lib/gtag";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -150,12 +151,21 @@ export default function Navbar() {
           <div className="hidden md:block">
             <div className="items-center flex flex-row gap-12">
               <Link href={"/appointment"}>
-                <Button className="rounded-full" size="md" variant="primary">
+                <Button
+                  onClick={() => sendToAnalytics("appointment_book_now_click")}
+                  className="rounded-full"
+                  size="md"
+                  variant="primary"
+                >
                   Book Now
                 </Button>
               </Link>
 
-              <a href="tel:+918660432589" className="flex gap-3 items-center text-sm">
+              <a
+                onClick={() => sendToAnalytics("phone_number_call_click")}
+                href="tel:+918660432589"
+                className="flex gap-3 items-center text-sm"
+              >
                 <PhoneIconOutlined className="size-4" /> 866-043-2589
               </a>
             </div>

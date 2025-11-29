@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { services, serviceWithCategories } from "../lib/constant";
 import ServiceCard from "./common/service-card";
+import { sendToAnalytics } from "../lib/gtag";
 
 const ServicesWithFilter = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -18,7 +19,10 @@ const ServicesWithFilter = () => {
         {["all", "hair", "skin"].map((cat) => (
           <button
             key={cat}
-            onClick={() => setActiveFilter(cat)}
+            onClick={() => {
+              setActiveFilter(cat);
+              sendToAnalytics("service_filter", { filter_name: cat });
+            }}
             className={`px-4 py-2 rounded-full cursor-pointer border text-sm font-medium transition ${
               cat === activeFilter ? "bg-primary text-white" : ""
             }`}

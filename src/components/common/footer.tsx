@@ -7,8 +7,13 @@ import LinkedInIcon from "./icons/linkedin";
 import WhatsupIcon from "./icons/whatsapp";
 import YoutubeIcon from "./icons/youtube";
 import Link from "next/link";
+import { socialLinks } from "../../lib/constant";
+import { sendToAnalytics } from "../../lib/gtag";
 
 export default function Footer() {
+  const handleSocialLinkClick = (linkSource: string) => {
+    sendToAnalytics(`social_${linkSource}_visit`);
+  };
   return (
     <footer className="bg-primary text-white py-16 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -19,20 +24,55 @@ export default function Footer() {
           </h2>
           <p className="text-gray-300">Transforming lives, one treatment at a time.</p>
           <div className="flex space-x-4 mt-4">
-            <Link href="#" className="hover:text-gray-400 transition" aria-label="Facebook">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => handleSocialLinkClick("facebook")}
+              href={socialLinks.facebook}
+              className="hover:text-gray-400 transition"
+              aria-label="Facebook"
+            >
               <FacebookIcon />
             </Link>
-            <Link href="#" className="hover:text-gray-400 transition" aria-label="Instagram">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href={socialLinks.instagram}
+              onClick={() => handleSocialLinkClick("instagram")}
+              className="hover:text-gray-400 transition"
+              aria-label="Instagram"
+            >
               <InstagramIcon />
             </Link>
 
-            <Link href="#" className="hover:text-gray-400 transition" aria-label="LinkedIn">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href={socialLinks.linkedin}
+              onClick={() => handleSocialLinkClick("linkedin")}
+              className="hover:text-gray-400 transition"
+              aria-label="LinkedIn"
+            >
               <LinkedInIcon />
             </Link>
-            <Link href="#" className="hover:text-gray-400 transition" aria-label="Whatsapp">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href={socialLinks.whatsapp}
+              onClick={() => handleSocialLinkClick("whatsapp")}
+              className="hover:text-gray-400 transition"
+              aria-label="Whatsapp"
+            >
               <WhatsupIcon />
             </Link>
-            <Link href="#" className="hover:text-gray-400 transition" aria-label="Youtube">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href={socialLinks.youtube}
+              onClick={() => handleSocialLinkClick("youtube")}
+              className="hover:text-gray-400 transition"
+              aria-label="Youtube"
+            >
               <YoutubeIcon />
             </Link>
           </div>

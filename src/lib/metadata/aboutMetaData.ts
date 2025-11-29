@@ -1,26 +1,12 @@
 import { Metadata } from "next";
 import { APP_NAME } from "../constant";
+import { keyWords } from "./common";
 
-export const metadata: Metadata = {
+export const aboutMetadata: Metadata = {
   title: `${APP_NAME} | About Us – Best Hair & Skin Clinic in Bangalore`,
   description:
     "Contour Cosmetic Clinic is a leading hair and skin treatment clinic in Bangalore, offering advanced hair transplant, PRP, GFC therapy, laser skin treatments, anti-aging solutions, and personalized cosmetic dermatology. Learn about our expert doctors, mission, experience, and why patients across Bangalore trust us for natural-looking results.",
-  keywords: [
-    "Contour Cosmetic Clinic Bangalore",
-    "best hair clinic Bangalore",
-    "hair transplant Bangalore",
-    "hair restoration Bangalore",
-    "skin clinic Bangalore",
-    "PRP treatment Bangalore",
-    "GFC therapy Bangalore",
-    "laser skin treatment Bangalore",
-    "derma fillers Bangalore",
-    "BTM Layout cosmetic clinic",
-    "cosmetic dermatologist Bangalore",
-    "hair loss treatment Bangalore",
-    "aesthetic clinic Bangalore",
-    "hair regrowth Bangalore",
-  ],
+  keywords: [...keyWords],
   alternates: {
     canonical: "https://contourcosmeticclinic.com/about",
   },
@@ -45,6 +31,6 @@ export const metadata: Metadata = {
     title: "Contour Cosmetic Clinic | About Us",
     description:
       "Get to know the expert doctors behind Bangalore’s most trusted hair and skin clinic, located in BTM Layout. Learn about our treatments, mission, and commitment to excellence.",
-    images: ["/images/og-about.jpg"],
+    images: ["/images/og-images/og-image.jpg"],
   },
 };

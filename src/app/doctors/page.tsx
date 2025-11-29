@@ -12,11 +12,11 @@ export const metadata: Metadata = {
     title: "Meet Our Experts | Contour Cosmetic Clinic",
     description:
       "Highly skilled dermatologists and cosmetic surgeons dedicated to natural, beautiful, and lasting results.",
-    url: "https://your-website.com/doctors",
+    url: `${process.env.NEXT_PUBLIC_APP_URL}/doctors`,
     siteName: "Contour Cosmetic Clinic",
     images: [
       {
-        url: "https://your-website.com/og-image.jpg",
+        url: "/images/og-image/og-image.png",
         width: 1200,
         height: 630,
       },
@@ -30,14 +30,14 @@ export default function DoctorsPage() {
     "@context": "https://schema.org",
     "@type": "MedicalOrganization",
     name: "Contour Cosmetic Clinic",
-    url: "https://your-website.com/doctors",
+    url: `${process.env.NEXT_PUBLIC_APP_URL}/doctors`,
     medicalSpecialty: "Dermatology, Cosmetic Surgery, Aesthetics",
     member: doctors.map((doc) => ({
       "@type": "Person",
       name: doc.name,
       jobTitle: doc.title,
       description: doc.description,
-      image: `https://your-website.com${doc.image}`,
+      image: "/images/og-image/og-image.png",
     })),
   };
 

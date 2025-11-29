@@ -6,6 +6,7 @@ import Link from "next/link";
 import SlideUp from "../animations/slide-up";
 import PhoneIconOutlined from "../common/icons/phone";
 import { RotatingText } from "../ui/rotating-text";
+import { sendToAnalytics } from "../../lib/gtag";
 
 export default function Hero() {
   return (
@@ -50,6 +51,7 @@ export default function Hero() {
             <SlideUp>
               <div className="mt-2 flex flex-col sm:flex-row gap-4">
                 <Link
+                  onClick={() => sendToAnalytics("appointment_book_now_click")}
                   href="/appointment"
                   className="rounded-full flex gap-2 items-center bg-primary px-8 py-3 text-white font-medium font-inter 
                   shadow-md hover:shadow-xl hover:bg-primary/90 transition-all duration-300"
