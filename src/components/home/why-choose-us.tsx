@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import SlideUp from "../animations/slide-up";
 import DownloadIcon from "../common/icons/download";
-import { sendToAnalytics } from "../../lib/gtag";
+import { sendGAEvent } from "@next/third-parties/google";
 
 const features = [
   {
@@ -90,7 +90,7 @@ export default function WhyChooseClinic() {
         </div>
         <div className="mt-10 flex justify-center">
           <a
-            onClick={() => sendToAnalytics("service_download_button_clicked")}
+            onClick={() => sendGAEvent("service_download_button_clicked")}
             href="/assets/contour-brochure.pdf"
             target="_blank"
             className="bg-primary rounded-full flex items-center gap-4 text-white px-8 py-3 hover:bg-forest-light transition-all duration-300"
