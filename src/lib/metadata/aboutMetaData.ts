@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { APP_NAME } from "../constant";
 import { keyWords } from "./common";
+import { OG_IMAGE_URL } from "../../app/layout";
 
 export const aboutMetadata: Metadata = {
   title: `${APP_NAME} | About Us – Best Hair & Skin Clinic in Bangalore`,
@@ -31,6 +32,6 @@ export const aboutMetadata: Metadata = {
     title: "Contour Cosmetic Clinic | About Us",
     description:
       "Get to know the expert doctors behind Bangalore’s most trusted hair and skin clinic, located in BTM Layout. Learn about our treatments, mission, and commitment to excellence.",
-    images: ["/images/og-images/og-image.jpg"],
+    images: [OG_IMAGE_URL],
   },
 };

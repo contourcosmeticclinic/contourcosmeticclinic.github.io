@@ -25,6 +25,6 @@ export const galleryMetadata: Metadata = {
     title: "Clinic Gallery | Contour Cosmetic Clinic",
     description:
       "Explore real photos of our clinic, treatment areas, and advanced cosmetic equipment.",
-    images: ["/images/og-images/og-gallery.jpg"],
+    images: [`${process.env.NEXT_PUBLIC_APP_URL}/images/og-images/og-gallery.jpg`],
   },
 };

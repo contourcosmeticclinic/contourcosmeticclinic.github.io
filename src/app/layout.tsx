@@ -21,7 +21,8 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const APP_URL = "https://www.contourcosmeticclinic.com";
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL;
+export const OG_IMAGE_URL = `${APP_URL}/images/og-images/og-image.jpg`;
 
 export const metadata: Metadata = {
   title: "Contour Cosmetic Clinic | Cosmetic, Hair & Skin Treatments in Bengaluru",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Contour Cosmetic Clinic", url: APP_URL }],
   creator: "Contour Cosmetic Clinic",
   publisher: "Contour Cosmetic Clinic",
-  metadataBase: new URL(APP_URL),
+  // metadataBase: new URL(APP_URL ?? ""),
   alternates: {
     canonical: APP_URL,
   },
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     siteName: "Contour Cosmetic Clinic",
     images: [
       {
-        url: "images/og-image/og-image.jpg",
+        url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
         alt: "Contour Cosmetic Clinic Bangalore",
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
     title: "Contour Cosmetic Clinic | Cosmetic, Hair & Skin Treatments in Bengaluru",
     description:
       "Contour Cosmetic Clinic in BTM Layout, Bengaluru offers advanced hair transplant, skin rejuvenation, facial enhancements, and cosmetic treatments. Book your appointment today!",
-    images: ["images/og-image/og-image.jpg"],
+    images: [OG_IMAGE_URL],
     creator: "@ContourClinic",
   },
   icons: {
@@ -74,6 +75,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log("OG", OG_IMAGE_URL);
   return (
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} antialiased bg-bg-light`}>

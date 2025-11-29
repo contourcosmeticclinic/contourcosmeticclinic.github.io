@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { keyWords } from "./common";
+import { OG_IMAGE_URL } from "../../app/layout";
 
 export const contactUsMetaData: Metadata = {
   title: "Contact Us | Contour Cosmetic Clinic BTM Layout",
@@ -25,7 +26,7 @@ export const contactUsMetaData: Metadata = {
     siteName: "Contour Cosmetic Clinic",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_APP_URL}/images/og-images/og-image.jpg`,
+        url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
         alt: "Contact Contour Cosmetic Clinic",
@@ -39,7 +40,7 @@ export const contactUsMetaData: Metadata = {
     title: "Contact Us | Contour Cosmetic Clinic",
     description:
       "Connect with our cosmetic specialists for appointments and queries at our BTM Layout clinic.",
-    images: [`${process.env.NEXT_PUBLIC_APP_URL}/images/og-images/og-image.jpg`],
+    images: [OG_IMAGE_URL],
   },
   robots: {
     index: true,
