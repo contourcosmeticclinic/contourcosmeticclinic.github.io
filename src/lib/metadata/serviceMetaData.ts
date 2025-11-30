@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { keyWords } from "./common";
 import { OG_IMAGE_URL } from "../../app/layout";
 
-export const metadata: Metadata = {
+export const serviceMetadata: Metadata = {
   title: "Our Services | Contour Cosmetic Clinic BTM Layout",
   description:
     "Explore a wide range of cosmetic treatments at Contour Cosmetic Clinic, BTM Layout. We offer hair transplant, PRP, GFC therapy, skin rejuvenation, laser treatments, derma fillers, and advanced aesthetic procedures.",

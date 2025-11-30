@@ -3,26 +3,10 @@ import SlideUp from "@/components/animations/slide-up";
 import { Metadata } from "next";
 import DoctorCard from "../../components/common/doctor-card";
 import { doctors } from "../../lib/constant";
+import { doctorsMetadata } from "../../lib/metadata/doctorsMetaData";
 
 export const metadata: Metadata = {
-  title: "Meet Our Experts | Contour Cosmetic Clinic",
-  description:
-    "Meet our experienced cosmetic doctors specializing in dermatology, aesthetics, skin rejuvenation, hair treatments, and facial enhancements at Contour Cosmetic Clinic.",
-  openGraph: {
-    title: "Meet Our Experts | Contour Cosmetic Clinic",
-    description:
-      "Highly skilled dermatologists and cosmetic surgeons dedicated to natural, beautiful, and lasting results.",
-    url: `${process.env.NEXT_PUBLIC_APP_URL}/doctors`,
-    siteName: "Contour Cosmetic Clinic",
-    images: [
-      {
-        url: "/images/og-image/og-image.png",
-        width: 1200,
-        height: 630,
-      },
-    ],
-    type: "website",
-  },
+  ...doctorsMetadata,
 };
 
 export default function DoctorsPage() {

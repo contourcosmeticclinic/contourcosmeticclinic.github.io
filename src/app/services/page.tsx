@@ -1,7 +1,11 @@
 "use client";
 
+import { Metadata } from "next";
 import ServicesWithFilter from "../../components/servicesWithFilter";
-
+import { serviceMetadata } from "../../lib/metadata/serviceMetaData";
+export const metadata: Metadata = {
+  ...serviceMetadata,
+};
 export default function ServicesSection() {
   return (
     <section className="py-6 bg-bg-light">
