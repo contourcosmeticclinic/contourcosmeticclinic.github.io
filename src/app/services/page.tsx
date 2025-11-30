@@ -1,5 +1,3 @@
-"use client";
-
 import { Metadata } from "next";
 import ServicesWithFilter from "../../components/servicesWithFilter";
 import { serviceMetadata } from "../../lib/metadata/serviceMetaData";
