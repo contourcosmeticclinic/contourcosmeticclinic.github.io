@@ -6,6 +6,7 @@ import Footer from "../components/common/footer";
 import { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { seoKeywords } from "../lib/metadata/common";
+import GlobalLoader from "./loading";
 // import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({
@@ -75,7 +76,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log("OG", OG_IMAGE_URL);
   return (
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} antialiased bg-bg-light`}>

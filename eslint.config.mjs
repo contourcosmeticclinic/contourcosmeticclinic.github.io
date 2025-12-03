@@ -43,7 +43,6 @@ const eslintConfig = defineConfig([
 
       // Style rules
       "no-multiple-empty-lines": ["error", { max: 1 }],
-      indent: ["error", 2],
       semi: ["error", "always"],
       quotes: ["error", "double"],
     },

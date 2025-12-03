@@ -10,7 +10,16 @@ import { sendToAnalytics } from "../../lib/gtag";
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-bg-light md:py-18">
+    <section
+      className="
+    relative w-full overflow-hidden bg-bg-light md:py-18
+    bg-[url('/images/mobile-hero-bg.jpg')] 
+    bg-cover bg-center bg-no-repeat
+    py-22
+    md:bg-none
+  "
+    >
+      <div className="absolute inset-0 bg-white/50 md:hidden"></div>
       {/* Background Soft Glows */}
 
       <div className="relative mx-auto max-w-6xl px-3 grid grid-cols-1 md:bg-accent/30 rounded-3xl md:grid-cols-2 gap-12 items-center">
@@ -19,7 +28,7 @@ export default function Hero() {
           <div className="relative flex flex-1 flex-col items-center md:items-start space-y-6  md:p-8">
             {/* Heading */}
             <SlideUp>
-              <h1 className="font-playfair font-semibold mt-12  md:px-0 px-8 md:mt-0 text-center sm:text-left font-heading text-3xl md:text-5xl lg:text-6xl text-primary leading-tight whitespace-nowrap">
+              <h1 className="font-playfair font-semibold mt-12  md:px-0 px-8 md:mt-0 text-center sm:text-left font-heading text-4xl md:text-5xl lg:text-6xl text-primary leading-tight md:whitespace-nowrap">
                 Contour Cosmetic Clinic
               </h1>
             </SlideUp>

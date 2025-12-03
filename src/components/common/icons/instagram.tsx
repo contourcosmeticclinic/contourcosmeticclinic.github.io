@@ -1,6 +1,7 @@
 import * as React from "react";
+import { IconProps } from "./plusicon";
 
-const InstagramIcon = () => (
+const InstagramIcon: React.FC<IconProps> = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -12,6 +13,7 @@ const InstagramIcon = () => (
     height={24}
     version="1.1"
     viewBox="0 0 1005 1005"
+    className={className}
   >
     <switch>
       <g>

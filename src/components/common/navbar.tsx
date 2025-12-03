@@ -32,16 +32,16 @@ export default function Navbar() {
             <Image
               src="/images/brand-logo.png"
               alt="Clinic Logo"
-              width={48}
-              height={48}
+              width={56}
+              height={56}
               className="object-contain"
             />
             <Image
-              src="/images/brand-name.png"
+              src="/images/text-brand.png"
               alt="Clinic Text Logo"
               width={120}
               height={40}
-              className="object-contain"
+              className="object-contain mt-1"
             />
           </Link>
         </SlideDown>
@@ -129,7 +129,7 @@ export default function Navbar() {
 
           <StaggerItem>
             <NavLink href="/doctors" className="hover:text-forest transition">
-              Doctros
+              Doctors
             </NavLink>
           </StaggerItem>
 
@@ -261,7 +261,7 @@ export default function Navbar() {
                 href="/doctors"
                 className="hover:text-forest transition"
               >
-                Doctros
+                Doctors
               </NavLink>
             </StaggerItem>
 

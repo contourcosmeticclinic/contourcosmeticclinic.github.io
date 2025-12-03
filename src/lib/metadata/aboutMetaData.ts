@@ -20,7 +20,7 @@ export const aboutMetadata: Metadata = {
     siteName: "Contour Cosmetic Clinic",
     images: [
       {
-        url: "/images/og-about.jpg",
+        url: `${process.env.NEXT_PUBLIC_APP_URL}/images/og-images/og-about.jpg`,
         width: 1200,
         height: 630,
         alt: "Contour Cosmetic Clinic | About Us",

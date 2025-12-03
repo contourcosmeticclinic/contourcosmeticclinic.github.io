@@ -13,6 +13,8 @@ export type DoctorType = {
   title: string;
   image: string;
   description: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  socialLinks?: any[];
 };
 
 export type ServiceCode =

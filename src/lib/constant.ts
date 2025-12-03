@@ -178,6 +178,9 @@ export const doctors: DoctorType[] = [
     id: 1,
     name: "Dr. Saket",
     title: "Facial cosmetic surgeon & Hair transplant Specialist",
+    socialLinks: [
+      { type: "instagram", link: "https://www.instagram.com/drsaket.jha/?igsh=OWJ5czN4NmdhYnd0" },
+    ],
     //   experience: "12+ Years of Experience",
     description:
       "Dr. Saket is a renowned facial cosmetic surgeon with specialized expertise in FUE hair transplantation. With a pan-India presence, he performs advanced hair restoration procedures from North to South India and serves as the leading surgeon for several reputed cosmetic chains in Bangalore. A graduate of Rajiv Gandhi University of Health Sciences, Dr. Saket has undergone intensive training and has worked alongside some of the most esteemed doctors in India. His clinical journey spans premier institutions such as Tata Medical Center (Kolkata), RCC Trivandrum, Jubilee Mission Medical College (Thrissur), Karnataka Institute of Medical Sciences (KIMS), and NIMHANS (Bangalore), among others. Known for blending surgical precision with artistic vision, Dr. Saket brings a decade of experience in facial aesthetics, reconstructive surgery, and advanced hair restoration, making him a trusted name in the field of facial transformation and cosmetic excellence.",
