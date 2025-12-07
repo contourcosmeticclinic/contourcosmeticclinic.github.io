@@ -355,5 +355,5 @@ export const socialLinks = {
   linkedin: "https://www.linkedin.com/company/contour-cosmetic-clinic/",
   instagram: "https://www.instagram.com/contour_bengaluru?igsh=Nzh4MXRzbTdwejdy",
   youtube: "https://youtube.com/@shapeyourstory?si=szaqr58VYWUBpQBV",
-  whatsapp: "https://api.whatsapp.com/send/?phone=918660432589&text&type=phone_number&app_absent=0",
+  whatsapp: "https://api.whatsapp.com/send/?phone=8660432589&text&type=phone_number&app_absent=0",
 };

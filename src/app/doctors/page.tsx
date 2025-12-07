@@ -53,7 +53,7 @@ export default function DoctorsPage() {
           {/* Doctors Grid */}
           <div className="">
             {doctors.map((doctor) => (
-              <DoctorCard key={doctor.id} {...doctor} />
+              <DoctorCard key={doctor.id} {...doctor} socialLinks={doctor.socialLinks || []} />
             ))}
           </div>
         </div>

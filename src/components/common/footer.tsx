@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import FacebookIcon from "./icons/facebook";
 import InstagramIcon from "./icons/instagram";
 import LinkedInIcon from "./icons/linkedin";
@@ -11,8 +11,32 @@ import { socialLinks } from "../../lib/constant";
 import { sendToAnalytics } from "../../lib/gtag";
 
 export default function Footer() {
+  const [email, setEmail] = useState<string>("");
   const handleSocialLinkClick = (linkSource: string) => {
     sendToAnalytics(`social_${linkSource}_visit`);
+  };
+
+  const handleSubscribe = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append("email", email);
+
+    try {
+      const res = await fetch("https://formsubmit.co/contact@contourcosmeticclinic.com", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (res.ok) {
+        alert("Subscribed successfully!");
+      } else {
+        alert("Something went wrong.");
+      }
+    } catch (err) {
+      console.log(err);
+
+      alert("Network error.");
+    }
   };
   return (
     <footer className="bg-primary text-white py-16 px-6">
@@ -79,17 +103,25 @@ export default function Footer() {
         </div>
 
         {/* Column 2: Address */}
-        <div className="space-y-2">
+        <div className="space-y-2 text-gray-300">
           <h3 className="text-lg font-semibold mb-2">Address</h3>
-          <p className="text-gray-300">
-            2nd Floor, Lakshmidevi Complex, 80 Ft Road, Vishweshwaraiah Road, 6th Stage, Phase 2,
-            BTM Layout
-            <br />
-            Bengaluru, Karnataka 560076
-            <br />
-            Phone: +91 98765 43210
-            <br />
-            Email: info@contourclinic.com
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://maps.app.goo.gl/A2KoWS7rxQWHtMRw7?g_st=com.google.maps.preview.copy"
+          >
+            <p className="hover:text-white">
+              2nd Floor, Lakshmidevi Complex, 80 Ft Road, Vishweshwaraiah Road, 6th Stage, Phase 2,
+              BTM Layout
+              <br />
+              Bengaluru, Karnataka 560076
+            </p>
+          </Link>
+          <p className="mt-2 hover:text-white ">
+            <a href="tel:+918660432589">+91-8660432589</a>
+          </p>
+          <p className="hover:text-white">
+            <a href="mailto:contact@contourcosmeticclinic.com">contact@contourcosmeticclinic.com</a>
           </p>
         </div>
 
@@ -119,8 +151,13 @@ export default function Footer() {
         <div className="space-y-4">
           <h3 className="text-lg font-semibold mb-2">Newsletter</h3>
           <p className="text-gray-300">Subscribe to get our latest updates</p>
-          <form className="flex flex-col flex-wrap sm:flex-row gap-2">
+          <form
+            className="flex flex-col flex-wrap sm:flex-row gap-2"
+            onSubmit={(e) => handleSubscribe(e)}
+          >
             <input
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
               type="email"
               placeholder="Enter your email"
               className="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-light-gray transition w-full sm:w-auto"

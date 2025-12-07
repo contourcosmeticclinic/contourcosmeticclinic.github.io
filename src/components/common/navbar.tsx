@@ -37,7 +37,7 @@ export default function Navbar() {
               className="object-contain"
             />
             <Image
-              src="/images/text-brand.png"
+              src="/images/brand-text.png"
               alt="Clinic Text Logo"
               width={120}
               height={40}
