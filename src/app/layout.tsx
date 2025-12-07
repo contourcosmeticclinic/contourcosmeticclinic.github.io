@@ -6,7 +6,6 @@ import Footer from "../components/common/footer";
 import { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { seoKeywords } from "../lib/metadata/common";
-import GlobalLoader from "./loading";
 // import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({
@@ -24,6 +23,7 @@ const playfair = Playfair_Display({
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL;
 export const OG_IMAGE_URL = `${APP_URL}/images/og-images/og-image.jpg`;
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {
   title: "Contour Cosmetic Clinic | Cosmetic, Hair & Skin Treatments in Bengaluru",
@@ -83,7 +83,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        <GoogleAnalytics gaId="G-4473WR4EGH" />
+        {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
       </body>
     </html>
   );
