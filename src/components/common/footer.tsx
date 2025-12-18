@@ -7,7 +7,7 @@ import LinkedInIcon from "./icons/linkedin";
 import WhatsupIcon from "./icons/whatsapp";
 import YoutubeIcon from "./icons/youtube";
 import Link from "next/link";
-import { socialLinks } from "../../lib/constant";
+import { services, socialLinks } from "../../lib/constant";
 import { sendToAnalytics } from "../../lib/gtag";
 
 export default function Footer() {
@@ -40,7 +40,7 @@ export default function Footer() {
   };
   return (
     <footer className="bg-primary text-white py-16 px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
         {/* Column 1: Clinic Name & Social */}
         <div className="space-y-4">
           <h2 className="text-2xl font-bold text-bg-light font-playfair">
@@ -147,6 +147,16 @@ export default function Footer() {
             <Link href="/faq">
               <li className="hover:text-white transition cursor-pointer">FAQ</li>
             </Link>
+          </ul>
+        </div>
+        <div className="space-y-2">
+          <h3 className="text-lg font-semibold mb-2">List of services</h3>
+          <ul className="space-y-1 text-gray-300">
+            {services.map((service) => (
+              <Link href={`/services/${service.code}`} key={service.id}>
+                <li className="hover:text-white transition cursor-pointer mb-1">{service.name}</li>
+              </Link>
+            ))}
           </ul>
         </div>
 
