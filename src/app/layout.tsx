@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   publisher: "Contour Cosmetic Clinic",
   // metadataBase: new URL(APP_URL ?? ""),
   alternates: {
-    canonical: APP_URL,
+    canonical: "/",
   },
   openGraph: {
     title: "Contour Cosmetic Clinic | Cosmetic, Hair & Skin Treatments in Bengaluru",
