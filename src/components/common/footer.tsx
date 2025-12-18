@@ -144,6 +144,9 @@ export default function Footer() {
             <Link href="/appointment">
               <li className="hover:text-white transition cursor-pointer">Contact</li>
             </Link>
+            <Link href="/faq">
+              <li className="hover:text-white transition cursor-pointer">FAQ</li>
+            </Link>
           </ul>
         </div>
 
