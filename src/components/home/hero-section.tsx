@@ -23,10 +23,10 @@ export default function Hero() {
       <div className="absolute inset-0 bg-white/50 md:hidden"></div>
       {/* Background Soft Glows */}
 
-      <div className="relative mx-auto max-w-6xl px-3 grid grid-cols-1 md:bg-accent/30 rounded-3xl md:grid-cols-2 gap-12 items-center">
+      <div className="relative mx-auto max-w-6xl px-3 grid grid-cols-1 md:bg-accent/20 rounded-3xl md:grid-cols-2 gap-12 items-center">
         {/* Text + CTA */}
         <div className="relative">
-          <div className="relative flex flex-1 flex-col items-center md:items-start space-y-5 md:p-8">
+          <div className="relative flex flex-1 flex-col items-center md:items-start space-y-4 md:p-8">
             {/* Heading */}
             <SlideUp>
               <h1 className="font-playfair font-semibold mt-12  md:px-0 px-8 md:mt-0 text-center sm:text-left font-heading text-4xl md:text-5xl lg:text-6xl text-primary leading-tight md:whitespace-nowrap">
@@ -50,9 +50,9 @@ export default function Hero() {
             </SlideUp>
             {/* Accent Line */}
             <SlideUp>
-              <p className="text-forest-light whitespace-nowrap hidden md:block text-center sm:text-left text-sm font-body font-semibold tracking-wide">
+              {/* <p className="text-forest-light whitespace-nowrap hidden md:block text-center sm:text-left text-sm font-body font-semibold tracking-wide">
                 Hair Treatment • Skin Rejuvenation • Facial Plastics • Laser Resurfacing
-              </p>
+              </p> */}
               <RotatingText
                 className="text-xl font-heading md:hidden block"
                 text={[
