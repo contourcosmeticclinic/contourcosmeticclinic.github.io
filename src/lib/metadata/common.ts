@@ -126,4 +126,9 @@ export const seoKeywords = [
   "Skin health clinic BTM Layout",
   "Hair specialist clinic Bengaluru",
   "Hair doctor near me BTM Layout",
+  "Best hair clinic bangalore BTM layout",
+  "Best hair clinic Bangalore",
+  "Best skin clinic BTM layout",
+  "Best skin and hair clicin BTM layout",
+  "Best skin and hair clinic BTM layout , Bangalore",
 ];
