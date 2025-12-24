@@ -7,6 +7,7 @@ import SlideUp from "../animations/slide-up";
 import PhoneIconOutlined from "../common/icons/phone";
 import { RotatingText } from "../ui/rotating-text";
 import { sendToAnalytics } from "../../lib/gtag";
+import TrustRating from "../common/TrustRating";
 
 export default function Hero() {
   return (
@@ -15,7 +16,7 @@ export default function Hero() {
     relative w-full overflow-hidden bg-bg-light md:py-18
     bg-[url('/images/mobile-hero-bg.jpg')] 
     bg-cover bg-center bg-no-repeat
-    py-22
+    py-12
     md:bg-none
   "
     >
@@ -25,7 +26,7 @@ export default function Hero() {
       <div className="relative mx-auto max-w-6xl px-3 grid grid-cols-1 md:bg-accent/30 rounded-3xl md:grid-cols-2 gap-12 items-center">
         {/* Text + CTA */}
         <div className="relative">
-          <div className="relative flex flex-1 flex-col items-center md:items-start space-y-6  md:p-8">
+          <div className="relative flex flex-1 flex-col items-center md:items-start space-y-5 md:p-8">
             {/* Heading */}
             <SlideUp>
               <h1 className="font-playfair font-semibold mt-12  md:px-0 px-8 md:mt-0 text-center sm:text-left font-heading text-4xl md:text-5xl lg:text-6xl text-primary leading-tight md:whitespace-nowrap">
@@ -35,12 +36,18 @@ export default function Hero() {
 
             {/* Sub Heading */}
             <SlideUp>
-              <p className="text-body-text text-center sm:text-left font-body text-sm md:text-md max-w-lg">
+              <p className="text-body-text text-center sm:text-left font-body text-sm md:text-md max-w-lg hidden md:block">
                 We finish with care, welcome change, and stay centered on your confidence.
                 Experience advanced cosmetic, skin & hair treatments designed for timeless beauty.
               </p>
+              <p className="text-body-text text-center sm:text-left font-body text-sm md:text-md max-w-lg md:hidden block">
+                Advanced skin & hair treatments designed to enhance your natural beauty.
+              </p>
             </SlideUp>
 
+            <SlideUp>
+              <TrustRating />
+            </SlideUp>
             {/* Accent Line */}
             <SlideUp>
               <p className="text-forest-light whitespace-nowrap hidden md:block text-center sm:text-left text-sm font-body font-semibold tracking-wide">
@@ -87,7 +94,7 @@ export default function Hero() {
               {/* Glow */}
               <div className="absolute inset-0 bg-[--color-beige-light]/30 blur-3xl rounded-full scale-150"></div>
 
-              <div className="relative w-fit -mt-12">
+              <div className="relative w-fit -mt-10">
                 <Image
                   loading="lazy"
                   src="/images/hero-closeup.png"
