@@ -1,4 +1,4 @@
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Montserrat, Playfair_Display } from "next/font/google";
 
 import "./globals.css";
 import Navbar from "@/components/common/navbar";
@@ -12,6 +12,11 @@ import Script from "next/script";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   display: "swap",
 });
 
@@ -111,7 +116,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} ${playfair.variable} antialiased bg-bg-light`}>
+      <body
+        className={`${inter.variable} ${playfair.variable} ${montserrat.variable} antialiased bg-bg-light`}
+      >
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-NDC36237"

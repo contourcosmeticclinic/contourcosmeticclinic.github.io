@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { GoogleIcon } from "./icons/googleIcon";
 
 const TrustRating = () => {
   return (
@@ -10,10 +11,12 @@ const TrustRating = () => {
     >
       <div className="mx-auto mt-6 w-full max-w-sm rounded-xl bg-accent-light/20 px-4 py-2 shadow-sm backdrop-blur-md">
         <div className="flex items-center justify-center gap-2 text-center">
-          <span className="text-lg">⭐</span>
+          <GoogleIcon className="w-6" />
           <p className="text-sm font-medium text-primary">
-            <span className="font-semibold">4.8</span> Rated on Google by{" "}
-            <span className="font-semibold">5,000+</span> Happy Patients
+            <span className="font-semibold">
+              4.8 <span className="text-lg">⭐</span>
+            </span>{" "}
+            Rated on Google by <span className="font-semibold">5,000+</span> Happy Patients
           </p>
         </div>
       </div>

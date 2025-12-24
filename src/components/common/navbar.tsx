@@ -56,7 +56,7 @@ export default function Navbar() {
           {/* SERVICES DROPDOWN */}
           <StaggerItem>
             <div className="relative group cursor-pointer">
-              <div className="flex items-center gap-2 hover:text-forest transition">
+              <div className="flex items-center gap-2  text-sm hover:text-forest font-monos uppercase transition">
                 {serviceWithCategories[0].name}
                 <ChevronDownIcon className="w-3 h-3" />
               </div>
@@ -92,7 +92,7 @@ export default function Navbar() {
           </StaggerItem>
           <StaggerItem>
             <div className="relative group cursor-pointer">
-              <div className="flex items-center gap-2 hover:text-forest transition">
+              <div className="flex items-center gap-2 text-sm font-monos uppercase hover:text-forest transition">
                 {serviceWithCategories[1].name}
                 <ChevronDownIcon className="w-3 h-3" />
               </div>
@@ -199,7 +199,7 @@ export default function Navbar() {
 
             <SlideDown>
               <details className="group">
-                <summary className="flex items-center justify-between cursor-pointer hover:text-forest">
+                <summary className="flex items-center text-sm font-monos uppercase justify-between cursor-pointer hover:text-forest">
                   {serviceWithCategories[0].name}
                   <ChevronDownIcon className="w-4 h-4 transition group-open:rotate-180" />
                 </summary>
@@ -228,7 +228,7 @@ export default function Navbar() {
 
             <SlideDown>
               <details className="group">
-                <summary className="flex items-center justify-between cursor-pointer hover:text-forest">
+                <summary className="flex items-center text-sm font-monos uppercase justify-between cursor-pointer hover:text-forest">
                   {serviceWithCategories[1].name}
                   <ChevronDownIcon className="w-4 h-4 transition group-open:rotate-180" />
                 </summary>

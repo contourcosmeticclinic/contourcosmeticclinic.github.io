@@ -22,8 +22,8 @@
   --color-accent: #c9a86a; /* Soft gold accent */
   --color-accent-light: #e6d7b9; /* Light gold / subtle highlights */
 
-  --animate-scroll: scroll var(--animation-duration, 40s)
-    var(--animation-direction, forwards) linear infinite;
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards)
+    linear infinite;
 
   @keyframes scroll {
     to {
@@ -46,6 +46,14 @@
 
 @utility font-body {
   font-family: var(--font-inter);
+}
+
+@utility font-monos {
+  font-family: var(--font-montserrat);
+}
+
+@utility font-button {
+  font-family: var(--font-montserrat);
 }
 
 @layer utilities {
