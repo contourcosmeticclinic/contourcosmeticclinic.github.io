@@ -1,13 +1,12 @@
 import { Inter, Montserrat, Playfair_Display } from "next/font/google";
 
 import "./globals.css";
-import Navbar from "@/components/common/navbar";
-import Footer from "../components/common/footer";
 import { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { seoKeywords } from "../lib/metadata/common";
 import FloatingButtons from "../components/common/floatingButtonts";
 import Script from "next/script";
+import RootComponent from "../components/rootComponent";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -131,9 +130,7 @@ export default function RootLayout({
           id="wf_anal"
           src="https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=9ee5d4a7dc28eb312eac81842770150719df078bd77229ff1a59c151e24ea6dc956e87710770e84df354d80f12fa82d7gid5d202dff8d82b9f3db58189ead9c6f79f822dc7371c2dab06fdc6ddc6e094c7egid046cb25b2d23f3f4a2d727931ffcd565693a5363c651d71e88ac16d423efe708gid5b87600ccace1db5fe88558e8b280b85b235e8ddc199c416468223c62977fb11&tw=7bea06a95a55c235be4586f2fd5640cdf4302b907beaa534d434f655509e06e2"
         />
-        <Navbar />
-        {children}
-        <Footer />
+        <RootComponent>{children}</RootComponent>
         <FloatingButtons />
         {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
       </body>

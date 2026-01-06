@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+export const inputClass =
+  "w-full px-4 py-3 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition";
 
 export default function ConnectForm() {
   const [formData, setFormData] = useState({
@@ -62,9 +64,6 @@ export default function ConnectForm() {
       setLoading(false);
     }
   };
-
-  const inputClass =
-    "w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition";
 
   return (
     <div className="w-full bg-bg-light" id="contact-section">

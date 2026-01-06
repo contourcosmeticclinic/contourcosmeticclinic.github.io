@@ -9,6 +9,7 @@
   /* Primary Brand Colors */
   --color-primary: #4b2e2e; /* Main brand color */
   --color-secondary: #7b4f4f; /* Bold headings / highlights */
+  --color-subheading: #0f4c5c;
 
   /* Text Colors */
   --color-body-text: #1e1e1e; /* Paragraphs, labels, body text */

@@ -6,6 +6,9 @@ import SlideUp from "../animations/slide-up";
 import DownloadIcon from "../common/icons/download";
 import { sendToAnalytics } from "../../lib/gtag";
 
+type Props = {
+  isLanding?: boolean;
+};
 const features = [
   {
     title: "Totally Safe",
@@ -39,26 +42,28 @@ const features = [
   },
 ];
 
-export default function WhyChooseClinic() {
+export default function WhyChooseClinic({ isLanding = false }: Props) {
   return (
-    <section className="relative w-full py-12 bg-bg-light">
+    <section id="why-choose-us" className="relative w-full py-12 bg-bg-light">
       <div className="relative mx-auto max-w-7xl px-6 text-center">
         {/* Section Heading */}
         <SlideUp>
           <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-primary font-heading leading-tight">
-            Why Choose Our Clinic?
+            Why Choose Contour Clinic?
           </h2>
         </SlideUp>
 
         {/* Subheading */}
-        <SlideUp className="mt-4">
-          <p className="mx-auto md:max-w-4xl md:mx-auto text-body-text text-sm md:text-lg leading-relaxed font-body">
-            Indulge in bespoke facial aesthetics and premium cosmetic surgery, expertly crafted by
-            renowned specialists — all at surprisingly affordable rates. Discover the gold standard
-            in hair restoration, featuring certified doctors, cutting-edge techniques, and
-            effortlessly natural results.
-          </p>
-        </SlideUp>
+        {!isLanding && (
+          <SlideUp className="mt-4">
+            <p className="mx-auto md:max-w-4xl md:mx-auto text-body-text text-sm md:text-lg leading-relaxed font-body">
+              Indulge in bespoke facial aesthetics and premium cosmetic surgery, expertly crafted by
+              renowned specialists — all at surprisingly affordable rates. Discover the gold
+              standard in hair restoration, featuring certified doctors, cutting-edge techniques,
+              and effortlessly natural results.
+            </p>
+          </SlideUp>
+        )}
 
         {/* Features Grid */}
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -88,16 +93,18 @@ export default function WhyChooseClinic() {
             </SlideUp>
           ))}
         </div>
-        <div className="mt-10 flex justify-center">
-          <a
-            onClick={() => sendToAnalytics("service_download_button_click")}
-            href="/assets/contour-brochure.pdf"
-            target="_blank"
-            className="bg-primary rounded-full flex items-center gap-4 text-white px-8 py-3 hover:bg-forest-light transition-all duration-300"
-          >
-            <DownloadIcon className="size-5" /> Our Services
-          </a>
-        </div>
+        {!isLanding && (
+          <div className="mt-10 flex justify-center">
+            <a
+              onClick={() => sendToAnalytics("service_download_button_click")}
+              href="/assets/contour-brochure.pdf"
+              target="_blank"
+              className="bg-primary rounded-full flex items-center gap-4 text-white px-8 py-3 hover:bg-forest-light transition-all duration-300"
+            >
+              <DownloadIcon className="size-5" /> Our Services
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );

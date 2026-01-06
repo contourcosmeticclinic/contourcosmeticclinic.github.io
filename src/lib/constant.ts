@@ -1,6 +1,11 @@
+import { ReviewType } from "../components/ui/moving-cards";
+import { SliderItem } from "../components/ui/slider";
 import { DoctorType, ImageType } from "./types";
 
 export const APP_NAME = "Contour Cosmetic Clinic";
+
+export const PHONE_NUMBER = "918660432589";
+export const EMAIL = "contact@contourcosmeticclinic.com";
 
 export const clientResultImages: {
   src: string;
@@ -13,6 +18,17 @@ export const clientResultImages: {
   { src: "/images/client-results/cr-4.png" },
   { src: "/images/client-results/cr-5.png" },
   { src: "/images/client-results/cr-6.png" },
+];
+
+export const HTResultsImages: SliderItem[] = [
+  { id: 1, imageUrl: "/images/lp/hair-transplant/ht-result1.jpg" },
+  { id: 2, imageUrl: "/images/lp/hair-transplant/ht-result2.jpg" },
+  { id: 3, imageUrl: "/images/lp/hair-transplant/ht-result3.jpg" },
+  { id: 4, imageUrl: "/images/lp/hair-transplant/ht-result4.jpg" },
+  { id: 5, imageUrl: "/images/lp/hair-transplant/ht-result5.jpg" },
+  { id: 6, imageUrl: "/images/lp/hair-transplant/ht-result6.jpg" },
+  { id: 7, imageUrl: "/images/lp/hair-transplant/ht-result7.jpg" },
+  { id: 8, imageUrl: "/images/lp/hair-transplant/ht-result8.jpg" },
 ];
 
 export const interiorImages: ImageType[] = [
@@ -357,3 +373,63 @@ export const socialLinks = {
   youtube: "https://youtube.com/@shapeyourstory?si=szaqr58VYWUBpQBV",
   whatsapp: "https://api.whatsapp.com/send/?phone=8660432589&text&type=phone_number&app_absent=0",
 };
+
+export const HTReviews: ReviewType[] = [
+  {
+    name: "Vinay DN",
+    quote:
+      "I’m undergoing hair treatment at this clinic, and the results have been noticeable. The team is very professional, the doctor listens to all concerns, and the sessions are always smooth and well-managed. The clinic maintains good hygiene, and they follow up regularly. Overall, a great experience — definitely worth it!",
+    rating: 5,
+    date: "a month ago",
+  },
+  {
+    name: "Tejaskumar D P",
+    quote:
+      "Absolutely love this clinic! My hair treatment results are fantastic and clearly noticeable. The staff is professional, the doctor is attentive, and the sessions are quick and easy. Excellent hygiene and consistent follow-up, too.",
+
+    rating: 5,
+    date: "a month ago",
+  },
+  {
+    name: "Danish Khan",
+    quote:
+      "I consulted Dr. Athmika at Contour Cosmetic Clinic for a hair issue, and the experience was excellent. She listened carefully, explained everything clearly, and made me feel really comfortable. Highly recommended!",
+    rating: 5,
+    date: "a month ago",
+  },
+  {
+    name: "Danish Raza",
+    quote:
+      "Got hair transplant done from dr saket and his team my results are very nice surgery was painless i went by sapphire method would surely recommend anyone for results a period of 5 months are required",
+    rating: 5,
+    date: "a month ago",
+  },
+  {
+    name: "Sagar Saini",
+    quote:
+      "I came for hair transplant under sapphire method with this clinic because treatment was budget friendly my results came in 6 months and results are totally amazing would surely recommend.",
+    rating: 5,
+    date: "a month ago",
+  },
+  {
+    name: "Nikita Kishor",
+    quote:
+      "I recently visited Contour Cosmetic Clinic for a hair treatment and had a really good experience. The staff was friendly, explained everything clearly, and made sure I was comfortable throughout. The clinic is clean and well-maintained. I’m already seeing great results and would definitely recommend it for anyone thinking about hair or cosmetic treatments.",
+    rating: 5,
+    date: "a month ago",
+  },
+];
+
+//@routes
+
+export const LANDING_PAGE_THANK_YOU = "/lp/hair-transplant-in-bangalore/thank-you-for-choosing-us";
+
+//@element_ids
+
+export const HT_HERO_SECTION = "hair-transplant-hero";
+export const HT_BEFORE_AFTER_RESULTS_SECTION = "ht-before-after-result";
+export const HT_WHY_CHOOSE_CONTOUR_SECTION = "ht-why-choose-contour";
+export const HT_TESTIMONIALS = "ht-testimonials";
+export const HT_BENIFITS_SECTION = "ht-benifits";
+export const HT_CONSULTATION_PROCESS_SECTION = "ht-consulation-process";
+export const HT_TYPES_SECTION = "ht-types-section";
