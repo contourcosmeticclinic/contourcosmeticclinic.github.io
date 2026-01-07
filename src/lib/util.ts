@@ -8,8 +8,7 @@
 export function scrollToElement(elementId: string, offset = 0) {
   const element = document.getElementById(elementId);
   if (element) {
-    const y =
-      element.getBoundingClientRect().top + window.pageYOffset + offset - 20;
+    const y = element.getBoundingClientRect().top + window.pageYOffset + offset - 20;
     window.scrollTo({ top: y, behavior: "smooth" });
   }
 }

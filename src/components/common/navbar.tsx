@@ -1,6 +1,4 @@
 "use client";
-
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -14,6 +12,7 @@ import Bar3Icon from "./icons/bar3-icon";
 import XmarkIcon from "./icons/x-mark";
 import { serviceWithCategories } from "../../lib/constant";
 import { sendToAnalytics } from "../../lib/gtag";
+import AppLogo from "../home/appLogo";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -24,27 +23,7 @@ export default function Navbar() {
     <nav className="w-full bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
         {/* Logo */}
-        <SlideDown delay={0.1}>
-          <Link
-            href="/"
-            className="text-2xl flex items-center font-heading text-forest font-semibold"
-          >
-            <Image
-              src="/images/brand-logo.png"
-              alt="Clinic Logo"
-              width={56}
-              height={56}
-              className="object-contain"
-            />
-            <Image
-              src="/images/brand-text.png"
-              alt="Clinic Text Logo"
-              width={120}
-              height={40}
-              className="object-contain mt-1"
-            />
-          </Link>
-        </SlideDown>
+        <AppLogo href="/" />
         {/* Desktop Menu */}
         <StaggerContainer className="hidden md:flex items-center gap-10 text-base text-charcoal">
           <StaggerItem>
