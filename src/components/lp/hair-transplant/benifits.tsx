@@ -96,7 +96,7 @@ export default function BenefitsSection() {
     {
       title: "Cost-Effective",
       description:
-        "Although the initial hair transplant cost may seem higher, it offers excellent long-term value compared to repeated temporary treatments.",
+        "A hair transplant is a long-term solution that helps you avoid repeated spending on temporary hair loss treatments.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
