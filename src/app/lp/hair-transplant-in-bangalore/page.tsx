@@ -10,6 +10,12 @@ import AppointmentProcess from "../../../components/lp/hair-transplant/bookingPr
 import { WhatOurClientSays } from "../../../components/lp/hair-transplant/whatOurClientSays";
 import CTASection from "../../../components/lp/hair-transplant/ctaSection";
 import Footer from "../../../components/lp/hair-transplant/footer";
+import { hairTransplantMetadata } from "../../../lib/metadata/hairTransplantPageMetadata";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  ...hairTransplantMetadata,
+};
 
 const HairTransplantLandingPage = () => {
   return (
