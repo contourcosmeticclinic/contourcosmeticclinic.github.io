@@ -30,7 +30,7 @@ export default function WhyChooseUs() {
             <ScrollReveal animation="slideLeft">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/doctors/ot-image-doctor-saket.JPG.JPG"
+                  src="/images/doctors/ot-image-doctor-saket.JPG"
                   alt="Dr Saket Performing Hair Transplant OT image"
                   className="w-full h-[600px] object-cover"
                   height={500}
