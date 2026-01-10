@@ -1,3 +1,4 @@
+import { Faq } from "../components/common/faq-disclosure";
 import { ReviewType } from "../components/ui/moving-cards";
 import { VideoItem } from "../components/ui/videoSlider";
 import { DoctorType, ImageType } from "./types";
@@ -438,7 +439,7 @@ export const HT_HERO_SECTION = "hair-transplant-hero";
 export const HT_BEFORE_AFTER_RESULTS_SECTION = "ht-before-after-result";
 export const HT_WHY_CHOOSE_CONTOUR_SECTION = "ht-why-choose-contour";
 export const HT_TESTIMONIALS = "ht-testimonials";
-export const HT_BENIFITS_SECTION = "ht-benifits";
+export const HT_benefits_SECTION = "ht-benefits";
 export const HT_CONSULTATION_PROCESS_SECTION = "ht-consulation-process";
 export const HT_TYPES_SECTION = "ht-types-section";
 
@@ -447,42 +448,65 @@ export const HT_TYPES_SECTION = "ht-types-section";
 export const hairTransplantQuotes = [
   {
     id: 1,
-    text: "At Contour Cosmetic Clinic, we don’t just restore hair — we restore confidence.",
+    text: "I opted for the Sapphire FUE hair transplant at Contour Cosmetic Clinic, Bangalore, and the results are amazing. My hairline looks completely natural!",
   },
   {
     id: 2,
-    text: "Contour Cosmetic Clinic: Where natural hairlines are carefully crafted.",
+    text: "Dr. Saket Jha and the team performed my Sapphire FUE transplant flawlessly. The procedure was smooth, and my hair density improved noticeably.",
   },
   {
     id: 3,
-    text: "Your hair transformation begins at Contour Cosmetic Clinic.",
+    text: "The Sapphire technique at Contour Cosmetic Clinic gave me a natural-looking hairline with minimal scabbing. Highly recommended for anyone considering FUE in Bangalore.",
   },
   {
     id: 4,
-    text: "Contour Cosmetic Clinic blends medical precision with aesthetic excellence.",
+    text: "I was impressed by the professionalism and care during my Sapphire FUE hair transplant. The results exceeded my expectations!",
   },
   {
     id: 5,
-    text: "Experience natural-looking hair restoration at Contour Cosmetic Clinic.",
+    text: "Contour Cosmetic Clinic in BTM Layout is the best place for Sapphire FUE hair restoration. Dr. Saket Jha ensured I got excellent results with natural density.",
   },
   {
     id: 6,
-    text: "Contour Cosmetic Clinic creates hairlines designed for your face.",
+    text: "Choosing Sapphire FUE at Contour Cosmetic Clinic was the best decision. The team was supportive, and my hair transplant looks natural and full.",
   },
   {
     id: 7,
-    text: "Because confidence starts with great hair — Contour Cosmetic Clinic.",
+    text: "Thanks to Dr. Saket Jha, my Sapphire FUE procedure in Bangalore was seamless. My confidence is back with a perfect hairline.",
   },
   {
     id: 8,
-    text: "Contour Cosmetic Clinic: Precision today, confidence for life.",
+    text: "Sapphire FUE hair transplant at Contour Cosmetic Clinic was painless and highly effective. I recommend it to anyone looking for hair restoration in Bangalore.",
   },
   {
     id: 9,
-    text: "Trust your hair transplant journey to Contour Cosmetic Clinic.",
+    text: "The results of my Sapphire FUE hair transplant are phenomenal. Contour Cosmetic Clinic combines medical expertise and aesthetic precision perfectly.",
   },
   {
     id: 10,
-    text: "Contour Cosmetic Clinic — shaping hairlines, changing lives.",
+    text: "I’m extremely satisfied with my hair transplant using the Sapphire FUE method. Natural, dense, and beautifully crafted hairline by Dr. Saket Jha.",
+  },
+];
+
+export const HairTransplantFaqData: Faq[] = [
+  {
+    question: "What is the Sapphire FUE hair transplant cost in Bangalore?",
+    answer:
+      "The cost varies based on the number of grafts, but the Sapphire technique is considered the gold standard for value due to its superior success rate and natural results.",
+  },
+  {
+    question: "How long does a Sapphire hair transplant take?",
+    answer:
+      "Typically, a session at our Bangalore clinic takes 6–8 hours depending on the area being covered.",
+  },
+  {
+    question: "Is Sapphire FUE better than traditional FUE?",
+    answer:
+      "Yes, the Sapphire technique hair transplant offers smaller incisions, less scabbing, and higher hair density compared to traditional methods.",
+  },
+  {
+    question: "Where can I find the best hair transplant near me in Bangalore?",
+    answer:
+      "Contour Cosmetic Clinic is conveniently located to serve patients across Bangalore seeking advanced Sapphire FUE hair restoration.",
   },
 ];

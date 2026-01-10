@@ -6,7 +6,8 @@ export default function BenefitsSection() {
   const benefits = [
     {
       title: "Natural-Looking Results",
-      description: "A hair transplant offers the most natural-looking results possible.",
+      description:
+        "Advanced Sapphire FUE hair transplant techniques are designed to create natural-looking hairlines that blend perfectly with your existing hair.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +27,8 @@ export default function BenefitsSection() {
     },
     {
       title: "Permanent Solution",
-      description: "A hair transplant is a permanent solution to hair loss.",
+      description:
+        "Hair transplant is a long-term, permanent solution for hair loss, helping you regain natural hair growth without ongoing treatments.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +48,8 @@ export default function BenefitsSection() {
     },
     {
       title: "Boosted Self-Confidence",
-      description: "Daily confidence with a successful hair transplant",
+      description:
+        "A successful hair transplant restores not just hair, but confidence—helping you feel comfortable and self-assured every day.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +70,7 @@ export default function BenefitsSection() {
     {
       title: "Low Maintenance",
       description:
-        "Transplanted hair requires no special maintenance – simply treat it like your other hair with regular washing, cutting, and styling.",
+        "Transplanted hair grows naturally and requires no special care. You can wash, cut, and style it just like your natural hair.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +96,7 @@ export default function BenefitsSection() {
     {
       title: "Cost-Effective",
       description:
-        "While the upfront cost of a hair transplant may seem higher compared to some temporary solutions, it's essential to consider long-term value.",
+        "Although the initial hair transplant cost may seem higher, it offers excellent long-term value compared to repeated temporary treatments.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +117,7 @@ export default function BenefitsSection() {
     {
       title: "Minimal Downtime",
       description:
-        "Modern hair transplant techniques, such as Follicular Unit Extraction (FUE), involve minimal downtime.",
+        "Modern techniques like Sapphire FUE hair transplant ensure faster recovery, minimal discomfort, and a quick return to daily activities.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -135,10 +138,10 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="py-8 px-4 " id="ht-benifits">
+    <section className="py-8 px-4 " id="ht-benefits">
       <div className="max-w-7xl mx-auto">
         {/* Heading with underline */}
-        <MainHeading title="Benifits of Hair Transplant" />
+        <MainHeading title="Benefits of Hair Transplant" />
 
         {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

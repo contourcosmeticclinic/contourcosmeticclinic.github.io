@@ -12,6 +12,7 @@ import CTASection from "../../../components/lp/hair-transplant/ctaSection";
 import Footer from "../../../components/lp/hair-transplant/footer";
 import { hairTransplantMetadata } from "../../../lib/metadata/hairTransplantPageMetadata";
 import { Metadata } from "next";
+import { HairTransplantFAQs } from "../../../components/lp/hair-transplant/faqSection";
 
 export const metadata: Metadata = {
   ...hairTransplantMetadata,
@@ -29,6 +30,7 @@ const HairTransplantLandingPage = () => {
       <BenefitsSection />
       <StatsCounter />
       <AppointmentProcess />
+      <HairTransplantFAQs />
       <WhatOurClientSays />
       <CTASection />
       <Footer />

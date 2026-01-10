@@ -1,10 +1,16 @@
+"use client";
 import { Disclosure } from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import PlusIcon from "./icons/plusicon";
 import MinusIcon from "./icons/minus";
 
 // Add your FAQ data here
-const faqs: { question: string; answer: string }[] = [
+
+export interface Faq {
+  question: string;
+  answer: string;
+}
+export const MAIN_FAQs: Faq[] = [
   {
     question: "What is a hair transplant?",
     answer: `A hair transplant is a surgical procedure that moves hair follicles from a donor area (usually
@@ -60,7 +66,7 @@ const faqs: { question: string; answer: string }[] = [
   },
 ];
 
-const FAQDisclosure = () => {
+const FAQDisclosure = ({ faqs }: { faqs: Faq[]; open?: boolean }) => {
   return (
     <div className="w-full max-w-4xl p-4 mx-auto my-8 bg-bg-light text-body-text">
       <ul>

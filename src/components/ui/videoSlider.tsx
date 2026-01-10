@@ -182,7 +182,7 @@ export default function VideoStorySlider({ videos }: { videos: VideoItem[] }) {
 
           return (
             <div
-              key={video.id}
+              key={i}
               ref={i === 0 ? firstCardRef : null}
               className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-3"
             >

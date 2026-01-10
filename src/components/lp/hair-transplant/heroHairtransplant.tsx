@@ -31,7 +31,7 @@ export default function HeroHairTransplant() {
                 />
               </svg>
               <h3 className="text-lg sm:text-xl  text-secondary font-medium">
-                Hair Trasnplant Starting from Only <span className="font-bold">₹45,000!</span>
+                Hair Transplant Starting from Only <span className="font-bold">₹45,000!</span>
               </h3>
             </div>
 
@@ -64,7 +64,9 @@ export default function HeroHairTransplant() {
                   clipRule="evenodd"
                 />
               </svg>
-              <h3 className="text-lg sm:text-xl text-secondary font-medium">Easy EMI available</h3>
+              <h3 className="text-lg sm:text-xl text-secondary font-medium">
+                No-cost EMI available
+              </h3>
             </div>
           </SlideUp>
 

@@ -4,15 +4,14 @@ import { CheckIcon } from "../common/icons/checkIcon";
 import { MainHeading } from "../ui/mainHeading";
 import Image from "next/image";
 import Button from "../ui/button";
-import { scrollToElement } from "../../lib/util";
-import { HT_HERO_SECTION } from "../../lib/constant";
+import { PHONE_NUMBER } from "../../lib/constant";
 import { ScrollReveal } from "../ui/scrollReveal";
 import { FeaturesCards } from "./hair-transplant/featureCards";
 
 export default function WhyChooseUs() {
   const reasons = [
     "Expert Hair Restoration Surgeon / Oral Maxillofacial Surgeon specializing in hair transplants.",
-    "Utilization of advanced FUE and FUT techniques.",
+    "Utilization of advanced FUE and Sapphire techniques.",
     "Personalized treatment plans tailored to your needs.",
     "Focus on achieving natural and undetectable results.",
     "Modern and well-equipped facilities ensuring safety.",
@@ -64,9 +63,9 @@ export default function WhyChooseUs() {
 
             {/* CTA Button */}
             <div className="pt-4">
-              <Button className="rounded-full" onClick={() => scrollToElement(HT_HERO_SECTION)}>
-                GET CONSULTATION NOW
-              </Button>
+              <a href={`tel:+${PHONE_NUMBER}`}>
+                <Button className="rounded-full">GET CONSULTATION NOW</Button>
+              </a>
             </div>
           </div>
         </div>

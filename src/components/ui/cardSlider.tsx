@@ -106,7 +106,7 @@ export default function CardCarousel() {
               ref={i === 0 ? firstCardRef : null}
               className="relative flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-3"
             >
-              <div className="h-[28rem] flex flex-col rounded-xl overflow-hidden">
+              <div className="h-[32rem] flex flex-col rounded-xl overflow-hidden">
                 <div
                   className="flex-1 flex items-center flex-col justify-center relative group overflow-hidden"
                   onClick={() => handleToggle(i)} // 👈 tap for mobile

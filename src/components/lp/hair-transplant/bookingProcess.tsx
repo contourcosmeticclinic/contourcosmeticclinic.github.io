@@ -1,10 +1,8 @@
 "use client";
 import React from "react";
 import { MainHeading } from "../../ui/mainHeading";
-import Button from "../../ui/button";
-import { scrollToElement } from "../../../lib/util";
-import { HT_HERO_SECTION } from "../../../lib/constant";
 import { ScrollReveal } from "../../ui/scrollReveal";
+import { BookNow } from "./beforeAfterResults";
 
 export default function AppointmentProcess() {
   const processSteps = [
@@ -56,7 +54,7 @@ export default function AppointmentProcess() {
       step: "Step 3",
       title: "Donor Harvest",
       description:
-        "Extract healthy hair follicles from the donor area using advanced FUE or FUT techniques.",
+        "Extract healthy hair follicles from the donor area using advanced FUE or Sapphire techniques.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -168,9 +166,7 @@ export default function AppointmentProcess() {
           </div>
         </div>
         <div className="py-4 flex items-center justify-center">
-          <Button className="rounded-full" onClick={() => scrollToElement(HT_HERO_SECTION)}>
-            Book your appointment now
-          </Button>
+          <BookNow />
         </div>
       </div>
     </section>

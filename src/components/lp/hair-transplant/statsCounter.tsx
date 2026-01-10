@@ -6,10 +6,26 @@ export default function StatsCounter() {
   const sectionRef = useRef(null);
 
   const stats = [
-    { number: 10, label: "Year of experience", suffix: "+" },
-    { number: 2000, label: "Happy Patients", suffix: "+" },
-    { number: 2500, label: "Treatments", suffix: "+" },
-    { number: 50, label: "Awards", suffix: "+" },
+    {
+      number: 10,
+      label: "Years of experience in hair transplant procedures",
+      suffix: "+",
+    },
+    {
+      number: 5000,
+      label: "Happy patients treated with Sapphire, FUE in Bangalore",
+      suffix: "+",
+    },
+    {
+      number: 5000,
+      label: "Successful hair transplant surgeries at Contour Cosmetic Clinic",
+      suffix: "+",
+    },
+    {
+      number: 50,
+      label: "Awards and recognitions for excellence in hair restoration",
+      suffix: "+",
+    },
   ];
 
   useEffect(() => {
@@ -55,16 +71,16 @@ export default function StatsCounter() {
               }}
             >
               {/* Vertical divider - hidden on mobile for first item, hidden on desktop for last item */}
-              {index < stats.length - 1 && (
+              {/* {index < stats.length - 1 && (
                 <div className="hidden lg:block absolute right-0 top-1/2 transform -translate-y-1/2 w-px h-24 bg-gray-300" />
               )}
               {index === 1 && (
                 <div className="lg:hidden absolute right-0 top-1/2 transform -translate-y-1/2 w-px h-24 bg-gray-300" />
-              )}
+              )} */}
 
               {/* Counter */}
               <div
-                className="text-5xl md:text-6xl lg:text-7xl font-bold mb-2"
+                className="text-5xl md:text-6xl lg:text-6xl font-bold mb-2"
                 style={{ color: "#8B6F47" }}
               >
                 {isVisible ? (
@@ -75,7 +91,7 @@ export default function StatsCounter() {
               </div>
 
               {/* Label */}
-              <p className="text-gray-600 text-sm md:text-base font-medium">{stat.label}</p>
+              <p className="text-gray-600 text-sm ">{stat.label}</p>
             </div>
           ))}
         </div>

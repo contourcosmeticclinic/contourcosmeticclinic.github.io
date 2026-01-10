@@ -18,6 +18,7 @@ import {
   HT_TESTIMONIALS,
   HT_TYPES_SECTION,
   HT_WHY_CHOOSE_CONTOUR_SECTION,
+  PHONE_NUMBER,
 } from "../../lib/constant";
 
 export const LandingPageNavbar = () => {
@@ -79,14 +80,11 @@ export const LandingPageNavbar = () => {
         <SlideDown>
           <div className="hidden md:block">
             <div className="items-center flex flex-row gap-12">
-              <Button
-                onClick={() => scrollToElement(HT_HERO_SECTION)}
-                className="rounded-full"
-                size="md"
-                variant="primary"
-              >
-                Book Now
-              </Button>
+              <a href={`tel:+${PHONE_NUMBER}`}>
+                <Button className="rounded-full" size="md" variant="primary">
+                  Book Now
+                </Button>
+              </a>
             </div>
           </div>
         </SlideDown>

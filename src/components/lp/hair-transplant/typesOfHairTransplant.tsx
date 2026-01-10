@@ -28,9 +28,10 @@ export default function TypeOfHairTransplantSection() {
       ),
     },
     {
-      title: "FUT Technique",
+      title: "Sapphire Technique",
       description:
-        "Follicular Unit Transplantation - Strip method ideal for maximum coverage in a single session.",
+        "Sapphire Follicular Unit Transplantation - Strip method ideal for maximum coverage in a single session.",
+
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"

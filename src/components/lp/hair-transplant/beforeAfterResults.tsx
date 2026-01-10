@@ -1,18 +1,18 @@
 "use client";
 import React from "react";
-import { HT_HERO_SECTION, HTResultVideos } from "../../../lib/constant";
+import { HTResultVideos, PHONE_NUMBER } from "../../../lib/constant";
 import { MainHeading } from "../../ui/mainHeading";
 import { ScrollReveal } from "../../ui/scrollReveal";
 import Button from "../../ui/button";
-import { scrollToElement } from "../../../lib/util";
+
 import CardCarousel from "../../ui/cardSlider";
 import VideoStorySlider from "../../ui/videoSlider";
 
-const BookNow = () => (
+export const BookNow = () => (
   <div className="mt-4 flex items-center justify-center">
-    <Button className="uppercase rounded-full" onClick={() => scrollToElement(HT_HERO_SECTION)}>
-      Book your appointment now
-    </Button>
+    <a href={`tel:+${PHONE_NUMBER}`}>
+      <Button className="uppercase rounded-full">Book your appointment now</Button>
+    </a>
   </div>
 );
 

@@ -2,7 +2,7 @@
 import React from "react";
 import {
   HT_BEFORE_AFTER_RESULTS_SECTION,
-  HT_BENIFITS_SECTION,
+  HT_benefits_SECTION,
   HT_CONSULTATION_PROCESS_SECTION,
   HT_HERO_SECTION,
   HT_TESTIMONIALS,
@@ -23,7 +23,7 @@ export default function Footer() {
     { name: "Why choose contour", href: HT_WHY_CHOOSE_CONTOUR_SECTION },
     { name: "Before & After", href: HT_BEFORE_AFTER_RESULTS_SECTION },
     { name: "Testimonials", href: HT_TESTIMONIALS },
-    { name: "Benifits", href: HT_BENIFITS_SECTION },
+    { name: "benefits", href: HT_benefits_SECTION },
     { name: "Consultation Process", href: HT_CONSULTATION_PROCESS_SECTION },
   ];
 
