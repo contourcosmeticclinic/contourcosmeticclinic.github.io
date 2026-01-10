@@ -20,14 +20,14 @@ export const clientResultImages: {
 ];
 
 export const HTResultsImages = [
-  { id: 1, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
-  { id: 2, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
-  { id: 3, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
-  { id: 4, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
-  { id: 5, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
-  { id: 6, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
-  { id: 7, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
-  { id: 8, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
+  { id: 1, image: "/images/lp/hair-transplant/ht-result-1.jpg" },
+  { id: 2, image: "/images/lp/hair-transplant/ht-result-2.jpg" },
+  { id: 3, image: "/images/lp/hair-transplant/ht-result-3.jpg" },
+  { id: 4, image: "/images/lp/hair-transplant/ht-result-4.jpg" },
+  { id: 5, image: "/images/lp/hair-transplant/ht-result-5.jpg" },
+  { id: 6, image: "/images/lp/hair-transplant/ht-result-6.jpg" },
+  { id: 7, image: "/images/lp/hair-transplant/ht-result-7.jpg" },
+  { id: 8, image: "/images/lp/hair-transplant/ht-result-8.jpg" },
 ];
 
 export const interiorImages: ImageType[] = [

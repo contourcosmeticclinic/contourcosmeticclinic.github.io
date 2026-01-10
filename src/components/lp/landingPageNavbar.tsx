@@ -23,7 +23,9 @@ import {
 export const LandingPageNavbar = () => {
   const pathName = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-
+  const handleMobileClick = () => {
+    setMobileOpen((prev) => !prev);
+  };
   return (
     <nav className="w-full bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-2 py-2 flex items-center justify-between">
@@ -106,7 +108,10 @@ export const LandingPageNavbar = () => {
           >
             <StaggerItem>
               <NavbarButton
-                onClick={() => scrollToElement(HT_WHY_CHOOSE_CONTOUR_SECTION)}
+                onClick={() => {
+                  scrollToElement(HT_WHY_CHOOSE_CONTOUR_SECTION);
+                  handleMobileClick();
+                }}
                 className="hover:text-forest transition"
               >
                 Why Contour
@@ -115,7 +120,10 @@ export const LandingPageNavbar = () => {
 
             <StaggerItem>
               <NavbarButton
-                onClick={() => scrollToElement(HT_HERO_SECTION)}
+                onClick={() => {
+                  scrollToElement(HT_HERO_SECTION);
+                  handleMobileClick();
+                }}
                 className="hover:text-forest transition"
               >
                 Contact
@@ -123,7 +131,10 @@ export const LandingPageNavbar = () => {
             </StaggerItem>
             <StaggerItem>
               <NavbarButton
-                onClick={() => scrollToElement(HT_TYPES_SECTION)}
+                onClick={() => {
+                  scrollToElement(HT_TYPES_SECTION);
+                  handleMobileClick();
+                }}
                 className="hover:text-forest transition"
               >
                 Hair Transplant
@@ -131,7 +142,10 @@ export const LandingPageNavbar = () => {
             </StaggerItem>
             <StaggerItem>
               <NavbarButton
-                onClick={() => scrollToElement(HT_BEFORE_AFTER_RESULTS_SECTION)}
+                onClick={() => {
+                  scrollToElement(HT_BEFORE_AFTER_RESULTS_SECTION);
+                  handleMobileClick();
+                }}
                 className="hover:text-forest transition"
               >
                 Results
@@ -139,7 +153,10 @@ export const LandingPageNavbar = () => {
             </StaggerItem>
             <StaggerItem>
               <NavbarButton
-                onClick={() => scrollToElement(HT_TESTIMONIALS)}
+                onClick={() => {
+                  scrollToElement(HT_TESTIMONIALS);
+                  handleMobileClick();
+                }}
                 className="hover:text-forest transition"
               >
                 Testimonials

@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { randomQuote } from "../../lib/util";
+import { isMobile, randomQuote } from "../../lib/util";
+import { HTResultsImages } from "../../lib/constant";
 
 const LeftIcon = () => (
   <svg
@@ -29,15 +30,19 @@ const RightIcon = () => (
   </svg>
 );
 
-const IMAGE_URL = "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg";
 const cards = Array.from({ length: 8 });
 
 export default function CardCarousel() {
   const [index, setIndex] = useState(0);
   const [cardWidth, setCardWidth] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number>(-1);
+
   const firstCardRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-
+  const handleToggle = (index: number) => {
+    if (!isMobile) return;
+    setActiveIndex((prev: number) => (prev === index ? -1 : index));
+  };
   // Measure first card width dynamically
   useEffect(() => {
     const updateWidth = () => {
@@ -67,10 +72,22 @@ export default function CardCarousel() {
   return (
     <div className="relative w-full overflow-hidden" ref={containerRef}>
       {/* Controls */}
-      <button onClick={prev} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2">
+      <button
+        onClick={() => {
+          prev();
+          handleToggle(index - 1);
+        }}
+        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2"
+      >
         <LeftIcon />
       </button>
-      <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2">
+      <button
+        onClick={() => {
+          next();
+          handleToggle(index + 1);
+        }}
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2"
+      >
         <RightIcon />
       </button>
 
@@ -80,22 +97,41 @@ export default function CardCarousel() {
         animate={{ x: -index * cardWidth }}
         transition={{ type: "spring", stiffness: 300, damping: 35 }}
       >
-        {cards.map((_, i) => (
-          <div
-            key={i}
-            ref={i === 0 ? firstCardRef : null} // measure first card
-            className="relative flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-3"
-          >
-            <div className="h-96 flex flex-col rounded-xl overflow-hidden">
-              <div className="flex-1 flex items-center justify-center relative group overflow-hidden">
-                <img src={IMAGE_URL} alt="Card" className="max-w-full max-h-full object-contain" />
-                <div className="absolute bottom-0 left-0 right-0 bg-primary text-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
-                  <q className="text-sm text-center flex italic py-4 px-3">{randomQuote(i)}</q>
+        {HTResultsImages.map((_, i) => {
+          const isActive = activeIndex === i;
+
+          return (
+            <div
+              key={_.id}
+              ref={i === 0 ? firstCardRef : null}
+              className="relative flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-3"
+            >
+              <div className="h-[28rem] flex flex-col rounded-xl overflow-hidden">
+                <div
+                  className="flex-1 flex items-center flex-col justify-center relative group overflow-hidden"
+                  onClick={() => handleToggle(i)} // 👈 tap for mobile
+                >
+                  <img
+                    src={_.image}
+                    alt="Card"
+                    className="max-w-full  max-h-full object-contain rounded-tr-xl rounded-tl-xl"
+                  />
+
+                  {/* Quote overlay */}
+                  <div
+                    className={`
+              absolute bottom-0 left-0 right-0 bg-primary text-white
+              transition-transform duration-300 ease-out
+              ${isActive ? "translate-y-0" : "translate-y-full group-hover:translate-y-0"}
+            `}
+                  >
+                    <q className="text-sm text-center flex italic py-2 px-3">{randomQuote(i)}</q>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </motion.div>
     </div>
   );

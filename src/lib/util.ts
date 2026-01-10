@@ -64,3 +64,7 @@ export const submitToZohoCRM = async (formData: FormData, thankYouPage: string) 
 
 export const randomQuote = (index: number) =>
   hairTransplantQuotes[index || Math.floor(Math.random() * hairTransplantQuotes.length)].text;
+
+export const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
+  navigator.userAgent
+);
