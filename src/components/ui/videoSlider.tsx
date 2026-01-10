@@ -197,9 +197,12 @@ export default function VideoStorySlider({ videos }: { videos: VideoItem[] }) {
                       videoRefs.current[i] = el;
                     }}
                     src={video.url}
-                    className="w-full h-full object-cover"
-                    loop
+                    muted
                     playsInline
+                    autoPlay
+                    loop
+                    preload="metadata"
+                    className="w-full h-full object-cover rounded-2xl transform group-hover:scale-105 transition-all duration-500"
                   />
 
                   {/* Play Overlay */}
