@@ -20,6 +20,7 @@ import {
   HT_WHY_CHOOSE_CONTOUR_SECTION,
   PHONE_NUMBER,
 } from "../../lib/constant";
+import AnimatedOfferBanner from "./offerBanner";
 
 export const LandingPageNavbar = () => {
   const pathName = usePathname();
@@ -29,6 +30,8 @@ export const LandingPageNavbar = () => {
   };
   return (
     <nav className="w-full bg-white shadow-sm sticky top-0 z-50">
+      <AnimatedOfferBanner />
+      <div className="bg-primary">{/* Offer banner */}</div>
       <div className="max-w-7xl mx-auto px-2 py-2 flex items-center justify-between">
         {/* Logo */}
         <AppLogo href={pathName} />

@@ -6,7 +6,7 @@ import { BaldnessForm } from "./baldnessLevelForm";
 
 export default function HeroHairTransplant() {
   return (
-    <section id="hair-transplant-hero" className="relative w-full overflow-hidden py-12 md:bg-none">
+    <section id="hair-transplant-hero" className="relative w-full overflow-hidden py-2 md:bg-none">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-16">
         {/* Text + CTA */}
         <div className="relative flex flex-col space-y-6 lg:space-y-8 order-2 lg:order-1">
