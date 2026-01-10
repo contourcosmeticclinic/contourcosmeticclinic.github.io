@@ -7,6 +7,7 @@ export default function HairTransplantLayout({ children }: { children: React.Rea
   return (
     <>
       {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
+      <div>{GTM_ID}</div>
       {children}
     </>
   );
