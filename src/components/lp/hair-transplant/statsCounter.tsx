@@ -7,8 +7,8 @@ export default function StatsCounter() {
 
   const stats = [
     { number: 10, label: "Year of experience", suffix: "+" },
-    { number: 100, label: "Happy Patients", suffix: "+" },
-    { number: 500, label: "Treatments", suffix: "+" },
+    { number: 2000, label: "Happy Patients", suffix: "+" },
+    { number: 2500, label: "Treatments", suffix: "+" },
     { number: 50, label: "Awards", suffix: "+" },
   ];
 

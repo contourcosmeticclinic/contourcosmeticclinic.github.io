@@ -103,7 +103,7 @@ export default function CTASection() {
         {/* Additional Info */}
         <div className="mt-12 text-center">
           <p className="text-white/80 text-sm">
-            Available Mon-Sat: 9:00 AM - 8:00 PM | Free Consultation | No Obligation
+            Available all days (Monday to Sunday) | Free Consultation | No Obligation
           </p>
         </div>
       </div>

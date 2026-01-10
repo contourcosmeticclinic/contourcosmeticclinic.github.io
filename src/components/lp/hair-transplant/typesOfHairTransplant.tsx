@@ -1,22 +1,10 @@
 "use client";
-import React, { useState } from "react";
+
 import { MainHeading } from "../../ui/mainHeading";
-import { inputClass } from "../../common/connect-form";
-import Button from "../../ui/button";
-import { useRouter } from "next/navigation";
-import { LANDING_PAGE_THANK_YOU } from "../../../lib/constant";
 import { ScrollReveal } from "../../ui/scrollReveal";
+import { CommonForm } from "./commonForm";
 
 export default function TypeOfHairTransplantSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const router = useRouter();
-
   const transplantTypes = [
     {
       title: "FUE Technique",
@@ -81,40 +69,7 @@ export default function TypeOfHairTransplantSection() {
         </svg>
       ),
     },
-    {
-      title: "Robotic Hair Transplant",
-      description:
-        "AI-assisted precision extraction and implantation for enhanced accuracy and consistency.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-          className="w-8 h-8"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"
-          />
-        </svg>
-      ),
-    },
   ];
-
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    router.push(LANDING_PAGE_THANK_YOU);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   return (
     <section className="py-4 px-4" id="ht-types-section">
@@ -160,89 +115,10 @@ export default function TypeOfHairTransplantSection() {
               </h3>
               <p className="text-gray-600 mb-6 text-sm">Get a free consultation with our experts</p>
 
-              <form onSubmit={handleSubmit}>
-                <div className="space-y-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className={inputClass}
-                      placeholder="John Doe"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className={inputClass}
-                      placeholder="john@example.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className={inputClass}
-                      placeholder="+1 (555) 000-0000"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={4}
-                      className={inputClass}
-                      placeholder="Tell us about your concerns..."
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    className="w-full text-white font-semibold py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                    style={{
-                      background: "linear-gradient(135deg, #4b2e2e 0%, #7b4f4f 100%)",
-                    }}
-                  >
-                    Schedule Consultation
-                  </Button>
-
-                  <p className="text-xs text-gray-500 text-center">
-                    We&apos;ll get back to you within 24 hours
-                  </p>
-                </div>
-              </form>
+              <CommonForm />
+              <p className="text-xs text-gray-500 text-center">
+                We&apos;ll get back to you within 24 hours
+              </p>
             </div>
           </ScrollReveal>
         </div>

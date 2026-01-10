@@ -142,7 +142,7 @@ export default function AppointmentProcess() {
               <ScrollReveal
                 key={index}
                 className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                animation="scaleUp"
+                animation="blur"
               >
                 {/* Icon */}
                 <div className="flex justify-center mb-4">
