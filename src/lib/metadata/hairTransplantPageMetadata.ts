@@ -74,7 +74,7 @@ export const hairTransplantMetadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_APP_URL}/images/og-images/og-image-hair-transplant-contour.png`,
+        url: `${process.env.NEXT_PUBLIC_APP_URL}/images/og-images/og-image-hair-transplant-contour.jpg`,
         width: 1200,
         height: 630,
         alt: "Hair Transplant in Bangalore | Dr. Saket Jha | Contour Cosmetic Clinic",
@@ -88,7 +88,7 @@ export const hairTransplantMetadata: Metadata = {
     description:
       "Expert hair transplant treatments at Contour Cosmetic Clinic, BTM Layout, Bangalore.",
     images: [
-      `${process.env.NEXT_PUBLIC_APP_URL}/images/og-images/og-image-hair-transplant-contour.png`,
+      `${process.env.NEXT_PUBLIC_APP_URL}/images/og-images/og-image-hair-transplant-contour.jpg`,
     ],
   },
 
