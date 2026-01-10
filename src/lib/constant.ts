@@ -1,4 +1,5 @@
 import { ReviewType } from "../components/ui/moving-cards";
+import { VideoItem } from "../components/ui/videoSlider";
 import { DoctorType, ImageType } from "./types";
 
 export const APP_NAME = "Contour Cosmetic Clinic";
@@ -28,6 +29,14 @@ export const HTResultsImages = [
   { id: 6, image: "/images/lp/hair-transplant/ht-result-6.jpg" },
   { id: 7, image: "/images/lp/hair-transplant/ht-result-7.jpg" },
   { id: 8, image: "/images/lp/hair-transplant/ht-result-8.jpg" },
+];
+
+export const HTResultVideos: VideoItem[] = [
+  { id: 1, url: "/images/lp/hair-transplant/ht-result1.mp4" },
+  { id: 1, url: "/images/lp/hair-transplant/ht-result2.mp4" },
+  { id: 1, url: "/images/lp/hair-transplant/ht-result3.mp4" },
+  { id: 1, url: "/images/lp/hair-transplant/ht-result4.mp4" },
+  { id: 1, url: "/images/lp/hair-transplant/ht-result5.mp4" },
 ];
 
 export const interiorImages: ImageType[] = [
