@@ -5,16 +5,16 @@ export const StageSelector = () => {
 
   return (
     <div className="space-y-3 py-2">
-      <label className="block mb-2 font-medium text-gray-700">Select your baldness level</label>
+      <label className="block text-xs font-medium text-gray-700 mb-1">
+        Select your baldness level
+      </label>
 
-      <div className="flex gap-2 md:gap-4 lg:gap-8 xl:gap-12">
+      <div className="flex gap-7">
         {[1, 2, 3, 4, 5, 6, 7].map((stage) => (
           <label
             key={stage}
             className={`flex items-center justify-center w-10 h-10 rounded-full border cursor-pointer
-              ${
-                selectedStage === stage ? "bg-primary text-white" : "border-gray-300 text-gray-700"
-              }`}
+              ${selectedStage === stage ? "bg-primary text-white" : "border-primary text-primary"}`}
           >
             <input
               type="radio"
@@ -31,3 +31,5 @@ export const StageSelector = () => {
     </div>
   );
 };
+
+export const labelClassName = "block text-xs font-medium text-gray-700 mb-1";

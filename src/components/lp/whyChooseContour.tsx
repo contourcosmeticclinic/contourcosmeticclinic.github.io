@@ -11,7 +11,7 @@ import { FeaturesCards } from "./hair-transplant/featureCards";
 
 export default function WhyChooseUs() {
   const reasons = [
-    "Expert dermatologists specializing in hair transplants.",
+    "Expert Hair Restoration Surgeon / Oral Maxillofacial Surgeon specializing in hair transplants.",
     "Utilization of advanced FUE and FUT techniques.",
     "Personalized treatment plans tailored to your needs.",
     "Focus on achieving natural and undetectable results.",
@@ -30,12 +30,17 @@ export default function WhyChooseUs() {
             <ScrollReveal animation="slideLeft">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/clinic/contourcosmeticclinic-interior9.jpg"
-                  alt="Contour interior image"
-                  className="w-full h-full object-cover"
-                  height={50}
+                  src="/images/doctors/ot-image-doctor-saket.JPG.JPG"
+                  alt="Dr Saket Performing Hair Transplant OT image"
+                  className="w-full h-[600px] object-cover"
+                  height={500}
                   width={300}
                 />
+                <p className="text-gray-600 text-sm p-2 italic">
+                  Dr. Saket Jha, Maxillofacial & Facial Plastic Surgeon, specializes in advanced
+                  hair restoration and transplant procedures, with 2000+ successful hair transplants
+                  and 100+ publications.
+                </p>
               </div>
             </ScrollReveal>
           </div>

@@ -1,103 +1,36 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
-import { inputClass } from "../../common/connect-form";
+import { CommonForm } from "./commonForm";
 import { StageSelector } from "./stageSelector";
-import PhoneIconOutlined from "../../common/icons/phone";
-import Button from "../../ui/button";
-import { useRouter } from "next/navigation";
-import { LANDING_PAGE_THANK_YOU } from "../../../lib/constant";
 
 export const BaldnessForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    query: "",
-  });
-  const [loading] = useState(false);
-  const router = useRouter();
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
   return (
-    <div className="m-6 rounded-md">
-      <div className="flex flex-col items-center justify-center">
+    <div className="max-w-md border border-accent rounded-2xl  mx-auto">
+      {/* Header - More Compact */}
+      <div className="text-center mb-3  bg-accent rounded-tl-2xl rounded-tr-2xl  py-2 text-white">
         <h3 className="text-2xl">
-          Get <span className="font-extrabold text-secondary">FREE</span> Consulation Now
+          Get <span className="text-white animate-pulse font-extrabold">FREE</span> Consultation Now
         </h3>
-        <p className="underline italic text-secondary font-semibold">
-          Get Upto 50% OFF T&C<sup>*</sup>
+        <p className="text-lg italic underline underline-offset-1 text-primary font-semibold">
+          Upto 50% OFF T&C<sup>*</sup>
         </p>
+        <div className="mb-3">
+          <Image
+            loading="lazy"
+            src="/images/lp/hair-transplant/baldness-level.png"
+            alt="Baldness level"
+            height={100}
+            width={600}
+          />
+        </div>
       </div>
 
-      <div className="py-2">
-        <Image
-          loading="lazy"
-          src="/images/lp/hair-transplant/baldness-level.png"
-          alt="Baldness level"
-          height={100}
-          width={600}
-        />
-      </div>
+      {/* Baldness Level Image - Smaller */}
 
-      <form
-        className="p-4"
-        onSubmit={(e) => {
-          e.preventDefault();
-          router.push(LANDING_PAGE_THANK_YOU);
-        }}
-      >
+      <div className="p-4">
         <StageSelector />
-        {/* LEFT SIDE */}
-        <div className="flex flex-col gap-2">
-          {/* Name */}
-          <div>
-            <label className="block mb-2 font-medium text-gray-700">Name</label>
-            <input
-              type="text"
-              name="name"
-              required
-              value={formData.name}
-              onChange={handleChange}
-              className={inputClass}
-            />
-          </div>
-
-          {/* Phone */}
-          <div>
-            <label className="block mb-2 font-medium text-gray-700">Phone</label>
-            <input
-              type="tel"
-              name="phone"
-              required
-              value={formData.phone}
-              onChange={handleChange}
-              className={inputClass}
-            />
-          </div>
-
-          {/* Email */}
-          <div>
-            <label className="block mb-2 font-medium text-gray-700">Query</label>
-            <textarea
-              name="query"
-              required
-              value={formData.query}
-              onChange={handleChange}
-              className={inputClass + " resize-none h-full"}
-            />
-          </div>
-        </div>
-
-        {/* BUTTON */}
-        <div className="md:col-span-2 flex justify-center mt-4">
-          <Button type="submit" className="w-full rounded-full uppercase" disabled={loading}>
-            <PhoneIconOutlined className="animate-pulse h-6" />{" "}
-            {loading ? "Submitting..." : "Request a call back"}
-          </Button>
-        </div>
-      </form>
+        <CommonForm />
+      </div>
     </div>
   );
 };

@@ -18,6 +18,7 @@ const HairTransplantLandingPage = () => {
       <BeforeAfterResult />
       {/* <StepperForm /> */}
       <WhyChooseUs />
+      {/* <DoctroSection /> */}
       <TypeOfHairTransplantSection />
       <BenefitsSection />
       <StatsCounter />

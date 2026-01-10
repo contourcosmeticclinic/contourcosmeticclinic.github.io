@@ -1,5 +1,4 @@
 import { ReviewType } from "../components/ui/moving-cards";
-import { SliderItem } from "../components/ui/slider";
 import { DoctorType, ImageType } from "./types";
 
 export const APP_NAME = "Contour Cosmetic Clinic";
@@ -20,15 +19,15 @@ export const clientResultImages: {
   { src: "/images/client-results/cr-6.png" },
 ];
 
-export const HTResultsImages: SliderItem[] = [
-  { id: 1, imageUrl: "/images/lp/hair-transplant/ht-result1.jpg" },
-  { id: 2, imageUrl: "/images/lp/hair-transplant/ht-result2.jpg" },
-  { id: 3, imageUrl: "/images/lp/hair-transplant/ht-result3.jpg" },
-  { id: 4, imageUrl: "/images/lp/hair-transplant/ht-result4.jpg" },
-  { id: 5, imageUrl: "/images/lp/hair-transplant/ht-result5.jpg" },
-  { id: 6, imageUrl: "/images/lp/hair-transplant/ht-result6.jpg" },
-  { id: 7, imageUrl: "/images/lp/hair-transplant/ht-result7.jpg" },
-  { id: 8, imageUrl: "/images/lp/hair-transplant/ht-result8.jpg" },
+export const HTResultsImages = [
+  { id: 1, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
+  { id: 2, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
+  { id: 3, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
+  { id: 4, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
+  { id: 5, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
+  { id: 6, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
+  { id: 7, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
+  { id: 8, image: "https://template.canva.com/EAGFaPNlvsU/3/0/1600w-s566ULkHlkQ.jpg" },
 ];
 
 export const interiorImages: ImageType[] = [
@@ -390,13 +389,13 @@ export const HTReviews: ReviewType[] = [
     rating: 5,
     date: "a month ago",
   },
-  {
-    name: "Danish Khan",
-    quote:
-      "I consulted Dr. Athmika at Contour Cosmetic Clinic for a hair issue, and the experience was excellent. She listened carefully, explained everything clearly, and made me feel really comfortable. Highly recommended!",
-    rating: 5,
-    date: "a month ago",
-  },
+  // {
+  //   name: "Danish Khan",
+  //   quote:
+  //     "I consulted Dr. Athmika at Contour Cosmetic Clinic for a hair issue, and the experience was excellent. She listened carefully, explained everything clearly, and made me feel really comfortable. Highly recommended!",
+  //   rating: 5,
+  //   date: "a month ago",
+  // },
   {
     name: "Danish Raza",
     quote:
@@ -433,3 +432,48 @@ export const HT_TESTIMONIALS = "ht-testimonials";
 export const HT_BENIFITS_SECTION = "ht-benifits";
 export const HT_CONSULTATION_PROCESS_SECTION = "ht-consulation-process";
 export const HT_TYPES_SECTION = "ht-types-section";
+
+//@quotes
+
+export const hairTransplantQuotes = [
+  {
+    id: 1,
+    text: "At Contour Cosmetic Clinic, we don’t just restore hair — we restore confidence.",
+  },
+  {
+    id: 2,
+    text: "Contour Cosmetic Clinic: Where natural hairlines are carefully crafted.",
+  },
+  {
+    id: 3,
+    text: "Your hair transformation begins at Contour Cosmetic Clinic.",
+  },
+  {
+    id: 4,
+    text: "Contour Cosmetic Clinic blends medical precision with aesthetic excellence.",
+  },
+  {
+    id: 5,
+    text: "Experience natural-looking hair restoration at Contour Cosmetic Clinic.",
+  },
+  {
+    id: 6,
+    text: "Contour Cosmetic Clinic creates hairlines designed for your face.",
+  },
+  {
+    id: 7,
+    text: "Because confidence starts with great hair — Contour Cosmetic Clinic.",
+  },
+  {
+    id: 8,
+    text: "Contour Cosmetic Clinic: Precision today, confidence for life.",
+  },
+  {
+    id: 9,
+    text: "Trust your hair transplant journey to Contour Cosmetic Clinic.",
+  },
+  {
+    id: 10,
+    text: "Contour Cosmetic Clinic — shaping hairlines, changing lives.",
+  },
+];

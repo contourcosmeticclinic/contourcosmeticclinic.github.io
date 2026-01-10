@@ -6,8 +6,6 @@ import SlideDown from "../animations/slide-down";
 import { StaggerContainer, StaggerItem } from "../animations/stagger";
 import Button from "../ui/button";
 
-import NavLink from "../common/navlink";
-import PhoneIconOutlined from "../common/icons/phone";
 import XmarkIcon from "../common/icons/x-mark";
 import Bar3Icon from "../common/icons/bar3-icon";
 import AppLogo from "../home/appLogo";
@@ -25,9 +23,7 @@ import {
 export const LandingPageNavbar = () => {
   const pathName = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const handleMobileClick = () => {
-    setMobileOpen((prev) => !prev);
-  };
+
   return (
     <nav className="w-full bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-2 py-2 flex items-center justify-between">
@@ -82,7 +78,7 @@ export const LandingPageNavbar = () => {
           <div className="hidden md:block">
             <div className="items-center flex flex-row gap-12">
               <Button
-                onClick={() => scrollToElement("contact-section")}
+                onClick={() => scrollToElement(HT_HERO_SECTION)}
                 className="rounded-full"
                 size="md"
                 variant="primary"
@@ -108,42 +104,47 @@ export const LandingPageNavbar = () => {
             className="md:hidden bg-white border-t border-gray-100 px-6 py-4 
       transition max-h-[80vh] overflow-y-auto flex flex-col gap-6"
           >
-            <SlideDown>
-              <NavLink
-                onClick={handleMobileClick}
-                href="/about"
-                className="block hover:text-forest"
+            <StaggerItem>
+              <NavbarButton
+                onClick={() => scrollToElement(HT_WHY_CHOOSE_CONTOUR_SECTION)}
+                className="hover:text-forest transition"
               >
-                About
-              </NavLink>
-            </SlideDown>
+                Why Contour
+              </NavbarButton>
+            </StaggerItem>
 
-            <SlideDown>
-              <NavLink
-                href="/contact"
-                onClick={handleMobileClick}
-                className="block hover:text-forest"
+            <StaggerItem>
+              <NavbarButton
+                onClick={() => scrollToElement(HT_HERO_SECTION)}
+                className="hover:text-forest transition"
               >
                 Contact
-              </NavLink>
-            </SlideDown>
-
-            <SlideDown>
-              <a href="tel:+918660432589" className="flex gap-3 items-center text-sm">
-                <PhoneIconOutlined className="size-4" /> 866-043-2589
-              </a>
-            </SlideDown>
-
-            <SlideDown>
-              <Button
-                onClick={() => scrollToElement("contact-section")}
-                className="rounded-full w-full"
-                size="md"
-                variant="primary"
+              </NavbarButton>
+            </StaggerItem>
+            <StaggerItem>
+              <NavbarButton
+                onClick={() => scrollToElement(HT_TYPES_SECTION)}
+                className="hover:text-forest transition"
               >
-                Book Now
-              </Button>
-            </SlideDown>
+                Hair Transplant
+              </NavbarButton>
+            </StaggerItem>
+            <StaggerItem>
+              <NavbarButton
+                onClick={() => scrollToElement(HT_BEFORE_AFTER_RESULTS_SECTION)}
+                className="hover:text-forest transition"
+              >
+                Results
+              </NavbarButton>
+            </StaggerItem>
+            <StaggerItem>
+              <NavbarButton
+                onClick={() => scrollToElement(HT_TESTIMONIALS)}
+                className="hover:text-forest transition"
+              >
+                Testimonials
+              </NavbarButton>
+            </StaggerItem>
           </div>
         </SlideDown>
       )}
