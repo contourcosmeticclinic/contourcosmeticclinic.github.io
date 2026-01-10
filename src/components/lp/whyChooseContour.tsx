@@ -36,9 +36,9 @@ export default function WhyChooseUs() {
                   width={300}
                 />
                 <p className="text-gray-600 text-sm p-2 italic">
-                  Dr. Saket Jha, Maxillofacial & Facial Plastic Surgeon, specializes in advanced
-                  hair restoration and transplant procedures, with 2000+ successful hair transplants
-                  and 100+ publications.
+                  Dr. Saket Jha, 2× Gold Medalist, Maxillofacial & Facial Plastic Surgeon,
+                  specializes in advanced hair restoration and hair transplant procedures, with
+                  2,000+ successful hair transplants and 100+ scientific publications.
                 </p>
               </div>
             </ScrollReveal>
