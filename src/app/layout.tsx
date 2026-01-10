@@ -2,7 +2,7 @@ import { Inter, Montserrat, Playfair_Display } from "next/font/google";
 
 import "./globals.css";
 import { Metadata } from "next";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { seoKeywords } from "../lib/metadata/common";
 import FloatingButtons from "../components/common/floatingButtonts";
 // import Script from "next/script";
@@ -115,7 +115,6 @@ export default function RootLayout({
           }}
         /> */}
       </head>
-      <GoogleTagManager gtmId="AW-17793038451" />
       <body
         className={`${inter.variable} ${playfair.variable} ${montserrat.variable} antialiased bg-bg-light`}
       >
