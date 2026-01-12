@@ -7,6 +7,7 @@ import Button from "../ui/button";
 import { PHONE_NUMBER } from "../../lib/constant";
 import { ScrollReveal } from "../ui/scrollReveal";
 import { FeaturesCards } from "./hair-transplant/featureCards";
+import Link from "next/link";
 
 export default function WhyChooseUs() {
   const reasons = [
@@ -39,6 +40,25 @@ export default function WhyChooseUs() {
                   Dr. Saket Jha, 2× Gold Medalist, Maxillofacial & Facial Plastic Surgeon,
                   specializes in advanced hair restoration and hair transplant procedures, with
                   2,000+ successful hair transplants and 100+ scientific publications.
+                  <span className="text-gray-600 font-extrabold text-sm justify-center py-2 flex items-center italic">
+                    <Link href="/assets/MAOS-D-25-00742_R1.pdf" target="_blank" className="flex">
+                      Featured Across Publications
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="size-5 ml-1"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                        />
+                      </svg>
+                    </Link>
+                  </span>
                 </p>
               </div>
             </ScrollReveal>

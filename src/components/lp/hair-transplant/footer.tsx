@@ -43,6 +43,31 @@ export default function Footer() {
               Leading experts in hair restoration with over 10 years of experience. Helping you
               regain your confidence with natural-looking results.
             </p>
+
+            <p className="text-gray-200 text-sm italic">
+              Dr. Saket Jha, 2× Gold Medalist, Maxillofacial & Facial Plastic Surgeon, specializes
+              in advanced hair restoration and hair transplant procedures, with 2,000+ successful
+              hair transplants and 100+ scientific publications.
+              <span className="text-yellow-500 font-extrabold text-sm py-2 flex items-center italic">
+                <Link href="/assets/MAOS-D-25-00742_R1.pdf" target="_blank" className="flex">
+                  Published & Featured In
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="size-5 ml-1"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                    />
+                  </svg>
+                </Link>
+              </span>
+            </p>
           </div>
 
           {/* Quick Links */}
