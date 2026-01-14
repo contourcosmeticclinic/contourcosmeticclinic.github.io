@@ -8,8 +8,9 @@ type Prop = {
   service: any;
 };
 const ServiceCard: FC<Prop> = ({ service }) => {
+  const htLandingPage = service.code === "hair-transplant" ? service.landingPage : service.code;
   return (
-    <Link key={service.id} href={`services/${service.code}`}>
+    <Link key={service.id} href={htLandingPage ? htLandingPage : `services/${service.code}`}>
       <div
         className="
     group bg-white/60 

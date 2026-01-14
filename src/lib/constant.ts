@@ -68,6 +68,7 @@ export const services = [
     id: 1,
     code: "hair-transplant",
     name: "Hair Transplant",
+    landingPage: "lp/hair-transplant-in-bangalore",
     image: "/images/services/contourcosmeticclinic-hair-transpant-service.png",
   },
   {
@@ -239,6 +240,7 @@ export const serviceWithCategories = [
         code: "hair-transplant",
         name: "Hair Transplant",
         image: "/images/services/contourcosmeticclinic-hair-transpant-service.png",
+        landingPage: "lp/hair-transplant-in-bangalore",
       },
       {
         id: 2,
