@@ -13,6 +13,7 @@ import XmarkIcon from "./icons/x-mark";
 import { serviceWithCategories } from "../../lib/constant";
 import { sendToAnalytics } from "../../lib/gtag";
 import AppLogo from "../home/appLogo";
+import AnimatedOfferBanner from "../lp/offerBanner";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -21,6 +22,7 @@ export default function Navbar() {
   };
   return (
     <nav className="w-full bg-white shadow-sm sticky top-0 z-50">
+      <AnimatedOfferBanner />
       <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
         {/* Logo */}
         <AppLogo href="/" />
@@ -35,7 +37,7 @@ export default function Navbar() {
           {/* SERVICES DROPDOWN */}
           <StaggerItem>
             <div className="relative group cursor-pointer">
-              <div className="flex items-center gap-2  text-sm hover:text-forest font-monos uppercase transition">
+              <div className="flex items-center gap-2  text-sm hover:text-forest  uppercase transition">
                 {serviceWithCategories[0].name}
                 <ChevronDownIcon className="w-3 h-3" />
               </div>
@@ -71,7 +73,7 @@ export default function Navbar() {
           </StaggerItem>
           <StaggerItem>
             <div className="relative group cursor-pointer">
-              <div className="flex items-center gap-2 text-sm font-monos uppercase hover:text-forest transition">
+              <div className="flex items-center gap-2 text-sm  uppercase hover:text-forest transition">
                 {serviceWithCategories[1].name}
                 <ChevronDownIcon className="w-3 h-3" />
               </div>
@@ -178,7 +180,7 @@ export default function Navbar() {
 
             <SlideDown>
               <details className="group">
-                <summary className="flex items-center text-sm font-monos uppercase justify-between cursor-pointer hover:text-forest">
+                <summary className="flex items-center text-sm  uppercase justify-between cursor-pointer hover:text-forest">
                   {serviceWithCategories[0].name}
                   <ChevronDownIcon className="w-4 h-4 transition group-open:rotate-180" />
                 </summary>
@@ -207,7 +209,7 @@ export default function Navbar() {
 
             <SlideDown>
               <details className="group">
-                <summary className="flex items-center text-sm font-monos uppercase justify-between cursor-pointer hover:text-forest">
+                <summary className="flex items-center text-sm  uppercase justify-between cursor-pointer hover:text-forest">
                   {serviceWithCategories[1].name}
                   <ChevronDownIcon className="w-4 h-4 transition group-open:rotate-180" />
                 </summary>

@@ -16,7 +16,7 @@ export default function NavLink({ href, children, className, onClick }: NavLinkP
       href={href}
       onClick={onClick}
       className={clsx(
-        `font-monos
+        `
          uppercase
           relative inline-block
           after:absolute after:left-0 after:-bottom-1 after:h-0.5
