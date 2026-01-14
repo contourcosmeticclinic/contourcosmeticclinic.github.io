@@ -55,7 +55,7 @@ export default function Navbar() {
                   {serviceWithCategories[0].services.map((item) => (
                     <Link
                       key={item.id}
-                      href={`/services/${item.code}`}
+                      href={item.landingPage ? item.landingPage : `services/${item.code}`}
                       className="
               block px-3 py-2 rounded-lg 
               hover:bg-bg-light hover:text-forest 
@@ -194,7 +194,7 @@ export default function Navbar() {
                       <Link
                         onClick={handleMobileClick}
                         key={item.id}
-                        href={`/services/${item.code}`}
+                        href={item.landingPage ? item.landingPage : `services/${item.code}`}
                         className="block px-3 py-2 rounded-lg hover:bg-bg-light hover:text-forest transition text-sm"
                       >
                         {item.name}
