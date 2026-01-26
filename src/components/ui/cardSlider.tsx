@@ -13,7 +13,7 @@ const LeftIcon = () => (
     stroke="currentColor"
     className="w-6 h-6"
   >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7 -7 7-7" />
   </svg>
 );
 

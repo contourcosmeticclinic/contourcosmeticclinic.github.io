@@ -3,20 +3,15 @@
 import React from "react";
 
 import { InfiniteMovingCards, ReviewType } from "../ui/moving-cards";
+import { MainHeading } from "../ui/mainHeading";
 
 export function ReviewCards() {
   return (
     <div className="rounded-md flex flex-col antialiased bg-bg-light items-center justify-center relative overflow-hidden py-12">
       {/* Heading */}
-      <h2 className="font-playfair font-heading pb-4 text-4xl md:text-5xl lg:text-6xl text-primary leading-tight">
-        Trusted By Thousands
-      </h2>
+      <MainHeading title="Trusted by Thousands" />
 
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="right"
-        speed="slow"
-      />
+      <InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
     </div>
   );
 }

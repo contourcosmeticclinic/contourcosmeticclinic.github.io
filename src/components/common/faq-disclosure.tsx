@@ -3,6 +3,7 @@ import { Disclosure } from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import PlusIcon from "./icons/plusicon";
 import MinusIcon from "./icons/minus";
+import { ScrollReveal } from "../ui/scrollReveal";
 
 // Add your FAQ data here
 
@@ -71,39 +72,37 @@ const FAQDisclosure = ({ faqs }: { faqs: Faq[]; open?: boolean }) => {
     <div className="w-full max-w-4xl p-4 mx-auto my-8 bg-bg-light text-body-text">
       <ul>
         {faqs.map((faq, idx) => (
-          <Disclosure
-            key={idx}
-            as="li"
-            className="border-b rounded border-body-text/10 bg-white/60 "
-          >
-            {({ open }) => (
-              <>
-                <Disclosure.Button className="flex font-body rounded bg-white/60 cursor-pointer justify-between w-full py-4 text-left px-4 focus:outline-none">
-                  <span className="font-medium">{faq.question.trim()}</span>
-                  {!open ? (
-                    <PlusIcon className="h-5 w-5 ml-4 transform transition-transform duration-300" />
-                  ) : (
-                    <MinusIcon className="h-5 w-5 ml-4 transform transition-transform duration-300" />
-                  )}
-                </Disclosure.Button>
-                <AnimatePresence>
-                  {open && (
-                    <Disclosure.Panel static>
-                      <motion.div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.3 }}
-                        className="px-4 pb-4 pt-2 text-body-text/80 font-body font-normal bg-white/60"
-                      >
-                        {faq.answer.trim()}
-                      </motion.div>
-                    </Disclosure.Panel>
-                  )}
-                </AnimatePresence>
-              </>
-            )}
-          </Disclosure>
+          <ScrollReveal key={idx} animation="fadeIn">
+            <Disclosure as="li" className="border-b rounded border-body-text/10 bg-white/60 ">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="flex font-body rounded bg-white/60 cursor-pointer justify-between w-full py-4 text-left px-4 focus:outline-none">
+                    <span className="font-medium">{faq.question.trim()}</span>
+                    {!open ? (
+                      <PlusIcon className="h-5 w-5 ml-4 transform transition-transform duration-300" />
+                    ) : (
+                      <MinusIcon className="h-5 w-5 ml-4 transform transition-transform duration-300" />
+                    )}
+                  </Disclosure.Button>
+                  <AnimatePresence>
+                    {open && (
+                      <Disclosure.Panel static>
+                        <motion.div
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -10 }}
+                          transition={{ duration: 0.3 }}
+                          className="px-4 pb-4 pt-2 text-body-text/80 font-body font-normal bg-white/60"
+                        >
+                          {faq.answer.trim()}
+                        </motion.div>
+                      </Disclosure.Panel>
+                    )}
+                  </AnimatePresence>
+                </>
+              )}
+            </Disclosure>
+          </ScrollReveal>
         ))}
       </ul>
     </div>

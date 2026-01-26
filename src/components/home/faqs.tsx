@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
 import FAQDisclosure, { MAIN_FAQs } from "../common/faq-disclosure";
+import { MainHeading } from "../ui/mainHeading";
 
 const Faqs = () => {
   return (
     <div className="py-8 bg-bg-light">
-      <h2 className="font-playfair font-heading text-4xl md:text-5xl lg:text-6xl text-primary leading-tight text-center mb-8">
-        Frequently Asked Questions
-      </h2>
+      <MainHeading title="Frequently Asked Questions" />
+
       <FAQDisclosure faqs={MAIN_FAQs} open={true} />
     </div>
   );

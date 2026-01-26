@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 
-import SlideUp from "../animations/slide-up";
 import DownloadIcon from "../common/icons/download";
 import { sendToAnalytics } from "../../lib/gtag";
+import { ScrollReveal } from "../ui/scrollReveal";
+import { MainHeading } from "../ui/mainHeading";
 
 type Props = {
   isLanding?: boolean;
@@ -47,28 +48,26 @@ export default function WhyChooseClinic({ isLanding = false }: Props) {
     <section id="why-choose-us" className="relative w-full py-12 bg-bg-light">
       <div className="relative mx-auto max-w-7xl px-6 text-center">
         {/* Section Heading */}
-        <SlideUp>
-          <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-primary font-heading leading-tight">
-            Why Choose Contour Clinic?
-          </h2>
-        </SlideUp>
+        <ScrollReveal animation="blur">
+          <MainHeading title="Why Choose Contour Cosmetic Clinic?" />
+        </ScrollReveal>
 
         {/* Subheading */}
         {!isLanding && (
-          <SlideUp className="mt-4">
+          <ScrollReveal animation="blur" className="mt-4">
             <p className="mx-auto md:max-w-4xl md:mx-auto text-body-text text-sm md:text-lg leading-relaxed font-body">
               Indulge in bespoke facial aesthetics and premium cosmetic surgery, expertly crafted by
               renowned specialists — all at surprisingly affordable rates. Discover the gold
               standard in hair restoration, featuring certified doctors, cutting-edge techniques,
               and effortlessly natural results.
             </p>
-          </SlideUp>
+          </ScrollReveal>
         )}
 
         {/* Features Grid */}
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, idx) => (
-            <SlideUp key={idx}>
+            <ScrollReveal animation="fadeIn" key={idx}>
               <div className="flex items-center gap-4 bg-white/60 backdrop-blur-xl rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300">
                 {/* Icon */}
                 <div className="w-20 h-20 relative shrink-0">
@@ -90,7 +89,7 @@ export default function WhyChooseClinic({ isLanding = false }: Props) {
                   </p>
                 </div>
               </div>
-            </SlideUp>
+            </ScrollReveal>
           ))}
         </div>
         {!isLanding && (

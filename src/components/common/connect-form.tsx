@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { MainHeading } from "../ui/mainHeading";
 export const inputClass =
   "w-full px-4 py-3 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition";
 
@@ -68,9 +69,7 @@ export default function ConnectForm() {
   return (
     <div className="w-full bg-bg-light" id="contact-section">
       <div className="max-w-4xl mx-auto py-12 px-4">
-        <h2 className="font-playfair font-heading text-4xl md:text-5xl text-primary text-center mb-8">
-          Connect With Us
-        </h2>
+        <MainHeading title="Connect with us!" />
 
         <p className="text-body-text font-body text-sm text-center md:text-lg pb-4">
           Got questions or ready to start your transformation journey? Our friendly team will be in
