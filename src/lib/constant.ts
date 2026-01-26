@@ -229,6 +229,20 @@ export const doctors: DoctorType[] = [
     description:
       "Dr. Akanksha Thakur is a skilled ENT specialist with 7 years of extensive clinical and surgical experience and advanced training in Facial Plastic and Aesthetic Surgery. She completed her MBBS from Muzaffarnagar Medical College and Hospital, Uttar Pradesh, affiliated with Chaudhary Charan Singh University, Meerut. She has served as a Junior Resident under the Government of Delhi at Rao Tula Ram Memorial Hospital and Indira Gandhi Hospital, gaining valuable exposure in ENT and facial procedures. Currently pursuing her MS in ENT, Dr. Thakur combines medical precision with aesthetic expertise, delivering exceptional reconstructive and cosmetic care.",
   },
+  {
+    id: 3,
+    name: "Dr. Athmika Prakash",
+    title: "Cosmetic and Aesthetic Physician",
+    image: "/images/doctors/athmika-prakash.JPG",
+    socialLinks: [
+      {
+        type: "instagram",
+        link: "https://www.instagram.com/the.glodoc?igsh=am1uZXVvbzk5cnI=",
+      },
+    ],
+    description:
+      "Dr. Athmika Prakash is a skilled Cosmetic and Aesthetic Physician and a proud RGUHS pass-out, with over 4 years of experience in advanced aesthetic medicine. She has worked with some of the top clinics and renowned doctors across Bangalore and Kerala, gaining hands-on expertise in facial aesthetics, skin rejuvenation and non-surgical cosmetic treatments. Known for her scientific approach, precision, and patient-centered care, Dr. Athmika focuses on enhancing natural beauty while preserving individuality. Her journey reflects dedication, compassion and a deep commitment to redefining aesthetics through innovation, ethics and artistry.",
+  },
 ];
 
 export const serviceWithCategories = [
